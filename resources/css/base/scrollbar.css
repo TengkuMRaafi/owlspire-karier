@@ -1,0 +1,18 @@
+/* Dipindah dari resources/views/layouts/head.blade.php */
+/* Scrollbar lembut: pil tipis tanpa tombol panah; oranye pastel, makin pekat saat disentuh */
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+::-webkit-scrollbar { width: 14px; height: 14px; }
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+::-webkit-scrollbar-track { background: rgb(27 38 56 / .04); }
+::-webkit-scrollbar-thumb { border: 4px solid transparent; border-radius: 99px; background: rgb(127 168 232 / .5); background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { border-width: 3px; background: rgb(127 168 232 / .85); background-clip: content-box; }
+::-webkit-scrollbar-thumb:active { background: #4f82e6; background-clip: content-box; }
+::-webkit-scrollbar-corner { background: transparent; }
+
+/* Firefox dan browser tanpa ::-webkit-scrollbar */
+@supports not selector(::-webkit-scrollbar) {
+    html { scrollbar-width: thin; scrollbar-color: #f6b27c rgb(27 38 56 / .04); }
+    * { scrollbar-width: thin; scrollbar-color: #c5cfde transparent; }
+}

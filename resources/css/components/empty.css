@@ -1,0 +1,8 @@
+/* Keadaan kosong */
+.ui-empty { padding: 3.2rem 1.5rem; border: 1px dashed var(--color-graphite-300, #c5cfde); border-radius: 1.25rem; background: var(--pn-card, #fff); text-align: center; color: var(--color-graphite-600, #4a5a73); animation: ui-in .5s both; }
+.ui-empty-t { font-family: var(--font-display, serif); font-size: 1.5rem; font-weight: 600; color: var(--color-ink, #1b2638); }
+.ui-empty p + p { margin-top: .4rem; font-size: .9rem; }
+.ui-empty .btn { margin-top: 1rem; }
+.ui-empty.is-sm { padding: 1.6rem 1rem; border-radius: 1rem; }
+.ui-empty.is-sm .ui-empty-t { font-size: 1.1rem; }
+@media (prefers-reduced-motion: reduce) { .ui-empty { animation: none; } }

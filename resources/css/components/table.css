@@ -1,0 +1,101 @@
+/* Tabel data: pembungkus kartu + tabel ringan. Gulir mendatar hanya muncul di layar sempit. */
+.ui-table-wrap { overflow: hidden; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.1rem; background: var(--pn-card, #fff); }
+.ui-table-scroll { position: relative; overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--color-graphite-300, #c5cfde) transparent; }
+.ui-table { width: 100%; border-collapse: collapse; text-align: left; font-size: .875rem; }
+.ui-table th { padding: .8rem 1rem; border-bottom: 1px solid var(--color-graphite-200, #e2e6ec); background: var(--color-graphite-50, #f3f5f8); font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; color: var(--color-graphite-500, #667794); }
+.ui-table td { white-space: nowrap; padding: .85rem 1rem; border-bottom: 1px solid var(--color-graphite-100, #edf0f5); vertical-align: middle; color: var(--color-graphite-700, #34435c); }
+.ui-table tbody tr { transition: background .15s; }
+.ui-table tbody tr:hover { background: color-mix(in srgb, var(--color-graphite-50, #f3f5f8) 70%, transparent); }
+.ui-table tbody tr:last-child td { border-bottom: 0; }
+.ui-table .is-num { text-align: right; font-variant-numeric: tabular-nums; }
+.ui-table .is-end { text-align: right; white-space: nowrap; }
+.ui-table .is-nowrap { white-space: nowrap; }
+.ui-table .is-top { vertical-align: top; }
+.ui-cell { display: grid; gap: .1rem; min-width: 0; max-width: 24rem; }
+.ui-table .ui-cell b, .ui-table .ui-cell small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ui-cell b { font-weight: 700; color: var(--color-graphite-800, #1f2a3d); }
+.ui-cell small { font-size: .75rem; color: var(--color-graphite-500, #667794); }
+.ui-cell.is-mono b { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem; }
+.ui-table-empty { padding: 3rem 1rem !important; text-align: center; color: var(--color-graphite-500, #667794); }
+.ui-table-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; padding: .85rem 1rem; border-top: 1px solid var(--color-graphite-100, #edf0f5); }
+.ui-table-foot .ui-pager { margin-top: 0; }
+.ui-table-actions { display: inline-flex; flex-wrap: nowrap; align-items: center; justify-content: flex-end; gap: .35rem; }
+.ui-table-actions form { display: inline-flex; flex: none; margin: 0; }
+.ui-link { font-size: .8rem; font-weight: 800; color: var(--color-accent-700, #2f58b3); transition: color .2s; }
+.ui-link:hover { color: var(--color-accent-600, #3b6cd4); text-decoration: underline; text-underline-offset: 3px; }
+.ui-link.is-danger { color: #b91c1c; }
+/* Tautan "Semua"/"Lihat" di kepala kartu: tampil seperti tombol kecil, bukan teks bergaris bawah. */
+.ui-linkbtn { display: inline-flex; align-items: center; gap: .35rem; padding: .4rem .8rem; border: 1px solid var(--color-graphite-200, #d8deea); border-radius: .65rem; background: var(--pn-card, #fff); box-shadow: 0 1px 2px rgb(16 24 40 / .05); font-size: .8rem; font-weight: 800; line-height: 1; color: var(--color-graphite-800, #1f2a3d); transition: border-color .2s, background .2s, color .2s; }
+.ui-linkbtn:hover { border-color: var(--color-accent-300, #a9c4f2); background: var(--color-accent-50, #eef3fc); color: var(--color-accent-700, #2f58b3); }
+
+/* ---------- Pola tabel panel: bar cari + tabel + kaki. Satu desain untuk semua menu bertabel. ---------- */
+.ui-table-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: 0; padding: .9rem 1rem; border-bottom: 1px solid var(--color-graphite-100, #edf0f5); }
+.ui-table-bar .ui-search { flex: 1 1 15rem; max-width: 24rem; }
+.ui-table-bar .ui-search input { height: 2.5rem; border-radius: .7rem; font-size: .85rem; }
+.ui-table-bar .ui-dd { flex: 0 0 11.5rem; }
+.ui-table-bar .ui-dd-btn { height: 2.5rem; border-radius: .7rem; font-size: .85rem; }
+.ui-table-bar .ui-go { height: 2.5rem; padding: 0 1.15rem; border-radius: .7rem; }
+.ui-table-bar .ui-seg { border: 0; padding: 0; background: none; }
+/* Bar filter satu baris: kolom cari melebar, dropdown berbagi sisa ruang sama rata. Di layar sempit tetap boleh turun baris. */
+@media (min-width: 1100px) {
+    .ui-table-bar.is-one-row { flex-wrap: nowrap; }
+    .ui-table-bar.is-one-row .ui-search { flex: 1.6 1 0; min-width: 11rem; max-width: none; }
+    .ui-table-bar.is-one-row .ui-dd { flex: 1 1 0; min-width: 0; }
+    .ui-table-bar.is-one-row .ui-dd-btn { padding-inline: .8rem; }
+    .ui-table-bar.is-one-row .ui-go, .ui-table-bar.is-one-row .ui-reset { flex: 0 0 auto; }
+}
+.ui-table-bar-end { margin-left: auto; font-size: .8rem; color: var(--color-graphite-500, #667794); }
+.ui-reset { display: inline-flex; align-items: center; height: 2.5rem; padding: 0 .6rem; font-size: .8rem; font-weight: 800; color: var(--color-graphite-500, #667794); transition: color .2s; }
+.ui-reset:hover { color: var(--color-accent-700, #2f58b3); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 640px) { .ui-table-bar .ui-search { max-width: none; flex-basis: 100%; } .ui-table-bar .ui-dd { flex: 1 1 9rem; } }
+
+.ui-table .is-no { width: 3.25rem; text-align: center; font-variant-numeric: tabular-nums; color: var(--color-graphite-500, #667794); }
+.ui-table .is-aksi { width: 1%; text-align: right; white-space: nowrap; }
+.ui-table-desc { max-width: 18rem; overflow: hidden; text-overflow: ellipsis; color: var(--color-graphite-600, #4a5a73); }
+/* Jalan keluar bila satu sel memang perlu turun baris: <td class="is-wrap"> */
+.ui-table td.is-wrap { white-space: normal; }
+.ui-table .ui-inline { display: inline-flex; align-items: center; gap: .5rem; }
+.ui-table .ui-inline small { font-size: .74rem; font-weight: 600; color: var(--color-graphite-500, #667794); }
+
+/* Tombol aksi baris: Detail, Ubah, Hapus */
+.ui-act { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; height: 2rem; padding: 0 .7rem; border: 0; border-radius: .6rem; background: var(--color-graphite-100, #edf0f5); font-size: .74rem; font-weight: 800; line-height: 1; white-space: nowrap; color: var(--color-graphite-700, #34435c); cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+.ui-act svg { flex: none; width: .95rem; height: .95rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ui-act:hover { transform: translateY(-1px); }
+.ui-act:focus-visible { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: 2px; }
+.ui-act.is-show { background: var(--color-accent-50, #eef4fd); color: var(--color-accent-700, #2f58b3); }
+.ui-act.is-show:hover { background: var(--color-accent-100, #dce8fb); }
+.ui-act.is-edit { background: #fef3c7; color: #92400e; }
+.ui-act.is-edit:hover { background: #fde68a; }
+.ui-act.is-danger { background: #fee2e2; color: #991b1b; }
+.ui-act.is-danger:hover { background: #fecaca; }
+.ui-act.is-ok { background: var(--color-accent-600, #3b6cd4); color: #fff; }
+.ui-act.is-ok:hover { background: var(--color-accent-700, #2f58b3); }
+/* Aksi selalu satu baris: tombol ikon persegi, nama aksi muncul sebagai tooltip (title). */
+.ui-act { flex: none; width: 2rem; padding: 0; }
+.ui-act > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .ui-act { transition: none; } .ui-act:hover { transform: none; } }
+
+/* Meter kecil di dalam sel tabel */
+.ui-cell-meter { display: grid; gap: .3rem; min-width: 7rem; font-size: .75rem; font-weight: 700; color: var(--color-graphite-600, #4a5a73); }
+
+/* Tabel ringkas (dasbor): satu baris per data, padat, tidak melar. */
+.ui-table.is-compact th { padding: .6rem 1rem; }
+.ui-table.is-compact td { max-width: 18rem; padding: .55rem 1rem; overflow: hidden; text-overflow: ellipsis; }
+.ui-table.is-compact .ui-cell { display: flex; align-items: baseline; gap: .5rem; max-width: none; }
+.ui-table.is-compact .ui-cell small { flex: none; }
+.ui-table.is-compact .ui-cell b { min-width: 0; }
+/* Dua kartu berdampingan tidak saling meregangkan tinggi. */
+.pn-split.is-even { align-items: start; }
+
+/* Pilihan periode di halaman Laporan. */
+.rp-periods { display: flex; flex-wrap: wrap; gap: .5rem; }
+.rp-period { padding: .5rem .95rem; border: 1px solid var(--color-graphite-200, #d8deea); border-radius: .7rem; background: var(--pn-card, #fff); font-size: .82rem; font-weight: 800; color: var(--color-graphite-600, #4b5a74); transition: border-color .2s, background .2s, color .2s; }
+.rp-period:hover { border-color: var(--color-accent-300, #a9c4f2); color: var(--color-accent-700, #2f58b3); }
+.rp-period.is-on { border-color: var(--color-accent-600, #3b6cd4); background: var(--color-accent-600, #3b6cd4); color: #fff; }
+/* Kartu angka penting di Laporan: satu baris di layar lebar, dua kolom di HP. */
+.rp-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
+.rp-stat { display: grid; gap: .3rem; padding: 1rem 1.15rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: var(--pn-card, #fff); }
+.rp-stat span { font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--color-graphite-500, #667794); }
+.rp-stat b { font-size: 1.55rem; font-weight: 800; line-height: 1.15; font-variant-numeric: tabular-nums; color: var(--color-graphite-900, #1b2638); }
+.rp-foot { margin: 0; font-size: .8rem; color: var(--color-graphite-500, #667794); }
+@media (max-width: 760px) { .rp-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .rp-stat b { font-size: 1.3rem; } }

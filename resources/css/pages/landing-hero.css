@@ -1,0 +1,440 @@
+/* Dipindah dari resources/views/partials/hero.blade.php */
+.hx { --px: 0; --py: 0; background: #070d1c; }
+.hx-pill { display: inline-flex; align-items: center; padding: .35rem .9rem; border: 1px solid rgb(255 255 255 / .2); border-radius: 99px; background: rgb(255 255 255 / .08); backdrop-filter: blur(8px); font-size: .8rem; font-weight: 700; animation: hx-in .8s both; }
+.hx-line { display: inline-block; animation: hx-in .9s cubic-bezier(.2, .8, .2, 1) both; animation-delay: var(--d, 0s); }
+p.hx-line { display: block; }
+.hx-accent { color: var(--color-accent-300, #a9c4f2); }
+.hx-copytxt { display: grid; }
+.hx-ct { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility 0s .3s; }
+.hx-ct.is-on { opacity: 1; visibility: visible; transition-delay: 0s; animation: hx-in .8s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes hx-in { from { opacity: 0; transform: translateY(24px); filter: blur(6px); } }
+.hx-cta { position: relative; overflow: hidden; }
+.hx-cta::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgb(255 255 255 / .35) 50%, transparent 70%); transform: translateX(-120%); animation: hx-sweep 3.5s ease-in-out 1.5s infinite; }
+@keyframes hx-sweep { 60%, 100% { transform: translateX(120%); } }
+
+.hx-right { position: relative; }
+.hx-stage { position: relative; aspect-ratio: 6 / 5; max-height: 420px; width: 100%; perspective: 1200px; translate: calc(var(--px) * 14px) calc(var(--py) * 10px); transition: translate .25s ease-out; }
+.hx-scene { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; visibility: hidden; transform: scale(.92) translateY(18px) rotateY(-10deg); transition: opacity .6s, transform .8s cubic-bezier(.2, .8, .2, 1), visibility 0s .8s; }
+.hx-scene.is-on { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.hx-art { width: 92%; height: auto; max-height: 100%; filter: drop-shadow(0 30px 40px rgb(0 0 0 / .45)); }
+
+.hx-laptop { grid-area: 1 / 1; width: 78%; margin-top: -4%; transform: rotate(-3.5deg) rotateY(-6deg); transform-origin: 50% 85%; filter: drop-shadow(0 26px 30px rgb(0 0 0 / .5)); }
+.is-on .hx-laptop { animation: hx-lap 8s ease-in-out infinite; }
+@keyframes hx-lap { 50% { transform: rotate(-2deg) rotateY(-3deg) translateY(-6px); } }
+.hx-lid { position: relative; margin: 0 3.5%; padding: 9px 9px 11px; border: 1px solid rgb(255 255 255 / .2); border-bottom: 0; border-radius: 14px 14px 2px 2px; background: linear-gradient(#1c2430, #0f1726); }
+.hx-lid::before { content: ''; position: absolute; top: 3px; left: 50%; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: #34404f; }
+.hx-base { position: relative; height: 74px; border-radius: 0 0 16px 16px; clip-path: polygon(3.2% 0, 96.8% 0, 100% 100%, 0 100%); background: linear-gradient(180deg, #c3ccd7 0 3px, #8f9bab 3px 6px, #3b4756 6px, #232c38 100%); }
+.hx-base::after { content: ''; position: absolute; left: 42%; right: 42%; top: 0; height: 5px; border-radius: 0 0 8px 8px; background: #6e7b8c; }
+.hx-keys { position: absolute; left: 8%; right: 8%; top: 11px; display: grid; gap: 3px; transform: perspective(260px) rotateX(14deg); transform-origin: 50% 0; }
+.hx-keys span { display: flex; gap: 3px; }
+.hx-keys i { flex: 1; height: 8px; border-radius: 2px; background: #1b232e; box-shadow: 0 1px 0 #0a0f16, inset 0 1px 0 rgb(255 255 255 / .07); }
+.hx-keys i.lg { flex: 1.5; } .hx-keys i.sp { flex: 6; }
+.is-on .hx-keys i:nth-child(5n+2) { animation: hx-key 2.6s ease-in-out infinite; }
+.is-on .hx-keys i:nth-child(7n+4) { animation: hx-key 3.4s ease-in-out .7s infinite; }
+.is-on .hx-keys span:nth-child(2) i:nth-child(3n) { animation-delay: 1.3s; }
+@keyframes hx-key { 0%, 84%, 100% { background: #1b232e; translate: 0 0; box-shadow: 0 1px 0 #0a0f16, inset 0 1px 0 rgb(255 255 255 / .07); } 90% { background: #7fa8e8; translate: 0 1px; box-shadow: 0 0 9px rgb(127 168 232 / .75); } }
+.hx-pad { position: absolute; left: 36%; right: 36%; bottom: 7px; height: 11px; border-radius: 5px; border: 1px solid rgb(255 255 255 / .1); background: rgb(255 255 255 / .07); }
+.hx-screen { position: relative; overflow: hidden; display: grid; align-content: start; gap: .6rem; min-height: 176px; padding: .75rem .9rem; font-size: .9em; border-radius: 7px; background: var(--color-graphite-50, #f3f5f8); color: #1b2638; }
+.hx-screen::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 58%, rgb(255 255 255 / .55) 59%, transparent 72%); opacity: .3; }
+.hx-timer { padding: .1rem .7rem; border-radius: 999px; background: #1b2638; color: #fff; font-variant-numeric: tabular-nums; }
+.hx-prog { height: 6px; overflow: hidden; border-radius: 9px; background: #e2e6ec; }
+.hx-prog b { display: block; height: 100%; width: 12%; background: #3b6cd4; }
+.is-on .hx-prog b { animation: hx-fill 6s ease-in-out infinite alternate; }
+.hx-opt { padding: .55rem .8rem; border: 1.5px solid #e2e6ec; border-radius: 9px; background: #fff; font-size: .85rem; }
+.is-on .hx-opt.is-picked { animation: hx-pick 5s infinite; }
+@keyframes hx-fill { to { width: 88%; } }
+@keyframes hx-pick { 0%, 30% { border-color: #e2e6ec; background: #fff; } 40%, 100% { border-color: #3b6cd4; background: #eef4fd; } }
+
+.hx-float { position: absolute; padding: .65rem .9rem; border-radius: 14px; background: #fff; color: #1b2638; font-size: .85rem; font-weight: 700; box-shadow: 0 18px 40px rgb(0 0 0 / .5); opacity: 0; transform: translateY(20px) scale(.9); }
+.is-on .hx-float { opacity: 1; transform: none; transition: all .7s cubic-bezier(.3, 1.5, .5, 1) .5s; animation: hx-bob 5s ease-in-out 1.2s infinite; }
+.is-on .hx-float.f2 { transition-delay: .8s; animation-delay: 2s; }
+.hx-float small { display: block; color: #667794; font-size: .7rem; font-weight: 500; }
+.hx-float b { font-family: var(--font-display, serif); font-size: 1.5rem; color: #3b6cd4; font-variant-numeric: tabular-nums; }
+.hx-float b.hx-sm { font-size: 1rem; }
+.hx-float.f1 { left: -3%; top: 4%; } .hx-float.f2 { right: -2%; top: 42%; } .hx-float.f3 { left: 2%; bottom: 2%; }
+@keyframes hx-bob { 50% { translate: 0 -12px; } }
+
+/* Adegan orang */
+.person2, .person4 { transform-box: fill-box; }
+.is-on .head2 { transform-box: fill-box; transform-origin: 50% 100%; animation: hx-nod 3s ease-in-out infinite; }
+@keyframes hx-nod { 40% { transform: rotate(-4deg); } 70% { transform: rotate(3deg) translateY(2px); } }
+.is-on .notes circle { animation: hx-note 2.4s ease-in-out infinite; } .notes circle:nth-child(2) { animation-delay: .5s !important; } .notes circle:nth-child(3) { animation-delay: 1s !important; }
+@keyframes hx-note { 0% { opacity: 0; translate: 0 10px; } 50% { opacity: 1; } 100% { opacity: 0; translate: 0 -22px; } }
+.is-on .lamp-cone { animation: hx-flick 3s ease-in-out infinite; }
+@keyframes hx-flick { 50% { opacity: .26; } }
+.is-on .vid { animation: hx-vid 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes hx-vid { 50% { opacity: .65; } }
+.is-on .books rect { animation: hx-book 3s ease-in-out infinite; } .books rect:nth-child(2) { animation-delay: .3s !important; } .books rect:nth-child(3) { animation-delay: .6s !important; }
+@keyframes hx-book { 50% { translate: 3px 0; } }
+
+
+.is-on .cv { animation: hx-cv 5s ease-in-out infinite; transform-box: fill-box; }
+@keyframes hx-cv { 0%, 8% { translate: -10px 0; } 45%, 70% { translate: 60px -20px; } 100% { translate: -10px 0; } }
+.stamp, .stamp-t { transform-box: fill-box; transform-origin: center; }
+.is-on .stamp { animation: hx-stamp 5s infinite; } .is-on .stamp-t { animation: hx-stamp 5s infinite; }
+@keyframes hx-stamp { 0%, 22% { transform: scale(0); } 32%, 90% { transform: scale(1); } 100% { transform: scale(0); } }
+.is-on .jb1 { animation: hx-swipe 5s ease-in-out infinite; }
+@keyframes hx-swipe { 0%, 45% { transform: none; opacity: 1; } 60% { transform: translateX(150px) rotate(14deg); opacity: 0; } 61%, 70% { transform: translateX(-30px); opacity: 0; } 85%, 100% { transform: none; opacity: 1; } }
+.jb2, .jb3 { opacity: .8; }
+.is-on .person4 { animation: hx-nod 3s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
+
+.hx-cap { margin-top: 1rem; display: grid; gap: .15rem; min-height: 3.2rem; }
+.hx-cap b { font-size: 1.05rem; } .hx-cap span { font-size: .9rem; color: #e2e6ec; }
+.hx-cap.swap { animation: hx-in .6s both; }
+
+/* ---------- Latar lanskap ---------- */
+.hx-land { position: absolute; left: 0; bottom: 0; z-index: -2; width: 100%; height: 100%; pointer-events: none; }
+.hx-land .hx-r { transition: translate .6s ease-out, fill 1.4s ease; }
+.hx-r0 { translate: calc(var(--px) * -4px) 0; } .hx-r1 { translate: calc(var(--px) * -8px) 0; } .hx-r2 { translate: calc(var(--px) * -13px) 0; } .hx-r3 { translate: calc(var(--px) * -19px) 0; } .hx-r4 { translate: calc(var(--px) * -26px) 0; }
+.hx-mist { animation: hx-drift 40s ease-in-out infinite alternate; } .hx-m1 { animation-duration: 55s; animation-direction: alternate-reverse; }
+@keyframes hx-drift { from { translate: -70px 0; } to { translate: 70px 0; } }
+.hx-land .hx-tw { animation: hx-twinkle 5s ease-in-out infinite alternate; }
+@keyframes hx-twinkle { from { opacity: .15; } to { opacity: .9; } }
+.hx-shade { z-index: -1; pointer-events: none; background: linear-gradient(90deg, rgb(var(--sh) / .62) 0%, rgb(var(--sh) / .3) 42%, transparent 70%), linear-gradient(0deg, rgb(var(--sh) / .35), transparent 30%); }
+
+/* ---------- Karier: berjalan menuju puncak ---------- */
+.hx-k .walker { transform: translate(372px, 124px); }
+.is-on .walker { animation: hx-walk 10s linear infinite; }
+.wk-lgf, .wk-lgb, .wk-arf, .wk-arb { transform-box: fill-box; transform-origin: 50% 0; }
+.is-on .wk-lgf { animation: hx-lgf 10s linear infinite; } .is-on .wk-lgb { animation: hx-lgb 10s linear infinite; }
+.is-on .wk-arf { animation: hx-arf 10s linear infinite; } .is-on .wk-arb { animation: hx-arb 10s linear infinite; }
+.is-on .wk-bob { animation: hx-bob2 10s linear infinite; }
+.wk-head { transform-box: fill-box; transform-origin: 50% 100%; }
+.k-prog { stroke-dasharray: 100; stroke-dashoffset: 0; }
+.is-on .k-prog { animation: hx-trail 10s linear infinite; }
+.is-on .k-trail { animation: hx-trailv 10s linear infinite; }
+.k-ms { transform-box: fill-box; transform-origin: center; }
+.is-on .k-ms.m0 { animation: hx-ms0 10s linear infinite; } .is-on .k-ms.m1 { animation: hx-ms1 10s linear infinite; }
+.k-cloth { transform-box: fill-box; transform-origin: left center; }
+.is-on .k-cloth { animation: hx-cloth 2.6s ease-in-out infinite alternate; }
+@keyframes hx-cloth { from { transform: skewY(-6deg) scaleX(1); } to { transform: skewY(7deg) scaleX(.88); } }
+.k-cloud { opacity: .75; fill: #ffe6cc; } .k-stars { display: none; } .is-on .k-cloud.c1 { animation: hx-cloud 18s ease-in-out infinite alternate; } .is-on .k-cloud.c2 { animation: hx-cloud 24s ease-in-out infinite alternate-reverse; }
+@keyframes hx-cloud { from { translate: -26px 0; } to { translate: 30px 0; } }
+.is-on .k-stars circle { animation: hx-twinkle 3s ease-in-out infinite alternate; }
+.k-stars circle:nth-child(2) { animation-delay: .8s !important; } .k-stars circle:nth-child(3) { animation-delay: 1.6s !important; }
+@keyframes hx-walk{0%{opacity:0;transform:translate(20.0px,290.0px)} 5%{opacity:1;transform:translate(20.0px,290.0px)} 10.00%{transform:translate(20.0px,290.0px)} 12.78%{transform:translate(35.3px,289.5px)} 15.56%{transform:translate(50.4px,288.0px)} 18.33%{transform:translate(65.3px,285.4px)} 21.11%{transform:translate(79.9px,281.5px)} 23.89%{transform:translate(94.3px,276.3px)} 26.67%{transform:translate(108.1px,270.1px)} 29.44%{transform:translate(121.8px,263.0px)} 32.22%{transform:translate(135.1px,255.6px)} 35.00%{transform:translate(148.1px,248.0px)} 37.78%{transform:translate(161.5px,240.5px)} 40.56%{transform:translate(174.8px,233.5px)} 43.33%{transform:translate(188.2px,226.0px)} 46.11%{transform:translate(201.1px,218.2px)} 48.89%{transform:translate(213.9px,210.0px)} 51.67%{transform:translate(226.6px,201.4px)} 54.44%{transform:translate(239.3px,192.6px)} 57.22%{transform:translate(251.6px,183.8px)} 60.00%{transform:translate(264.0px,175.0px)} 62.78%{transform:translate(276.4px,166.1px)} 65.56%{transform:translate(288.7px,157.5px)} 68.33%{transform:translate(301.4px,149.1px)} 71.11%{transform:translate(314.4px,141.1px)} 73.89%{transform:translate(327.8px,133.9px)} 76.67%{transform:translate(341.9px,128.3px)} 79.44%{transform:translate(356.9px,125.3px)} 82.22%{transform:translate(372.0px,124.0px)} 93%{opacity:1;transform:translate(372.0px,124.0px)} 96%{opacity:0;transform:translate(372.0px,124.0px)} 97%{opacity:0;transform:translate(20.0px,290.0px)} 100%{opacity:0;transform:translate(20.0px,290.0px)}}
+@keyframes hx-lgf{0%{transform:rotate(0deg);animation-timing-function:ease-in-out} 10.00%{transform:rotate(0deg);animation-timing-function:ease-in-out} 12.11%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 16.33%{transform:rotate(30deg);animation-timing-function:ease-in-out} 20.56%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 24.78%{transform:rotate(30deg);animation-timing-function:ease-in-out} 29.00%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 33.22%{transform:rotate(30deg);animation-timing-function:ease-in-out} 37.44%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 41.67%{transform:rotate(30deg);animation-timing-function:ease-in-out} 45.89%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 50.11%{transform:rotate(30deg);animation-timing-function:ease-in-out} 54.33%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 58.56%{transform:rotate(30deg);animation-timing-function:ease-in-out} 62.78%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 67.00%{transform:rotate(30deg);animation-timing-function:ease-in-out} 71.22%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 75.44%{transform:rotate(30deg);animation-timing-function:ease-in-out} 79.67%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 85.56%{transform:rotate(0deg);animation-timing-function:ease-in-out} 100%{transform:rotate(0deg)}}
+@keyframes hx-lgb{0%{transform:rotate(0deg);animation-timing-function:ease-in-out} 10.00%{transform:rotate(0deg);animation-timing-function:ease-in-out} 12.11%{transform:rotate(30deg);animation-timing-function:ease-in-out} 16.33%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 20.56%{transform:rotate(30deg);animation-timing-function:ease-in-out} 24.78%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 29.00%{transform:rotate(30deg);animation-timing-function:ease-in-out} 33.22%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 37.44%{transform:rotate(30deg);animation-timing-function:ease-in-out} 41.67%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 45.89%{transform:rotate(30deg);animation-timing-function:ease-in-out} 50.11%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 54.33%{transform:rotate(30deg);animation-timing-function:ease-in-out} 58.56%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 62.78%{transform:rotate(30deg);animation-timing-function:ease-in-out} 67.00%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 71.22%{transform:rotate(30deg);animation-timing-function:ease-in-out} 75.44%{transform:rotate(-30deg);animation-timing-function:ease-in-out} 79.67%{transform:rotate(30deg);animation-timing-function:ease-in-out} 85.56%{transform:rotate(0deg);animation-timing-function:ease-in-out} 100%{transform:rotate(0deg)}}
+@keyframes hx-arf{0%{transform:rotate(0deg);animation-timing-function:ease-in-out} 10.00%{transform:rotate(0deg);animation-timing-function:ease-in-out} 12.11%{transform:rotate(24deg);animation-timing-function:ease-in-out} 16.33%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 20.56%{transform:rotate(24deg);animation-timing-function:ease-in-out} 24.78%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 29.00%{transform:rotate(24deg);animation-timing-function:ease-in-out} 33.22%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 37.44%{transform:rotate(24deg);animation-timing-function:ease-in-out} 41.67%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 45.89%{transform:rotate(24deg);animation-timing-function:ease-in-out} 50.11%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 54.33%{transform:rotate(24deg);animation-timing-function:ease-in-out} 58.56%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 62.78%{transform:rotate(24deg);animation-timing-function:ease-in-out} 67.00%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 71.22%{transform:rotate(24deg);animation-timing-function:ease-in-out} 75.44%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 79.67%{transform:rotate(24deg);animation-timing-function:ease-in-out} 85.56%{transform:rotate(0deg);animation-timing-function:ease-in-out} 90.56%{transform:rotate(-150deg);animation-timing-function:ease-in-out} 93.89%{transform:rotate(-132deg);animation-timing-function:ease-in-out} 97.22%{transform:rotate(-155deg);animation-timing-function:ease-in-out} 100.56%{transform:rotate(-132deg);animation-timing-function:ease-in-out} 102.78%{transform:rotate(-150deg)} 106.11%{transform:rotate(0deg)} 100%{transform:rotate(0deg)}}
+@keyframes hx-arb{0%{transform:rotate(0deg);animation-timing-function:ease-in-out} 10.00%{transform:rotate(0deg);animation-timing-function:ease-in-out} 12.11%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 16.33%{transform:rotate(24deg);animation-timing-function:ease-in-out} 20.56%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 24.78%{transform:rotate(24deg);animation-timing-function:ease-in-out} 29.00%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 33.22%{transform:rotate(24deg);animation-timing-function:ease-in-out} 37.44%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 41.67%{transform:rotate(24deg);animation-timing-function:ease-in-out} 45.89%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 50.11%{transform:rotate(24deg);animation-timing-function:ease-in-out} 54.33%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 58.56%{transform:rotate(24deg);animation-timing-function:ease-in-out} 62.78%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 67.00%{transform:rotate(24deg);animation-timing-function:ease-in-out} 71.22%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 75.44%{transform:rotate(24deg);animation-timing-function:ease-in-out} 79.67%{transform:rotate(-24deg);animation-timing-function:ease-in-out} 85.56%{transform:rotate(0deg);animation-timing-function:ease-in-out} 100%{transform:rotate(0deg)}}
+@keyframes hx-bob2{0%{transform:translateY(0)} 10.00%{transform:translateY(0)} 12.11%{transform:translateY(-3px);animation-timing-function:ease-in-out} 14.22%{transform:translateY(0px);animation-timing-function:ease-in-out} 16.33%{transform:translateY(-3px);animation-timing-function:ease-in-out} 18.44%{transform:translateY(0px);animation-timing-function:ease-in-out} 20.56%{transform:translateY(-3px);animation-timing-function:ease-in-out} 22.67%{transform:translateY(0px);animation-timing-function:ease-in-out} 24.78%{transform:translateY(-3px);animation-timing-function:ease-in-out} 26.89%{transform:translateY(0px);animation-timing-function:ease-in-out} 29.00%{transform:translateY(-3px);animation-timing-function:ease-in-out} 31.11%{transform:translateY(0px);animation-timing-function:ease-in-out} 33.22%{transform:translateY(-3px);animation-timing-function:ease-in-out} 35.33%{transform:translateY(0px);animation-timing-function:ease-in-out} 37.44%{transform:translateY(-3px);animation-timing-function:ease-in-out} 39.56%{transform:translateY(0px);animation-timing-function:ease-in-out} 41.67%{transform:translateY(-3px);animation-timing-function:ease-in-out} 43.78%{transform:translateY(0px);animation-timing-function:ease-in-out} 45.89%{transform:translateY(-3px);animation-timing-function:ease-in-out} 48.00%{transform:translateY(0px);animation-timing-function:ease-in-out} 50.11%{transform:translateY(-3px);animation-timing-function:ease-in-out} 52.22%{transform:translateY(0px);animation-timing-function:ease-in-out} 54.33%{transform:translateY(-3px);animation-timing-function:ease-in-out} 56.44%{transform:translateY(0px);animation-timing-function:ease-in-out} 58.56%{transform:translateY(-3px);animation-timing-function:ease-in-out} 60.67%{transform:translateY(0px);animation-timing-function:ease-in-out} 62.78%{transform:translateY(-3px);animation-timing-function:ease-in-out} 64.89%{transform:translateY(0px);animation-timing-function:ease-in-out} 67.00%{transform:translateY(-3px);animation-timing-function:ease-in-out} 69.11%{transform:translateY(0px);animation-timing-function:ease-in-out} 71.22%{transform:translateY(-3px);animation-timing-function:ease-in-out} 73.33%{transform:translateY(0px);animation-timing-function:ease-in-out} 75.44%{transform:translateY(-3px);animation-timing-function:ease-in-out} 77.56%{transform:translateY(0px);animation-timing-function:ease-in-out} 79.67%{transform:translateY(-3px);animation-timing-function:ease-in-out} 81.78%{transform:translateY(0px);animation-timing-function:ease-in-out} 85.56%{transform:translateY(0)} 100%{transform:translateY(0)}}
+@keyframes hx-trail{0%,10%{stroke-dashoffset:100}82%,96%{stroke-dashoffset:0}97%,100%{stroke-dashoffset:100}}
+@keyframes hx-trailv{0%,94%{opacity:1}96%,98%{opacity:0}100%{opacity:1}}
+@keyframes hx-ms0{0%,35.80%{fill:#86a6c6;transform:scale(1)}36.20%{fill:#a9c4f2;transform:scale(1.9)}39.00%,93%{fill:#a9c4f2;transform:scale(1)}96%,100%{fill:#86a6c6;transform:scale(1)}}
+@keyframes hx-ms1{0%,58.91%{fill:#86a6c6;transform:scale(1)}59.31%{fill:#a9c4f2;transform:scale(1.9)}62.11%,93%{fill:#a9c4f2;transform:scale(1)}96%,100%{fill:#86a6c6;transform:scale(1)}}
+
+.hx-float.f3.f3r { left: auto; right: 2%; }
+/* ---------- Tanah, kartu mengambang, garis waktu ---------- */
+.hx-art { overflow: visible; filter: drop-shadow(0 18px 24px rgb(0 0 0 / .35)); }
+.hx-art.hx-gnd { grid-area: 1 / 1; filter: none; }
+.hx-copy { position: relative; z-index: 3; }
+.hx-cap { position: relative; z-index: 3; }
+.hx-float { --ex: 0px; --ey: 20px; --r: 0deg; rotate: var(--r); white-space: nowrap; transform: translate(var(--ex), var(--ey)) scale(.9); }
+.is-on .hx-float { transform: none; }
+.is-on .hx-float.f3 { transition-delay: 1s; animation-duration: 7s; animation-delay: 2.4s; }
+.is-on .hx-float.f4 { transition-delay: 1.2s; animation-duration: 4.6s; animation-delay: 1.6s; }
+.is-on .hx-float.f2 { animation-duration: 6.2s; }
+.s1 .hx-float.f1 { right: -9%; top: 0%; left: auto; bottom: auto; --r: 3deg; --ex: 22px; --ey: -12px; }
+.s1 .hx-float.f2 { left: -16%; top: 26%; bottom: auto; top: auto; right: auto; --r: -3deg; --ex: -22px; }
+.s1 .hx-float.f4 { right: -11%; bottom: 10%; top: auto; left: auto; --r: 2deg; --ex: 18px; }
+.s2 .hx-float.f1 { right: 0; top: 2%; left: auto; bottom: auto; --r: 2deg; --ex: 20px; --ey: -10px; }
+.s2 .hx-float.f2 { left: -6%; top: 62%; right: auto; bottom: auto; --r: -2.5deg; --ex: -24px; }
+.s3 .hx-float.f1 { left: 16%; top: -2%; right: auto; bottom: auto; --r: -2deg; --ey: -14px; }
+.s3 .hx-float.f2 { right: -3%; top: 44%; left: auto; bottom: auto; --r: 3deg; --ex: 24px; }
+.s3 .hx-float.f3 { right: 4%; bottom: 4%; left: auto; top: auto; --r: -2deg; }
+.s4 .hx-float.f1 { left: -7%; top: 4%; right: auto; bottom: auto; --r: -3deg; --ex: -22px; }
+.s4 .hx-float.f2 { right: -4%; top: 50%; left: auto; bottom: auto; --r: 3deg; --ex: 24px; }
+.s4 .hx-float.f4 { right: 6%; top: -2%; left: auto; bottom: auto; --r: 2deg; --ey: -14px; }
+.hx-row { display: flex; align-items: center; gap: .6rem; }
+.hx-up { display: block; margin-top: .1rem; color: #0f9d6b; font-size: .7rem; font-style: normal; font-weight: 700; }
+.hx-row .hx-up { margin: 0; } .hx-up::before { content: '\25B2 '; font-size: .55rem; }
+.hx-sub { color: #667794; font-size: .7rem; font-style: normal; font-weight: 500; }
+.hx-bar { display: block; min-width: 7.5rem; height: 5px; margin-top: .45rem; overflow: hidden; border-radius: 9px; background: #e5e9ee; }
+.hx-bar u { display: block; width: 0; height: 100%; border-radius: 9px; background: linear-gradient(90deg, #7fa8e8, #3b6cd4); }
+.is-on .hx-bar u { animation: hx-barfill 1.6s cubic-bezier(.2, .8, .2, 1) .9s forwards; }
+@keyframes hx-barfill { to { width: var(--w); } }
+.hx-spark { width: 62px; height: 20px; overflow: visible; }
+.hx-spark path { fill: none; stroke: #3b6cd4; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 100; }
+.is-on .hx-spark path { animation: hx-draw 1.4s ease-out .9s forwards; }
+@keyframes hx-draw { to { stroke-dashoffset: 0; } }
+.hx-eq { display: flex; gap: 3px; align-items: flex-end; height: 14px; margin-top: .3rem; }
+.hx-eq u { width: 3px; height: 100%; border-radius: 2px; background: #3b6cd4; transform-origin: bottom; transform: scaleY(.3); }
+.is-on .hx-eq u { animation: hx-eq 1s ease-in-out infinite alternate; }
+.hx-eq u:nth-child(2) { animation-delay: -.3s !important; } .hx-eq u:nth-child(3) { animation-delay: -.6s !important; } .hx-eq u:nth-child(4) { animation-delay: -.15s !important; } .hx-eq u:nth-child(5) { animation-delay: -.45s !important; }
+@keyframes hx-eq { to { transform: scaleY(1); } }
+.hx-toast { display: flex; align-items: center; gap: .5rem; padding: .5rem .85rem; font-size: .78rem; }
+.hx-dot { width: .5rem; height: .5rem; border-radius: 50%; background: #10b981; }
+.is-on .hx-dot { animation: hx-ping 1.8s ease-out infinite; }
+@keyframes hx-ping { 0% { box-shadow: 0 0 0 0 rgb(16 185 129 / .6); } 80%, 100% { box-shadow: 0 0 0 8px rgb(16 185 129 / 0); } }
+
+.hx-tl { position: absolute; left: 50%; bottom: 1.1rem; z-index: 4; translate: -50% 0; display: flex; gap: .6rem; width: min(520px, calc(100% - 2rem)); }
+.hx-seg { flex: 1; display: grid; gap: .4rem; padding: .2rem 0; text-align: left; cursor: pointer; color: rgb(255 255 255 / .5); transition: color .3s; }
+.hx-seg:hover, .hx-seg.is-act { color: #fff; } .hx-seg.is-done { color: rgb(255 255 255 / .78); }
+.hx-seg-l { font-size: .72rem; font-weight: 700; letter-spacing: .02em; } .hx-seg-l em { margin-right: .4rem; font-style: normal; opacity: .7; font-variant-numeric: tabular-nums; }
+.hx-seg-t { display: block; height: 3px; overflow: hidden; border-radius: 9px; background: rgb(255 255 255 / .18); }
+.hx-seg-t b { display: block; width: 0; height: 100%; border-radius: 9px; background: linear-gradient(90deg, #a9c4f2, #3b6cd4); }
+.hx-seg.is-done .hx-seg-t b { width: 100%; }
+.hx-seg.is-act .hx-seg-t b { animation: hx-seg 10s linear forwards; }
+.hx.is-paused .hx-seg.is-act .hx-seg-t b { animation-play-state: paused; }
+@keyframes hx-seg { to { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .hx-seg.is-act .hx-seg-t b { width: 100%; } .hx-float, .hx-bar u { transform: none; } .hx-bar u { width: var(--w); } .hx-spark path { stroke-dashoffset: 0; } }
+
+/* ---------- Tema suasana per adegan (data-th di .hx) ---------- */
+.hx { --k0: #070b24; --k1: #101a47; --k2: #1f2f6b; --k3: #34478a; --k4: #4a62a0; --r0: #3a4a86; --r1: #2d3b72; --r2: #222d5c; --r3: #171f46; --r4: #0e1330; --st: 1; --gl: #dbe4ff; --mi: #c9d4ff; --mx: 0px; --my: 0px; --ss: 1; --so: 1; --sunc: #eef2ff; --sh: 5 8 24; }
+.hx[data-th="1"] { --k0: #140d0a; --k1: #231510; --k2: #3a2316; --k3: #54331c; --k4: #6b4424; --r0: #6a4a34; --r1: #55392a; --r2: #432c20; --r3: #2f1e16; --r4: #1e130d; --st: 0; --gl: #ffcf9a; --mi: #ffd6a8; --so: 0; --sh: 18 10 4; }
+.hx[data-th="2"] { --k0: #2a4f8f; --k1: #5b86c0; --k2: #e3a08b; --k3: #f0b88a; --k4: #f8cf9c; --r0: #a590b8; --r1: #7f78a8; --r2: #5b628f; --r3: #3d4772; --r4: #272f55; --st: 0; --gl: #dce8fb; --mi: #ffd9b0; --mx: -150px; --my: 90px; --ss: 1.5; --sunc: #fff1cf; --sh: 12 26 56; }
+.hx[data-th="3"] { --k0: #1a1038; --k1: #3a1d5e; --k2: #7b3a7a; --k3: #c0587a; --k4: #e8896f; --r0: #7a4a82; --r1: #623a74; --r2: #4a2c62; --r3: #331f4c; --r4: #1f1233; --st: .5; --gl: #ffc6d8; --mi: #ffbcd0; --mx: -80px; --my: 120px; --ss: 1.2; --sunc: #ffe0ea; --sh: 16 8 34; }
+.hx-k0 { stop-color: var(--k0); } .hx-k1 { stop-color: var(--k1); } .hx-k2 { stop-color: var(--k2); } .hx-k3 { stop-color: var(--k3); } .hx-k4 { stop-color: var(--k4); }
+.hx-k0, .hx-k1, .hx-k2, .hx-k3, .hx-k4, .hx-gl, .hx-mi { transition: stop-color 1.4s ease; }
+.hx-gl { stop-color: var(--gl); } .hx-mi { stop-color: var(--mi); }
+.hx-r0 { fill: var(--r0); } .hx-r1 { fill: var(--r1); } .hx-r2 { fill: var(--r2); } .hx-r3 { fill: var(--r3); } .hx-r4 { fill: var(--r4); }
+.hx-sunc { fill: var(--sunc); transition: fill 1.4s ease; }
+.hx-sun { opacity: var(--so); transform-origin: 1130px 250px; transform: translate(var(--mx), var(--my)) scale(var(--ss)); transition: transform 1.6s cubic-bezier(.3, .7, .2, 1), opacity 1.2s; }
+.hx-stars { opacity: var(--st); transition: opacity 1.2s; }
+
+/* Detail suasana: simbol soal, ruang belajar, burung, jendela kota */
+.s2 .hx-art { filter: none; }
+.is-on .hx-sym text { animation: hx-sym 7s ease-in-out infinite alternate; opacity: .16; }
+.hx-sym text { opacity: .16; } .hx-sym text:nth-child(2n) { animation-delay: -2s !important; } .hx-sym text:nth-child(3n) { animation-delay: -4s !important; animation-duration: 9s !important; }
+@keyframes hx-sym { from { translate: 0 8px; opacity: .06; } to { translate: 0 -16px; opacity: .22; } }
+.is-on .room-glow { animation: hx-flick 3.4s ease-in-out infinite; }
+.hx-hand { transform-box: fill-box; transform-origin: 50% 100%; }
+.is-on .hx-hand { animation: hx-tick 12s linear infinite; }
+@keyframes hx-tick { to { transform: rotate(360deg); } }
+.is-on .k-bird.b1 { animation: hx-bird 16s linear infinite; } .is-on .k-bird.b2 { animation: hx-bird 22s linear -8s infinite; }
+@keyframes hx-bird { from { translate: -40px 0; } 50% { translate: 200px -16px; } to { translate: 470px 6px; } }
+.is-on .hx-win.w2 { animation: hx-wk 4s steps(1) infinite; } .is-on .hx-win.w3 { animation: hx-wk 5.3s steps(1) 1s infinite; }
+@keyframes hx-wk { 0% { opacity: 1; } 45% { opacity: .15; } 70% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .hx-sun, .hx-stars { transition: none; } }
+
+
+/* ---------- Tag tematik (menggantikan chip ikon) ---------- */
+.hx-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.2rem; max-width: 36rem; max-height: 4.9rem; padding-top: .2rem; overflow: hidden; }
+.hx-tags li { display: inline-flex; align-items: baseline; padding: .38rem .8rem; border: 1px solid rgb(169 196 242 / .28); border-radius: 99px; background: rgb(255 255 255 / .07); backdrop-filter: blur(8px); font-size: .84rem; font-weight: 700; letter-spacing: .005em; color: #fff; transition: background .25s, border-color .25s, translate .25s; cursor: default; }
+.hx-tags li::before { content: '#'; margin-right: .12rem; font-weight: 800; color: var(--color-accent-300, #a9c4f2); }
+.hx-tags li:hover { background: rgb(59 108 212 / .35); border-color: rgb(169 196 242 / .7); translate: 0 -2px; }
+.hx-tags li:nth-child(2) { --i: 1; } .hx-tags li:nth-child(3) { --i: 2; } .hx-tags li:nth-child(4) { --i: 3; }
+.hx-ct.is-on .hx-tags li { animation: hx-tag .6s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(.4s + var(--i, 0) * .09s); }
+@keyframes hx-tag { from { opacity: 0; transform: translateY(10px) scale(.94); } }
+
+/* ---------- Latar interior: ruang ujian (th 0) dan kantor (th 3) ---------- */
+.hx-bgx { z-index: -2; }
+.hx-bx { opacity: 0; transition: opacity 1.4s ease; }
+.hx[data-th="0"] .bx0, .hx[data-th="3"] .bx3 { opacity: 1; }
+.hx-scr { animation: hx-scr 5s ease-in-out infinite alternate; }
+@keyframes hx-scr { from { opacity: .5; } to { opacity: .92; } }
+.hx-bx .hx-led { animation: hx-led 2.4s steps(1) infinite; }
+@keyframes hx-led { 50% { opacity: .25; } }
+.hx-bx .hx-win.w2 { animation: hx-wk 4s steps(1) infinite; } .hx-bx .hx-win.w3 { animation: hx-wk 5.3s steps(1) 1s infinite; }
+.hx-clk { transform-box: fill-box; transform-origin: 50% 100%; animation: hx-tick 60s linear infinite; }
+.hx-clk.h { animation-duration: 720s; }
+
+/* ---------- Adegan 1: kursor, meja, server ---------- */
+.hx-opt { position: relative; }
+.hx-cur { position: absolute; right: 22%; top: 42%; width: 15px; opacity: 0; filter: drop-shadow(0 2px 2px rgb(0 0 0 / .35)); }
+.is-on .hx-cur { animation: hx-cur 5s ease-in-out infinite; }
+@keyframes hx-cur { 0% { opacity: 0; translate: 110px -70px; } 10% { opacity: 1; translate: 110px -70px; } 32% { translate: 0 0; scale: 1; } 36% { translate: 0 0; scale: .8; } 40% { scale: 1; } 85% { opacity: 1; translate: 0 0; } 94%, 100% { opacity: 0; translate: 0 0; } }
+.is-on .hx-steam { animation: hx-steam 3.2s ease-in-out infinite; } .hx-steam.s-b { animation-delay: -1.4s !important; }
+@keyframes hx-steam { 0% { opacity: 0; translate: 0 6px; } 40% { opacity: .55; } 100% { opacity: 0; translate: 0 -8px; } }
+.is-on .hx-led { animation: hx-led 1.8s steps(1) infinite; } .hx-led.l2 { animation-delay: -.6s !important; } .hx-led.l3 { animation-delay: -1.1s !important; }
+.is-on .hx-flow { animation: hx-flow 1.4s linear infinite; }
+@keyframes hx-flow { to { stroke-dashoffset: -22; } }
+
+/* ---------- Adegan 4: pelamar bertemu HRD (alur 10 detik) ---------- */
+.hx-off { overflow: visible; }
+.hrd-head, .applic, .hrd-ok, .hrd-star .st, .cv4 { transform-box: fill-box; }
+.hrd-head { transform-origin: 50% 100%; } .applic { transform-origin: 50% 100%; }
+.hrd-ok, .hrd-star .st { transform-origin: center; transform: scale(0); }
+.cv4 { transform-origin: center; }
+.is-on .applic { animation: ap-joy 10s ease-in-out infinite; }
+.is-on .cv4 { animation: hx-cv4 10s ease-in-out infinite; }
+.is-on .hrd-head { animation: hx-hrdnod 10s ease-in-out infinite; }
+.is-on .hrd-row { animation: hx-row 10s ease-in-out infinite; }
+.is-on .hrd-ok { animation: hx-ok 10s cubic-bezier(.3, 1.6, .5, 1) infinite; }
+.is-on .hrd-star .st { animation: hx-spark 10s ease-out infinite; } .hrd-star .st.b { animation-delay: .25s !important; } .hrd-star .st.c { animation-delay: .5s !important; }
+.hrd-row { fill: #eef4fd; stroke: #3b6cd4; opacity: 0; }
+@keyframes hx-cv4 { 0%, 7% { translate: 0 0; scale: 1; rotate: 0deg; opacity: 1; } 12% { translate: -2px -10px; scale: 1.05; rotate: -5deg; opacity: 1; } 24% { translate: 30px -78px; scale: .78; rotate: 8deg; opacity: 1; } 34% { translate: 47px -44px; scale: .34; rotate: 0deg; opacity: 1; } 39%, 94% { translate: 47px -44px; scale: .12; rotate: 0deg; opacity: 0; } 99% { translate: 0 0; scale: 1; rotate: 0deg; opacity: 0; } 100% { translate: 0 0; scale: 1; rotate: 0deg; opacity: 1; } }
+@keyframes hx-row { 0%, 36% { opacity: 0; } 42%, 90% { opacity: 1; } 97%, 100% { opacity: 0; } }
+@keyframes hx-ok { 0%, 46% { transform: scale(0); } 54%, 90% { transform: scale(1); } 96%, 100% { transform: scale(0); } }
+@keyframes hx-hrdnod { 0%, 40% { rotate: 0deg; translate: 0 0; } 46% { rotate: 5deg; translate: 0 2px; } 52% { rotate: 0deg; translate: 0 0; } 58% { rotate: 5deg; translate: 0 2px; } 64%, 100% { rotate: 0deg; translate: 0 0; } }
+@keyframes hx-spark { 0%, 52% { transform: scale(0) rotate(0); opacity: 0; } 60% { transform: scale(1.2) rotate(20deg); opacity: 1; } 78% { transform: scale(1) rotate(40deg); opacity: .9; } 88%, 100% { transform: scale(0) rotate(60deg); opacity: 0; } }
+.hx[data-th="3"] { --sh: 16 12 36; }
+@media (prefers-reduced-motion: reduce) { .hrd-ok, .hrd-row { opacity: 1; transform: none; } .hx-bx .hx-win, .hx-scr { animation: none; } }
+
+@media (max-width: 1023px) { .hx-float.f1 { left: 0; } .hx-float.f2 { right: 0; } .hx-stage { max-height: 360px; } }
+@media (prefers-reduced-motion: reduce) {
+    .hx *, .hx *::before, .hx *::after { animation: none !important; }
+}
+
+/* ---------- Perbaikan keterbacaan hero (teks tidak lagi tertimpa ilustrasi) ---------- */
+/* Panel transparan lembut di belakang teks agar tulisan menonjol di atas ilustrasi. */
+.hx-copytxt {
+    padding: 1.6rem 1.8rem 1.7rem;
+    border: 1px solid rgb(169 196 242 / .16);
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, rgb(7 13 28 / .52), rgb(7 13 28 / .3));
+    -webkit-backdrop-filter: blur(10px) saturate(1.1);
+    backdrop-filter: blur(10px) saturate(1.1);
+    box-shadow: 0 18px 50px rgb(3 7 18 / .28);
+}
+.hx-copytxt h1, .hx-copytxt h2 { text-shadow: 0 2px 18px rgb(3 7 18 / .45); }
+.hx-copytxt p { color: #fff; text-shadow: 0 1px 10px rgb(3 7 18 / .5); }
+
+/* Tagar: putih dan miring. */
+.hx-tags li { color: #fff; font-style: italic; background: rgb(255 255 255 / .1); border-color: rgb(255 255 255 / .3); }
+.hx-tags li::before { color: #fff; font-style: italic; }
+
+/* Keterangan di bawah panggung ikut diberi panel lembut. */
+.hx-cap { padding: .8rem 1.1rem; border-radius: 1rem; background: rgb(7 13 28 / .42); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.hx-cap span { color: #fff; }
+
+/* Beri jarak antara kolom teks dan ilustrasi di layar lebar; kartu melayang tidak masuk ke area teks. */
+@media (min-width: 1024px) {
+    .hx-right { padding-left: 2.5rem; }
+    .s1 .hx-float.f2 { left: -4%; }
+    .s2 .hx-float.f2 { left: -2%; }
+    .s4 .hx-float.f1 { left: -2%; }
+}
+@media (max-width: 640px) {
+    .hx-copytxt { padding: 1.1rem 1.1rem 1.2rem; border-radius: 1.2rem; }
+}
+
+/* Teks hero rata tengah, penjelasan singkat. */
+.hx-copytxt { padding: 1.8rem 2rem 2rem; text-align: center; }
+.hx-lead { max-width: 30rem; margin: 1.1rem auto 0; font-size: 1.1rem; line-height: 1.65; color: #fff; text-shadow: 0 1px 10px rgb(3 7 18 / .5); }
+.hx-copytxt .hx-tags { justify-content: center; margin-inline: auto; }
+.hx-tags li:nth-child(5) { --i: 4; } .hx-tags li:nth-child(6) { --i: 5; }
+@media (max-width: 640px) { .hx-copytxt { padding: 1.2rem 1.2rem 1.4rem; } .hx-lead { font-size: 1rem; } }
+
+/* ---------- Adegan 4: pelamar kirim CV, HRD menyetujui (siklus 10 detik, sama dengan garis waktu) ---------- */
+.ap-head { transform-box: fill-box; transform-origin: 50% 100%; }
+.ap-arm { transform-box: view-box; }
+.ap-arm.r { transform-origin: 94px 188px; } .ap-arm.l { transform-origin: 33px 188px; }
+.is-on .ap-head { animation: hx-nod 3.4s ease-in-out infinite; }
+.is-on .ap-arm.r { animation: ap-armr 10s ease-in-out infinite; }
+.is-on .ap-arm.l { animation: ap-arml 10s ease-in-out infinite; }
+@keyframes ap-joy { 0%, 52% { translate: 0 0; } 56% { translate: 0 -16px; } 61% { translate: 0 0; } 65% { translate: 0 -11px; } 70%, 100% { translate: 0 0; } }
+@keyframes ap-armr { 0%, 6% { rotate: 0deg; } 14%, 24% { rotate: -26deg; } 34%, 50% { rotate: 0deg; } 56%, 72% { rotate: -88deg; } 80%, 100% { rotate: 0deg; } }
+@keyframes ap-arml { 0%, 52% { rotate: 0deg; } 58%, 72% { rotate: 150deg; } 80%, 100% { rotate: 0deg; } }
+.ap-trail { opacity: 0; } .is-on .ap-trail { animation: ap-trail 10s ease-in-out infinite; }
+@keyframes ap-trail { 0%, 9% { opacity: 0; } 16%, 28% { opacity: .75; } 38%, 100% { opacity: 0; } }
+.ap-stamp { opacity: 0; transform-box: fill-box; transform-origin: center; }
+.is-on .ap-stamp { animation: ap-stamp 10s cubic-bezier(.3, 1.5, .5, 1) infinite; }
+@keyframes ap-stamp { 0%, 53% { opacity: 0; transform: scale(2.2) rotate(-10deg); } 58% { opacity: 1; transform: scale(.92) rotate(0); } 61%, 90% { opacity: 1; transform: scale(1); } 96%, 100% { opacity: 0; transform: scale(.85); } }
+.hx-tsw { display: grid; } .hx-tsw i { grid-area: 1 / 1; font-style: normal; } .hx-tsw .b { opacity: 0; }
+.is-on .hx-tsw .a { animation: ap-ta 10s ease-in-out infinite; } .is-on .hx-tsw .b { animation: ap-tb 10s ease-in-out infinite; }
+@keyframes ap-ta { 0%, 50% { opacity: 1; } 55%, 94% { opacity: 0; } 98%, 100% { opacity: 1; } }
+@keyframes ap-tb { 0%, 52% { opacity: 0; } 58%, 92% { opacity: 1; } 97%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .ap-stamp { opacity: 1; transform: none; } .hx-tsw .a { opacity: 0; } .hx-tsw .b { opacity: 1; } }
+
+/* ---------- HP (<= 767px) ----------
+   Teks rata kiri, tagar membungkus (4 saja). Panggung kembali ke bentuk laptop: kartu melayang tetap di sudut
+   ilustrasi seperti di layar lebar, hanya diperkecil (tidak lagi jadi deretan chip). */
+@media (max-width: 767px) {
+    .hx { max-width: 100%; overflow-x: clip; }
+    .hx > .relative.grid { grid-template-columns: minmax(0, 1fr); }
+    .hx-wrap { min-height: 0; align-content: start; gap: .9rem; padding-top: 1.4rem; padding-bottom: 4.4rem; }
+    .hx-copy, .hx-right, .hx-ct, .hx-copytxt { min-width: 0; max-width: 100%; }
+    .hx-shade { background: linear-gradient(180deg, rgb(var(--sh) / .72) 0%, rgb(var(--sh) / .4) 48%, rgb(var(--sh) / .55) 100%); }
+    .hx-copytxt { grid-template-columns: minmax(0, 1fr); padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-align: left; }
+    .hx-copytxt .hx-ct :is(h1, h2) { font-size: clamp(1.7rem, 7.4vw, 2.2rem); line-height: 1.12; letter-spacing: -.02em; overflow-wrap: anywhere; }
+    .hx-lead { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; max-width: none; margin: .65rem 0 0; font-size: .92rem; line-height: 1.5; }
+    .hx-copytxt .hx-tags { flex-wrap: wrap; justify-content: flex-start; gap: .35rem; max-width: 100%; max-height: none; margin: .8rem 0 0; padding: 0; overflow: visible; }
+    .hx-tags li { flex: 0 1 auto; max-width: 100%; padding: .26rem .62rem; font-size: .72rem; white-space: nowrap; backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .hx-tags li:nth-child(n+5) { display: none; }
+    .hx-go { justify-content: flex-start; margin-top: .8rem; }
+    .hx-go a { width: 100%; padding: .7rem 1.2rem; font-size: .92rem; }
+    .hx-cap { display: none; }
+    .hx-tl { bottom: .9rem; }
+
+    .hx-right { margin-top: 0; }
+    .hx-stage { aspect-ratio: 6 / 5; height: auto; max-height: 21rem; translate: none; }
+    .hx-art { width: 100%; max-width: 100%; }
+    .hx-laptop { width: 82%; margin-top: 0; }
+
+    /* Kartu: posisi sama dengan laptop (sudut), ukuran dikecilkan */
+    .hx-float { padding: .34rem .52rem; border-radius: 10px; font-size: .64rem; line-height: 1.2; box-shadow: 0 8px 18px rgb(0 0 0 / .4); }
+    .hx-float small { font-size: .5rem; line-height: 1.2; }
+    .hx-float b { font-size: .92rem; } .hx-float b.hx-sm { font-size: .68rem; }
+    .hx-float .hx-bar { min-width: 3.4rem; height: 3px; margin-top: .22rem; }
+    .hx-float .hx-spark { width: 30px; height: 11px; } .hx-float .hx-up, .hx-float .hx-sub, .hx-float .hx-eq { display: none; }
+    .hx-toast { gap: .3rem; padding: .3rem .5rem; font-size: .6rem; } .hx-dot { width: .38rem; height: .38rem; }
+    .is-on .hx-float { animation-name: hx-bobs; }
+    @keyframes hx-bobs { 50% { translate: 0 -5px; } }
+    .s1 .hx-float.f1 { right: -1%; top: 0; } .s1 .hx-float.f2 { left: -1%; top: auto; bottom: 14%; } .s1 .hx-float.f4 { right: -1%; bottom: 8%; }
+    .s2 .hx-float.f1 { right: 0; top: 2%; } .s2 .hx-float.f2 { left: -1%; top: 62%; }
+    .s4 .hx-float.f1 { left: -1%; top: 3%; } .s4 .hx-float.f2 { right: -1%; top: 52%; } .s4 .hx-float.f4 { right: 2%; top: -3%; }
+}
+@media (max-width: 380px) {
+    .hx-copytxt .hx-ct :is(h1, h2) { font-size: 1.6rem; }
+    .hx-lead { -webkit-line-clamp: 2; }
+    .hx-tags li:nth-child(n+4) { display: none; }
+    .hx-float { padding: .3rem .44rem; } .hx-float small { font-size: .46rem; }
+}
+
+/* ---------- Perbaikan: mata berkedip di tempat (dulu melorot ke bawah karena transform-box tidak diset) ---------- */
+.n-eye { transform-box: fill-box; transform-origin: 50% 50%; }
+@keyframes n-blink { 0%, 93%, 100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+
+/* ---------- Gerak tokoh yang lebih halus: easing lembut, antisipasi, squash saat mendarat, lengan melambai ---------- */
+.is-on .applic { animation: ap-joy 10s linear infinite; }
+.is-on .ap-head { animation: ap-head 10s linear infinite; }
+.is-on .ap-arm.r { animation: ap-armr 10s linear infinite; }
+.is-on .ap-arm.l { animation: ap-arml 10s linear infinite; }
+@keyframes ap-joy {
+    0%, 50% { translate: 0 0; scale: 1 1; animation-timing-function: ease-in-out; }
+    53% { translate: 0 1px; scale: 1.03 .95; animation-timing-function: cubic-bezier(.2, .7, .3, 1); }
+    58% { translate: 0 -18px; scale: .97 1.04; animation-timing-function: cubic-bezier(.7, 0, .85, .35); }
+    62% { translate: 0 0; scale: 1.04 .95; animation-timing-function: ease-out; }
+    65% { translate: 0 0; scale: 1 1; animation-timing-function: cubic-bezier(.2, .7, .3, 1); }
+    69% { translate: 0 -10px; scale: .98 1.03; animation-timing-function: cubic-bezier(.7, 0, .85, .35); }
+    73% { translate: 0 0; scale: 1.02 .97; animation-timing-function: ease-out; }
+    77%, 100% { translate: 0 0; scale: 1 1; }
+}
+@keyframes ap-head {
+    0%, 100% { rotate: 0deg; translate: 0 0; animation-timing-function: ease-in-out; }
+    18% { rotate: -2deg; translate: 0 1px; animation-timing-function: ease-in-out; }
+    36% { rotate: 1.5deg; translate: 0 0; animation-timing-function: ease-in-out; }
+    55% { rotate: -5deg; translate: 0 -1px; animation-timing-function: ease-in-out; }
+    68% { rotate: 4deg; animation-timing-function: ease-in-out; }
+    82% { rotate: 0deg; }
+}
+@keyframes ap-armr {
+    0%, 6% { rotate: 0deg; animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
+    15%, 24% { rotate: -26deg; animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
+    36%, 52% { rotate: 0deg; animation-timing-function: ease-in-out; }
+    55% { rotate: 8deg; animation-timing-function: cubic-bezier(.2, .8, .3, 1.1); }
+    62% { rotate: -92deg; animation-timing-function: ease-in-out; }
+    66% { rotate: -80deg; animation-timing-function: ease-in-out; }
+    70% { rotate: -96deg; animation-timing-function: ease-in-out; }
+    74% { rotate: -84deg; animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
+    84%, 100% { rotate: 0deg; }
+}
+@keyframes ap-arml {
+    0%, 53% { rotate: 0deg; animation-timing-function: cubic-bezier(.2, .8, .3, 1.1); }
+    60% { rotate: -6deg; animation-timing-function: cubic-bezier(.2, .8, .3, 1.1); }
+    64% { rotate: 150deg; animation-timing-function: ease-in-out; }
+    68% { rotate: 138deg; animation-timing-function: ease-in-out; }
+    72% { rotate: 154deg; animation-timing-function: ease-in-out; }
+    76% { rotate: 142deg; animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
+    86%, 100% { rotate: 0deg; }
+}
+.is-on .hrd-head { animation-timing-function: cubic-bezier(.45, 0, .25, 1); }
+@keyframes hx-hrdnod { 0%, 40% { rotate: 0deg; translate: 0 0; } 46% { rotate: 4deg; translate: 0 2px; } 52% { rotate: 0deg; translate: 0 0; } 58% { rotate: 4deg; translate: 0 2px; } 66%, 100% { rotate: 0deg; translate: 0 0; } }
+
+/* ---------- Laptop di HP: layar dipipihkan (rasio laptop, bukan tablet) ---------- */
+@media (max-width: 767px) {
+    .hx-laptop { width: 88%; }
+    .hx-lid { padding: 6px 6px 7px; border-radius: 10px 10px 2px 2px; }
+    .hx-screen { gap: .24rem; min-height: 0; padding: .42rem .55rem; font-size: 1em; }
+    .hx-screen .text-xs { font-size: .56rem; line-height: 1.2; }
+    .hx-screen p { font-size: .62rem; line-height: 1.25; }
+    .hx-timer { padding: .02rem .4rem; }
+    .hx-prog { height: 4px; }
+    .n-pal { gap: 2px; } .n-pal i { height: 9px; font: 700 5px/9px sans-serif; border-radius: 2px; }
+    .hx-opt { padding: .16rem .45rem; border-width: 1px; border-radius: 6px; font-size: .58rem; line-height: 1.2; }
+    .hx-cur { width: 10px; }
+    .hx-base { height: 34px; border-radius: 0 0 12px 12px; }
+    .hx-keys { top: 6px; gap: 2px; } .hx-keys span { gap: 2px; } .hx-keys i { height: 4px; }
+    .hx-pad { height: 6px; bottom: 4px; }
+}

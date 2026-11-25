@@ -1,0 +1,64 @@
+/* Pemilih tanggal dan jam kustom (resources/js/picker.js). Pengganti input date, time, datetime-local bawaan browser. */
+.ui-pk { position: relative; width: 100%; min-width: 0; }
+.ui-pk-input { position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; padding: 0; border: 0; opacity: 0; pointer-events: none; }
+.ui-pk-btn { display: flex; align-items: center; gap: .6rem; width: 100%; min-width: 9.5rem; height: 2.9rem; padding: 0 2.4rem 0 .9rem; border: 1px solid var(--color-graphite-300, #c5cfde); border-radius: .85rem; background: var(--pn-card, #fff); font-size: .9rem; font-weight: 600; text-align: left; color: var(--color-graphite-800, #1f2a3d); transition: border-color .25s, box-shadow .25s; }
+.ui-pk-btn > svg { flex: none; width: 1.15rem; height: 1.15rem; fill: none; stroke: var(--color-graphite-500, #667794); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ui-pk-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ui-pk.is-empty .ui-pk-text { font-weight: 500; color: var(--color-graphite-400, #94a3bb); }
+.ui-pk-btn:hover { border-color: var(--color-graphite-500, #667794); }
+.ui-pk-btn:focus-visible, .ui-pk.is-open .ui-pk-btn { outline: none; border-color: var(--color-accent-600, #3b6cd4); box-shadow: 0 0 0 4px rgb(59 108 212 / .14); }
+.ui-pk.is-invalid .ui-pk-btn { border-color: #dc2626; box-shadow: 0 0 0 4px rgb(220 38 38 / .12); }
+.ui-pk-btn:disabled { opacity: .55; cursor: not-allowed; }
+.ui-pk.is-sm .ui-pk-btn { height: 2.4rem; padding-left: .75rem; border-radius: .7rem; font-size: .8rem; }
+.ui-pk-x { position: absolute; top: 50%; right: .5rem; display: grid; place-items: center; width: 1.7rem; height: 1.7rem; margin-top: -.85rem; border-radius: .5rem; color: var(--color-graphite-500, #667794); transition: background .15s, color .15s; }
+.ui-pk-x svg { width: .95rem; height: .95rem; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+.ui-pk-x:hover, .ui-pk-x:focus-visible { outline: none; background: var(--color-graphite-100, #edf0f5); color: var(--color-graphite-800, #1f2a3d); }
+
+/* Panel: fixed, posisinya dihitung picker.js dari tombol */
+.ui-pk-pop { position: fixed; z-index: 60; top: 0; left: 0; width: min(19rem, calc(100vw - 1rem)); overflow-y: auto; padding: .8rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.1rem; background: var(--pn-card, #fff); box-shadow: 0 24px 48px -20px rgb(27 38 56 / .42); color: var(--color-graphite-800, #1f2a3d); opacity: 0; visibility: hidden; transform: translateY(-6px) scale(.98); transition: opacity .2s ease, transform .25s cubic-bezier(.2, .8, .2, 1), visibility 0s linear .25s; overscroll-behavior: contain; }
+.ui-pk.is-open .ui-pk-pop { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.ui-pk[data-pk=time] .ui-pk-pop { width: min(15rem, calc(100vw - 1rem)); }
+.ui-pk-pop [hidden] { display: none; }
+
+/* Kalender */
+.ui-pk-head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-bottom: .55rem; }
+.ui-pk-title { font-size: .92rem; font-weight: 800; letter-spacing: -.005em; }
+.ui-pk-nav { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: .65rem; color: var(--color-graphite-600, #4a5a73); transition: background .15s, color .15s; }
+.ui-pk-nav svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.ui-pk-nav:hover, .ui-pk-nav:focus-visible { outline: none; background: var(--color-graphite-100, #edf0f5); color: var(--color-accent-700, #2f58b3); }
+.ui-pk-dow, .ui-pk-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
+.ui-pk-dow span { padding: .3rem 0; text-align: center; font-size: .7rem; font-weight: 700; color: var(--color-graphite-400, #94a3bb); }
+.ui-pk-grid { row-gap: .15rem; }
+.ui-pk-day { position: relative; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; margin: 0 auto; border-radius: 999px; font-size: .84rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--color-graphite-700, #34435c); transition: background .15s, color .15s; }
+.ui-pk-day:hover:not(:disabled) { background: var(--color-graphite-100, #edf0f5); }
+.ui-pk-day:focus-visible { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: 1px; }
+.ui-pk-day.is-today { box-shadow: inset 0 0 0 1.5px var(--color-accent-600, #3b6cd4); color: var(--color-accent-700, #2f58b3); }
+.ui-pk-day.is-on { background: var(--color-accent-600, #3b6cd4); color: #fff; box-shadow: none; }
+.ui-pk-day.is-on:hover { background: var(--color-accent-700, #2f58b3); }
+.ui-pk-day:disabled { opacity: .3; cursor: not-allowed; }
+
+/* Jam: dua kolom gulir */
+.ui-pk-time { display: flex; align-items: flex-start; justify-content: center; gap: .6rem; }
+.ui-pk-col { display: grid; gap: .35rem; flex: 1 1 0; min-width: 0; }
+.ui-pk-col-h { text-align: center; font-size: .7rem; font-weight: 700; color: var(--color-graphite-400, #94a3bb); }
+.ui-pk-list { position: relative; height: 10.5rem; overflow-y: auto; padding: .2rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: .8rem; background: var(--color-graphite-50, #f7f9fc); scrollbar-width: thin; scrollbar-color: var(--color-graphite-300, #c5cfde) transparent; overscroll-behavior: contain; }
+.ui-pk-list:focus-visible { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: 1px; }
+.ui-pk-opt { padding: .42rem 0; border-radius: .55rem; text-align: center; font-size: .88rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--color-graphite-700, #34435c); cursor: pointer; transition: background .15s; }
+.ui-pk-opt:hover { background: var(--color-graphite-100, #edf0f5); }
+.ui-pk-opt.is-on { background: var(--color-accent-600, #3b6cd4); color: #fff; }
+.ui-pk-colon { align-self: center; margin-top: 1.1rem; font-size: 1.2rem; font-weight: 800; color: var(--color-graphite-400, #94a3bb); }
+
+/* Tab tanggal/jam (datetime) dan kaki panel */
+.ui-pk-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: .25rem; margin-bottom: .7rem; padding: .22rem; border-radius: .8rem; background: var(--color-graphite-100, #edf0f5); }
+.ui-pk-tab { padding: .45rem 0; border-radius: .6rem; font-size: .8rem; font-weight: 700; color: var(--color-graphite-600, #4a5a73); transition: background .2s, color .2s; }
+.ui-pk-tab.is-on { background: var(--pn-card, #fff); color: var(--color-accent-700, #2f58b3); box-shadow: 0 1px 3px rgb(27 38 56 / .15); }
+.ui-pk-tab:focus-visible { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: 1px; }
+.ui-pk-foot { display: flex; align-items: center; gap: .3rem; margin-top: .7rem; padding-top: .65rem; border-top: 1px solid var(--color-graphite-200, #e2e6ec); }
+.ui-pk-link { padding: .4rem .6rem; border-radius: .55rem; font-size: .8rem; font-weight: 700; color: var(--color-accent-700, #2f58b3); transition: background .15s; }
+.ui-pk-link.is-quiet { color: var(--color-graphite-500, #667794); }
+.ui-pk-link:hover, .ui-pk-link:focus-visible { outline: none; background: var(--color-graphite-100, #edf0f5); }
+.ui-pk-done { margin-left: auto; padding: .45rem 1rem; border-radius: .65rem; background: var(--color-accent-600, #3b6cd4); font-size: .8rem; font-weight: 700; color: #fff; transition: background .2s; }
+.ui-pk-done:hover, .ui-pk-done:focus-visible { outline: none; background: var(--color-accent-700, #2f58b3); }
+
+@media (max-width: 640px) { .ui-pk-btn { font-size: 16px; } .ui-pk.is-sm .ui-pk-btn { font-size: 16px; } }
+@media (prefers-reduced-motion: reduce) { .ui-pk-pop, .ui-pk-btn { transition: none; } }

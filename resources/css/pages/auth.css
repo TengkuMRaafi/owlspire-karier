@@ -1,0 +1,60 @@
+/* Masuk dan Daftar. Prefix au-. Hanya transform dan opacity yang dianimasikan. */
+.au { display: grid; min-height: 100vh; background: var(--color-surface, #f3f5f8); }
+@media (min-width: 1024px) { .au { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); } }
+
+/* Panel kiri: panggung gelap */
+.au-aside { position: relative; display: none; overflow: hidden; padding: 3rem; color: #fff; background: #0e1626; }
+@media (min-width: 1024px) { .au-aside { display: flex; flex-direction: column; justify-content: space-between; } }
+.au-bg { position: absolute; inset: 0; overflow: hidden; }
+.au-bg::before { content: ''; position: absolute; inset: 0; opacity: .5; background-image: linear-gradient(rgb(255 255 255 / .05) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / .05) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(75% 70% at 50% 45%, #000, transparent 88%); }
+.au-glow { position: absolute; width: 30rem; height: 30rem; border-radius: 999px; filter: blur(80px); animation: au-drift 18s ease-in-out infinite alternate; }
+.au-glow-a { top: -10rem; left: -8rem; background: rgb(59 108 212 / .5); opacity: .5; }
+.au-glow-b { right: -9rem; bottom: -12rem; background: rgb(240 180 41 / .14); opacity: .6; animation-delay: -8s; }
+.au-ring { position: absolute; left: 50%; top: 50%; border: 1px solid rgb(169 196 242 / .14); border-radius: 999px; translate: -50% -50%; animation: au-spin 90s linear infinite; }
+.au-ring-1 { width: 26rem; height: 26rem; } .au-ring-2 { width: 40rem; height: 40rem; border-color: rgb(169 196 242 / .09); animation-direction: reverse; }
+
+.au-top, .au-foot { position: relative; z-index: 1; }
+.au-foot { font-size: .75rem; color: var(--color-graphite-300, #c5cfde); }
+
+
+
+
+/* Panel kiri: teks saja, satu logo di pojok */
+.au-stage { position: relative; z-index: 1; max-width: 31rem; }
+.au-title { margin-top: 1rem; font-size: clamp(2.2rem, 3.2vw, 3.1rem); font-weight: 600; line-height: 1.1; letter-spacing: -.025em; animation: au-up .7s .2s cubic-bezier(.2, .8, .2, 1) both; }
+.au-stage { margin-block: auto; }
+.au-title em { font-style: italic; font-weight: 600; color: var(--color-accent-400, #7fa8e8); }
+.au-sub { max-width: 27rem; margin-top: 1rem; font-size: 1rem; line-height: 1.65; color: var(--color-graphite-200, #e2e6ec); animation: au-up .6s .3s cubic-bezier(.2, .8, .2, 1) both; }
+
+
+/* Panel kanan: formulir */
+.au-main { position: relative; display: flex; align-items: center; justify-content: center; padding: 3rem 1.25rem; }
+.au-main::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(40rem 22rem at 100% 0, rgb(59 108 212 / .08), transparent 70%), radial-gradient(30rem 20rem at 0 100%, rgb(240 180 41 / .07), transparent 70%); }
+.au-card { position: relative; width: 100%; max-width: 28rem; animation: au-up .6s cubic-bezier(.2, .8, .2, 1) both; }
+.au-mobile-logo { display: inline-flex; margin-bottom: 1.6rem; }
+@media (min-width: 1024px) { .au-mobile-logo { display: none; } }
+.au-h1 { font-size: 2rem; font-weight: 600; line-height: 1.1; letter-spacing: -.02em; color: var(--color-ink, #1b2638); }
+.au-lead { margin-top: .7rem; color: var(--color-graphite-600, #4a5a73); line-height: 1.6; }
+.au-form::before { content: ''; position: absolute; inset: 0 1.5rem auto; height: 3px; border-radius: 0 0 4px 4px; background: linear-gradient(90deg, var(--color-accent-600, #3b6cd4), var(--color-accent-300, #a9c4f2)); }
+.au-form { position: relative; display: grid; gap: 1.15rem; margin-top: 1.8rem; padding: 1.6rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.25rem; background: #fff; box-shadow: 0 18px 40px -26px rgb(27 38 56 / .35); }
+.au-field { position: relative; }
+.au-field > .field { padding-top: .8rem; padding-bottom: .8rem; }
+.au-eye { position: absolute; inset-block: 0; right: 0; padding: 0 1rem; font-size: .8rem; font-weight: 700; color: var(--color-graphite-600, #4a5a73); transition: color .2s; }
+.au-eye:hover { color: var(--color-accent-600, #3b6cd4); }
+.au-pass { display: grid; gap: .4rem; }
+.au-pass .au-field > .field { padding-right: 5.5rem; }
+.au-err { margin-top: .4rem; font-size: .8rem; font-weight: 700; color: #b91c1c; }
+.au-hint { margin-top: .35rem; font-size: .75rem; color: var(--color-graphite-500, #667794); }
+.au-remember { display: flex; align-items: center; gap: .6rem; font-size: .85rem; font-weight: 600; color: var(--color-graphite-700, #34435c); }
+.au-remember { cursor: pointer; }
+.au-submit { width: 100%; justify-content: center; padding-block: .8rem; font-size: 1rem; }
+.au-alt { margin-top: 1.6rem; text-align: center; font-size: .875rem; color: var(--color-graphite-600, #4a5a73); }
+.au-alt a { font-weight: 800; color: var(--color-accent-700, #2f58b3); }
+.au-alt a:hover { text-decoration: underline; }
+
+@keyframes au-spin { to { transform: rotate(360deg); } }
+@keyframes au-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes au-drift { to { transform: translate(4rem, 3rem); } }
+@media (prefers-reduced-motion: reduce) {
+    .au-glow, .au-ring, .au-title, .au-sub, .au-card { animation: none; }
+}

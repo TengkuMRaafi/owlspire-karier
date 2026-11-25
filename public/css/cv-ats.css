@@ -1,0 +1,104 @@
+/* Analisis CV mode ATS (cv-type, cv-ats): pilihan jenis CV di form dan kartu hasil kesiapan ATS. Token warna sama dengan cv.css supaya tema gelap ikut. */
+
+/* Pilihan jenis CV */
+.cv-type { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+.cv-type legend { padding: 0; margin-bottom: .4rem; }
+.cv-type-opt { position: relative; display: flex; align-items: flex-start; gap: .65rem; min-width: 0; padding: .8rem .9rem; border: 1.5px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: var(--pn-card, #fff); cursor: pointer; transition: border-color .15s, background .15s, box-shadow .15s; }
+.cv-type-opt:hover { border-color: var(--color-accent-300, #a9c4f2); }
+.cv-type-opt input { flex: none; width: 1.05rem; height: 1.05rem; margin-top: .15rem; accent-color: var(--color-accent-600, #3b6cd4); }
+.cv-type-opt span { display: grid; gap: .15rem; min-width: 0; }
+.cv-type-opt b { font-size: .88rem; color: var(--color-graphite-800, #1f2a3d); }
+.cv-type-opt small { font-size: .74rem; line-height: 1.45; color: var(--color-graphite-500, #667794); }
+.cv-type-opt:has(input:checked) { border-color: var(--color-accent-600, #3b6cd4); background: var(--color-accent-50, #eef4fd); box-shadow: 0 10px 22px -18px rgb(59 108 212 / .8); }
+.cv-type-opt:has(input:focus-visible) { outline: 2px solid var(--color-accent-600, #3b6cd4); outline-offset: 2px; }
+
+/* Isian jabatan: hanya tampil saat CV ATS dipilih */
+.cv-ats-field { display: none; gap: .35rem; }
+.cv-form:has(input[name="cv_type"][value="ats"]:checked) .cv-ats-field { display: grid; }
+@supports not selector(:has(*)) { .cv-ats-field { display: grid; } }
+.cv-ats-hint { font-size: .74rem; line-height: 1.5; color: var(--color-graphite-500, #667794); }
+
+/* Kartu hasil ATS */
+.cva { display: grid; gap: 1rem; min-width: 0; }
+.cva-top { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.cva-ring { --p: 0%; --c: #16a34a; position: relative; flex: none; display: grid; place-items: center; width: 4.4rem; height: 4.4rem; border-radius: 50%; background: conic-gradient(var(--c) var(--p), var(--color-graphite-100, #edf0f5) 0); }
+.cva-ring.is-mid { --c: #d97706; }
+.cva-ring.is-low { --c: #dc2626; }
+.cva-ring::before { content: ''; position: absolute; inset: .4rem; border-radius: 50%; background: var(--pn-card, #fff); }
+.cva-ring b { position: relative; font-family: var(--font-display, serif); font-size: 1.25rem; font-weight: 600; color: var(--color-ink, #1b2638); font-variant-numeric: tabular-nums; }
+.cva-top h2 { font-size: 1rem; font-weight: 800; line-height: 1.3; color: var(--color-graphite-800, #1f2a3d); overflow-wrap: anywhere; }
+.cva-top p { margin-top: .15rem; font-size: .8rem; line-height: 1.5; color: var(--color-graphite-500, #667794); }
+.cva-chip { display: inline-flex; align-items: center; margin-top: .35rem; padding: .15rem .65rem; border-radius: 999px; background: var(--color-accent-50, #eef4fd); font-size: .72rem; font-weight: 800; color: var(--color-accent-700, #2f58b3); }
+
+.cva-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.cva-box { display: grid; align-content: start; gap: .55rem; min-width: 0; padding: .9rem 1rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: var(--pn-card, #fff); }
+.cva-box h3 { display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-size: .84rem; font-weight: 800; color: var(--color-graphite-800, #1f2a3d); }
+.cva-box h3 em { font-style: normal; font-size: .72rem; font-weight: 800; color: var(--color-graphite-500, #667794); }
+.cva-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; padding: 0; list-style: none; }
+.cva-tags li { padding: .2rem .65rem; border: 1px solid #bbf7d0; border-radius: 999px; background: #f0fdf4; font-size: .76rem; font-weight: 700; line-height: 1.3; color: #166534; }
+.cva-tags.is-miss li { border-color: #fde68a; background: #fffbeb; color: #92400e; }
+.cva-tags.is-miss li.is-soft { border-color: var(--color-graphite-200, #e2e6ec); background: var(--color-graphite-50, #f6f8fb); color: var(--color-graphite-600, #4a5a73); }
+.cva-empty { font-size: .78rem; color: var(--color-graphite-500, #667794); }
+
+.cva-checks { display: grid; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.cva-checks li { display: flex; align-items: flex-start; gap: .6rem; min-width: 0; padding: .6rem .75rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: .85rem; background: var(--pn-card, #fff); }
+.cva-checks svg { flex: none; width: 1.1rem; height: 1.1rem; margin-top: .1rem; }
+.cva-checks li.is-ok svg { color: #16a34a; }
+.cva-checks li.is-no { border-color: #fecaca; background: #fef2f2; }
+.cva-checks li.is-no svg { color: #dc2626; }
+.cva-checks b { display: block; font-size: .82rem; color: var(--color-graphite-800, #1f2a3d); }
+.cva-checks span { display: block; margin-top: .1rem; font-size: .76rem; line-height: 1.5; color: var(--color-graphite-600, #4a5a73); }
+.cva-note { font-size: .74rem; line-height: 1.55; color: var(--color-graphite-500, #667794); }
+
+@media (max-width: 40rem) {
+    .cv-type { grid-template-columns: minmax(0, 1fr); }
+    .cva-cols { grid-template-columns: minmax(0, 1fr); }
+    .cva-ring { width: 3.8rem; height: 3.8rem; }
+}
+
+/* Isian jabatan dengan daftar saran kustom (gaya sama dengan pemilih tanggal) */
+.cv-role { position: relative; }
+.cv-role .ui-input { padding-right: 2.6rem; }
+.cv-role-chev { position: absolute; right: .4rem; top: 0; display: grid; place-items: center; width: 2.2rem; height: 2.9rem; padding: 0; border: 0; background: transparent; color: var(--color-graphite-500, #667794); cursor: pointer; }
+.cv-role-chev svg { width: 1.05rem; height: 1.05rem; transition: transform .2s ease; }
+.cv-role.is-open .cv-role-chev svg { transform: rotate(180deg); }
+.cv-role-list { position: absolute; left: 0; right: 0; top: calc(100% + .35rem); z-index: 40; display: grid; gap: .1rem; max-height: 15rem; margin: 0; padding: .4rem; overflow-y: auto; overscroll-behavior: contain; list-style: none; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: var(--pn-card, #fff); box-shadow: 0 24px 48px -20px rgb(27 38 56 / .42); animation: cv-role-in .2s ease both; }
+.cv-role-list[hidden] { display: none; }
+.cv-role-list li { padding: .55rem .75rem; border-radius: .65rem; font-size: .86rem; font-weight: 600; line-height: 1.3; color: var(--color-graphite-700, #34435c); cursor: pointer; }
+.cv-role-list li:hover, .cv-role-list li.is-active { background: var(--color-accent-50, #eef4fd); color: var(--color-accent-700, #2f58b3); }
+.cv-role-list li.is-chosen { font-weight: 800; color: var(--color-accent-700, #2f58b3); }
+@keyframes cv-role-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* Kartu ATS versi ringkas */
+.cva { gap: .8rem; }
+.cva-top h2 { font-size: .95rem; }
+.cva-top p { margin-top: .1rem; font-size: .76rem; }
+.cva-box { gap: .5rem; padding: .8rem .9rem; }
+.cva-sub { font-size: .74rem; font-weight: 700; color: var(--color-graphite-500, #667794); }
+.cva-tags li { padding: .15rem .55rem; font-size: .74rem; }
+.cva-more summary { display: inline-flex; align-items: center; padding: .15rem .6rem; border: 1px dashed var(--color-graphite-300, #c5cfde); border-radius: 999px; font-size: .74rem; font-weight: 800; color: var(--color-accent-700, #2f58b3); cursor: pointer; list-style: none; }
+.cva-more summary::-webkit-details-marker { display: none; }
+.cva-more[open] summary { margin-bottom: .5rem; }
+.cva-checks { gap: .35rem; }
+.cva-checks li { padding: .5rem .7rem; border-color: #fecaca; background: #fef2f2; }
+.cva-checks svg { color: #dc2626; }
+.cva-checks b { font-size: .8rem; }
+.cva-checks span { font-size: .74rem; line-height: 1.45; }
+.cva-ok { display: flex; align-items: flex-start; gap: .4rem; font-size: .76rem; line-height: 1.5; color: var(--color-graphite-600, #4a5a73); }
+.cva-ok svg { flex: none; width: 1rem; height: 1rem; margin-top: .1rem; color: #16a34a; }
+.cva-note { font-size: .7rem; }
+
+/* Poin yang bisa diklik (zoom ke bagian CV) */
+.cva-checks li { padding: 0; border: 0; background: none; }
+.cva-go { display: flex; align-items: flex-start; gap: .6rem; width: 100%; min-width: 0; padding: .5rem .7rem; border: 1px solid #fecaca; border-radius: .85rem; background: #fef2f2; text-align: left; font: inherit; cursor: pointer; transition: border-color .15s, box-shadow .15s, transform .15s; }
+.cva-go:hover { border-color: #f87171; box-shadow: 0 10px 20px -16px rgb(220 38 38 / .8); }
+.cva-go:active { transform: scale(.995); }
+.cva-go:focus-visible, .cva-see:focus-visible { outline: 2px solid var(--color-accent-600, #3b6cd4); outline-offset: 2px; }
+.cva-go > div { flex: 1; min-width: 0; }
+.cva-go .cva-arrow { flex: none; align-self: center; width: .95rem; height: .95rem; margin: 0; color: #b91c1c; opacity: .7; }
+.cva-go:hover .cva-arrow { opacity: 1; transform: translateX(2px); }
+.cva-see { display: inline-flex; align-items: center; gap: .25rem; padding: 0; border: 0; background: none; font: inherit; font-size: .72rem; font-weight: 800; color: var(--color-accent-700, #2f58b3); cursor: pointer; }
+.cva-see svg { width: .85rem; height: .85rem; }
+.cva-see:hover { text-decoration: underline; }
+.cvp-cell.is-flash { animation: cva-flash 1.6s ease-out 1; }
+@keyframes cva-flash { 0% { box-shadow: 0 0 0 0 rgb(59 108 212 / .55); } 100% { box-shadow: 0 0 0 14px transparent; } }

@@ -1,0 +1,46 @@
+/* Kontrol formulir bersama: kolom isian, kotak centang kustom, saklar, area unggah. */
+.ui-field { display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; gap: .4rem; min-width: 0; }
+.ui-field > label, .ui-label { font-size: .8rem; font-weight: 800; color: var(--color-graphite-800, #1f2a3d); }
+.ui-field small, .ui-hint { font-size: .75rem; color: var(--color-graphite-500, #667794); }
+.ui-field .ui-err, .ui-err { font-size: .78rem; font-weight: 700; color: #b91c1c; }
+.ui-input { width: 100%; height: 2.9rem; padding: 0 1rem; border: 1px solid var(--color-graphite-300, #c5cfde); border-radius: .85rem; background: var(--pn-card, #fff); font-size: .9rem; color: var(--color-graphite-800, #1f2a3d); transition: border-color .25s, box-shadow .25s; }
+textarea.ui-input { height: auto; padding: .75rem 1rem; line-height: 1.55; resize: vertical; }
+.ui-input.is-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .8rem; }
+.ui-input::placeholder { color: var(--color-graphite-400, #94a3bb); }
+.ui-input:hover { border-color: var(--color-graphite-500, #667794); }
+.ui-input:focus { outline: none; border-color: var(--color-accent-600, #3b6cd4); box-shadow: 0 0 0 4px rgb(59 108 212 / .14); }
+.ui-input.is-sm { height: 2.4rem; padding: 0 .75rem; border-radius: .7rem; font-size: .8rem; }
+.ui-input[aria-invalid=true] { border-color: #dc2626; }
+.ui-input[type=file] { height: auto; padding: .55rem .7rem; }
+.ui-input[type=file]::file-selector-button { margin-right: .8rem; padding: .4rem .85rem; border: 0; border-radius: .55rem; background: var(--color-graphite-800, #1f2a3d); color: #fff; font-size: .78rem; font-weight: 700; cursor: pointer; transition: background .2s; }
+.ui-input[type=file]::file-selector-button:hover { background: var(--color-accent-600, #3b6cd4); }
+.ui-input[type=number] { appearance: textfield; }
+.ui-input[type=number]::-webkit-inner-spin-button, .ui-input[type=number]::-webkit-outer-spin-button { appearance: none; margin: 0; }
+.ui-form-grid { display: grid; align-items: start; gap: 1.1rem 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+/* Dua kolom tetap: pasangan kolom sejajar atas-bawah, satu kolom di layar sempit. */
+.ui-form-grid.is-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 640px) { .ui-form-grid.is-two { grid-template-columns: minmax(0, 1fr); } }
+.ui-form-grid .is-wide { grid-column: 1 / -1; }
+.ui-form-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .6rem; }
+
+/* Kotak centang kustom: semua <input type=checkbox> biasa. Saklar (.ui-check) tetap memakai gayanya sendiri di bawah. */
+input[type=checkbox] { appearance: none; flex: none; display: inline-grid; place-content: center; width: 1.2rem; height: 1.2rem; margin: 0; border: 1.5px solid var(--color-graphite-400, #94a3bb); border-radius: .38rem; background: var(--pn-card, #fff) center / .8rem no-repeat; cursor: pointer; vertical-align: middle; transition: background-color .18s, border-color .18s, box-shadow .18s; }
+input[type=checkbox]:hover:not(:disabled) { border-color: var(--color-accent-600, #3b6cd4); }
+input[type=checkbox]:checked { border-color: var(--color-accent-600, #3b6cd4); background-color: var(--color-accent-600, #3b6cd4); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3.5 8.5 3 3 6-6.5'/%3E%3C/svg%3E"); }
+input[type=checkbox]:indeterminate { border-color: var(--color-accent-600, #3b6cd4); background-color: var(--color-accent-600, #3b6cd4); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M4 8h8'/%3E%3C/svg%3E"); }
+input[type=checkbox]:focus-visible { outline: none; box-shadow: 0 0 0 4px rgb(59 108 212 / .22); }
+input[type=checkbox]:disabled { opacity: .45; cursor: not-allowed; }
+@media (prefers-reduced-motion: reduce) { input[type=checkbox] { transition: none; } }
+
+/* Kotak centang + saklar */
+.ui-check { display: inline-flex; align-items: center; gap: .6rem; font-size: .875rem; font-weight: 700; color: var(--color-graphite-800, #1f2a3d); cursor: pointer; }
+.ui-check input { position: absolute; opacity: 0; pointer-events: none; }
+.ui-check i { position: relative; flex: none; width: 2.5rem; height: 1.45rem; border-radius: 999px; background: var(--color-graphite-300, #c5cfde); transition: background .25s; }
+.ui-check i::after { content: ''; position: absolute; left: .2rem; top: .2rem; width: 1.05rem; height: 1.05rem; border-radius: 999px; background: var(--pn-card, #fff); box-shadow: 0 1px 3px rgb(27 38 56 / .3); transition: transform .25s cubic-bezier(.2, .8, .2, 1); }
+.ui-check input:checked + i { background: var(--color-accent-600, #3b6cd4); }
+.ui-check input:checked + i::after { transform: translateX(1.05rem); }
+.ui-check input:focus-visible + i { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .ui-check i, .ui-check i::after { transition: none; } }
+
+/* Sembunyikan ikon mata/hapus bawaan browser (Edge) di kolom sandi; tombol "Lihat" buatan aplikasi sudah ada. */
+input[type='password']::-ms-reveal, input[type='password']::-ms-clear { display: none; }

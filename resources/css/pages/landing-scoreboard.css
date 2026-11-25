@@ -1,0 +1,78 @@
+/* Papan skor: satu baris angka dalam panel kaca di band gelap. Desktop: ikon di kiri angka. HP: tetap sebaris, ikon > angka > label ditumpuk. */
+.sb { position: relative; overflow: hidden; padding: 2.4rem 1rem; color: #fff; border-block: 1px solid rgb(169 196 242 / .16); background:
+    radial-gradient(40rem 12rem at 50% 50%, rgb(59 108 212 / .28), transparent 70%),
+    linear-gradient(180deg, #0f1830, #101c3a); }
+.sb-row { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(var(--sb-cols, 3), minmax(0, 1fr)); max-width: 62rem; margin: 0 auto; padding: .4rem; list-style: none; border: 1px solid rgb(169 196 242 / .22); border-radius: 1.3rem; background: linear-gradient(180deg, rgb(26 41 82 / .95), rgb(15 24 50 / .96)); box-shadow: 0 22px 44px -22px rgb(0 0 0 / .75), inset 0 1px 0 rgb(255 255 255 / .09); }
+.sb-row::before { content: ''; position: absolute; left: 12%; right: 12%; top: -1px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, transparent, #f0b429, transparent); opacity: .8; }
+.sb-row > li { position: relative; min-width: 0; }
+.sb-row > li + li::before { content: ''; position: absolute; left: 0; top: 18%; bottom: 18%; width: 1px; background: rgb(169 196 242 / .22); }
+
+.sb-cell { display: flex; align-items: center; gap: .95rem; width: 100%; height: 100%; padding: 1.05rem 1.3rem; border: 0; border-radius: .95rem; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; transition: background .2s; -webkit-tap-highlight-color: transparent; }
+.sb-cell:hover, .sb-cell:focus-visible { background: rgb(59 108 212 / .16); outline: none; }
+.sb-cell:focus-visible { box-shadow: inset 0 0 0 2px #7fa8e8; }
+
+.sb-ic { flex: none; display: grid; place-items: center; width: 2.9rem; height: 2.9rem; border-radius: .9rem; background: rgb(79 130 230 / .2); color: #a9c4f2; box-shadow: inset 0 0 0 1px rgb(169 196 242 / .26); }
+.sb-ic svg { width: 1.45rem; height: 1.45rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sb-rate .sb-ic { background: rgb(240 180 41 / .16); color: #f0b429; box-shadow: inset 0 0 0 1px rgb(240 180 41 / .4); }
+.sb-rate .sb-ic svg { fill: currentColor; stroke-width: 1.4; }
+
+.sb-txt { display: grid; gap: .12rem; min-width: 0; }
+.sb-val { font: 700 clamp(1.55rem, 2.5vw, 2.1rem)/1.05 'Poppins', ui-sans-serif, sans-serif; font-variant-numeric: tabular-nums; white-space: nowrap; color: #fff; }
+.sb-rate .sb-val::after { content: '/5'; margin-left: .2em; font-size: .5em; font-weight: 600; color: #94a3bb; }
+.sb-lbl { font-size: .8rem; font-weight: 800; color: #dce8fb; }
+.sb-note { font-style: normal; font-size: .76rem; line-height: 1.35; color: #94a3bb; }
+
+/* Hiasan pesta hanya di layar lebar; di HP dihilangkan supaya ringan dan baris angka tetap bersih. */
+.sb-fx { position: absolute; inset: 0; display: none; pointer-events: none; }
+.sb-cf { position: absolute; display: block; background: var(--c); opacity: .85; animation: sb-bob 6s ease-in-out infinite; animation-delay: var(--d); }
+.sb-cf-sq { width: .6rem; height: .6rem; border-radius: 2px; }
+.sb-cf-bar { width: 1rem; height: .3rem; border-radius: 2px; }
+.sb-cf-dot { width: .5rem; height: .5rem; border-radius: 99px; }
+@keyframes sb-bob { 0%, 100% { transform: translateY(-9px) rotate(var(--r)); } 50% { transform: translateY(11px) rotate(calc(var(--r) + 200deg)); } }
+.sb-stream, .sb-popper { display: none; position: absolute; }
+.sb-stream { top: .4rem; width: 13rem; height: auto; opacity: .85; }
+.sb-stream-l { left: 0; } .sb-stream-r { right: 0; }
+.sb-popper { bottom: 1rem; width: 4.6rem; height: auto; transform-origin: 20% 90%; animation: sb-pop 3.4s ease-in-out infinite; }
+.sb-popper-l { left: 4%; }
+.sb-popper-r { right: 4%; transform: scaleX(-1); animation-name: sb-pop-r; }
+@keyframes sb-pop { 0%, 70%, 100% { rotate: 0deg; } 78% { rotate: -9deg; } 86% { rotate: 5deg; } }
+@keyframes sb-pop-r { 0%, 70%, 100% { rotate: 0deg; } 78% { rotate: 9deg; } 86% { rotate: -5deg; } }
+@media (min-width: 1024px) { .sb-fx { display: block; } }
+@media (min-width: 1280px) { .sb-stream, .sb-popper { display: block; } }
+
+/* Tablet: ikon tetap di samping tetapi lebih rapat */
+@media (max-width: 899px) {
+    .sb-cell { gap: .7rem; padding: .95rem .9rem; }
+    .sb-ic { width: 2.5rem; height: 2.5rem; border-radius: .75rem; }
+    .sb-ic svg { width: 1.25rem; height: 1.25rem; }
+    .sb-note { display: none; }
+}
+/* HP: satu baris, ikon > angka > label ditumpuk dan rata tengah */
+@media (max-width: 640px) {
+    .sb { padding: 1.3rem .75rem; }
+    .sb-row { padding: .3rem .15rem; border-radius: 1.1rem; }
+    .sb-cell { flex-direction: column; justify-content: center; gap: .5rem; padding: .85rem .15rem .8rem; text-align: center; }
+    .sb-ic { width: 2.2rem; height: 2.2rem; border-radius: .7rem; }
+    .sb-ic svg { width: 1.1rem; height: 1.1rem; }
+    .sb-txt { justify-items: center; gap: .2rem; }
+    .sb-val { font-size: clamp(1.05rem, 5.6vw, 1.4rem); }
+    .sb-rate .sb-val::after { font-size: .55em; }
+    .sb-lbl { font-size: .72rem; }
+}
+@media (max-width: 350px) { .sb-val { font-size: 1rem; } .sb-lbl { font-size: .68rem; } }
+@media (prefers-reduced-motion: reduce) { .sb-cf, .sb-popper { animation: none !important; } .sb-cell { transition: none; } }
+
+/* HP (versi rapi): 2x2, ikon di kiri angka, angka tampil utuh (tidak dipendekkan) */
+@media (max-width: 640px) {
+    .sb { padding: 1.4rem .85rem; }
+    .sb-row { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: .35rem; }
+    .sb-row > li + li::before { display: none; }
+    .sb-row > li:nth-child(even)::before { content: ''; display: block; left: 0; top: 20%; bottom: 20%; width: 1px; }
+    .sb-row > li:nth-child(n+3)::after { content: ''; position: absolute; left: 12%; right: 12%; top: 0; height: 1px; background: rgb(169 196 242 / .2); }
+    .sb-cell { flex-direction: row; justify-content: flex-start; gap: .7rem; padding: .85rem .7rem; text-align: left; }
+    .sb-ic { width: 2.4rem; height: 2.4rem; }
+    .sb-ic svg { width: 1.2rem; height: 1.2rem; }
+    .sb-txt { justify-items: start; gap: .1rem; }
+    .sb-val { font-size: clamp(1.25rem, 6vw, 1.6rem); }
+    .sb-lbl { font-size: .74rem; }
+}

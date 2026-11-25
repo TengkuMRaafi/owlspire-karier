@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Finder — Temukan Lowongan yang Cocok</title>
+<style>
+  :root {
+    --bg:#f3f5f9; --card:#fff; --ink:#0f172a; --text:#334155; --muted:#64748b; --line:#e2e8f0;
+    --brand:#1e40af; --accent:#2563eb; --accent-soft:#eff4ff; --ok:#15803d;
+    --shadow:0 1px 2px rgba(15,23,42,.05), 0 6px 20px rgba(15,23,42,.05);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif; }
+  svg { flex:none; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 20px; }
+
+  .hero { background:radial-gradient(1200px 400px at 80% -10%, #2b4fc7 0%, transparent 60%), linear-gradient(135deg,#0f172a 0%,#172554 100%); color:#fff; padding-bottom:84px; }
+  .nav { height:62px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:17px; }
+  .logo-mark { width:32px; height:32px; border-radius:9px; background:linear-gradient(135deg,#3b82f6,#1e40af); display:grid; place-items:center; }
+  .nav small { color:#94a3b8; }
+  .hero h1 { margin:26px 0 8px; font-size:32px; line-height:1.2; letter-spacing:-.4px; max-width:640px; }
+  .hero p { margin:0; color:#b6c3dd; font-size:15px; max-width:620px; }
+
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:16px; box-shadow:0 10px 40px rgba(15,23,42,.14); padding:22px; margin-top:-56px; position:relative; }
+  .cvbar { display:flex; align-items:center; gap:14px; border:1.5px dashed #cbd5e1; border-radius:12px; padding:10px 14px; cursor:pointer; background:#fafbfd; transition:.15s; }
+  .cvbar:hover { border-color:var(--accent); background:var(--accent-soft); }
+  .cvbar .ic { width:36px; height:36px; border-radius:10px; background:var(--accent-soft); color:var(--accent); display:grid; place-items:center; }
+  .cvbar b { color:var(--ink); font-size:13px; }
+  .cvbar span { color:var(--muted); font-size:12px; word-break:break-all; display:block; }
+  .cvbar .or { margin-left:auto; color:var(--muted); font-size:12px; white-space:nowrap; }
+  .hint { color:var(--muted); font-size:12px; margin:6px 2px 0; min-height:16px; }
+
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:4px 18px; }
+  label.f { display:block; font-weight:600; font-size:13px; color:var(--ink); margin:12px 0 6px; }
+  label.f small { font-weight:400; color:var(--muted); }
+  .tags { display:flex; flex-wrap:wrap; gap:6px; padding:7px 8px; border:1px solid var(--line); border-radius:10px; background:#fff; min-height:44px; transition:.15s; }
+  .tags:focus-within { border-color:var(--accent); box-shadow:0 0 0 3px rgba(37,99,235,.12); }
+  .tags input { border:0; outline:0; flex:1; min-width:120px; font:inherit; padding:4px; color:var(--ink); }
+  .chip { background:var(--accent-soft); color:var(--brand); border-radius:6px; padding:2px 9px; font-size:12px; font-weight:500; cursor:pointer; align-self:center; }
+  .chip:hover { background:#dbe7ff; }
+  .chip.ok { background:#ecfdf3; color:var(--ok); cursor:default; }
+  .chip.more { background:#f1f5f9; color:var(--muted); cursor:default; }
+
+  .actions { display:flex; gap:18px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+  .srcwrap { flex:1; min-width:300px; }
+  .srcs { display:flex; flex-wrap:wrap; gap:8px; }
+  .src { display:inline-flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; padding:6px 13px; font-size:13px; font-weight:500; color:var(--text); cursor:pointer; background:#fff; user-select:none; transition:.15s; }
+  .src input { display:none; }
+  .src::before { content:""; width:8px; height:8px; border-radius:50%; background:#cbd5e1; }
+  .src:hover { border-color:#bfd0f5; }
+  .src:has(input:checked) { background:var(--accent-soft); border-color:var(--accent); color:var(--brand); }
+  .src:has(input:checked)::before { background:var(--accent); }
+  .src.off { opacity:.5; cursor:not-allowed; background:#f8fafc; }
+  .src em { font-style:normal; font-size:11px; color:var(--muted); }
+  .ctrl { display:flex; gap:10px; align-items:center; }
+  /* ---------- dropdown custom ---------- */
+  .dd { position:relative; min-width:180px; }
+  .dd-btn { width:100%; display:flex; align-items:center; gap:9px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#fff; font:inherit; color:var(--ink); cursor:pointer; text-align:left; transition:.15s; }
+  .dd-btn:hover { border-color:#bfd0f5; }
+  .dd-btn:focus-visible, .dd.open .dd-btn { outline:0; border-color:var(--accent); box-shadow:0 0 0 3px rgba(37,99,235,.12); }
+  .dd-btn .ico { color:var(--accent); }
+  .dd-btn .lbl { flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; }
+  .dd-btn .chev { color:var(--muted); transition:transform .18s; }
+  .dd.open .chev { transform:rotate(180deg); }
+  .dd-menu { position:absolute; left:0; right:0; top:calc(100% + 6px); z-index:40; margin:0; padding:6px; list-style:none; min-width:max-content; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 14px 36px rgba(15,23,42,.18); display:none; }
+  .dd.right .dd-menu { left:auto; right:0; }
+  @media (max-width:900px) { .dd-menu { min-width:100%; } }
+  .dd.open .dd-menu { display:block; animation:ddin .14s ease-out; }
+  @keyframes ddin { from { opacity:0; transform:translateY(-4px); } }
+  .dd-menu li { display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:8px; cursor:pointer; color:var(--text); font-size:13.5px; }
+  .dd-menu li.act { background:var(--accent-soft); color:var(--brand); }
+  .dd-menu li[aria-selected="true"] { font-weight:600; color:var(--brand); }
+  .dd-menu li .ck { margin-left:auto; color:var(--accent); opacity:0; }
+  .dd-menu li[aria-selected="true"] .ck { opacity:1; }
+  .dd.compact .dd-btn { padding:7px 10px; font-size:13px; }
+  .dd.compact { min-width:130px; }
+  #go { background:var(--accent); color:#fff; border:0; border-radius:10px; padding:11px 22px; font-size:14px; font-weight:600; font-family:inherit; cursor:pointer; display:flex; align-items:center; gap:8px; transition:.15s; white-space:nowrap; }
+  #go:hover { background:#1d4ed8; } #go:disabled { opacity:.55; cursor:wait; }
+  .bar { height:6px; background:var(--line); border-radius:99px; overflow:hidden; margin-top:16px; display:none; }
+  .bar > div { height:100%; width:0; background:linear-gradient(90deg,#3b82f6,#1e40af); transition:width .4s; }
+  #msg { color:var(--muted); font-size:12px; margin-top:6px; min-height:16px; }
+
+  .toolbar { display:flex; justify-content:space-between; align-items:center; margin:26px 0 14px; gap:12px; flex-wrap:wrap; }
+  .toolbar strong { color:var(--ink); font-size:18px; }
+  .toolbar .sel { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:13px; }
+  .toolbar .tr { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .srcline { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-top:6px; color:var(--muted); font-size:12.5px; }
+  .srcline .pill { background:#fff; border:1px solid var(--line); border-radius:999px; padding:2px 10px; color:var(--text); font-size:12px; }
+  .srcline .pill b { color:var(--brand); }
+  .tgbtn { display:inline-flex; align-items:center; gap:7px; background:#229ed9; color:#fff; text-decoration:none; padding:8px 14px; border-radius:9px; font-size:13px; font-weight:600; transition:.15s; }
+  .tgbtn:hover { background:#1b8ac0; }
+  .tgnav { display:inline-flex; align-items:center; gap:6px; color:#fff; text-decoration:none; font-size:13px; font-weight:600; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); padding:6px 12px; border-radius:999px; }
+  .tgnav:hover { background:rgba(255,255,255,.2); }
+  .tgnav[hidden], .tgbtn[hidden], .tgcard[hidden] { display:none; }
+  .navr { display:flex; align-items:center; gap:14px; }
+  .insights { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin:0 0 16px; font-size:13.5px; color:var(--text); }
+  .insights[hidden] { display:none; }
+  .insights .row { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:7px 0; }
+  .insights .row > b { color:var(--ink); font-weight:600; margin-right:4px; }
+  .insights .chip2 { background:var(--accent-soft); color:var(--brand); border-radius:999px; padding:2px 10px; font-size:12.5px; }
+  .insights .chip2 small { opacity:.7; }
+  .insights .chip2.gap { background:#fef3c7; color:#92400e; }
+  .insights .chip2.off { background:#f1f5f9; color:var(--muted); }
+  .insights ul.tips { margin:8px 0 0; padding-left:18px; color:var(--text); }
+  .morelinks { margin:18px 2px 0; color:var(--muted); font-size:13px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .morelinks a { background:#fff; border:1px solid var(--line); border-radius:999px; padding:4px 12px; color:var(--accent); text-decoration:none; font-weight:500; }
+  .srcnote { color:var(--muted); font-size:12px; margin:8px 2px 0; }
+  .srcnote a { color:var(--accent); text-decoration:none; font-weight:500; }
+
+  .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .job { background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); padding:18px; display:flex; flex-direction:column; transition:.15s; }
+  .job:hover { border-color:#bfd0f5; transform:translateY(-2px); }
+  .head { display:flex; gap:14px; align-items:flex-start; }
+  .logo { width:50px; height:50px; border-radius:12px; border:1px solid var(--line); object-fit:contain; background:#fff; flex:none; }
+  .logo.ph { display:grid; place-items:center; font-weight:700; font-size:19px; color:var(--brand); background:var(--accent-soft); border-color:transparent; }
+  .hd { flex:1; min-width:0; }
+  .title { margin:0; font-size:15.5px; font-weight:700; color:var(--ink); line-height:1.3; }
+  .co { margin:3px 0 0; color:var(--muted); font-size:13px; }
+  .via { color:var(--accent); font-weight:500; }
+  .score { --c:#94a3b8; flex:none; text-align:center; width:70px; }
+  .ring { width:52px; height:52px; margin:0 auto; border-radius:50%; background:conic-gradient(var(--c) calc(var(--p)*1%), #e8edf5 0); display:grid; place-items:center; position:relative; }
+  .ring::before { content:""; position:absolute; inset:5px; background:#fff; border-radius:50%; }
+  .ring b { position:relative; font-size:13.5px; color:var(--ink); }
+  .score small { display:block; margin-top:4px; font-size:10.5px; font-weight:600; color:var(--c); }
+  .hi { --c:#16a34a; } .mid { --c:#d97706; }
+  .meta { display:flex; flex-wrap:wrap; gap:5px 14px; margin:12px 0 10px; color:var(--muted); font-size:12.5px; }
+  .meta span { display:inline-flex; align-items:center; gap:5px; }
+  .skills { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:8px; }
+  .snip { margin:4px 0 14px; color:var(--text); font-size:13px; line-height:1.55; display:-webkit-box; -webkit-line-clamp:3; line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .foot { margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+  .srcb { font-size:12px; color:var(--muted); }
+  .srcb b { color:var(--brand); font-weight:600; }
+  .btn { display:inline-flex; align-items:center; gap:6px; background:var(--ink); color:#fff; text-decoration:none; padding:8px 14px; border-radius:8px; font-size:13px; font-weight:600; }
+  .btn:hover { background:#1e293b; }
+
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:26px; }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--shadow); }
+  .step .n { width:30px; height:30px; border-radius:9px; background:var(--accent-soft); color:var(--accent); display:grid; place-items:center; font-weight:700; margin-bottom:10px; }
+  .step h3 { margin:0 0 4px; font-size:14.5px; color:var(--ink); }
+  .step p { margin:0; color:var(--muted); font-size:13px; }
+  .about { display:grid; grid-template-columns:1.5fr 1fr; gap:14px; margin-top:34px; }
+  .box { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; box-shadow:var(--shadow); }
+  .box h3 { margin:0 0 4px; font-size:15.5px; color:var(--ink); }
+  .box > p { margin:0 0 12px; color:var(--muted); font-size:13px; }
+  .srclist { list-style:none; margin:0; padding:0; }
+  .srclist li { display:flex; align-items:center; gap:12px; padding:10px 0; border-top:1px solid var(--line); }
+  .srclist .nm { font-weight:600; color:var(--ink); text-decoration:none; min-width:92px; }
+  .srclist .nm:hover { color:var(--accent); }
+  .srclist .ds { flex:1; color:var(--muted); font-size:12.5px; }
+  .badge { font-size:11px; font-weight:600; border-radius:999px; padding:2px 9px; white-space:nowrap; }
+  .badge.on { background:#ecfdf3; color:var(--ok); } .badge.off { background:#f1f5f9; color:var(--muted); }
+  .tgcard { align-self:start; background:linear-gradient(135deg,#229ed9,#1b6fb5); color:#fff; border:0; }
+  .tgcard h3 { color:#fff; } .tgcard > p { color:#e3f3fb; }
+  .tgcard .acts { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .tgcard .acts a { background:#fff; color:#1b6fb5; text-decoration:none; font-weight:600; font-size:13px; padding:8px 14px; border-radius:9px; }
+  .tgcard .acts a.ghost { background:rgba(255,255,255,.16); color:#fff; }
+  .empty { grid-column:1/-1; background:var(--card); border:1px dashed #cbd5e1; border-radius:14px; text-align:center; padding:48px 24px; color:var(--muted); }
+  .empty h3 { margin:0 0 4px; color:var(--ink); font-size:16px; }
+  .sk { height:190px; border-radius:14px; border:1px solid var(--line); background:linear-gradient(90deg,#fff 25%,#f1f5f9 50%,#fff 75%); background-size:200% 100%; animation:sh 1.3s infinite; }
+  @keyframes sh { to { background-position:-200% 0; } }
+
+  footer { text-align:center; color:#94a3b8; font-size:12px; padding:34px 0 30px; }
+  @media (max-width:900px) {
+    .cards, .steps, .grid2 { grid-template-columns:1fr; }
+    .hero h1 { font-size:25px; } .nav small { display:none; }
+    .cvbar .or { display:none; } .ctrl { width:100%; flex-wrap:wrap; } .ctrl .dd { flex:1 1 150px; min-width:0; } .ctrl #go { flex:1 1 100%; justify-content:center; padding:12px 16px; }
+    .about { grid-template-columns:1fr; } .srclist .ds { display:none; }
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+        Job Finder
+      </div>
+      <div class="navr">
+        <small>Pencocokan lowongan berdasarkan keahlian &amp; CV</small>
+        <a class="tgnav" id="tgNav" target="_blank" rel="noopener" hidden>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 3.3L2.9 10.5c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.2-.5-1.8-1.4-1.4zM8.6 13.4l9.6-6c.5-.3.9-.1.5.2l-7.9 7.1-.3 3.3-1.9-4.6z"/></svg>
+          Telegram
+        </a>
+      </div>
+    </div>
+    <h1>Temukan lowongan yang benar-benar cocok dengan keahlianmu</h1>
+    <p>Satu pencarian, banyak sumber. Upload CV atau isi keahlian, lalu lihat hasil yang diurutkan dari yang paling relevan.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="panel">
+    <label class="cvbar" for="cv">
+      <div class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg></div>
+      <div><b>Upload CV untuk mengisi otomatis</b><span id="fname">PDF, DOCX, atau TXT · maks 5 MB</span></div>
+      <div class="or">atau isi manual di bawah</div>
+    </label>
+    <input type="file" id="cv" hidden accept=".pdf,.docx,.txt">
+    <div class="hint" id="cvHint"></div>
+
+    <div class="grid2">
+      <div>
+        <label class="f">Posisi yang dicari <small>· Enter untuk menambah</small></label>
+        <div class="tags" id="positions"><input placeholder="mis. Mechanical Engineer"></div>
+      </div>
+      <div>
+        <label class="f">Wilayah <small>· maks 3</small></label>
+        <div class="tags" id="locations"><input placeholder="mis. Pekanbaru, Jakarta, Remote"></div>
+      </div>
+    </div>
+    <label class="f">Keahlian</label>
+    <div class="tags" id="skills"><input placeholder="mis. python, autocad, akuntansi, seo"></div>
+
+    <div class="actions">
+      <div class="srcwrap">
+        <label class="f" style="margin-top:0">Sumber lowongan</label>
+        <div class="srcs" id="srcs"></div>
+        <div class="srcnote">Data diambil langsung dari situs &amp; API sumber di atas. <a href="#sumber">Lihat detail sumber</a></div>
+      </div>
+      <div class="ctrl">
+        <div class="dd" id="kind" data-value="kerja" data-icon="brief">
+          <ul class="dd-menu" role="listbox">
+            <li data-value="kerja"><span>Lowongan kerja</span></li>
+            <li data-value="magang"><span>Magang / internship</span></li>
+          </ul>
+        </div>
+        <div class="dd" id="hours" data-value="24" data-icon="clock">
+          <ul class="dd-menu" role="listbox">
+            <li data-value="24"><span>24 jam terakhir</span></li>
+            <li data-value="168"><span>7 hari terakhir</span></li>
+            <li data-value="720"><span>30 hari terakhir</span></li>
+          </ul>
+        </div>
+        <button id="go" onclick="startSearch()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          Cari Lowongan
+        </button>
+      </div>
+    </div>
+    <div class="bar" id="bar"><div id="fill"></div></div>
+    <div id="msg"></div>
+  </div>
+
+  <div class="toolbar" id="toolbar" style="display:none">
+    <div class="tl">
+      <strong id="count"></strong>
+      <div class="srcline" id="srcline"></div>
+    </div>
+    <div class="tr">
+      <button type="button" class="tgbtn" id="shBtn" hidden style="background:#188038;border:0;cursor:pointer;font-family:inherit" onclick="exportSheet()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg>
+        <span>Simpan ke Google Sheets</span>
+      </button>
+      <a class="tgbtn" id="tgBtn" target="_blank" rel="noopener" hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 3.3L2.9 10.5c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.2-.5-1.8-1.4-1.4zM8.6 13.4l9.6-6c.5-.3.9-.1.5.2l-7.9 7.1-.3 3.3-1.9-4.6z"/></svg>
+        Ringkasan di Telegram
+      </a>
+      <div class="sel">Tingkat kecocokan
+        <div class="dd compact right" id="minMatch" data-value="25">
+          <ul class="dd-menu" role="listbox">
+            <li data-value="0"><span>Semua</span></li>
+            <li data-value="25"><span>≥ 25%</span></li>
+            <li data-value="50"><span>≥ 50%</span></li>
+            <li data-value="75"><span>≥ 75%</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insights" id="insights" hidden></div>
+
+  <div id="results">
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Isi profilmu</h3><p>Upload CV agar skill terisi otomatis, atau ketik posisi dan keahlian sendiri. Semua bidang pekerjaan didukung.</p></div>
+      <div class="step"><div class="n">2</div><h3>Pilih wilayah &amp; sumber</h3><p>Cari di kota tertentu atau remote, dari LinkedIn dan sumber lain sekaligus. Lowongan kembar digabung otomatis.</p></div>
+      <div class="step"><div class="n">3</div><h3>Lihat yang paling cocok</h3><p>Hasil diurutkan berdasarkan persen kecocokan, lengkap dengan skill yang cocok dan link ke lowongan aslinya.</p></div>
+    </div>
+  </div>
+
+  <div class="about" id="sumber">
+    <div class="box">
+      <h3>Sumber data lowongan</h3>
+      <p>Setiap lowongan diambil dari situs atau API publik berikut. Lowongan yang sama dari beberapa sumber digabung, dan tombol "Lihat lowongan" selalu mengarah ke halaman aslinya.</p>
+      <ul class="srclist" id="srclist"></ul>
+    </div>
+    <div class="box tgcard" id="tgCard" hidden>
+      <h3>Pantau lewat Telegram</h3>
+      <p>Setelah mencari, klik tombol "Ringkasan di Telegram" untuk menerima rangkuman hasil dan lowongan terbaik di chat kamu. Bisa juga ikuti channel untuk update harian.</p>
+      <div class="acts" id="tgActs"></div>
+    </div>
+  </div>
+</div>
+<footer>Data dari berbagai sumber lowongan · Hak cipta dan atribusi tetap milik masing-masing penyedia</footer>
+
+<script>
+const T = {};
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const IC = {
+  chev:'<path d="M6 9l6 6 6-6"/>',
+  check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  pin:'<path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  brief:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/>',
+  level:'<path d="M5 20V12M12 20V6M19 20V9"/>',
+  build:'<path d="M4 21V5a1 1 0 011-1h8a1 1 0 011 1v16M14 9h5a1 1 0 011 1v11M8 8h2M8 12h2M8 16h2M3 21h18"/>',
+  users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0M16 4.5a3.5 3.5 0 010 7M18 14.5a6.5 6.5 0 013.5 5.5"/>',
+  out:'<path d="M7 17L17 7M8 7h9v9"/>'
+};
+const svg = (k, s = 14) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[k]}</svg>`;
+
+function initTags(id) {
+  const box = $(id), inp = box.querySelector("input");
+  T[id] = [];
+  const draw = () => {
+    box.querySelectorAll(".chip").forEach(c => c.remove());
+    T[id].forEach((v, i) => {
+      const c = document.createElement("span");
+      c.className = "chip"; c.textContent = v + " ×";
+      c.onclick = () => { T[id].splice(i, 1); draw(); };
+      box.insertBefore(c, inp);
+    });
+  };
+  const add = v => {
+    v = v.trim();
+    if (v && !T[id].some(x => x.toLowerCase() === v.toLowerCase())) { T[id].push(v); draw(); }
+  };
+  inp.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === ",") { e.preventDefault(); add(inp.value); inp.value = ""; }
+  });
+  inp.addEventListener("blur", () => { add(inp.value); inp.value = ""; });
+  box._set = arr => { T[id] = []; arr.forEach(add); };
+}
+["positions", "skills", "locations"].forEach(initTags);
+
+/* ---------- dropdown custom (keyboard: ↑ ↓ Enter Esc) ---------- */
+const ddVal = id => $(id).dataset.value;
+function initDD(id, onChange) {
+  const root = $(id), menu = root.querySelector(".dd-menu"), items = [...menu.querySelectorAll("li")];
+  const icon = root.dataset.icon;
+  root.insertAdjacentHTML("afterbegin",
+    `<button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false">
+       ${icon ? `<span class="ico">${svg(icon, 15)}</span>` : ""}<span class="lbl"></span><span class="chev">${svg("chev", 15)}</span></button>`);
+  const btn = root.querySelector(".dd-btn"), lbl = root.querySelector(".lbl");
+  items.forEach((li, i) => { li.id = `${id}-o${i}`; li.setAttribute("role", "option"); li.insertAdjacentHTML("beforeend", `<span class="ck">${svg("check", 15)}</span>`); });
+  let act = 0;
+  const mark = i => { act = i; items.forEach((li, k) => li.classList.toggle("act", k === i)); btn.setAttribute("aria-activedescendant", items[i].id); items[i].scrollIntoView({ block: "nearest" }); };
+  const pick = (i, fire = true) => {
+    const li = items[i];
+    items.forEach(x => x.setAttribute("aria-selected", x === li));
+    lbl.textContent = li.querySelector("span").textContent;
+    const changed = root.dataset.value !== li.dataset.value;
+    root.dataset.value = li.dataset.value;
+    if (fire && changed && onChange) onChange(li.dataset.value);
+  };
+  const open = () => { document.querySelectorAll(".dd.open").forEach(d => d !== root && d._close()); root.classList.add("open"); btn.setAttribute("aria-expanded", "true"); mark(items.findIndex(x => x.getAttribute("aria-selected") === "true")); };
+  const close = () => { root.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); };
+  root._close = close;
+  btn.addEventListener("click", () => root.classList.contains("open") ? close() : open());
+  btn.addEventListener("keydown", e => {
+    const isOpen = root.classList.contains("open");
+    if (["ArrowDown", "ArrowUp"].includes(e.key)) { e.preventDefault(); isOpen ? mark((act + (e.key === "ArrowDown" ? 1 : -1) + items.length) % items.length) : open(); }
+    else if (["Enter", " "].includes(e.key)) { e.preventDefault(); if (isOpen) { pick(act); close(); } else open(); }
+    else if (e.key === "Escape" || e.key === "Tab") close();
+  });
+  items.forEach((li, i) => {
+    li.addEventListener("mouseenter", () => mark(i));
+    li.addEventListener("click", () => { pick(i); close(); btn.focus(); });
+  });
+  document.addEventListener("click", e => { if (!root.contains(e.target)) close(); });
+  pick(Math.max(0, items.findIndex(x => x.dataset.value === root.dataset.value)), false);
+}
+initDD("hours");
+initDD("kind");
+initDD("minMatch", () => render());
+
+$("cv").addEventListener("change", async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  $("fname").textContent = f.name;
+  $("cvHint").textContent = "Membaca CV...";
+  const fd = new FormData(); fd.append("cv", f);
+  try {
+    const r = await fetch("/api/cv", { method: "POST", body: fd });
+    const d = await r.json();
+    if (d.error) { $("cvHint").textContent = "⚠ " + d.error; return; }
+    if (d.positions.length) $("positions")._set(d.positions);
+    $("skills")._set(d.skills);
+    $("cvHint").textContent = `${d.skills.length} skill terdeteksi (${d.source === "claude" ? "dibaca AI" : "kamus kata kunci"}). Silakan edit bila perlu.`;
+  } catch (err) { $("cvHint").textContent = "⚠ Gagal membaca CV"; }
+});
+
+let CATALOG = [], CUR_ID = "";
+const TG = { enabled: false, bot: "", channel: "" };
+let SHEETS = false, SHEET_URL = "";
+
+async function loadConfig() {
+  try {
+    const cfg = await (await fetch("/api/config")).json();
+    SHEETS = !!cfg.sheets;
+    Object.assign(TG, cfg.telegram || {});
+  } catch (e) { return; }
+  if (!TG.enabled) return;
+  const home = TG.channel || `https://t.me/${TG.bot}`;
+  $("tgNav").href = home; $("tgNav").hidden = false;
+  $("tgActs").innerHTML = `<a href="https://t.me/${esc(TG.bot)}" target="_blank" rel="noopener">Buka bot</a>` +
+    (TG.channel ? `<a class="ghost" href="${esc(TG.channel)}" target="_blank" rel="noopener">Ikuti channel</a>` : "");
+  $("tgCard").hidden = false;
+}
+loadConfig();
+
+async function loadSources() {
+  const list = (await (await fetch("/api/sources")).json()).filter(s => s.available);
+  CATALOG = list;
+  $("srclist").innerHTML = list.map(s => `<li>
+    <a class="nm" href="${esc(s.site)}" target="_blank" rel="noopener">${esc(s.label)}</a>
+    <span class="ds">${esc(s.note)}</span>
+    <span class="badge ${s.available ? "on" : "off"}">${s.available ? "Aktif" : "Butuh API key"}</span></li>`).join("");
+  $("srcs").innerHTML = list.map(s => `<label class="src ${s.available ? "" : "off"}" title="${esc(s.note)}">
+    <input type="checkbox" value="${esc(s.id)}" ${s.available ? "" : "disabled"} ${s.default && s.available ? "checked" : ""}>
+    ${esc(s.label)}${s.available ? "" : " <em>butuh key</em>"}</label>`).join("");
+}
+loadSources();
+const pickedSources = () => [...document.querySelectorAll("#srcs input:checked")].map(i => i.value);
+
+let ALL = [], LINKS = [], INS = null;
+
+const linksHtml = () => LINKS.length
+  ? `<div class="morelinks">Cari juga langsung di: ${LINKS.map(l => `<a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join("")}</div>` : "";
+
+async function startSearch() {
+  const body = { positions: T.positions, skills: T.skills, locations: T.locations, hours: +ddVal("hours"), kind: ddVal("kind"), sources: pickedSources() };
+  if (!body.positions.length && !body.skills.length) return alert("Isi minimal satu posisi atau skill.");
+  if (!body.sources.length) return alert("Pilih minimal satu sumber lowongan.");
+  $("go").disabled = true; $("bar").style.display = "block"; $("fill").style.width = "3%";
+  $("msg").textContent = "Memulai..."; $("toolbar").style.display = "none";
+  $("results").innerHTML = '<div class="cards"><div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>';
+  const r = await fetch("/api/search", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const d = await r.json();
+  if (d.error) { $("msg").textContent = "⚠ " + d.error; $("go").disabled = false; $("results").innerHTML = ""; return; }
+  CUR_ID = d.id; $("tgBtn").hidden = true; resetSheetBtn(); INS = null; $("insights").hidden = true;
+  poll(d.id);
+}
+
+function resetSheetBtn() {
+  SHEET_URL = ""; const b = $("shBtn"); b.hidden = true; b.disabled = false;
+  b.querySelector("span").textContent = "Simpan ke Google Sheets";
+}
+
+async function exportSheet() {
+  const b = $("shBtn"), lbl = b.querySelector("span");
+  if (SHEET_URL) return window.open(SHEET_URL, "_blank", "noopener");
+  b.disabled = true; lbl.textContent = "Menyimpan...";
+  try {
+    const d = await (await fetch("/api/export/" + CUR_ID, { method: "POST" })).json();
+    if (d.error) throw new Error(d.error);
+    SHEET_URL = d.url; lbl.textContent = "Buka Google Sheets";
+  } catch (e) { lbl.textContent = "Simpan ke Google Sheets"; alert(e.message || "Gagal menyimpan"); }
+  b.disabled = false;
+}
+
+async function poll(id) {
+  const s = await (await fetch("/api/status/" + id)).json();
+  $("fill").style.width = (s.pct || 3) + "%"; $("msg").textContent = s.msg || "";
+  if (s.status === "running") return setTimeout(() => poll(id), 2000);
+  $("go").disabled = false;
+  if (s.status === "done") {
+    ALL = s.results; LINKS = s.links || []; INS = s.insights || null; if ((s.warnings || []).length) $("msg").textContent = "Catatan: " + s.warnings.join(" · ");
+    $("toolbar").style.display = "flex"; render();
+    if (SHEETS && CUR_ID) $("shBtn").hidden = false;
+    if (TG.enabled && CUR_ID) { $("tgBtn").href = `https://t.me/${TG.bot}?start=${CUR_ID}`; $("tgBtn").hidden = false; } setTimeout(() => $("bar").style.display = "none", 800);
+  } else { $("results").innerHTML = ""; $("bar").style.display = "none"; }
+}
+
+function insightsHtml() {
+  const a = INS; if (!a) return "";
+  const chips = (arr, cls = "", withN = true) => arr.map(x => Array.isArray(x)
+    ? `<span class="chip2 ${cls}">${esc(x[0])}${withN ? ` <small>×${x[1]}</small>` : ""}</span>`
+    : `<span class="chip2 ${cls}">${esc(x)}</span>`).join("");
+  const row = (t, html) => html ? `<div class="row"><b>${t}</b>${html}</div>` : "";
+  const t = a.tiers, tiers = [["Sangat cocok", t.hi], ["Cukup cocok", t.mid], ["Kurang cocok", t.low]].filter(x => x[1]).map(x => `${x[0]} ${x[1]}`).join(" · ");
+  return `<div class="row"><b>Ringkasan:</b> ${a.found} ditemukan, ${a.shown} cocok${tiers ? " — " + tiers : ""}</div>`
+    + row("Skill terpakai", chips(a.used.slice(0, 8)) + (a.used.length > 8 ? `<span class="chip2 off">+${a.used.length - 8}</span>` : ""))
+    + row("Belum muncul", chips(a.unused.slice(0, 6), "off", false) + (a.unused.length > 6 ? `<span class="chip2 off">+${a.unused.length - 6}</span>` : ""))
+    + row("Sering diminta, belum ada di profilmu", chips(a.gap, "gap"))
+    + row("Terbanyak di", chips(a.locations))
+    + row("Paling banyak buka", chips(a.companies))
+    + (a.tips && a.tips.length ? `<ul class="tips">${a.tips.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "");
+}
+
+function render() {
+  const ins = $("insights"), ih = insightsHtml(); ins.innerHTML = ih; ins.hidden = !ih;
+  const min = +ddVal("minMatch");
+  const list = ALL.filter(j => j.match >= min);
+  $("count").textContent = `${list.length} lowongan cocok`;
+  const cnt = {};
+  list.forEach(j => (j.sources || [j.source]).forEach(n => cnt[n] = (cnt[n] || 0) + 1));
+  const parts = Object.entries(cnt).sort((a, b) => b[1] - a[1]);
+  $("srcline").innerHTML = parts.length ? "Diambil dari: " + parts.map(([n, c]) => `<span class="pill"><b>${esc(n)}</b> ${c}</span>`).join("") : "";
+  if (!list.length) {
+    $("results").innerHTML = '<div class="cards"><div class="empty"><h3>Belum ada yang cocok</h3><div>Coba turunkan tingkat kecocokan, perluas rentang waktu, atau tambah skill, wilayah, dan sumber.</div></div></div>' + linksHtml();
+    return;
+  }
+  $("results").innerHTML = '<div class="cards">' + list.map(j => {
+    const cls = j.match >= 70 ? "hi" : j.match >= 40 ? "mid" : "";
+    const label = j.match >= 70 ? "Sangat cocok" : j.match >= 40 ? "Cukup cocok" : "Kurang cocok";
+    const logo = j.logo ? `<img class="logo" src="${esc(j.logo)}" alt="" referrerpolicy="no-referrer">` : `<div class="logo ph">${esc((j.company || "?")[0])}</div>`;
+    const meta = [["pin", j.location], ["clock", j.posted], ["brief", j.job_type], ["level", j.seniority], ["build", j.industry], ["users", j.applicants]]
+      .filter(m => m[1]).map(m => `<span>${svg(m[0])}${esc(m[1])}</span>`).join("");
+    const m = j.matched || [];
+    const chips = m.slice(0, 8).map(x => `<span class="chip ok">${esc(x)}</span>`).join("") + (m.length > 8 ? `<span class="chip more">+${m.length - 8}</span>` : "");
+    return `<div class="job">
+      <div class="head">${logo}
+        <div class="hd"><p class="title">${esc(j.title)}</p><p class="co">${esc(j.company)} · <span class="via">${esc((j.sources || [j.source]).join(", "))}</span></p></div>
+        <div class="score ${cls}"><div class="ring" style="--p:${j.match}"><b>${j.match}%</b></div><small>${label}</small></div>
+      </div>
+      <div class="meta">${meta}</div>
+      ${chips ? `<div class="skills">${chips}</div>` : ""}
+      ${j.snippet ? `<p class="snip">${esc(j.snippet)}</p>` : ""}
+      <div class="foot"><span class="srcb">Sumber: <b>${esc((j.sources || [j.source]).join(", "))}</b></span><a class="btn" href="${esc(j.url)}" target="_blank" rel="noopener">Lihat lowongan ${svg("out", 14)}</a></div>
+    </div>`;
+  }).join("") + "</div>" + linksHtml();
+}
+</script>
+</body>
+</html>

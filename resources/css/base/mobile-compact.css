@@ -1,0 +1,109 @@
+/*
+ * HP (<= 639px): tampilan padat untuk dashboard admin dan pengguna.
+ * Kotak keterangan, kartu angka, dan kartu pilihan tidak lagi memanjang satu per baris, tetapi disusun kiri-kanan:
+ * 3 atau 4 sebaris bila muat, kalau tidak 2 sebaris (grid auto-fill dengan lebar minimum kecil).
+ * Popover topbar (riwayat, notifikasi, akun) tampil seukuran isinya di bawah tombolnya, bukan selebar layar.
+ * Desktop tidak berubah. Dimuat setelah mobile.css dan responsive.css.
+ */
+
+/* ---------- Popover topbar: animasi masuk (semua layar) ---------- */
+@keyframes pn-pop-in { from { opacity: 0; transform: translateY(-6px) scale(.97); } }
+.pn-pop:not([hidden]) { transform-origin: top right; animation: pn-pop-in .2s cubic-bezier(.2, .8, .2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .pn-pop:not([hidden]) { animation: none; } }
+
+@media (max-width: 639px) {
+
+    /* ---------- Popover: seukuran isi, menempel di kanan bawah topbar ---------- */
+    .pn-pop, .pn-pop.is-right { position: fixed; top: 3.7rem; right: .6rem; left: auto; width: min(17.5rem, calc(100vw - 1.2rem)); max-height: calc(100svh - 5rem); overflow-y: auto; overscroll-behavior: contain; border-radius: 1rem; box-shadow: 0 24px 44px -16px rgb(27 38 56 / .45), 0 0 0 1px rgb(27 38 56 / .04); }
+    .pn-pop.pn-pop-acct { width: min(18.5rem, calc(100vw - 1.2rem)); }
+    .pn-pop-item { padding: .5rem .6rem; font-size: .84rem; }
+    .pn-prev-cover { height: 3.6rem; }
+
+    /* ---------- Kotak keterangan (ikon + label + nilai): tile mini ---------- */
+    .ad-d-info { grid-template-columns: repeat(auto-fill, minmax(5.6rem, 1fr)); gap: .5rem; }
+    .ad-d-i { flex-direction: column; align-items: flex-start; gap: .4rem; padding: .6rem .65rem; border-radius: .8rem; }
+    .ad-d-i-ic { width: 1.7rem; height: 1.7rem; border-radius: .55rem; }
+    .ad-d-i-ic svg { width: .9rem; height: .9rem; }
+    .ad-d-i > div { gap: .1rem; width: 100%; }
+    .ad-d-i small { font-size: .62rem; line-height: 1.25; }
+    .ad-d-i b { font-size: .84rem; line-height: 1.3; }
+    .ad-d-i.is-wide { flex-direction: row; align-items: center; gap: .65rem; }
+    .ad-d-i.is-wide > div { width: auto; }
+    .ad-d-h { margin-bottom: .8rem; }
+    .ad-d-hero { padding: 1.1rem 1rem; gap: .8rem 1rem; border-radius: 1rem; }
+    .ad-d-av { width: 3.2rem; height: 3.2rem; border-radius: .95rem; font-size: 1.3rem; }
+    .ad-d-t h2 { font-size: 1.15rem; }
+    .ad-d-fig { font-size: 1.5rem; }
+    .ad-d-ring { width: 4.4rem; height: 4.4rem; } .ad-d-ring b { font-size: 1.1rem; }
+    .ad-d-note { margin-top: .75rem; padding: .7rem .85rem; font-size: .8rem; }
+
+    /* Alur langkah: tetap menumpuk ke bawah (aturan di admin-detail.css), supaya teks tidak terpotong */
+
+    /* ---------- Kartu angka ---------- */
+    .ui-stats, .ui-stats.is-compact { grid-template-columns: repeat(auto-fit, minmax(6.8rem, 1fr)); gap: .5rem; }
+    .ui-stats > :last-child:nth-child(odd) { grid-column: auto; }
+    .ui-stat, .ui-stats.is-compact .ui-stat { padding: .65rem .7rem; border-radius: .85rem; }
+    .ui-stat-l { font-size: .58rem; letter-spacing: .04em; line-height: 1.25; }
+    .ui-stat-ic, .ui-stats.is-compact .ui-stat-ic { width: 1.5rem; height: 1.5rem; border-radius: .5rem; }
+    .ui-stat-ic svg { width: .85rem; height: .85rem; }
+    .ui-stat-v, .ui-stats.is-compact .ui-stat-v { margin-top: .3rem; font-size: 1.35rem; }
+    .ui-stat-v small { font-size: .7rem; }
+    .ui-stat-h { margin-top: .15rem; font-size: .64rem; line-height: 1.3; }
+    .rp-stats { grid-template-columns: repeat(auto-fit, minmax(6.8rem, 1fr)); gap: .5rem; }
+    .rp-stat b { font-size: 1.15rem; }
+
+    /* ---------- Pengaturan admin: tile, peran, paket ---------- */
+    .ad-st-tiles { grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: .5rem; }
+    .ad-st-tile { flex-direction: column; align-items: flex-start; gap: .4rem; padding: .6rem .7rem; border-radius: .85rem; }
+    .ad-st-tile:hover { transform: none; }
+    .ad-st-tile-ic { width: 1.8rem; height: 1.8rem; border-radius: .55rem; } .ad-st-tile-ic svg { width: .95rem; height: .95rem; }
+    .ad-st-tile-t { width: 100%; gap: .1rem; } .ad-st-tile-t small { font-size: .62rem; } .ad-st-tile-t b { font-size: .84rem; }
+    .ad-st-roles { grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .5rem; }
+    .ad-st-role { flex-direction: column; gap: .5rem; padding: .7rem .75rem; border-radius: .85rem; }
+    .ad-st-role-n { min-width: 2.1rem; height: 2.1rem; font-size: .92rem; border-radius: .65rem; }
+    .ad-st-role b { font-size: .84rem; } .ad-st-role small { font-size: .7rem; line-height: 1.4; }
+    .ad-st-plans { grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: .5rem; }
+    .ad-st-plan { padding: .7rem .8rem; border-radius: .85rem; } .ad-st-plan b { font-size: 1.05rem; }
+    .ad-st-disc-g { grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .5rem; }
+
+    /* ---------- Dashboard pengguna: bagian skor, kartu daftar, paket ---------- */
+    .ac-parts { grid-template-columns: repeat(auto-fit, minmax(6.8rem, 1fr)); gap: .6rem; }
+    .ac-part-h { font-size: .72rem; } .ac-part p { font-size: .66rem; }
+    .ac-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+    .ac-item { gap: .45rem; padding: .75rem .8rem; border-radius: .95rem; }
+    .ac-item:hover { box-shadow: none; }
+    .ac-item h3 { font-size: 1rem; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .ac-item p { font-size: .74rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .ac-item-k { font-size: .58rem; }
+    .ac-item-meta { gap: .2rem .6rem; font-size: .66rem; } .ac-item-meta svg { width: .8rem; height: .8rem; }
+    .ac-item-foot { gap: .35rem; } .ac-item-foot .btn-sm, .ac-item-foot a, .ac-item-foot button { padding: .38rem .7rem; font-size: .74rem; }
+    .ac-plans { grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: .5rem; }
+    .ac-plan-opt { padding: .75rem .8rem; border-radius: .9rem; } .ac-plan-opt strong { font-size: 1.3rem; }
+
+    /* ---------- Detail karier dan latihan ---------- */
+    .kd-does { grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: .5rem; }
+    .kd-does li { min-height: 0; gap: .35rem; padding: .75rem .8rem; border-radius: .9rem; }
+    .kd-does li:hover { transform: none; }
+    .kd-does-no { font-size: 1.2rem; } .kd-does p { font-size: .8rem; line-height: 1.4; }
+    .kd-does li > svg { top: .6rem; right: .6rem; }
+    .tr-opts, .tr-facts { grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: .5rem; }
+    .tr-opt { min-height: 2.5rem; padding: .45rem .65rem; font-size: .8rem; }
+    .bl-src-grid { grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: .5rem; }
+
+    /* ---------- Daftar pengguna admin: kartu lebih rapat ---------- */
+    .au-grid { gap: .6rem; padding: .7rem; }
+    .au-card { gap: .65rem; padding: .8rem .85rem; border-radius: 1rem; }
+    .au-card:hover { transform: none; box-shadow: none; }
+    .au-av { width: 2.6rem; height: 2.6rem; border-radius: .85rem; font-size: 1rem; }
+    .au-top { gap: .65rem; } .au-who a { font-size: .9rem; } .au-who small { font-size: .72rem; }
+
+    /* ---------- Judul bagian dan kartu panel lebih hemat tempat ---------- */
+    .pn-head { gap: .5rem .75rem; margin-bottom: .9rem; }
+    .pn-heading h1 { font-size: 1.2rem; } .pn-heading p { margin-top: .2rem; font-size: .8rem; }
+    .pn-sec { margin-bottom: .65rem; } .pn-card-h { margin-bottom: .75rem; }
+    .pn-stack, .pn-split { gap: .8rem; }
+    .pn-card { padding: .9rem; border-radius: 1rem; }
+}
+
+/* Layar sangat sempit: tile keterangan tetap 2 sebaris */
+@media (max-width: 340px) { .ad-d-info { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ac-cards { grid-template-columns: minmax(0, 1fr); } }

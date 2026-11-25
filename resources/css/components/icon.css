@@ -1,0 +1,4 @@
+/* Ikon <x-icon>: ukuran bawaan mengikuti teks, supaya ikon tanpa kelas ukuran tidak melebar penuh. Kelas ukuran (size-4 dll) tetap menang. */
+@layer components {
+    .ui-ic { flex: none; width: 1.1em; height: 1.1em; vertical-align: -.17em; }
+}

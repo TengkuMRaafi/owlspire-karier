@@ -1,0 +1,329 @@
+@import 'tailwindcss';
+
+/* Urutan: dasar -> komponen bersama -> layout -> halaman. Blade hanya memanggil, tidak menulis CSS. */
+@import './base/scrollbar.css';
+@import './base/motion.css';
+@import './base/rapi.css';
+@import './components/alert.css';
+@import './components/badge.css';
+@import './components/dropdown.css';
+@import './components/picker.css';
+@import './components/empty.css';
+@import './components/feedback.css';
+@import './components/filter.css';
+@import './components/offline.css';
+@import './components/owl.css';
+@import './components/form.css';
+@import './components/icon.css';
+@import './components/pagination.css';
+@import './components/promo.css';
+@import './components/quota-lock.css';
+@import './components/stat.css';
+@import './components/table.css';
+@import './layouts/footer.css';
+@import './layouts/header.css';
+@import './layouts/panel.css';
+@import './pages/account.css';
+@import './pages/assistant.css';
+@import './pages/cv.css';
+@import './pages/dashboard.css';
+@import './pages/auth.css';
+@import './pages/settings.css';
+@import './pages/admin.css';
+@import './pages/admin-detail.css';
+@import './pages/billing.css';
+@import './pages/coming-soon.css';
+@import './pages/exam.css';
+@import './pages/home.css';
+@import './pages/jobs.css';
+@import './pages/landing-direction.css';
+@import './pages/career-show.css';
+@import './pages/landing-duo.css';
+@import './pages/landing-guide.css';
+@import './pages/landing-hero.css';
+@import './pages/landing-intro.css';
+@import './pages/landing-marquee.css';
+@import './pages/landing-roadmap.css';
+@import './pages/landing-scoreboard.css';
+@import './pages/landing-selection.css';
+@import './pages/landing-ranking.css';
+@import './pages/landing-trending.css';
+@import './pages/leaderboard.css';
+@import './pages/learning.css';
+@import './pages/quiz.css';
+@import './base/mobile.css';
+@import './base/responsive.css';
+@import './base/mobile-compact.css';
+@import './base/mobile-final.css';
+@import './base/mobile-karier.css';
+@import './base/mobile-tes.css';
+@import './base/mobile-hero.css';
+@import './base/dark.css';
+@import './base/lite.css';
+
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+/*
+ * Owlspire: Biru + Netral + Kuning.
+ * Biru-abu tua -> header, sidebar, band gelap
+ * Oranye  -> khusus tombol utama dan aksen (#3b6cd4; teks putih di atasnya = kontras 4,6:1)
+ * Font    -> Poppins (judul) + Plus Jakarta Sans (isi dan antarmuka)
+ */
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+    --color-graphite-50: #f3f5f8;
+    --color-graphite-100: #edf0f5;
+    --color-graphite-200: #e2e6ec;
+    --color-graphite-300: #c5cfde;
+    --color-graphite-400: #94a3bb;
+    --color-graphite-500: #667794;
+    --color-graphite-600: #4a5a73;
+    --color-graphite-700: #34435c;
+    --color-graphite-800: #1f2a3d;
+    --color-graphite-900: #1b2638;
+
+    --color-accent-50: #eef4fd;
+    --color-accent-100: #dce8fb;
+    --color-accent-300: #a9c4f2;
+    --color-accent-400: #7fa8e8;
+    --color-accent-500: #4f82e6;
+    --color-accent-600: #3b6cd4;
+    --color-accent-700: #2f58b3;
+    --color-accent-800: #254690;
+
+    --color-surface: #f3f5f8;
+    --color-ink: #1b2638;
+}
+
+@layer base {
+    html {
+        color-scheme: light;
+        scroll-behavior: smooth;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-accent-500);
+        outline-offset: 2px;
+    }
+
+    .font-display {
+        font-optical-sizing: auto;
+        
+    }
+}
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-bold transition;
+}
+@utility btn-primary {
+    @apply btn bg-accent-600 text-white shadow-sm hover:bg-accent-700 active:bg-accent-800;
+}
+@utility btn-dark {
+    @apply btn bg-graphite-800 text-white hover:bg-graphite-900;
+}
+@utility btn-outline-light {
+    @apply btn border border-white/30 text-white hover:border-white hover:bg-white/10;
+}
+@utility btn-outline {
+    @apply btn border border-graphite-300 text-graphite-800 hover:border-graphite-800 hover:bg-graphite-50;
+}
+@utility btn-danger {
+    @apply btn bg-red-700 text-white hover:bg-red-800;
+}
+@utility btn-sm {
+    @apply px-3 py-1.5 text-xs;
+}
+@utility eyebrow {
+    @apply text-xs font-bold uppercase tracking-widest text-accent-600;
+}
+@utility eyebrow-dark {
+    @apply text-accent-400;
+}
+@utility card {
+    @apply rounded-2xl border border-graphite-200 bg-white p-6 shadow-sm;
+}
+@utility field {
+    @apply block w-full rounded-xl border border-graphite-300 bg-white px-3.5 py-2.5 text-sm text-graphite-800 transition placeholder:text-graphite-400 hover:border-graphite-500 focus:border-accent-600 focus:outline-none focus:ring-4 focus:ring-accent-600/15;
+}
+@utility label {
+    @apply mb-1.5 block text-sm font-bold text-graphite-800;
+}
+@utility badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-bold;
+}
+
+/* Label kecil di atas latar gelap memakai oranye yang lebih terang agar tetap terbaca */
+.on-dark .eyebrow {
+    color: var(--color-accent-400);
+}
+
+/* ---------- Landing ---------- */
+.hero-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 68% center;
+}
+.hero-veil {
+    background:
+        linear-gradient(90deg, rgb(8 11 16 / 0.88) 0%, rgb(8 11 16 / 0.62) 38%, rgb(8 11 16 / 0.05) 72%),
+        linear-gradient(0deg, rgb(8 11 16 / 0.55) 0%, transparent 35%);
+}
+@media (max-width: 767px) {
+    .hero-veil {
+        background: linear-gradient(0deg, rgb(8 11 16 / 0.92) 0%, rgb(8 11 16 / 0.6) 55%, rgb(8 11 16 / 0.35) 100%);
+    }
+}
+.glass {
+    background: rgb(27 38 56 / 0.55);
+    border: 1px solid rgb(255 255 255 / 0.14);
+    backdrop-filter: blur(14px);
+}
+.step-line::before {
+    content: '';
+    position: absolute;
+    left: 1.2rem;
+    top: 2.6rem;
+    bottom: -1.4rem;
+    width: 2px;
+    background: repeating-linear-gradient(var(--color-graphite-300) 0 6px, transparent 6px 12px);
+}
+.step-line:last-child::before {
+    display: none;
+}
+
+/* Muncul halus saat di-scroll (dimatikan bila pengguna memilih "kurangi animasi") */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ---------- Ruang ujian ---------- */
+.q-nav-btn[aria-current='true'] {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 1px;
+}
+.opt-label:has(input:checked) {
+    border-color: var(--color-accent-600);
+    background: var(--color-accent-50);
+}
+.opt-label:has(input:focus-visible) {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 2px;
+}
+
+/* ---------- Roadmap perjalanan ---------- */
+.route-track {
+    position: relative;
+}
+@media (min-width: 1024px) {
+    .route-track::before {
+        content: '';
+        position: absolute;
+        left: 8%;
+        right: 8%;
+        top: 1.45rem;
+        height: 3px;
+        border-radius: 2px;
+        background: repeating-linear-gradient(90deg, var(--color-accent-500) 0 14px, transparent 14px 24px);
+    }
+}
+.route-node {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 9999px;
+    font-weight: 800;
+    color: #fff;
+    background: var(--color-graphite-900);
+    box-shadow: 0 0 0 6px var(--color-surface);
+}
+.route-node.is-premium {
+    background: var(--color-accent-600);
+}
+@media (max-width: 1023px) {
+    .route-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 1.4rem;
+        top: 3.2rem;
+        bottom: -1.2rem;
+        width: 2px;
+        background: repeating-linear-gradient(var(--color-accent-500) 0 6px, transparent 6px 12px);
+    }
+}
+
+/* ---------- Hero baru: kartu produk ---------- */
+.hero-chip { display: flex; align-items: center; gap: .5rem; padding: .35rem .9rem .35rem .4rem; border: 1px solid rgb(255 255 255 / .18); border-radius: 999px; background: rgb(255 255 255 / .08); backdrop-filter: blur(8px); font-size: .9rem; font-weight: 700; }
+.hero-chip-ic { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 999px; background: var(--color-accent-600); }
+.hero-mock { position: relative; perspective: 1200px; }
+.hero-laptop { padding: 10px; border: 1px solid rgb(255 255 255 / .18); border-radius: 14px; background: #0f1726; box-shadow: 0 30px 80px rgb(0 0 0 / .6); transform: rotateY(-8deg) rotateX(3deg); }
+.hero-screen { display: grid; align-content: start; gap: .7rem; min-height: 280px; padding: 1rem; border-radius: 8px; background: var(--color-graphite-50); color: var(--color-ink); }
+.hero-timer { padding: .1rem .7rem; border-radius: 999px; background: var(--color-graphite-900); color: #fff; font-variant-numeric: tabular-nums; }
+.hero-prog { height: 6px; overflow: hidden; border-radius: 9px; background: var(--color-graphite-200); }
+.hero-prog b { display: block; height: 100%; background: var(--color-accent-600); animation: hero-fill 6s ease-in-out infinite alternate; }
+.hero-opt { padding: .55rem .8rem; border: 1.5px solid var(--color-graphite-200); border-radius: 9px; background: #fff; font-size: .85rem; }
+.hero-opt.is-picked { animation: hero-pick 6s infinite; }
+.hero-float { position: absolute; padding: .7rem .95rem; border-radius: 14px; background: #fff; color: var(--color-ink); font-size: .85rem; font-weight: 700; box-shadow: 0 18px 40px rgb(0 0 0 / .5); animation: hero-bob 5s ease-in-out infinite; }
+.hero-float small { display: block; color: var(--color-graphite-500); font-size: .72rem; font-weight: 500; }
+.hero-float b { font-family: var(--font-display); font-size: 1.5rem; color: var(--color-accent-600); font-variant-numeric: tabular-nums; }
+.hero-float.f1 { left: -4%; top: 6%; }
+.hero-float.f2 { right: -2%; top: 40%; animation-delay: -1.6s; }
+.hero-float.f3 { left: 6%; bottom: -6%; animation-delay: -3s; }
+@keyframes hero-fill { from { width: 12%; } to { width: 88%; } }
+@keyframes hero-pick { 0%, 30% { border-color: var(--color-graphite-200); background: #fff; } 40%, 100% { border-color: var(--color-accent-600); background: var(--color-accent-50); } }
+@keyframes hero-bob { 50% { transform: translateY(-12px); } }
+@media (max-width: 1023px) { .hero-float.f1 { left: 0; } .hero-float.f2 { right: 0; } }
+
+/* ---------- Roadmap "Jalur Owlspire" (animasi mengikuti scroll) ---------- */
+.journey { --hdr: 4.5rem; position: relative; height: 620vh; background: #0e1319; color: #fff; }
+.journey-pin { position: sticky; top: var(--hdr); display: grid; grid-template-rows: auto 1fr auto; height: calc(100svh - var(--hdr)); overflow: hidden; }
+.journey-stage { position: relative; min-height: 0; }
+.journey-stage svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.journey-dots { display: flex; gap: 6px; margin-top: .9rem; }
+.journey-dots i { flex: 1; height: 5px; border-radius: 9px; background: rgb(255 255 255 / .3); transition: background .3s; }
+.journey-dots i.on { background: var(--color-accent-400); }
+.journey-trail { fill: none; stroke: rgb(255 255 255 / .3); stroke-width: 14; stroke-linecap: round; stroke-dasharray: 2 22; }
+.journey-line { fill: none; stroke: var(--color-accent-400); stroke-width: 7; stroke-linecap: round; }
+.journey-walker { filter: drop-shadow(0 4px 4px rgb(0 0 0 / .4)); }
+.j-st { cursor: pointer; transform-box: fill-box; transform-origin: center; transition: transform .35s cubic-bezier(.3, 1.6, .5, 1); }
+.j-st circle { fill: var(--color-graphite-800); stroke: rgb(255 255 255 / .35); stroke-width: 3; transition: fill .3s, stroke .3s; }
+.j-st .num { fill: #fff; font: 700 15px var(--font-sans); text-anchor: middle; dominant-baseline: central; transition: opacity .2s; }
+.j-st .ico { color: #fff; opacity: 0; transition: opacity .3s; }
+.j-st.on circle { fill: var(--color-accent-600); stroke: #fff; }
+.j-st.on .num { opacity: 0; }
+.j-st.on .ico { opacity: 1; }
+.j-st.on { transform: scale(1.2); }
+.j-st.cur circle { stroke: var(--color-accent-400); stroke-width: 6; }
+.j-st:focus-visible { outline: 2px solid var(--color-accent-400); outline-offset: 4px; }
+.journey-conf circle { opacity: 0; }
+.journey-pin.win .journey-conf circle { animation: j-pop 1.4s ease-out forwards; }
+@keyframes j-pop { from { opacity: 1; transform: translate(0, 0); } to { opacity: 0; transform: translate(var(--x), var(--y)); } }
+.journey-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.2rem; border-radius: 16px; background: #fff; color: var(--color-ink); box-shadow: 0 20px 50px rgb(0 0 0 / .45); }
+.journey-card h3 { font-size: 1.15rem; font-weight: 800; }
+.journey-card p { margin-top: .15rem; font-size: .95rem; color: var(--color-graphite-600); }
+@media (prefers-reduced-motion: reduce) {
+    .hero-float, .hero-prog b, .hero-opt.is-picked { animation: none; }
+    .j-st, .j-st circle, .journey-dots i { transition: none; }
+}

@@ -1,0 +1,201 @@
+{
+ "topics": {
+  "1": {
+   "v": 1,
+   "minutes": 14,
+   "prereq": "Tidak ada. Cukup bisa membuka Excel dan mengetik di sel. Rumus di bawah memakai pemisah titik koma (;) seperti pengaturan Excel berbahasa Indonesia; kalau Excelmu memakai koma, ganti semua ; dengan ,.",
+   "sections": [
+    {
+     "heading": "Mulai dari ide dasarnya: analisis hanya sebagus datanya",
+     "paragraphs": [
+      "Hampir semua kesalahan laporan datang dari data yang belum rapi, bukan dari rumus yang salah. Bayangkan kamu menjumlahkan omzet \"Kopi\" tetapi di tabel ada baris yang tertulis \"Kopi \" (ada spasi di belakang) dan \"kopi\" dengan huruf kecil. Bagi mata manusia ketiganya sama. Bagi Excel, spasi tambahan membuat teksnya berbeda, sehingga sebagian baris tidak ikut terhitung dan angkamu diam-diam kurang.",
+      "Karena itu urutan kerja analis selalu sama: bentuk tabel yang rapi, bersihkan isinya, baru hitung dan rangkum. Memahami urutan ini lebih penting daripada menghafal rumus."
+     ],
+     "note": {
+      "label": "Aturan tabel rapi",
+      "text": "Satu baris berisi satu catatan (misalnya satu transaksi). Satu kolom berisi satu jenis informasi (misalnya hanya Produk, atau hanya Omzet). Baris judul hanya satu, tanpa sel yang digabung (merge), dan tidak ada baris total yang menyelip di tengah data."
+     }
+    },
+    {
+     "heading": "Membersihkan data: empat masalah yang paling sering muncul",
+     "paragraphs": [
+      "Sebelum menghitung, periksa data dari atas ke bawah. Empat masalah berikut mencakup sebagian besar kekacauan data di pekerjaan nyata."
+     ],
+     "table": {
+      "head": [
+       "Masalah",
+       "Contoh di sel",
+       "Akibatnya",
+       "Cara memperbaiki"
+      ],
+      "rows": [
+       [
+        "Spasi berlebih",
+        "\"Kopi \"",
+        "Dianggap berbeda dari \"Kopi\"",
+        "Kolom bantu dengan =TRIM(A2), lalu salin dan tempel sebagai nilai"
+       ],
+       [
+        "Angka tersimpan sebagai teks",
+        "\"Rp 1.200.000\"",
+        "Tidak bisa dijumlahkan",
+        "Hapus \"Rp\" dengan Find & Replace, lalu ubah format sel ke Number"
+       ],
+       [
+        "Format tanggal campur",
+        "05/01/2026 dan 2026-01-05",
+        "Sulit diurutkan, bulan bisa tertukar dengan hari",
+        "Pilih kolom, Data > Text to Columns > Date, tentukan urutan hari-bulan-tahun"
+       ],
+       [
+        "Baris ganda",
+        "Transaksi yang sama tercatat dua kali",
+        "Omzet terhitung dobel",
+        "Data > Remove Duplicates, centang kolom yang menentukan keunikan"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Kebiasaan penting: jangan menimpa data asli. Salin dulu ke sheet baru bernama \"Bersih\", lalu bekerja di sana. Kalau ada kesalahan, data mentahmu masih utuh dan kamu bisa mengulang dari awal."
+     ]
+    },
+    {
+     "heading": "Rumus bersyarat: SUMIFS, COUNTIFS, AVERAGEIFS",
+     "paragraphs": [
+      "Ketiganya punya pola pikir yang sama: lihat satu kolom angka, tetapi hanya hitung baris yang memenuhi syarat. Kita pakai tabel kecil ini agar hasilnya bisa kamu cocokkan di kepala. Kolom A berisi Produk, B Wilayah, C Bulan, D Omzet, dengan data di baris 2 sampai 6."
+     ],
+     "table": {
+      "head": [
+       "Produk",
+       "Wilayah",
+       "Bulan",
+       "Omzet"
+      ],
+      "rows": [
+       [
+        "Kopi",
+        "Jakarta",
+        "Jan",
+        "1.200.000"
+       ],
+       [
+        "Kopi",
+        "Bandung",
+        "Jan",
+        "800.000"
+       ],
+       [
+        "Teh",
+        "Jakarta",
+        "Jan",
+        "500.000"
+       ],
+       [
+        "Kopi",
+        "Jakarta",
+        "Feb",
+        "1.500.000"
+       ],
+       [
+        "Teh",
+        "Bandung",
+        "Feb",
+        "600.000"
+       ]
+      ]
+     },
+     "code": "=SUMIFS(D2:D6; A2:A6; \"Kopi\"; B2:B6; \"Jakarta\")\n=COUNTIFS(A2:A6; \"Kopi\")\n=AVERAGEIFS(D2:D6; A2:A6; \"Kopi\")",
+     "paragraphs_after": [
+      "Baca rumus pertama dari kiri: \"jumlahkan D2:D6, tetapi hanya baris yang kolom A-nya Kopi dan kolom B-nya Jakarta\". Baris 2 dan 5 yang lolos, jadi hasilnya 1.200.000 + 1.500.000 = 2.700.000. Rumus kedua menghitung jumlah baris Kopi, yaitu 3. Rumus ketiga merata-ratakan omzet Kopi: (1.200.000 + 800.000 + 1.500.000) / 3 = sekitar 1.166.667.",
+      "Perhatikan bahwa pada SUMIFS dan AVERAGEIFS kolom yang dihitung ditulis paling depan, sedangkan syaratnya berpasangan sesudahnya (kolom syarat, lalu isi syarat). Semua rentang harus sama panjang. Kalau satu rentang D2:D6 dan yang lain A2:A5, Excel menampilkan #VALUE!."
+     ]
+    },
+    {
+     "heading": "Mengambil data dari tabel lain dengan XLOOKUP",
+     "paragraphs": [
+      "Sering kali informasi yang kamu butuhkan ada di tabel berbeda. Misalnya tabel transaksi hanya berisi kode produk, sedangkan nama dan harganya ada di tabel master. XLOOKUP mencari sebuah kunci lalu mengembalikan nilai di baris yang sama dari kolom lain."
+     ],
+     "code": "=XLOOKUP(A2; Master!A:A; Master!C:C; \"Tidak ditemukan\")",
+     "paragraphs_after": [
+      "Argumennya berurutan: apa yang dicari (A2), di kolom mana mencarinya (Master!A:A), nilai dari kolom mana yang diambil (Master!C:C), dan teks cadangan kalau tidak ketemu. Argumen terakhir ini berguna: tanpanya Excel menampilkan #N/A, yang mudah merusak jumlah di rumus lain. Kunci pencarian harus unik di tabel master, kalau tidak Excel hanya mengambil yang pertama ditemukan."
+     ],
+     "note": {
+      "label": "Cek versi Excel",
+      "text": "XLOOKUP tersedia di Microsoft 365 dan Excel 2021 ke atas. Di Excel 2016 atau 2019 fungsi ini tidak ada, dan kamu bisa memakai INDEX dengan MATCH untuk hasil yang sama."
+     }
+    },
+    {
+     "heading": "Tabel pivot: merangkum ribuan baris tanpa menulis rumus",
+     "paragraphs": [
+      "Tabel pivot adalah mesin pengelompokan. Kamu cukup memberi tahu Excel kolom mana yang menjadi pengelompok dan kolom mana yang dihitung, lalu Excel mengerjakan sisanya. Ada empat area yang perlu kamu pahami: Rows (pengelompok di sisi kiri), Columns (pengelompok di sisi atas), Values (angka yang dihitung, biasanya dijumlahkan), dan Filters (penyaring seluruh tabel)."
+     ],
+     "steps": [
+      "Klik satu sel di dalam tabel datamu, lalu pilih Insert > PivotTable dan tekan OK.",
+      "Seret Produk ke area Rows. Seketika muncul daftar Kopi dan Teh.",
+      "Seret Omzet ke area Values. Excel menjumlahkannya: Kopi 3.500.000 dan Teh 1.100.000.",
+      "Seret Bulan ke area Columns untuk memecah angka itu per bulan, atau ke Filters kalau kamu ingin memilih satu bulan saja.",
+      "Pilih Insert > PivotChart bila kamu butuh grafiknya."
+     ],
+     "paragraphs_after": [
+      "Satu hal yang sering terlupa: pivot tidak otomatis ikut berubah ketika data sumbernya kamu edit. Klik kanan pivot lalu pilih Refresh. Jika kamu menambah baris baru di bawah data, ubah dulu data menjadi tabel resmi lewat Ctrl+T supaya rentangnya ikut melebar."
+     ]
+    },
+    {
+     "heading": "Memeriksa hasilmu sebelum dikirim",
+     "paragraphs": [
+      "Analis yang baik tidak percaya pada angkanya sendiri sampai terbukti. Ada tiga pemeriksaan murah yang bisa kamu lakukan dalam satu menit.",
+      "Pertama, cocokkan total. Pada contoh di atas total pivot harus 4.600.000, sama dengan =SUM(D2:D6). Kalau berbeda, ada baris yang tidak ikut terhitung, biasanya karena angkanya masih berupa teks. Kedua, hitung jumlah baris dengan =COUNTA(A2:A6) dan bandingkan dengan jumlah catatan yang kamu ketahui. Ketiga, lihat nilai terkecil dan terbesar (MIN dan MAX): angka negatif atau nol yang janggal biasanya tanda salah ketik."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Menggabungkan sel (merge) di baris judul supaya tampak rapi",
+     "why": "Pivot dan filter tidak bisa membaca judul kolom yang digabung.",
+     "fix": "Biarkan satu sel per judul kolom. Percantik tampilan lewat warna, bukan merge."
+    },
+    {
+     "wrong": "Mengetik angka hasil hitungan langsung ke sel",
+     "why": "Saat data berubah, angka itu tidak ikut berubah dan kamu tidak bisa melacak asalnya.",
+     "fix": "Selalu pakai rumus, supaya setiap angka punya jejak perhitungan."
+    },
+    {
+     "wrong": "Membuat pivot lalu lupa me-refresh setelah data diperbarui",
+     "why": "Pivot menyimpan salinan hasil, bukan terhubung langsung secara real time.",
+     "fix": "Biasakan klik Refresh, atau ubah data menjadi tabel dengan Ctrl+T."
+    },
+    {
+     "wrong": "Menulis syarat teks tanpa tanda kutip di SUMIFS",
+     "why": "Excel menganggap Kopi sebagai nama, bukan teks, lalu menampilkan #NAME?.",
+     "fix": "Tulis teks di dalam tanda kutip: \"Kopi\", atau arahkan ke sel yang berisi kata itu."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Kenapa \"Kopi \" dan \"Kopi\" bisa membuat jumlah di SUMIFS kurang?",
+     "a": "Spasi di belakang membuat Excel menganggap kedua teks itu berbeda, jadi baris dengan spasi tidak memenuhi syarat \"Kopi\". Perbaikannya memakai TRIM sebelum menghitung."
+    },
+    {
+     "q": "Dengan tabel contoh, berapa hasil =SUMIFS(D2:D6; A2:A6; \"Teh\")?",
+     "a": "1.100.000, yaitu 500.000 (baris 4) ditambah 600.000 (baris 6)."
+    },
+    {
+     "q": "Apa gunanya argumen keempat pada XLOOKUP?",
+     "a": "Teks cadangan yang ditampilkan bila kunci tidak ditemukan, sehingga hasilnya tidak berupa #N/A yang bisa merusak rumus lain."
+    },
+    {
+     "q": "Total pivotmu 4.550.000 padahal SUM kolom Omzet 4.600.000. Apa yang pertama kamu curigai?",
+     "a": "Ada angka yang tersimpan sebagai teks sehingga tidak ikut dijumlahkan, atau pivot belum di-refresh setelah data diubah."
+    }
+   ],
+   "summary": [
+    "Bentuk tabel rapi dulu, bersihkan, baru hitung.",
+    "SUMIFS, COUNTIFS, dan AVERAGEIFS menghitung hanya baris yang memenuhi syarat, dan semua rentangnya harus sama panjang.",
+    "XLOOKUP mengambil nilai dari tabel lain berdasarkan kunci, dan sebaiknya diberi teks cadangan.",
+    "Pivot merangkum data lewat Rows, Columns, Values, dan Filters; ingat untuk me-refresh.",
+    "Selalu cocokkan total hasilmu dengan SUM data asli."
+   ],
+   "next": "Topik berikutnya, SQL dasar, memakai cara pikir yang sama: memilih kolom, menyaring baris, dan mengelompokkan, tetapi untuk data yang terlalu besar untuk dibuka di Excel."
+  }
+ }
+}

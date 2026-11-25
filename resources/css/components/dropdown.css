@@ -1,0 +1,30 @@
+/* Dropdown kustom (desain menu Karier). Dipakai di semua filter dan formulir pengganti <select>. */
+.ui-dd { position: relative; flex: 0 0 16rem; }
+.ui-dd-btn { display: flex; align-items: center; justify-content: space-between; gap: .5rem; width: 100%; height: 3rem; padding: 0 .9rem 0 1rem; border: 1px solid var(--color-graphite-300, #c5cfde); border-radius: .9rem; background: var(--pn-card, #fff); font-size: .9rem; font-weight: 600; text-align: left; color: var(--color-graphite-800, #1f2a3d); transition: border-color .25s, box-shadow .25s; }
+.ui-dd-btn span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ui-dd-btn svg { flex: none; width: 1.1rem; height: 1.1rem; fill: none; stroke: var(--color-graphite-500, #667794); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s cubic-bezier(.2, .8, .2, 1); }
+.ui-dd-btn:hover { border-color: var(--color-graphite-500, #667794); }
+.ui-dd-btn:focus-visible, .ui-dd.is-open .ui-dd-btn { outline: none; border-color: var(--color-accent-600, #3b6cd4); box-shadow: 0 0 0 4px rgb(59 108 212 / .14); }
+.ui-dd.is-open .ui-dd-btn svg { transform: rotate(180deg); }
+.ui-dd-list { position: absolute; z-index: 60; top: calc(100% + .4rem); left: 0; right: 0; max-height: 18rem; margin: 0; overflow-y: auto; padding: .35rem; list-style: none; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: .9rem; background: var(--pn-card, #fff); box-shadow: 0 20px 40px -18px rgb(27 38 56 / .35); opacity: 0; visibility: hidden; transform: translateY(-6px) scale(.98); transform-origin: top; transition: opacity .2s ease, transform .25s cubic-bezier(.2, .8, .2, 1), visibility 0s linear .25s; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--color-graphite-300, #c5cfde) transparent; }
+.ui-dd.is-open .ui-dd-list { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.ui-dd-list li { position: relative; padding: .6rem 2rem .6rem .75rem; border-radius: .6rem; font-size: .85rem; font-weight: 600; line-height: 1.35; color: var(--color-graphite-700, #34435c); cursor: pointer; transition: background .15s; }
+.ui-dd-list li:hover, .ui-dd-list li.is-hi { background: var(--color-graphite-100, #edf0f5); }
+.ui-dd-list li[aria-selected=true] { color: var(--color-accent-700, #2f58b3); background: var(--color-accent-50, #eef4fd); }
+.ui-dd-list li[aria-selected=true]::after { content: ''; position: absolute; right: .8rem; top: 50%; width: .5rem; height: .9rem; margin-top: -.6rem; border: solid var(--color-accent-600, #3b6cd4); border-width: 0 2.4px 2.4px 0; transform: rotate(45deg); }
+.ui-dd-list li.is-group { padding: .5rem .75rem .25rem; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--color-graphite-400, #94a3bb); cursor: default; pointer-events: none; }
+.ui-dd-list li.is-group:hover { background: transparent; }
+
+/* Varian: pendek (di dalam tabel dan formulir) dan lebar menyesuaikan isi */
+.ui-dd.is-sm { flex: 0 0 auto; width: 9rem; }
+.ui-dd.is-sm .ui-dd-btn { height: 2.4rem; padding: 0 .7rem 0 .8rem; border-radius: .7rem; font-size: .8rem; }
+.ui-dd.is-sm .ui-dd-list { min-width: 100%; width: max-content; max-width: 18rem; right: auto; }
+.ui-dd.is-block { flex: 1 1 auto; width: 100%; }
+.ui-dd.is-up .ui-dd-list { top: auto; bottom: calc(100% + .4rem); transform-origin: bottom; transform: translateY(6px) scale(.98); }
+.ui-dd.is-up.is-open .ui-dd-list { transform: none; }
+@media (max-width: 640px) { .ui-dd { flex: 1 1 100%; } .ui-dd.is-sm { flex: 0 0 auto; } }
+@media (prefers-reduced-motion: reduce) { .ui-dd-list, .ui-dd-btn svg { transition: none; } }
+
+/* Panel dipasang fixed oleh ui.js (ukuran dan posisi dihitung dari tombol); teks panjang boleh turun baris */
+.ui-dd-list li { overflow-wrap: anywhere; }
+.ui-dd.is-sm .ui-dd-list { max-width: none; }

@@ -1,0 +1,142 @@
+/* Dashboard pengguna. Awalan: db-. Hero tetap gelap di tema terang dan gelap, sisanya mengikuti token tema. */
+.db { --db-navy: #162036; --db-navy-2: #1d2b47; --db-amber: #f5b942; }
+
+/* ---------- Hero: kesiapan karier ---------- */
+.db-hero { position: relative; isolation: isolate; display: grid; gap: 1.5rem 2rem; align-items: center; padding: 1.5rem 1.6rem; overflow: hidden; border-radius: 1.3rem; background: linear-gradient(135deg, var(--db-navy), var(--db-navy-2)); color: #fff; }
+.db-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(60% 120% at 85% 15%, rgb(255 255 255 / .10), transparent 70%); }
+.db-hero-main { min-width: 0; }
+.db-hero-k { font-size: .78rem; font-weight: 600; color: var(--color-graphite-300, #c5cfde); }
+.db-hero h2 { margin-top: .15rem; font-family: var(--font-display, serif); font-size: 1.5rem; font-weight: 600; line-height: 1.2; letter-spacing: -.01em; color: #fff; }
+.db-hero h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.db-hero-t { max-width: 34rem; margin-top: .5rem; font-size: .88rem; line-height: 1.6; color: #c5cfde; }
+.db-hero-t b { font-weight: 800; color: #fff; }
+.db-hero-cta { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1rem; padding: .55rem 1.05rem; border-radius: .75rem; background: #fff; font-size: .84rem; font-weight: 800; color: var(--db-navy); transition: background .2s, transform .2s; }
+.db-hero-cta:hover { background: var(--color-accent-100, #dce8fb); }
+.db-hero-cta:focus-visible { outline: 2px solid var(--db-amber); outline-offset: 3px; }
+.db-hero.is-empty { grid-template-columns: auto minmax(0, 1fr); }
+
+/* Cincin skor */
+.db-ring { --p: 0; position: relative; display: grid; place-content: center; justify-items: center; width: 7.6rem; height: 7.6rem; border-radius: 50%; background: conic-gradient(var(--color-accent-400, #7fa8e8) calc(var(--p) * 1%), rgb(255 255 255 / .12) 0); }
+.db-ring::before { content: ''; position: absolute; inset: .55rem; border-radius: inherit; background: var(--db-navy); }
+.db-ring b, .db-ring small { position: relative; }
+.db-ring b { font-family: var(--font-display, serif); font-size: 2.3rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.db-ring small { margin-top: .2rem; font-size: .68rem; font-weight: 600; color: var(--color-graphite-300, #c5cfde); }
+.db-hero.is-empty .db-ring { background: rgb(255 255 255 / .1); }
+
+/* Bagian skor */
+.db-parts { display: grid; gap: .8rem; min-width: 0; }
+.db-part { display: grid; gap: .35rem; }
+.db-part-h { display: flex; justify-content: space-between; gap: .75rem; font-size: .8rem; font-weight: 600; color: #c5cfde; }
+.db-part-h b { font-weight: 800; color: #fff; font-variant-numeric: tabular-nums; }
+.db-meter { height: .45rem; overflow: hidden; border-radius: 999px; background: rgb(255 255 255 / .14); }
+.db-meter > i { display: block; height: 100%; border-radius: inherit; background: var(--color-accent-400, #7fa8e8); transform-origin: left; animation: db-fill .9s cubic-bezier(.2, .8, .2, 1) both; }
+.db-part.is-weak .db-meter > i { background: var(--db-amber); }
+.db-part.is-weak .db-part-h b { color: var(--db-amber); }
+@keyframes db-fill { from { transform: scaleX(0); } }
+
+/* ---------- Strip angka: satu baris, satu wadah ---------- */
+.db-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; overflow: hidden; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.1rem; background: var(--pn-card, #fff); }
+.db-stat { display: flex; align-items: center; gap: .85rem; min-width: 0; padding: 1rem 1.15rem; border-bottom: 1px solid var(--color-graphite-100, #edf0f5); }
+.db-stat:nth-child(odd) { border-right: 1px solid var(--color-graphite-100, #edf0f5); }
+.db-stat:nth-last-child(-n + 2) { border-bottom: 0; }
+.db-stat-ic { flex: none; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: .75rem; background: var(--color-accent-50, #eef4fd); color: var(--color-accent-700, #2f58b3); }
+.db-stat-ic svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.db-stat > div { min-width: 0; line-height: 1.25; }
+.db-stat dt { font-size: .76rem; font-weight: 600; color: var(--color-graphite-500, #667794); }
+.db-stat dd { margin: .05rem 0 0; font-family: var(--font-display, serif); font-size: 1.55rem; font-weight: 600; line-height: 1.15; letter-spacing: -.01em; color: var(--color-ink, #1b2638); font-variant-numeric: tabular-nums; }
+.db-stat small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .72rem; color: var(--color-graphite-400, #94a3bb); }
+
+/* ---------- Dua kolom: riwayat + pintasan ---------- */
+.db-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.db-panel { overflow: hidden; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.1rem; background: var(--pn-card, #fff); }
+.db-panel > header { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .95rem 1.2rem; border-bottom: 1px solid var(--color-graphite-100, #edf0f5); }
+.db-panel > header h2 { font-size: .98rem; font-weight: 800; color: var(--color-graphite-800, #1f2a3d); }
+
+/* Baris riwayat */
+.db-row { display: flex; align-items: center; gap: 1rem; padding: .8rem 1.2rem; border-bottom: 1px solid var(--color-graphite-100, #edf0f5); transition: background .2s; }
+.db-row:last-child { border-bottom: 0; }
+.db-row:hover { background: var(--color-graphite-50, #f3f5f8); }
+.db-row:focus-visible { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: -2px; }
+.db-row-main { display: grid; flex: 1; gap: .1rem; min-width: 0; }
+.db-row-main b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .9rem; font-weight: 700; color: var(--color-graphite-800, #1f2a3d); }
+.db-row-main small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .75rem; color: var(--color-graphite-500, #667794); }
+.db-row-score { display: grid; justify-items: end; gap: .3rem; flex: none; }
+.db-row-score b { font-family: var(--font-display, serif); font-size: 1.15rem; font-weight: 600; line-height: 1; color: var(--color-ink, #1b2638); font-variant-numeric: tabular-nums; }
+.db-meter.is-sm { width: 3.6rem; height: .3rem; background: var(--color-graphite-100, #edf0f5); }
+.db-meter.is-sm > i { background: var(--color-accent-600, #3b6cd4); }
+.db-row-go { flex: none; width: 1rem; height: 1rem; fill: none; stroke: var(--color-graphite-400, #94a3bb); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s, stroke .2s; }
+.db-row:hover .db-row-go { transform: translateX(2px); stroke: var(--color-accent-600, #3b6cd4); }
+.db-empty { display: grid; justify-items: start; gap: .75rem; padding: 1.4rem 1.2rem; font-size: .88rem; color: var(--color-graphite-600, #4a5a73); }
+
+/* Info CV + daftar pintasan */
+.db-cv { display: flex; align-items: center; gap: .6rem; margin: 1rem 1.2rem 0; padding: .6rem .8rem; border-radius: .8rem; background: var(--color-accent-50, #eef4fd); font-size: .82rem; color: var(--color-graphite-700, #34435c); }
+.db-cv svg { flex: none; width: 1.1rem; height: 1.1rem; fill: none; stroke: var(--color-accent-600, #3b6cd4); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.db-cv p { flex: 1; min-width: 0; }
+.db-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .2rem .6rem; margin: 0; padding: .7rem .7rem .8rem; list-style: none; }
+.db-links a { display: flex; align-items: center; gap: .6rem; min-height: 2.5rem; padding: 0 .6rem; border-radius: .7rem; font-size: .84rem; font-weight: 700; color: var(--color-graphite-700, #34435c); transition: background .2s, color .2s; }
+.db-links a:hover { background: var(--color-accent-50, #eef4fd); color: var(--color-accent-700, #2f58b3); }
+.db-links a:focus-visible { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: -2px; }
+.db-links svg { flex: none; width: 1.05rem; height: 1.05rem; fill: none; stroke: var(--color-accent-600, #3b6cd4); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.db-links span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.db-links a.is-locked { color: var(--color-graphite-500, #667794); }
+.db-links a.is-locked > svg:first-child { stroke: var(--color-graphite-400, #94a3bb); }
+.db-links .db-links-lock { margin-left: auto; width: .85rem; height: .85rem; stroke: var(--color-graphite-400, #94a3bb); }
+
+/* ---------- Layar lebar ---------- */
+@media (min-width: 760px) {
+    .db-hero { grid-template-columns: auto minmax(0, 1fr); }
+    .db-parts { grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; padding-top: 1.1rem; border-top: 1px solid rgb(255 255 255 / .12); }
+}
+@media (min-width: 1100px) {
+    .db-hero { grid-template-columns: auto minmax(0, 1fr) minmax(14rem, 18rem); padding: 1.6rem 2rem; }
+    .db-parts { grid-column: auto; grid-template-columns: minmax(0, 1fr); gap: .85rem; padding: 0 0 0 2rem; border-top: 0; border-left: 1px solid rgb(255 255 255 / .12); }
+    .db-hero.is-empty { grid-template-columns: auto minmax(0, 1fr); }
+    .db-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .db-stat, .db-stat:nth-child(odd), .db-stat:nth-last-child(-n + 2) { border-bottom: 0; border-right: 1px solid var(--color-graphite-100, #edf0f5); }
+    .db-stat:last-child { border-right: 0; }
+    .db-cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .db-cols.is-one { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- Layar kecil ---------- */
+@media (max-width: 759px) {
+    .db-hero { grid-template-columns: auto minmax(0, 1fr); gap: 1.1rem; padding: 1.15rem; }
+    .db-ring { width: 5.6rem; height: 5.6rem; }
+    .db-ring::before { inset: .42rem; }
+    .db-ring b { font-size: 1.7rem; }
+    .db-ring small { font-size: .6rem; }
+    .db-hero h2 { font-size: 1.2rem; }
+    .db-hero-t { font-size: .82rem; }
+    .db-hero-main { grid-column: 2; }
+    .db-parts { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+    .db-hero.is-empty { grid-template-columns: minmax(0, 1fr); }
+    .db-hero.is-empty .db-ring { display: none; }
+    .db-hero-main { grid-column: 1 / -1; }
+    .db-stat { gap: .65rem; padding: .85rem .9rem; }
+    .db-stat-ic { width: 2rem; height: 2rem; border-radius: .6rem; }
+    .db-stat dd { font-size: 1.3rem; }
+    .db-links { grid-template-columns: minmax(0, 1fr); }
+    .db-row { gap: .75rem; padding: .75rem 1rem; }
+    .db-panel > header { padding: .85rem 1rem; }
+    .db-cv { margin: .85rem 1rem 0; }
+}
+
+/* ---------- Tema gelap: hero sudah gelap, sisanya ikut token ---------- */
+html[data-theme='dark'] .db { --db-navy: #0f1828; --db-navy-2: #172339; }
+html[data-theme='dark'] .db-hero { box-shadow: inset 0 0 0 1px rgb(255 255 255 / .06); }
+html[data-theme='dark'] .db-stat-ic, html[data-theme='dark'] .db-cv { background: rgb(79 130 230 / .14); }
+html[data-theme='dark'] .db-stat-ic, html[data-theme='dark'] .db-links svg, html[data-theme='dark'] .db-cv svg { color: #8db3f0; stroke: #8db3f0; }
+html[data-theme='dark'] .db-stat-ic svg { stroke: #8db3f0; }
+html[data-theme='dark'] .db-links a:hover { color: #8db3f0; background: rgb(79 130 230 / .12); }
+html[data-theme='dark'] .db-links a.is-locked svg { stroke: var(--color-graphite-400); }
+
+@media (prefers-reduced-motion: reduce) { .db-meter > i { animation: none; } .db-row, .db-row-go, .db-links a, .db-hero-cta { transition: none; } }
+
+/* Beli tiket langsung dari dashboard */
+.db-buy { display: grid; gap: .8rem; margin-top: 1rem; padding: 1.1rem 1.2rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.1rem; background: var(--pn-card, #fff); }
+.db-buy-t { display: grid; gap: .15rem; }
+.db-buy-t b { font-size: .95rem; color: var(--color-ink, #1b2638); }
+.db-buy-t small { font-size: .8rem; color: var(--color-graphite-500, #667794); }
+@media (min-width: 860px) { .db-buy { grid-template-columns: minmax(0, 1fr) minmax(0, 18rem) auto; align-items: center; } }

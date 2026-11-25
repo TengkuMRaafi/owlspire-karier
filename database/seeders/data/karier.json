@@ -1,0 +1,125 @@
+{
+  "sumber_tren": "LinkedIn Grad Guide 2025 (Indonesia): peran dengan pertumbuhan tercepat untuk lulusan S1.",
+  "careers": [
+    {
+      "slug": "ai-engineer", "name": "AI Engineer", "division": "IT & Software", "tren": "Peringkat 1 peran tumbuh tercepat lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Membangun dan menerapkan model machine learning serta aplikasi berbasis LLM ke produk nyata.",
+      "does": ["Menyiapkan data dan melatih model", "Membuat fitur AI (chatbot, rekomendasi, deteksi)", "Memantau model setelah dipakai pengguna"],
+      "tags": ["analitis", "teknis"],
+      "skills": ["Python", "Machine Learning", "Deep Learning", "NLP", "PyTorch", "TensorFlow", "SQL", "Git", "Docker", "LLM"],
+      "path": [["Dasar Python untuk data", "python untuk pemula data science", "Menguasai sintaks, struktur data, dan pustaka pengolah data."], ["Dasar machine learning", "machine learning untuk pemula", "Memahami regresi, klasifikasi, evaluasi model, dan overfitting."], ["Deep learning dan NLP", "deep learning pytorch pemula", "Membangun jaringan saraf sederhana dan memahami embedding."], ["Aplikasi LLM dan RAG", "membuat aplikasi LLM RAG", "Merancang aplikasi yang menjawab berdasarkan dokumen sendiri."]]
+    },
+    {
+      "slug": "soc-analyst", "name": "Analis Keamanan Siber (SOC)", "division": "IT & Software", "tren": "Peringkat 2 peran tumbuh tercepat lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Memantau, mendeteksi, dan merespons ancaman keamanan di sistem organisasi.",
+      "does": ["Memantau alert di SIEM", "Menyelidiki insiden dan menentukan dampaknya", "Menyusun laporan dan rekomendasi perbaikan"],
+      "tags": ["analitis", "teknis"],
+      "skills": ["Cybersecurity", "SIEM", "Incident Response", "Networking", "Linux", "Threat Hunting", "Log Analysis", "Firewall", "Python"],
+      "path": [["Dasar jaringan dan Linux", "jaringan komputer dasar untuk keamanan siber", "Memahami TCP/IP, DNS, HTTP, dan perintah dasar Linux."], ["Dasar keamanan siber", "cybersecurity untuk pemula", "Mengenal CIA triad, jenis serangan, dan kontrol keamanan."], ["Analisis log dan SIEM", "SIEM soc analyst tutorial", "Membaca log, korelasi kejadian, dan menyaring alert palsu."], ["Respons insiden", "incident response dasar", "Mengikuti alur identifikasi, penahanan, pemulihan, dan pelaporan."]]
+    },
+    {
+      "slug": "ehs-specialist", "name": "Spesialis K3 / EHS", "division": "Produksi, Manufaktur & Kualitas", "tren": "Peringkat 3 peran tumbuh tercepat lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Memastikan tempat kerja aman dan patuh aturan keselamatan, kesehatan kerja, serta lingkungan.",
+      "does": ["Mengidentifikasi bahaya dan menilai risiko", "Menginvestigasi insiden dan nyaris celaka", "Melatih pekerja dan mengaudit kepatuhan"],
+      "tags": ["lapangan", "analitis"],
+      "skills": ["K3", "HSE", "Risk Assessment", "ISO 45001", "Audit", "Incident Investigation", "Safety Inspection", "Hazard Identification"],
+      "path": [["Dasar K3 dan regulasi", "dasar k3 keselamatan kerja", "Memahami tujuan K3 dan kewajiban pengusaha serta pekerja."], ["Identifikasi bahaya dan penilaian risiko", "hazard identification risk assessment HIRADC", "Menyusun matriks risiko dan menentukan pengendalian."], ["Investigasi insiden", "investigasi kecelakaan kerja root cause", "Mencari akar penyebab, bukan mencari siapa yang salah."], ["Sistem manajemen K3", "ISO 45001 pengantar", "Memahami siklus PDCA, audit internal, dan perbaikan berkelanjutan."]]
+    },
+    {
+      "slug": "procurement", "name": "Procurement Specialist", "division": "Logistik & Supply Chain", "tren": "Peringkat 7 peran tumbuh tercepat lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Mencari, menilai, dan menegosiasikan pemasok supaya barang dan jasa tepat mutu, harga, dan waktu.",
+      "does": ["Membandingkan penawaran vendor", "Menegosiasikan harga dan syarat kontrak", "Memantau kinerja pemasok"],
+      "tags": ["bisnis", "analitis"],
+      "skills": ["Procurement", "Negotiation", "Vendor Management", "SAP", "Excel", "Supply Chain", "Tender", "Contract Management"],
+      "path": [["Dasar pengadaan", "dasar procurement pengadaan barang", "Memahami siklus pengadaan dari kebutuhan sampai pembayaran."], ["Evaluasi vendor dan tender", "evaluasi vendor tender procurement", "Menyusun kriteria penilaian yang objektif."], ["Negosiasi", "teknik negosiasi bisnis", "Menyiapkan BATNA dan mencari kesepakatan menguntungkan kedua pihak."], ["Excel untuk analisis biaya", "excel analisis biaya pemasok", "Membandingkan penawaran dengan rumus dan tabel pivot."]]
+    },
+    {
+      "slug": "industrial-engineer", "name": "Industrial Engineer", "division": "Produksi, Manufaktur & Kualitas", "tren": "Peringkat 6 peran tumbuh tercepat lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Merancang proses kerja yang lebih efisien, murah, dan berkualitas di pabrik maupun layanan.",
+      "does": ["Mengukur waktu dan menganalisis alur kerja", "Mengurangi pemborosan dengan lean", "Menjaga kualitas dengan data statistik"],
+      "tags": ["analitis", "lapangan"],
+      "skills": ["Lean", "Six Sigma", "Time Study", "Process Improvement", "Quality Control", "Excel", "AutoCAD", "PPIC"],
+      "path": [["Dasar lean manufacturing", "lean manufacturing pengantar", "Mengenali tujuh pemborosan dan prinsip aliran nilai."], ["Studi waktu dan metode", "time study work measurement", "Menghitung waktu baku dan beban kerja."], ["Pengendalian kualitas statistik", "statistical process control pemula", "Membaca peta kendali dan kapabilitas proses."], ["PPIC dasar", "ppic perencanaan produksi", "Menyusun rencana produksi dan kebutuhan bahan."]]
+    },
+    {
+      "slug": "learning-specialist", "name": "Learning & Development Specialist", "division": "Pendidikan & Pelatihan", "tren": "Peringkat 8 peran tumbuh tercepat lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Merancang dan menjalankan pelatihan agar karyawan benar-benar bertambah kemampuannya.",
+      "does": ["Menganalisis kebutuhan pelatihan", "Merancang materi dan sesi belajar", "Mengukur dampak pelatihan"],
+      "tags": ["sosial", "kreatif"],
+      "skills": ["Instructional Design", "Training", "Public Speaking", "LMS", "Needs Analysis", "Presentation", "E-Learning"],
+      "path": [["Analisis kebutuhan pelatihan", "training needs analysis", "Membedakan masalah yang butuh pelatihan dan yang tidak."], ["Desain instruksional", "instructional design ADDIE", "Merumuskan tujuan belajar yang terukur."], ["Fasilitasi dan public speaking", "teknik fasilitasi pelatihan public speaking", "Memandu sesi yang aktif dan mengelola kelas."], ["Evaluasi pelatihan", "evaluasi pelatihan kirkpatrick", "Mengukur reaksi, pembelajaran, perilaku, dan hasil."]]
+    },
+    {
+      "slug": "logistik", "name": "Logistik & Import Specialist", "division": "Logistik & Supply Chain", "tren": "Impor adalah peran tumbuh cepat nomor 4 dan transportasi/logistik masuk 10 industri tumbuh cepat (LinkedIn Grad Guide 2025)",
+      "summary": "Mengatur pergerakan barang dari pemasok ke pelanggan, termasuk dokumen impor dan gudang.",
+      "does": ["Mengurus dokumen kepabeanan dan pengiriman", "Mengelola stok dan gudang", "Menekan biaya serta keterlambatan kirim"],
+      "tags": ["lapangan", "bisnis"],
+      "skills": ["Logistics", "Supply Chain", "Inventory", "Warehouse Management", "Import", "Customs", "Incoterms", "Excel", "SAP"],
+      "path": [["Dasar logistik dan rantai pasok", "supply chain management pengantar", "Memahami aliran barang, informasi, dan uang."], ["Inkoterm dan dokumen impor", "incoterms dokumen impor ekspor", "Membaca pembagian risiko dan biaya pengiriman."], ["Manajemen gudang dan stok", "manajemen persediaan gudang EOQ", "Mengatur stok pengaman dan titik pesan ulang."], ["Excel untuk logistik", "excel untuk logistik dan inventory", "Membuat laporan stok dan biaya kirim."]]
+    },
+    {
+      "slug": "partnership", "name": "Business Development & Partnership", "division": "Sales & Business Development", "tren": "Peringkat 9 peran tumbuh tercepat lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Membuka dan merawat kemitraan yang menambah pendapatan atau jangkauan perusahaan.",
+      "does": ["Mencari dan menyaring calon mitra", "Menyusun proposal dan negosiasi", "Merawat hubungan jangka panjang"],
+      "tags": ["bisnis", "sosial"],
+      "skills": ["Business Development", "Negotiation", "Sales", "Partnership", "Presentation", "CRM", "Market Research"],
+      "path": [["Dasar bisnis dan nilai kemitraan", "business development pengantar", "Menjelaskan nilai yang ditukar antara dua pihak."], ["Riset pasar", "riset pasar dasar untuk pemula", "Memetakan calon mitra dan pesaing."], ["Presentasi dan proposal", "cara membuat proposal kemitraan presentasi bisnis", "Menyusun cerita bisnis yang meyakinkan."], ["Negosiasi dan CRM", "negosiasi dan crm untuk sales", "Mencatat dan menindaklanjuti peluang secara rapi."]]
+    },
+    {
+      "slug": "data-analyst", "name": "Data Analyst", "division": "IT & Software", "tren": null,
+      "summary": "Mengubah data mentah menjadi temuan dan dasbor yang membantu keputusan bisnis.",
+      "does": ["Menarik dan membersihkan data dengan SQL", "Membuat dasbor dan laporan", "Menjelaskan temuan ke tim non-teknis"],
+      "tags": ["analitis", "bisnis"],
+      "skills": ["SQL", "Excel", "Power BI", "Tableau", "Python", "Data Analysis", "Statistics", "Data Visualization"],
+      "path": [["Excel untuk analisis data", "excel analisis data pemula", "Menguasai rumus, pivot table, dan pembersihan data."], ["SQL dasar", "belajar sql untuk data analyst", "Menulis SELECT, JOIN, GROUP BY, dan subquery."], ["Statistik dasar", "statistik dasar untuk data analyst", "Memahami rata-rata, sebaran, korelasi, dan uji hipotesis."], ["Visualisasi dan dasbor", "power bi dashboard pemula", "Memilih grafik yang tepat dan menceritakan data."]]
+    },
+    {
+      "slug": "software-developer", "name": "Software Developer (Web)", "division": "IT & Software", "tren": null,
+      "summary": "Membuat aplikasi web yang berjalan stabil, dari antarmuka sampai basis data.",
+      "does": ["Menulis dan menguji kode", "Membangun API dan basis data", "Bekerja dengan Git dalam tim"],
+      "tags": ["teknis", "analitis"],
+      "skills": ["JavaScript", "PHP", "Laravel", "Python", "SQL", "Git", "REST API", "HTML", "CSS", "Docker", "React"],
+      "path": [["HTML, CSS, dan JavaScript", "html css javascript untuk pemula", "Membuat halaman web yang responsif dan interaktif."], ["Git dan kolaborasi", "git dan github untuk pemula", "Memakai branch, commit, dan pull request."], ["Backend dan basis data", "belajar backend sql rest api", "Merancang tabel dan membuat API."], ["Framework dan deployment", "laravel untuk pemula", "Membangun aplikasi utuh dan menerbitkannya."]]
+    },
+    {
+      "slug": "ui-ux", "name": "UI/UX Designer", "division": "Desain & Kreatif", "tren": null,
+      "summary": "Merancang tampilan dan pengalaman produk digital supaya mudah dan menyenangkan dipakai.",
+      "does": ["Meneliti kebutuhan pengguna", "Membuat wireframe dan prototipe", "Menguji desain dengan pengguna asli"],
+      "tags": ["kreatif", "sosial"],
+      "skills": ["Figma", "UI/UX", "User Research", "Wireframing", "Prototyping", "Design System", "Usability Testing"],
+      "path": [["Dasar UX dan riset pengguna", "ux design pengantar user research", "Menggali masalah pengguna lewat wawancara dan observasi."], ["Wireframe dan alur", "wireframe user flow figma", "Menggambar alur layar sebelum mendesain visual."], ["Dasar UI dan sistem desain", "ui design dasar tipografi warna", "Memakai tipografi, warna, dan komponen yang konsisten."], ["Prototipe dan uji kegunaan", "usability testing prototype figma", "Menguji prototipe dan memperbaiki berdasarkan temuan."]]
+    },
+    {
+      "slug": "digital-marketing", "name": "Digital Marketing Specialist", "division": "Marketing, Konten & Komunikasi", "tren": null,
+      "summary": "Menarik dan mempertahankan pelanggan lewat kanal digital yang terukur.",
+      "does": ["Merencanakan dan menjalankan kampanye", "Mengoptimalkan SEO dan iklan berbayar", "Membaca data kampanye untuk memperbaikinya"],
+      "tags": ["kreatif", "bisnis"],
+      "skills": ["Digital Marketing", "SEO", "Social Media", "Content Writing", "Google Analytics", "Ads", "Copywriting", "Email Marketing"],
+      "path": [["Dasar pemasaran digital", "digital marketing pengantar funnel", "Memahami funnel dari kesadaran sampai pembelian."], ["SEO dan konten", "seo dasar content marketing", "Meneliti kata kunci dan menulis konten yang dicari orang."], ["Iklan berbayar", "meta ads google ads pemula", "Menyusun target, anggaran, dan materi iklan."], ["Analitik kampanye", "google analytics 4 pemula", "Membaca konversi, biaya per hasil, dan retensi."]]
+    },
+    {
+      "slug": "akuntansi", "name": "Akuntan & Perpajakan", "division": "Keuangan, Akuntansi & Pajak", "tren": null,
+      "summary": "Mencatat, melaporkan, dan menghitung pajak keuangan perusahaan secara akurat dan patuh aturan.",
+      "does": ["Mencatat jurnal dan menyusun laporan keuangan", "Melakukan rekonsiliasi", "Menghitung dan melaporkan pajak"],
+      "tags": ["analitis", "bisnis"],
+      "skills": ["Accounting", "Akuntansi", "Pajak", "Audit", "Excel", "Laporan Keuangan", "SAP", "Rekonsiliasi"],
+      "path": [["Siklus akuntansi", "akuntansi dasar siklus akuntansi", "Memahami jurnal, buku besar, dan neraca saldo."], ["Laporan keuangan", "cara membaca laporan keuangan", "Membaca neraca, laba rugi, dan arus kas."], ["Dasar perpajakan", "pajak PPh PPN dasar", "Memahami PPh, PPN, dan kewajiban pelaporan."], ["Excel untuk akuntansi", "excel untuk akuntansi", "Membuat rekonsiliasi dan laporan dengan rumus."]]
+    },
+    {
+      "slug": "hr-talent", "name": "HR & Talent Acquisition", "division": "SDM / HR", "tren": null,
+      "summary": "Merekrut, mengembangkan, dan merawat karyawan serta memastikan administrasi SDM berjalan benar.",
+      "does": ["Menyaring kandidat dan mewawancarai", "Mengelola onboarding dan administrasi", "Menjaga kepatuhan aturan ketenagakerjaan"],
+      "tags": ["sosial", "bisnis"],
+      "skills": ["Recruitment", "Payroll", "HR", "Interview", "Onboarding", "Hukum Ketenagakerjaan", "HRIS", "Talent Acquisition"],
+      "path": [["Dasar manajemen SDM", "manajemen sumber daya manusia pengantar", "Memahami fungsi SDM dari rekrutmen sampai pemutusan hubungan kerja."], ["Rekrutmen dan wawancara", "teknik wawancara rekrutmen behavioral", "Menyaring kandidat dengan pertanyaan perilaku."], ["Hukum ketenagakerjaan", "hukum ketenagakerjaan indonesia dasar", "Memahami kontrak kerja, lembur, dan pesangon."], ["Payroll dan HRIS", "payroll dasar hris", "Menghitung gaji, iuran, dan pajak karyawan."]]
+    },
+    {
+      "slug": "customer-service", "name": "Customer Experience & Service", "division": "Customer Service", "tren": "Layanan konsumen adalah industri tumbuh cepat nomor 3 untuk lulusan S1 di Indonesia (LinkedIn Grad Guide 2025)",
+      "summary": "Membantu pelanggan menyelesaikan masalah dan menjaga mereka tetap puas dan setia.",
+      "does": ["Menjawab dan menyelesaikan keluhan", "Mencatat kasus di sistem tiket", "Memberi masukan agar produk lebih baik"],
+      "tags": ["sosial", "bisnis"],
+      "skills": ["Customer Service", "Communication", "CRM", "Complaint Handling", "Problem Solving", "Ticketing", "English"],
+      "path": [["Dasar layanan pelanggan", "customer service excellence dasar", "Memahami ekspektasi pelanggan dan standar layanan."], ["Komunikasi dan empati", "komunikasi empati customer service", "Meredakan emosi pelanggan dan menjelaskan dengan jelas."], ["Penanganan keluhan", "menangani komplain pelanggan", "Mengikuti alur dengar, minta maaf, selesaikan, dan tindak lanjut."], ["CRM dan sistem tiket", "crm helpdesk ticketing dasar", "Mencatat dan memprioritaskan kasus dengan rapi."]]
+    }
+  ]
+}

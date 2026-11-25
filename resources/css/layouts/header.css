@@ -1,0 +1,35 @@
+/* Tombol garis tiga dan dropdown hanya untuk HP: `display` di bawah menimpa utilitas md:hidden Tailwind, jadi desktop disembunyikan eksplisit. */
+@media (min-width: 768px) { .nav-burger, .nav-menu { display: none !important; } }
+
+/* Navbar HP (< 768px): satu baris (logo, Daftar/akun, hamburger) + dropdown menu. Desktop memakai menu inline seperti biasa. */
+.nav-burger { display: inline-grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; border: 1px solid rgb(255 255 255 / .18); border-radius: .7rem; background: rgb(255 255 255 / .06); color: #fff; cursor: pointer; transition: background .2s, border-color .2s; -webkit-tap-highlight-color: transparent; }
+.nav-burger:hover { background: rgb(255 255 255 / .12); border-color: rgb(255 255 255 / .3); }
+.nav-burger:focus-visible { outline: 2px solid var(--color-accent-400, #7fa8e8); outline-offset: 2px; }
+.nav-burger i { grid-area: 1 / 1; display: block; width: 1.1rem; height: 2px; border-radius: 2px; background: currentColor; transition: transform .25s ease, opacity .2s ease; }
+.nav-burger i:nth-child(1) { transform: translateY(-.34rem); }
+.nav-burger i:nth-child(3) { transform: translateY(.34rem); }
+.nav-burger[aria-expanded="true"] i:nth-child(1) { transform: rotate(45deg); }
+.nav-burger[aria-expanded="true"] i:nth-child(2) { opacity: 0; }
+.nav-burger[aria-expanded="true"] i:nth-child(3) { transform: rotate(-45deg); }
+
+/* Panel dropdown menempel di bawah header; bayangan gelap di bawahnya (::after) menutup konten dan klik di sana menutup menu. */
+.nav-menu { position: absolute; left: 0; right: 0; top: 100%; z-index: 40; }
+.nav-menu[hidden] { display: none; }
+.nav-menu::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 100vh; background: rgb(7 13 28 / .55); animation: nav-fade .25s ease both; }
+.nav-menu-in { position: relative; z-index: 1; max-height: calc(100svh - 3.6rem); overflow-y: auto; border-bottom: 1px solid rgb(255 255 255 / .1); background: var(--color-graphite-900, #1b2638); box-shadow: 0 24px 40px -18px rgb(0 0 0 / .6); animation: nav-in .22s ease both; }
+@keyframes nav-in { from { opacity: 0; transform: translateY(-8px); } }
+@keyframes nav-fade { from { opacity: 0; } }
+.nav-m-list { display: grid; gap: .25rem; margin: 0; padding: 0; list-style: none; }
+.nav-m-link { display: flex; align-items: center; justify-content: space-between; gap: .6rem; min-height: 3rem; padding: 0 .9rem; border-radius: .8rem; font-size: 1rem; font-weight: 700; color: var(--color-graphite-100, #edf0f5); }
+.nav-m-link:hover, .nav-m-link:focus-visible { background: rgb(255 255 255 / .07); color: #fff; outline: none; }
+.nav-m-link.is-active { background: rgb(79 130 230 / .2); color: #fff; box-shadow: inset 3px 0 0 var(--color-accent-400, #7fa8e8); }
+.nav-m-foot { display: grid; gap: .6rem; margin-top: .8rem; padding-top: .9rem; border-top: 1px solid rgb(255 255 255 / .12); }
+.site-header .nav-m-foot .btn-outline-light { width: 100%; min-height: 2.9rem; justify-content: center; padding: .7rem 1rem; font-size: .95rem; }
+@media (prefers-reduced-motion: reduce) { .nav-menu-in, .nav-menu::after { animation: none; } .nav-burger i { transition: none; } }
+
+/* Menu HP: ikon di kiri, label rata kiri sejajar, penanda (Segera/Baru) di kanan. */
+.nav-m-l { display: inline-flex; align-items: center; gap: .7rem; min-width: 0; }
+.nav-m-ic { flex: none; width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; opacity: .8; }
+.nav-m-link.is-active .nav-m-ic { opacity: 1; }
+.nav-new { flex: none; padding: .12rem .5rem; border-radius: 999px; background: var(--color-accent-500, #4f82e6); color: #fff; font-size: .62rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.nav-m-list { padding-top: .35rem; }

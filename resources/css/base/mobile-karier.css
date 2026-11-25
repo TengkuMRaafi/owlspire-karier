@@ -1,0 +1,93 @@
+/*
+ * Tampilan HP (<= 639px) untuk halaman Simulasi dan detail karier. Desktop tidak berubah:
+ * semua aturan ada di dalam @media (max-width: 639px). Dimuat setelah mobile-final.css supaya menang
+ * atas aturan HP sebelumnya.
+ *   1. Susunan ujian        (.kd-sg)     -> halaman seleksi (CPNS, BUMN, Polri/TNI): 3 kartu sebaris
+ *   2. Aturan main          (.kd-rules)  -> satu kartu berisi daftar bernomor
+ *   3. Simulasi karier      (.sx-grid)   -> menu Simulasi: 1 kartu per baris
+ *   4. Karier sebidang      (.kd-rel)    -> detail karier: 3 kartu sebaris
+ *   5. Skill yang dicari    (.kd-chips)  -> label lebih kecil, baris lebih sedikit
+ *   6. Kartu "Punya CV?"    (.kd-cv)     -> ikon + judul sebaris, tombol selebar kartu
+ */
+@media (max-width: 639px) {
+
+    /* Teks di kartu-kartu ini rata kiri: perataan kiri-kanan membuat spasi melebar di kolom sempit. */
+    .kd-sg p, .kd-rules p, .kd-cv-body > p, .kd-sg p *, .kd-rules p *, .kd-cv-body > p * {
+        text-align: left !important;
+        text-align-last: auto !important;
+        hyphens: none !important;
+        -webkit-hyphens: none !important;
+        letter-spacing: normal !important;
+    }
+
+    /* ---------- 1. Susunan ujian: tiga kartu sebaris ---------- */
+    .kd-sg { grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: .5rem; }
+    .kd-sg li { align-items: flex-start; gap: .3rem; min-height: 0; padding: .7rem .6rem .65rem; border-radius: .95rem; }
+    .kd-sg .kd-does-no { font-size: 1.1rem; }
+    .kd-sg .kd-sg-n { margin-bottom: .4rem; display: flex; flex-direction: column-reverse; gap: .12rem; font-size: .66rem; font-weight: 600; line-height: 1.3; color: var(--color-graphite-500, #667794); }
+    .kd-sg .kd-sg-code { font-family: var(--font-display, 'Poppins', sans-serif); font-size: 1.02rem; font-weight: 700; line-height: 1.1; letter-spacing: .02em; color: var(--color-ink, #1b2638); }
+    .kd-sg-code::before, .kd-sg-code::after { content: none; }
+    .kd-sg .kd-sg-d { display: none; }
+    .kd-sg-c { align-self: flex-start; margin: auto 0 0; padding: .16rem .5rem; border-radius: 99px; background: var(--color-accent-50, #eef4fd); font-size: .6rem; letter-spacing: .06em; }
+
+    /* ---------- 2. Aturan main: satu kartu, daftar bernomor ---------- */
+    .kd-rules { display: flex; flex-direction: column; gap: 0; overflow: hidden; border: 1px solid var(--kd-line, #e2e6ec); border-radius: 1.1rem; background: #fff; }
+    .kd-rules li { flex-direction: row; align-items: center; gap: .75rem; min-height: 0; padding: .72rem .85rem; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+    .kd-rules li + li { border-top: 1px solid var(--color-graphite-100, #edf0f5); }
+    .kd-rules .kd-does-no { display: grid; flex: none; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: .6rem; background: var(--color-accent-50, #eef4fd); font-size: .78rem; font-weight: 800; color: var(--color-accent-700, #2f58b3); -webkit-text-stroke: 0; }
+    .kd-rules p { flex: 1; min-width: 0; font-size: .84rem; font-weight: 600; line-height: 1.45; }
+    .kd-rules li > svg { position: static; flex: none; width: .8rem; height: .8rem; padding: .25rem; background: #e8f8f1; color: #0b9560; stroke-width: 3; }
+
+    /* ---------- 3. Simulasi karier: satu kartu per baris, 3 baris ke bawah (halaman berikutnya lewat pagination) ---------- */
+    .sx-grid { grid-template-columns: minmax(0, 1fr); gap: .6rem; }
+    .sx-card { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; column-gap: .85rem; row-gap: .1rem; padding: .85rem .95rem; border-radius: 1.05rem; text-align: left; }
+    .sx-card-top { display: contents; }
+    .sx-ic { order: 0; grid-column: 1; grid-row: 1 / span 3; width: 3.2rem; height: 3.2rem; border-radius: .9rem; }
+    .sx-tag { order: 0; grid-column: 2; grid-row: 1; justify-self: start; max-width: 100%; margin: 0; padding: 0; background: none; font-size: .64rem; letter-spacing: .02em; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .sx-card h3 { order: 0; grid-column: 2; grid-row: 2; width: auto; margin: 0; font-size: 1rem; line-height: 1.25; text-align: left; -webkit-line-clamp: 2; }
+    .sx-pre, .sx-div, .sx-desc, .sx-skills { display: none; }
+    .sx-meta { order: 0; grid-column: 2; grid-row: 3; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; gap: .9rem; margin: .3rem 0 0; font-size: .72rem; white-space: nowrap; }
+    .sx-meta span { display: inline-flex; align-items: center; gap: .3rem; }
+    .sx-meta svg { display: block; flex: none; width: .8rem; height: .8rem; }
+    .sx-lnk { order: 0; grid-column: 3; grid-row: 1 / span 3; align-self: center; justify-self: end; width: 2.2rem; height: 2.2rem; margin: 0; }
+    .sx-lnk svg { width: 1rem; height: 1rem; }
+
+    /* ---------- 4. Karier sebidang: tiga kartu sebaris (satu hasil tetap seukuran satu kartu) ---------- */
+    .kd-rel { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .45rem; }
+    .kd-rel a { display: flex; flex-direction: column; align-items: stretch; height: 100%; padding: .4rem .4rem .65rem; border-radius: .9rem; text-align: center; }
+    .kd-rel-img { aspect-ratio: 4 / 3; margin-bottom: .45rem; border-radius: .65rem; }
+    .kd-rel-pct { top: .25rem; left: .25rem; padding: .06rem .38rem; font-size: .56rem; }
+    .kd-rel b { padding: 0 .1rem; font-size: .74rem; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .kd-rel a > small { padding: 0 .1rem; margin-top: .15rem; font-size: .6rem; white-space: normal; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+    .kd-rel-match { margin-top: auto; padding: .45rem .15rem 0; }
+    .kd-rel-match small { display: none; }
+    .kd-rel a > svg { display: none; }
+
+    /* ---------- 5. Skill yang dicari ---------- */
+    /* Chip kecil dan rapat, tanpa ikon centang: daftar skill cukup 3 baris di HP */
+    .kd-chips { gap: .3rem .25rem; }
+    .kd-chips li { gap: .2rem; padding: .22rem .5rem; font-size: .72rem; line-height: 1.25; }
+    .kd-chips li svg { display: none; }
+    .kd-chips li:hover { transform: none; }
+    .kd-group + .kd-group { margin-top: .9rem; }
+
+    /* ---------- 6. Kartu "Punya CV? Cek kecocokannya" ---------- */
+    .kd-cv { grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: .85rem .8rem; margin-top: 1.2rem; padding: 1.1rem 1rem 1rem; border-radius: 1.2rem; }
+    .kd-cv::after { right: -3rem; bottom: -3.4rem; width: 9rem; height: 9rem; border-width: 18px; }
+    .kd-cv-body { display: contents; }
+    .kd-cv-ic { grid-column: 1; grid-row: 1; width: 2.9rem; height: 2.9rem; border-radius: .95rem; }
+    .kd-cv-ic svg { width: 1.45rem; height: 1.45rem; }
+    .kd-cv h3 { grid-column: 2; grid-row: 1; font-size: 1.05rem; line-height: 1.25; }
+    .kd-cv-body > p { grid-column: 1 / -1; grid-row: 2; max-width: none; margin: 0; font-size: .84rem; line-height: 1.55; }
+    .kd-cv-pts { grid-column: 1 / -1; grid-row: 3; flex-wrap: wrap; gap: .4rem; margin: 0; }
+    .kd-cv-pts li { gap: .3rem; padding: .22rem .65rem .22rem .3rem; border-radius: 99px; background: rgb(255 255 255 / .09); font-size: .7rem; }
+    .kd-cv-go { grid-column: 1 / -1; grid-row: 4; width: 100%; min-height: 2.8rem; justify-content: center; }
+}
+
+/* Karier sebidang di HP: satu baris berisi 3 kartu; sisanya muncul ke bawah setelah "Tampilkan semua". */
+@media (max-width: 639px) {
+    .kd-rel:not(.is-open) > li:nth-child(n+4) { display: none; }
+}
+@media (min-width: 640px) {
+    .kd-rel-more { display: none; }
+}

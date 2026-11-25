@@ -1,0 +1,76 @@
+/* Tema gelap panel (admin dan akun). Aktif lewat html[data-theme='dark'], diatur tombol tema di navbar. */
+html[data-theme='dark'] {
+    color-scheme: dark;
+    --pn-card: #161f30;
+    --pn-bar: rgb(14 20 32 / .9);
+    --color-surface: #0e1420;
+    --color-ink: #f1f4f9;
+    --color-graphite-50: #1a2335;
+    --color-graphite-100: #1e2a3d;
+    --color-graphite-200: #2a374d;
+    --color-graphite-300: #38475f;
+    --color-graphite-400: #6b7d99;
+    --color-graphite-500: #8c9bb4;
+    --color-graphite-600: #a8b4c9;
+    --color-graphite-700: #c3ccdb;
+    --color-graphite-800: #e4e9f1;
+    --color-graphite-900: #f1f4f9;
+    --color-accent-50: #16233b;
+    --color-accent-100: #1c2f52;
+    --color-accent-300: #35508a;
+}
+/* Sidebar tetap gelap seperti terang: kembalikan token ke nilai terang di dalamnya. */
+html[data-theme='dark'] .pn-side {
+    --color-graphite-300: #c5cfde; --color-graphite-400: #94a3bb; --color-graphite-500: #667794;
+    --color-graphite-900: #1b2638; --color-accent-300: #a9c4f2;
+    background: #111a29;
+}
+html[data-theme='dark'] .pn { background: #0e1420; }
+
+/* Tombol dan kontrol yang memakai graphite sebagai latar gelap dengan teks putih */
+html[data-theme='dark'] .btn-dark, html[data-theme='dark'] .ui-go, html[data-theme='dark'] .ui-badge.is-dark,
+html[data-theme='dark'] .ui-input[type=file]::file-selector-button { background: #2b3a55; color: #fff; }
+html[data-theme='dark'] .btn-dark:hover, html[data-theme='dark'] .ui-go:hover { background: var(--color-accent-600); }
+html[data-theme='dark'] .ui-seg .is-on, html[data-theme='dark'] .ui-seg .is-on:hover { background: var(--color-accent-600); color: #fff; }
+html[data-theme='dark'] .ui-act { background: var(--color-graphite-100); }
+html[data-theme='dark'] .ui-act.is-ok { background: var(--color-accent-600); color: #fff; }
+
+/* Teks aksen biru: terang di latar gelap */
+html[data-theme='dark'] :is(.ui-link, .ac-item-k, .pn-pop-more, .ui-reset:hover, .ui-act.is-show, .ui-dd-list li[aria-selected=true], .ac-match-h h3 a:hover, .ui-badge.is-accent, .ac-lock-ic) { color: #8db3f0; }
+html[data-theme='dark'] .ui-badge.is-accent { --fg: #a9c4f2; }
+
+/* Status berwarna: latar tembus supaya tidak menyilaukan */
+html[data-theme='dark'] .ui-badge.is-success { --bg: rgb(16 185 129 / .18); --fg: #6ee7b7; }
+html[data-theme='dark'] .ui-badge.is-warning { --bg: rgb(245 158 11 / .18); --fg: #fcd34d; }
+html[data-theme='dark'] .ui-badge.is-danger { --bg: rgb(239 68 68 / .18); --fg: #fca5a5; }
+html[data-theme='dark'] .ui-act.is-edit { background: rgb(245 158 11 / .16); color: #fcd34d; }
+html[data-theme='dark'] .ui-act.is-danger { background: rgb(239 68 68 / .16); color: #fca5a5; }
+html[data-theme='dark'] .ui-alert.is-success { --al-bg: rgb(16 185 129 / .12); --al-bd: rgb(16 185 129 / .35); --al-fg: #a7f3d0; }
+html[data-theme='dark'] .ui-alert.is-error { --al-bg: rgb(239 68 68 / .12); --al-bd: rgb(239 68 68 / .35); --al-fg: #fecaca; }
+html[data-theme='dark'] .ui-alert.is-warning { --al-bg: rgb(245 158 11 / .12); --al-bd: rgb(245 158 11 / .35); --al-fg: #fde68a; }
+html[data-theme='dark'] .ad-queue { border-color: rgb(245 158 11 / .4); background: rgb(245 158 11 / .12); color: #fde68a; }
+html[data-theme='dark'] .ad-queue:hover { background: rgb(245 158 11 / .2); }
+html[data-theme='dark'] .ad-opts li.is-key { border-color: rgb(16 185 129 / .5); background: rgb(16 185 129 / .12); color: #a7f3d0; }
+html[data-theme='dark'] .ad-opts li em { color: #6ee7b7; }
+html[data-theme='dark'] .ac-yes, html[data-theme='dark'] .ac-skills li.is-ok { background: rgb(16 185 129 / .18); color: #6ee7b7; }
+html[data-theme='dark'] .ui-input:hover { border-color: var(--color-graphite-400); }
+
+/* Kelas Tailwind yang dipakai langsung di Blade panel */
+html[data-theme='dark'] .pn-body .bg-white { background-color: var(--pn-card); }
+html[data-theme='dark'] .pn-body .text-amber-700 { color: #fcd34d; }
+
+/* Dialog konfirmasi dan toast */
+html[data-theme='dark'] .fb-dlg::backdrop { background: rgb(8 11 16 / .6); }
+html[data-theme='dark'] .fb-dlg-ic { border-color: var(--pn-card); }
+html[data-theme='dark'] .fb-toast-ic { background: color-mix(in srgb, var(--c) 18%, transparent); }
+html[data-theme='dark'] .fb-dlg[data-tone=logout] { --t: #2b3a55; }
+
+/* Halaman detail admin dan kartu preview akun: teks aksen dibuat lebih terang di latar gelap. */
+html[data-theme='dark'] :is(.ad-d-h-ic, .ad-d-chip svg, .ad-d-tags span, .ad-d-note b, .pn-prev-chip.is-role) { color: #8db3f0; }
+html[data-theme='dark'] .ad-d-i-ic { background: var(--color-graphite-100); }
+
+/* Form soal: pilihan jawaban kartu */
+html[data-theme='dark'] .ad-oc-row:has(input[type=radio]:checked) { border-color: rgb(16 185 129 / .5); background: rgb(16 185 129 / .12); }
+html[data-theme='dark'] .ad-oc-tag { background: rgb(16 185 129 / .2); color: #6ee7b7; }
+html[data-theme='dark'] .ad-img-btn.is-danger:hover { background: rgb(239 68 68 / .12); }
+html[data-theme='dark'] .ad-pg li em { color: #8db3f0; }

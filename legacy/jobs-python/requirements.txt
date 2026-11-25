@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+pyyaml
+flask
+pypdf
+python-docx
+gunicorn

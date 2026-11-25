@@ -1,0 +1,29 @@
+# Deploy gratis di Render: https://render.com  (New > Blueprint > pilih repo ini)
+services:
+  - type: web
+    name: job-finder
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # 1 worker + banyak thread: hasil pencarian & percakapan bot disimpan di memori,
+    # jadi jangan pakai lebih dari 1 worker.
+    startCommand: gunicorn app:app --workers 1 --threads 8 --timeout 120 --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_BOT_USERNAME
+        sync: false
+      - key: TELEGRAM_WEBHOOK_SECRET
+        generateValue: true
+      - key: WEB_URL
+        sync: false          # isi dengan alamat https://xxxx.onrender.com setelah deploy pertama
+      - key: GSHEET_WEBHOOK_URL
+        sync: false          # alamat Web App Apps Script (lihat apps_script.gs)
+      - key: GSHEET_SECRET
+        sync: false          # sama dengan Script Property SECRET di Apps Script
+      - key: JOOBLE_API_KEY
+        sync: false          # opsional (gratis di jooble.org/api/about)
+      - key: ANTHROPIC_API_KEY
+        sync: false          # opsional, untuk membaca CV lebih akurat

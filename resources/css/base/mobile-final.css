@@ -1,0 +1,330 @@
+/*
+ * Lapisan HP terakhir (<= 639px). Dimuat paling akhir di app.css (sebelum dark.css) supaya menimpa aturan lain.
+ * Prinsip: di HP semua daftar tampil dalam versi mini (2 kolom, isi diringkas) seperti di PC, tidak ada elemen
+ * yang keluar dari layar, dropdown selalu pas selebar tombolnya, dan tutorial Owlspire tampil kecil.
+ * Desktop tidak berubah: semua aturan ada di dalam @media (max-width: 639px).
+ */
+
+/* Lompat halaman hanya tampil di HP */
+.ui-pg-jump, .lw-jump { display: none; }
+
+@media (max-width: 639px) {
+
+    /* ---------- 0. Pengaman: tidak ada yang meleber keluar layar ---------- */
+    html, body { max-width: 100%; overflow-x: clip; }
+    main img,
+    main video,
+    main canvas,
+    main iframe,
+    main svg:not([width]) { max-width: 100%; }
+    main :where(h1, h2, h3, h4, p, li, summary, label, small) { overflow-wrap: break-word; }
+    .pn-main,
+    .pn-stack > *,
+    .pn-split > *,
+    .pn-card,
+    .card { min-width: 0; }
+    pre, code { max-width: 100%; overflow-x: auto; }
+
+    /* ---------- 1. Dropdown: selalu pas selebar tombol (JS ui.js menghitung posisi dan lebarnya) ---------- */
+    .ui-dd, .ui-dd.is-sm.is-block { flex: 1 1 100%; max-width: 100%; }
+    .ui-dd-list { max-width: calc(100vw - 1rem); }
+    .ui-dd-list li { white-space: normal; padding-right: 1.9rem; }
+    /* Menu kolom di Pengaturan: lebar mengikuti isi (minimal selebar tombolnya), jadi teks tidak pernah meleber keluar kotak.
+       Kolom kiri menempel di tepi kiri tombol dan tumbuh ke kanan, kolom kanan menempel di tepi kanan dan tumbuh ke kiri, jadi tidak keluar layar. */
+    .ac-set-menu { left: 0; right: auto; width: max-content; min-width: 100%; max-width: calc(100vw - 1.5rem); padding: .3rem; box-sizing: border-box; }
+    .ac-set-col:nth-child(even) .ac-set-menu { left: auto; right: 0; }
+    .ac-set-menu a { white-space: nowrap; gap: .5rem; padding: 0 .7rem; min-height: 2.4rem; font-size: .8rem; }
+    .ac-set-menu a svg { flex: none; width: 1rem; height: 1rem; }
+    /* Dropdown sumber lowongan sudah pas tombol; samakan tinggi dan huruf dengan dropdown lain */
+    .lw-dd-btn { height: 3rem; }
+
+    /* ---------- 2. Formulir: isian pendek berdampingan (2 kolom), isian teks panjang satu baris penuh ---------- */
+    body .ap-grid, body .pl-form, body .ct-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem .6rem; align-items: end; }
+    body .ap-grid > *, body .pl-form > *, body .ct-grid > * { min-width: 0; }
+    body .ap-grid > :not(.ui-field), body .pl-form > :not(.ui-field), body .ct-grid > :not(.ui-field) { grid-column: 1 / -1; }
+    body .ap-grid > .ui-field:not(:has(.ui-dd, .ui-pk, input[type='date'], input[type='time'], input[type='number'])), body .pl-form > .ui-field:not(:has(.ui-dd, .ui-pk, input[type='date'], input[type='time'], input[type='number'])), body .ct-grid > .ui-field:not(:has(.ui-dd, .ui-pk, input[type='date'], input[type='time'], input[type='number'])) { grid-column: 1 / -1; }
+    /* Isian tunggal (mis. Atur target) selebar penuh, dan tombol kirim formulir alert selebar penuh supaya rata kiri-kanan */
+    body .pl-form.is-one { grid-template-columns: minmax(0, 1fr); }
+    body .pl-form.is-one .ui-pk, body .pl-form.is-one .ui-pk-btn, body .pl-form.is-one .ui-dd { width: 100%; min-width: 0; }
+    body .ap-grid.is-alert .btn-primary { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 2.9rem; }
+    body .ui-form-grid.is-two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem .6rem; }
+    body .ui-form-grid.is-two > :has(textarea), body .ui-form-grid.is-two > .is-wide { grid-column: 1 / -1; }
+    .ui-field > label, .ui-field > .ui-label { font-size: .8rem; }
+
+    /* ---------- 3. Pilih pewawancara: kartu mini 2 x 2 ---------- */
+    body .ivs .ivs-pick { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+    body .ivs .ivs-card { flex-direction: column; align-items: center; gap: .4rem; padding: .7rem .5rem .75rem; border-radius: .95rem; text-align: center; }
+    body .ivs .ivs-ph { width: 3.1rem; height: 3.1rem; }
+    body .ivs .ivs-card > span:last-child { display: grid; gap: .1rem; min-width: 0; }
+    body .ivs .ivs-card b { font-size: .82rem; line-height: 1.25; }
+    body .ivs .ivs-card small { display: block; font-size: .68rem; line-height: 1.35; }
+    body .pn-main .iv-two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+    body .pn-main .iv-two > div { padding: .65rem .7rem; font-size: .78rem; line-height: 1.45; }
+
+    /* ---------- 4. Perbandingan akses (Premium): satu tabel Fitur | Gratis | Premium, bukan kartu bertumpuk ---------- */
+    .ui-table-scroll:has(> .ac-cmp) { overflow: hidden; border-radius: 1rem; background: var(--pn-card, #fff); }
+    .ui-table.ac-cmp { width: 100%; table-layout: fixed; }
+    .ui-table.ac-cmp th, .ui-table.ac-cmp td { padding: .6rem .4rem; font-size: .8rem; vertical-align: middle; }
+    .ui-table.ac-cmp th:first-child, .ui-table.ac-cmp td:first-child { padding-left: .8rem; }
+    .ui-table.ac-cmp th:not(:first-child), .ui-table.ac-cmp td:not(:first-child) { width: 3.9rem; padding-inline: .2rem; text-align: center; }
+    .ui-table.ac-cmp th { font-size: .62rem; letter-spacing: .04em; }
+    .ui-table.ac-cmp .ui-cell { gap: .1rem; min-width: 0; }
+    .ui-table.ac-cmp .ui-cell b { font-size: .8rem; line-height: 1.3; white-space: normal; }
+    .ui-table.ac-cmp .ui-cell small { font-size: .66rem; line-height: 1.35; white-space: normal; overflow: visible; }
+    .ui-table.ac-cmp td::before { content: none; }
+    .ui-table.ac-cmp .ac-yes, .ui-table.ac-cmp .ac-no { width: 1.35rem; height: 1.35rem; }
+    .ui-table.ac-cmp .ac-yes svg, .ui-table.ac-cmp .ac-no svg { width: .75rem; height: .75rem; }
+
+    /* ---------- 5. Papan lamaran (dashboard): kolom lebih sempit dan bisa digeser, kartu mini ---------- */
+    body .ap-board { grid-template-columns: repeat(5, minmax(11.5rem, 78%)); gap: .55rem; scroll-snap-type: x proximity; scrollbar-width: thin; margin-inline: -.1rem; padding-inline: .1rem; }
+    body .ap-col { padding: .6rem; border-radius: .9rem; scroll-snap-align: start; }
+    body .ap-col h3 { margin-bottom: .45rem; font-size: .7rem; }
+    body .ap-card { margin-bottom: .45rem; padding: .6rem .7rem; border-radius: .8rem; }
+    body .ap-card b { font-size: .84rem; }
+    body .ap-card small { font-size: .72rem; }
+    body .ap-card p { font-size: .74rem; }
+    body .ap-acts { margin-top: .45rem; gap: .35rem; }
+    body .ap-empty { padding: .55rem; font-size: .74rem; }
+    body .ap-alert { padding: .6rem .75rem; gap: .35rem .6rem; }
+    body .ap-alert b { font-size: .84rem; }
+    body .ap-alert small { font-size: .72rem; }
+
+    /* ---------- 6. Daftar kartu lain: versi mini 2 kolom ---------- */
+    body .sl-portals { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+    body .sl-portal { padding: .65rem .75rem; border-radius: .85rem; }
+    body .sl-portal b { font-size: .84rem; line-height: 1.3; }
+    body .sl-portal span { font-size: .72rem; }
+    body .ss-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; margin-top: .9rem; }
+    body .ss-card { gap: .3rem; padding: .7rem .8rem; border-radius: .9rem; }
+    body .ss-card:hover { transform: none; }
+    body .ss-card h3 { font-size: .84rem; line-height: 1.3; }
+    body .ss-card small { font-size: .7rem; }
+    .lw-list, .lw-locked-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+    .lw-job { grid-template-columns: minmax(0, 1fr); gap: .35rem; padding: .7rem .75rem; border-radius: .9rem; }
+    .lw-job:hover { transform: none; box-shadow: none; }
+    .lw-job h4 { font-size: .8rem; }
+    .bl-src-grid, .tr-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+    body .cvx-two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+    body .cvx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+    .qz-opts, .dr-points { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+    .db-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+
+    /* ---------- 7. Tutorial Owlspire (pemandu) versi mini ---------- */
+    .og { bottom: .5rem; gap: .3rem; width: min(16rem, calc(100vw - 1.2rem)); }
+    .og-bubble { padding: .6rem .7rem .55rem; border-radius: .95rem; border-top-width: 2px; box-shadow: 0 18px 36px -18px rgb(15 23 38 / .55), 0 0 0 1px rgb(15 23 38 / .04); }
+    .og-top { gap: .4rem; margin-bottom: .3rem; }
+    .og-name { gap: .3rem; font-size: .7rem; }
+    .og-name i { width: .42rem; height: .42rem; }
+    .og-step { max-width: 7.2rem; padding: .08rem .42rem; font-size: .58rem; }
+    .og-min { width: 1.5rem; height: 1.5rem; }
+    .og-txt { min-height: 0; font-size: .74rem; line-height: 1.45; }
+    .og-cta { min-height: 1.9rem; margin-top: .4rem; padding: .3rem .7rem; border-radius: .6rem; font-size: .72rem; }
+    .og-nav { gap: .3rem; margin-top: .5rem; padding-top: .45rem; }
+    .og-btn { min-width: 1.9rem; min-height: 1.9rem; padding: 0 .45rem; border-radius: .6rem; font-size: .7rem; }
+    .og-next { max-width: 5.4rem; }
+    .og-dots { gap: 0; }
+    .og-dot { width: .65rem; height: 1.3rem; }
+    .og-dot::before { width: .3rem; height: .3rem; margin: -.15rem 0 0 -.15rem; }
+    .og-dot.is-on::before { transform: scale(1.6); }
+    .og-owl { width: 2.9rem; }
+    .og-shadow { width: 2.2rem; }
+    .og-ping { width: .7rem; height: .7rem; }
+    /* Tur di halaman Lowongan dan hasil simulasi memakai gelembung yang sama kecilnya */
+    .lw-tip { width: min(15.5rem, calc(100vw - 1.5rem)); padding: .7rem .8rem .65rem; border-radius: .9rem; font-size: .76rem; }
+    .lw-tip h4, .lw-tip b { font-size: .8rem; }
+    .lw-tip p { font-size: .74rem; line-height: 1.45; }
+
+    /* ---------- 8. Landing: teks dan angka tidak mendorong kartu keluar layar ---------- */
+    main section, .duo, .fq, .journey, .rm, .of { max-width: 100%; overflow-x: clip; }
+    .duo .tb-lead > *, .duo .tb-lead-body, .tb-row > *, .lb-row > * { min-width: 0; }
+    .tb-name, .tb-div, .tb-lead-body { min-width: 0; overflow-wrap: anywhere; }
+    .duo .tb-no { max-width: 4.2rem; font-size: 3.2rem; overflow: hidden; }
+    .fq-q { gap: .6rem; } .fq-qt { min-width: 0; font-size: .95rem; }
+    .ft-col a { min-width: 0; overflow-wrap: anywhere; }
+    .sx-hero-grid > *, .bl-hero-grid > *, .pm-hero-grid > *, .lw-hero-grid > *, .lb-hero-grid > * { min-width: 0; }
+    /* ---------- 9. Perbaikan lanjutan (hasil cek screenshot HP) ---------- */
+
+    /* Kenali dirimu (roadmap landing): radar kecil di kiri, daftar karier satu baris per karier */
+    .v-radar { grid-template-columns: 6.4rem minmax(0, 1fr); gap: .5rem; }
+    .v-radar text { font-size: 10px; }
+    .v-top { grid-template-columns: minmax(0, 1fr) auto; gap: .15rem .4rem; font-size: .72rem; }
+    .v-top b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .v-top span { font-size: .66rem; white-space: nowrap; }
+    .rm-pts { gap: .25rem; font-size: .78rem; line-height: 1.4; }
+
+    /* Navigasi soal (ruang ujian dan coba 5 menit): 5 kotak ke samping, 4 baris = 20 soal per halaman.
+       Soal ke-21 dst. lewat tombol panah di bawah kotak (lihat .xr-pg / .tx-pg). */
+    body .xr-card .xr-qgrid, body .tx-nav .tx-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .45rem; margin-top: .7rem; max-height: none; overflow: visible; padding: 0; }
+    body .xr-dot, body .tx-dot { border-radius: .6rem; font-size: .9rem; border-width: 1.5px; }
+    body .xr-dot.is-cur { outline-offset: 2px; }
+    body .xr-legend { margin-top: .7rem; gap: .3rem .8rem; font-size: .7rem; }
+
+    /* Kartu "Perkuat dulu / Uji lagi": 2 kartu mini sebaris */
+    body .rs-next, body .tx-next { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; margin-top: .8rem; }
+    body .rs-next a, body .tx-next a { padding: .7rem .8rem; border-radius: .9rem; }
+    body .rs-next small, body .tx-next small { font-size: .58rem; letter-spacing: .1em; }
+    body .rs-next b, body .tx-next b { margin-top: .15rem; font-size: .86rem; line-height: 1.25; }
+    body .rs-next span, body .tx-next span { margin-top: .15rem; font-size: .7rem; line-height: 1.4; }
+
+    /* Portal resmi dan kartu kecil lain: baris teks rapat */
+    body .sl-portal span { display: block; margin-top: .15rem; line-height: 1.4; }
+
+    /* Cocokkan CV: 3 langkah sebaris (angka di atas, teks pendek di bawah) */
+    .cv-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .4rem; }
+    .cv-steps li { flex-direction: column; align-items: center; gap: .3rem; padding: .55rem .4rem; text-align: center; font-size: .68rem; line-height: 1.3; overflow-wrap: normal; }
+
+    /* Tentang jalur ini (detail Belajar): teks lebih kecil dan rapat */
+    .lp-about { margin-bottom: 1.2rem; }
+    .lp-about p { margin-top: .5rem; font-size: .8rem; line-height: 1.55; }
+    .lp-about .eyebrow { font-size: .66rem; }
+    .lp-skills { gap: .3rem; } .lp-skills li { font-size: .7rem; padding: .2rem .55rem; }
+    .card.lp-about { padding: .9rem 1rem; }
+
+    /* Footer: Akun tidak jatuh sendirian, tautannya berjajar di satu baris */
+    .ft-main { gap: 1.4rem 1rem; }
+    .ft-about { font-size: .82rem; line-height: 1.55; margin-top: .6rem; }
+    .ft-col a { padding: .22rem 0; gap: .5rem; font-size: .82rem; }
+    .ft-col ul { margin-top: .4rem; }
+    .ft-col:last-of-type { grid-column: 1 / -1; }
+    .ft-col:last-of-type ul { display: flex; flex-wrap: wrap; gap: .1rem 1.2rem; }
+    .ft-head { padding-bottom: .4rem; font-size: .84rem; }
+    /* ---------- 10. Sisa perbaikan ---------- */
+
+    /* Tur hasil simulasi: kartu penjelasan mini */
+    body .tg-card { width: min(16.5rem, calc(100vw - 1.2rem)); padding: .7rem .8rem .65rem; border-radius: .95rem; }
+    body .tg-step { font-size: .58rem; letter-spacing: .1em; }
+    body .tg-h { margin-top: .2rem; font-size: .86rem; }
+    body .tg-p { margin-top: .25rem; font-size: .74rem; line-height: 1.45; }
+    body .tg-dots { margin-top: .55rem; gap: .22rem; }
+    body .tg-dots i { height: .3rem; } body .tg-dots i.is-on { width: .9rem; }
+    body .tg-act { margin-top: .55rem; gap: .4rem; }
+    body .tg-skip { padding: .25rem .1rem; font-size: .72rem; }
+    body .tg-btn { padding: .38rem .75rem; border-radius: .65rem; font-size: .74rem; }
+    body .tg-replay { padding: .4rem .85rem; font-size: .76rem; }
+
+    /* Tentang jalur ini: dipotong 4 baris, ada tombol baca selengkapnya */
+    .lp-about.is-clamp:not(.is-open) .lp-body { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+    .lp-about.is-clamp:not(.is-open) .lp-body p:nth-child(n+2), .lp-about.is-clamp:not(.is-open) .lp-skills, .lp-about.is-clamp:not(.is-open) .lp-about-k { display: none; }
+    .lp-more { display: inline-block; margin-top: .5rem; padding: 0; border: 0; background: none; font: inherit; font-size: .76rem; font-weight: 800; color: var(--color-accent-600, #3b6cd4); }
+    .lp-about:not(.is-clamp) .lp-more { display: none; }
+    /* Papan karier: baris peringkat tidak sempit di layar kecil */
+    .tb-item { grid-template-columns: 2.3rem minmax(0, 1fr) auto auto; gap: .3rem .5rem; padding: .75rem .8rem 1rem; }
+    .tb-item .tb-heat { left: .8rem; right: .8rem; }
+    .tb-d { min-width: 2.3rem; padding: .12rem .4rem; font-size: .68rem; }
+    .tb-item small { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    /* ---------- 11. Pagination: di tengah, plus kotak "Ke halaman" ---------- */
+    .ui-pager, .ui-pager.is-sm { flex-wrap: wrap; justify-content: center; }
+    .ui-table-foot { flex-direction: column; align-items: center; gap: .6rem; text-align: center; }
+    .ui-table-foot .ui-pager { width: 100%; }
+    .ui-pager-info { text-align: center; }
+    .ui-pg-jump, .lw-jump { display: flex; flex: 0 0 100%; align-items: center; justify-content: center; gap: .45rem; margin: .3rem 0 0; font-size: .78rem; color: var(--color-graphite-500, #667794); }
+    .ui-pg-jump input, .lw-jump input { width: 3.6rem; height: 2.2rem; padding: 0 .3rem; border: 1px solid var(--color-graphite-300, #c5cfde); border-radius: .65rem; background: var(--pn-card, #fff); font: inherit; font-weight: 800; text-align: center; color: var(--color-graphite-800, #1f2a3d); -moz-appearance: textfield; appearance: textfield; }
+    .ui-pg-jump input::-webkit-outer-spin-button, .ui-pg-jump input::-webkit-inner-spin-button, .lw-jump input::-webkit-outer-spin-button, .lw-jump input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .ui-pg-jump input:focus, .lw-jump input:focus { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: 1px; }
+    .ui-pg-jump button, .lw-jump button { height: 2.2rem; min-width: 0; padding: 0 .9rem; border: 0; border-radius: .65rem; background: var(--color-graphite-800, #1f2a3d); color: #fff; font-size: .78rem; font-weight: 800; }
+    .lw-pager { justify-content: center; }
+    .lw-pager .lw-jump { color: var(--color-graphite-500, #667794); }
+    /* ---------- 12. Rencana belajar dan form 2 kolom: pemilih tanggal/jam dan dropdown muat di setengah lebar ---------- */
+    .ui-pk-btn { min-width: 0; gap: .45rem; padding: 0 1.9rem 0 .7rem; }
+    .ui-pk-text { min-width: 0; }
+    .ui-pk.is-empty .ui-pk-btn { padding-right: .6rem; }
+    .pl-form .ui-pk-btn > svg, .ap-grid .ui-pk-btn > svg { width: 1.05rem; height: 1.05rem; }
+    body .pl-form > .ui-field:has(#dd-exam_type_id), body .pl-form > .ui-field:has(.ui-dd-btn[aria-label*='Simulasi' i]) { grid-column: 1 / -1; }
+    .ap-grid .ui-dd-btn, .pl-form .ui-dd-btn, .ct-grid .ui-dd-btn, .ap-grid .ui-pk-btn, .pl-form .ui-pk-btn, .ct-grid .ui-pk-btn { font-size: .86rem; }
+    .ap-grid .ui-dd-btn, .pl-form .ui-dd-btn, .ct-grid .ui-dd-btn { padding-inline: .75rem .6rem; }
+    .ap-grid .ui-dd-btn svg, .pl-form .ui-dd-btn svg { width: 1rem; height: 1rem; }
+    .ap-grid .ui-field > label, .pl-form .ui-field > label, .ct-grid .ui-field > label { font-size: .78rem; line-height: 1.25; }
+}
+
+/* Layar sangat sempit (<= 340px): kartu pewawancara dan tutorial tetap utuh */
+@media (max-width: 340px) {
+    .og { width: min(14.6rem, calc(100vw - 1rem)); }
+    .og-next { max-width: 4.4rem; }
+    body .ap-grid, body .pl-form, body .ct-grid { gap: .6rem .5rem; }
+}
+
+/* Tombol "baca selengkapnya" hanya dipakai di HP */
+@media (min-width: 640px) { .lp-more { display: none; } }
+
+/* Ikon tombol aksi di tabel (Detail, Coba gratis, Ujian penuh, dll): ukuran dikunci supaya tidak mengecil jadi titik */
+.ui-table .ui-act { width: 2.25rem; height: 2.25rem; }
+.ui-table .ui-act svg { flex: none; width: 1.15rem; height: 1.15rem; min-width: 1.15rem; min-height: 1.15rem; max-width: none; max-height: none; stroke-width: 2; }
+
+/* ---------- Dropdown seragam di HP (semua menu): huruf .85rem dan tinggi 2.5rem seperti dropdown filter tabel.
+   Menimpa aturan 16px (anti-zoom iOS, hanya untuk <input>) yang membuat dropdown di beberapa halaman tampil besar. ---------- */
+@media (max-width: 767px) {
+    body .ui-dd-btn, body .ui-dd.is-sm .ui-dd-btn, body .ui-table-bar .ui-dd-btn,
+    body .ap-grid .ui-dd-btn, body .pl-form .ui-dd-btn, body .ct-grid .ui-dd-btn { height: 2.5rem; padding-inline: .8rem .7rem; border-radius: .7rem; font-size: .85rem; }
+    body .ui-dd-btn svg { width: 1.1rem; height: 1.1rem; }
+    body .ui-pk-btn, body .ui-pk.is-sm .ui-pk-btn,
+    body .ap-grid .ui-pk-btn, body .pl-form .ui-pk-btn, body .ct-grid .ui-pk-btn { height: 2.5rem; border-radius: .7rem; font-size: .85rem; }
+    body .lw-dd-btn { height: 2.5rem; border-radius: .7rem; font-size: .85rem; }
+    body .ui-dd-list li { font-size: .85rem; }
+}
+
+/* ---------- Kolom isian seragam di HP: semua input, textarea, pencarian, dan kolom chat memakai huruf .85rem
+   (sama seperti dropdown) dan tinggi satu baris 2.5rem. Menimpa aturan 16px di responsive.css.
+   Catatan: iOS Safari dapat memperbesar halaman saat kolom diketuk bila hurufnya < 16px. ---------- */
+@media (max-width: 767px) {
+    body input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='file']):not([type='color']):not([type='hidden']),
+    body select, body textarea, body .field, body .ui-input, body .ui-input.is-sm,
+    body .ui-search input, body .lw-tags input, body .cb-box textarea, body .shr-url, body .ad-oc-in { font-size: .85rem; }
+    body .ui-input.is-mono { font-size: .8rem; }
+    body input.ui-input, body .ui-input.is-sm:not(textarea), body .ui-search input { height: 2.5rem; border-radius: .7rem; }
+    body textarea.ui-input { border-radius: .7rem; line-height: 1.55; }
+    body .ad-oc-in { height: 2.5rem; }
+    body .ui-input::placeholder, body .ui-search input::placeholder, body .ad-oc-in::placeholder { font-size: .85rem; }
+}
+
+/* ---------- Perbaikan HP panel admin: filter Log aktivitas, kartu log, aksi massal pengguna, tabel akses ---------- */
+.ad-lg-date { flex: 0 0 11.5rem; }
+.ad-lg-date .ui-pk, .ad-lg-date .ui-input { width: 100%; }
+.ad-bulk { gap: .5rem; flex-wrap: wrap; align-items: center; }
+.ad-bulk-n { font-size: .82rem; color: var(--color-graphite-500, #667794); white-space: nowrap; }
+.ad-bulk-n b { color: var(--color-graphite-800, #1f2a3d); }
+@media (max-width: 640px) {
+    body .ad-lg-bar { display: grid; grid-template-columns: minmax(0, 1fr); gap: .6rem; }
+    body .ad-lg-bar > * { min-width: 0; max-width: none; width: 100%; }
+    body .ad-lg-bar .ui-search { flex-basis: auto; }
+    body .ad-lg-date { flex: none; }
+    body .ad-lg-bar .ui-go { width: 100%; }
+    body .ad-lg-bar .ui-reset { justify-content: center; }
+
+    /* Kartu log: isi tidak boleh melebihi kartu */
+    body .ad-lg td { min-width: 0; }
+    body .ad-lg .ad-lg-who, body .ad-lg .ad-lg-target { min-width: 0; max-width: 100%; text-align: right; }
+    body .ad-lg .ad-lg-who { justify-content: flex-end; }
+    /* Chip detail: selalu satu baris; isi yang kepanjangan dipotong jadi "..." */
+    body .ad-lg .ad-lg-detail { display: grid; grid-template-columns: minmax(0, 1fr); flex: 1 1 0; gap: .35rem; min-width: 0; max-width: 100%; }
+    body .ad-lg .ad-lg-chip { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-end; gap: .4rem; width: 100%; max-width: 100%; min-width: 0; overflow: hidden; white-space: nowrap; }
+    body .ad-lg .ad-lg-chip i { flex: 1 0 auto; text-align: left; }
+    body .ad-lg .ad-lg-chip b, body .ad-lg .ad-lg-chip s { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; }
+    body .ad-lg .ad-lg-chip s { flex-shrink: 2; }
+    body .ad-lg .ad-lg-chip em { flex: none; }
+
+    /* Aksi massal: jumlah di atas, pilihan dan tombol selebar kartu */
+    body .ad-bulk { display: grid; grid-template-columns: minmax(0, 1fr); gap: .55rem; }
+    body .ad-bulk > * { width: 100%; max-width: none; min-width: 0; }
+    body .ad-bulk .ui-dd { flex: none; }
+    body .ad-bulk .btn-outline { justify-content: center; }
+
+    /* Alur pesanan: teks boleh turun baris, tidak terpotong */
+    body .ad-d-step b, body .ad-d-step small { white-space: normal; overflow-wrap: anywhere; }
+}
+@media (max-width: 640px) { body .ad-bulk { grid-template-columns: repeat(2, minmax(0, 1fr)); } body .ad-bulk .ad-bulk-n { grid-column: 1 / -1; } body .ad-bulk .btn-outline { padding-inline: .5rem; font-size: .8rem; } }
+
+/* ---------- Form Cari lowongan di HP/tablet: huruf dan tinggi disamakan dengan input & dropdown halaman lain
+   (.85rem, tinggi 2.5rem). Sebelumnya ukuran dari jobs.css (.95rem, 3.3rem, dst.) terlihat besar sendiri. ---------- */
+@media (max-width: 959px) {
+    body .lw-field > label, body .lw-field > legend { margin-bottom: .35rem; font-size: .66rem; letter-spacing: .09em; }
+    body .lw-tags { min-height: 2.5rem; gap: .3rem; padding: .25rem .6rem; border-radius: .7rem; }
+    body .lw-tags input { height: 1.9rem; font-size: .85rem; }
+    body .lw-tags input::placeholder { font-size: .85rem; }
+    body .lw-tag { height: 1.75rem; padding: 0 .25rem 0 .7rem; font-size: .78rem; }
+    body .lw-tag button { width: 1.15rem; height: 1.15rem; font-size: .9rem; }
+    body .lw-hint { margin-top: -.7rem; font-size: .72rem; }
+    body .lw-seg { border-radius: .7rem; }
+    body .lw-seg span { padding: .6rem .4rem; font-size: .8rem; }
+    body .lw-dd-btn b { font-size: .62rem; }
+    body .lw-submit { height: 2.8rem; font-size: .88rem; }
+}

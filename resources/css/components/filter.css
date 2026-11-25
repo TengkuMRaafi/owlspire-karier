@@ -1,0 +1,24 @@
+/* Bilah cari + filter dan daftar hasil yang dimuat langsung. */
+.ui-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 0 0 1.25rem; }
+.ui-search { position: relative; flex: 1 1 18rem; min-width: 0; }
+.ui-search > svg { position: absolute; left: .95rem; top: 50%; width: 1.1rem; height: 1.1rem; margin-top: -.55rem; fill: none; stroke: var(--color-graphite-400, #94a3bb); stroke-width: 2; stroke-linecap: round; pointer-events: none; transition: stroke .25s; }
+.ui-search:focus-within > svg { stroke: var(--color-accent-600, #3b6cd4); }
+.ui-search input { width: 100%; height: 3rem; padding: 0 1rem 0 2.7rem; border: 1px solid var(--color-graphite-300, #c5cfde); border-radius: .9rem; background: var(--pn-card, #fff); font-size: .9rem; color: var(--color-graphite-800, #1f2a3d); transition: border-color .25s, box-shadow .25s; }
+.ui-search input::placeholder { color: var(--color-graphite-400, #94a3bb); }
+.ui-search input:focus { outline: none; border-color: var(--color-accent-600, #3b6cd4); box-shadow: 0 0 0 4px rgb(59 108 212 / .14); }
+.ui-go { height: 3rem; padding: 0 1.4rem; border-radius: .9rem; background: var(--color-graphite-800, #1f2a3d); color: #fff; font-size: .85rem; font-weight: 700; transition: background .2s; }
+.ui-go:hover { background: var(--color-accent-600, #3b6cd4); }
+
+.ui-results { scroll-margin-top: 6rem; transition: opacity .25s ease; }
+.ui-results.is-busy { opacity: .45; pointer-events: none; }
+.ui-count { margin-bottom: 1.25rem; font-size: .85rem; color: var(--color-graphite-500, #667794); }
+.ui-count b { color: var(--color-graphite-800, #1f2a3d); }
+@media (prefers-reduced-motion: reduce) { .ui-results { transition: none; } }
+
+/* Tab status berbentuk pil (mis. Semua / Menunggu / Lunas) */
+.ui-seg { display: inline-flex; flex-wrap: wrap; gap: .35rem; padding: .3rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: .95rem; background: var(--pn-card, #fff); }
+.ui-seg a, .ui-seg button { display: inline-flex; align-items: center; gap: .4rem; height: 2.1rem; padding: 0 .85rem; border-radius: .65rem; font-size: .8rem; font-weight: 700; color: var(--color-graphite-600, #4a5a73); transition: background .2s, color .2s; }
+.ui-seg a:hover, .ui-seg button:hover { background: var(--color-graphite-100, #edf0f5); color: var(--color-graphite-800, #1f2a3d); }
+.ui-seg .is-on { background: var(--color-graphite-900, #1b2638); color: #fff; }
+.ui-seg .is-on:hover { background: var(--color-graphite-900, #1b2638); color: #fff; }
+.ui-seg small { font-size: .7rem; font-weight: 800; opacity: .65; font-variant-numeric: tabular-nums; }

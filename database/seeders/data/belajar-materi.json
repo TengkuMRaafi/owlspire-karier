@@ -1,0 +1,1637 @@
+{
+ "ai-engineer": {
+  "description": "AI Engineer membangun fitur berbasis kecerdasan buatan sampai benar-benar dipakai pengguna: dari menyiapkan data, melatih model, sampai memantau kualitasnya setelah rilis. Jalur ini cocok untuk kamu yang suka logika, angka, dan eksperimen, dan ingin masuk lewat jalur praktis tanpa harus langsung memahami seluruh teori matematika.\n\nKamu mulai dari Python dan pustaka pengolah data, lalu masuk ke dasar machine learning (regresi, klasifikasi, evaluasi, overfitting). Setelah itu kamu mengenal deep learning dan NLP, dan ditutup dengan membuat aplikasi LLM yang menjawab berdasarkan dokumen sendiri (RAG). Urutannya sengaja berjenjang: tiap topik memakai hal yang dipelajari di topik sebelumnya.\n\nDi akhir jalur kamu bisa menjelaskan alur kerja proyek AI dari data sampai evaluasi, membaca hasil model dengan metrik yang tepat, dan merancang aplikasi LLM sederhana. Cara belajar yang disarankan: tonton videonya, kerjakan latihan kecil di tiap topik, lalu uji pemahamanmu lewat simulasi karier AI Engineer.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar Python untuk data",
+    "overview": "Python adalah bahasa utama di dunia data dan AI. Di topik ini kamu belajar menulis program yang rapi: variabel, tipe data, percabangan, perulangan, fungsi, lalu memakai pustaka seperti pandas dan NumPy untuk membaca dan membersihkan tabel data.",
+    "points": [
+     "Tipe data dasar (angka, teks, boolean) dan struktur data list, dict, tuple, set.",
+     "Alur program: if/else, for, while, dan menulis fungsi yang bisa dipakai ulang.",
+     "pandas: membaca CSV, memfilter baris, mengelompokkan (groupby), dan menangani nilai kosong.",
+     "NumPy: array dan operasi vektor yang jauh lebih cepat daripada perulangan biasa."
+    ],
+    "terms": [
+     {
+      "t": "DataFrame",
+      "d": "Tabel dua dimensi di pandas: baris adalah data, kolom adalah atribut."
+     },
+     {
+      "t": "List comprehension",
+      "d": "Cara ringkas membuat list baru dari list lain dalam satu baris."
+     },
+     {
+      "t": "NaN",
+      "d": "Penanda nilai kosong pada data numerik yang harus ditangani sebelum analisis."
+     }
+    ],
+    "practice": "Unduh satu file CSV terbuka (misalnya data harga rumah), lalu tulis skrip yang menghitung rata-rata per kolom, membuang baris kosong, dan menyimpan hasilnya ke file baru."
+   },
+   {
+    "topic": 2,
+    "title": "Dasar machine learning",
+    "overview": "Machine learning membuat komputer menemukan pola dari data, bukan dari aturan yang ditulis tangan. Topik ini mengenalkan dua jenis tugas utama, regresi (memprediksi angka) dan klasifikasi (memprediksi kategori), serta cara menilai apakah model benar-benar bagus atau hanya menghafal.",
+    "points": [
+     "Pisahkan data menjadi data latih dan data uji agar penilaian jujur.",
+     "Regresi untuk angka (harga, suhu), klasifikasi untuk kategori (spam atau bukan).",
+     "Metrik klasifikasi: akurasi, precision, recall, dan F1; pilih sesuai biaya kesalahan.",
+     "Overfitting terjadi saat model bagus di data latih tetapi buruk di data baru; underfitting saat model terlalu sederhana."
+    ],
+    "terms": [
+     {
+      "t": "Overfitting",
+      "d": "Model menghafal data latih sehingga gagal pada data baru."
+     },
+     {
+      "t": "Recall",
+      "d": "Dari semua kasus positif yang sebenarnya, berapa yang berhasil ditemukan model."
+     },
+     {
+      "t": "Cross-validation",
+      "d": "Menguji model berulang pada beberapa pembagian data agar hasil lebih stabil."
+     }
+    ],
+    "practice": "Latih model klasifikasi sederhana (misalnya logistic regression) pada dataset bunga iris atau data churn pelanggan, lalu bandingkan skor pada data latih dan data uji."
+   },
+   {
+    "topic": 3,
+    "title": "Deep learning dan NLP",
+    "overview": "Deep learning memakai jaringan saraf berlapis untuk mengenali pola rumit seperti gambar dan bahasa. Di topik ini kamu memahami cara kerja satu neuron, proses training dengan backpropagation, lalu bagaimana teks diubah menjadi angka (embedding) agar bisa diproses model.",
+    "points": [
+     "Jaringan saraf: lapisan input, lapisan tersembunyi, lapisan output, dan fungsi aktivasi.",
+     "Training: hitung loss, hitung gradien, perbarui bobot (gradient descent) berulang kali.",
+     "Tokenisasi memecah teks menjadi potongan; embedding mengubahnya menjadi vektor yang menangkap makna.",
+     "Transformer dan mekanisme attention menjadi dasar model bahasa modern."
+    ],
+    "terms": [
+     {
+      "t": "Embedding",
+      "d": "Representasi kata atau kalimat sebagai deretan angka; makna yang mirip punya vektor yang berdekatan."
+     },
+     {
+      "t": "Epoch",
+      "d": "Satu putaran penuh model melihat seluruh data latih."
+     },
+     {
+      "t": "Learning rate",
+      "d": "Seberapa besar langkah perubahan bobot di setiap pembaruan."
+     }
+    ],
+    "practice": "Bangun jaringan saraf kecil dengan PyTorch untuk mengklasifikasi digit tulisan tangan, lalu amati bagaimana loss turun tiap epoch."
+   },
+   {
+    "topic": 4,
+    "title": "Aplikasi LLM dan RAG",
+    "overview": "Large Language Model (LLM) pintar berbahasa, tetapi tidak tahu isi dokumen internalmu dan kadang mengarang. RAG (Retrieval-Augmented Generation) menjawabnya: cari potongan dokumen yang relevan lebih dulu, lalu berikan ke model sebagai bahan jawaban.",
+    "points": [
+     "Alur RAG: pecah dokumen jadi potongan, ubah jadi embedding, simpan di basis data vektor, cari yang paling mirip dengan pertanyaan, lalu kirim ke LLM.",
+     "Prompt yang baik memberi peran, konteks, dan format jawaban yang jelas.",
+     "Halusinasi dikurangi dengan meminta model hanya menjawab dari konteks dan menyertakan sumber.",
+     "Evaluasi: periksa apakah potongan yang diambil relevan dan apakah jawaban setia pada sumber."
+    ],
+    "terms": [
+     {
+      "t": "RAG",
+      "d": "Teknik menambahkan dokumen hasil pencarian ke prompt agar jawaban LLM berdasar pada sumber."
+     },
+     {
+      "t": "Halusinasi",
+      "d": "Jawaban yang terdengar meyakinkan tetapi tidak benar atau tidak ada dasarnya."
+     },
+     {
+      "t": "Chunk",
+      "d": "Potongan kecil dokumen yang disimpan dan dicari secara terpisah."
+     }
+    ],
+    "practice": "Buat asisten tanya-jawab untuk satu PDF (misalnya panduan kebijakan perusahaan): pecah per paragraf, cari 3 potongan teratas, lalu minta LLM menjawab dengan menyebut potongan mana yang dipakai."
+   }
+  ]
+ },
+ "soc-analyst": {
+  "description": "Analis SOC (Security Operations Center) adalah penjaga yang memantau sistem organisasi sepanjang waktu: membaca alert, memisahkan serangan sungguhan dari alarm palsu, dan merespons sebelum kerusakan melebar. Jalur ini cocok untuk kamu yang teliti, tenang di bawah tekanan, dan suka menelusuri jejak kejadian.\n\nKamu mulai dari fondasi jaringan dan Linux (TCP/IP, DNS, HTTP, perintah dasar), karena analis harus paham lalu lintas normal sebelum bisa mengenali yang janggal. Lalu kamu mempelajari dasar keamanan siber (CIA triad, jenis serangan, kontrol), analisis log dan SIEM, dan ditutup dengan alur respons insiden.\n\nSetelah menyelesaikan jalur ini kamu bisa membaca log sederhana, menjelaskan mengapa sebuah alert layak atau tidak layak dieskalasi, dan menyebutkan tahapan respons insiden secara berurutan. Uji pemahamanmu lewat simulasi karier Analis Keamanan Siber (SOC).",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar jaringan dan Linux",
+    "overview": "Hampir semua serangan siber melewati jaringan dan banyak server berjalan di Linux. Topik ini membangun fondasi: bagaimana data berpindah antar perangkat dan bagaimana kamu bekerja di terminal Linux dengan percaya diri.",
+    "points": [
+     "Model TCP/IP: alamat IP, port, TCP vs UDP, dan peran DNS menerjemahkan nama domain ke alamat IP.",
+     "HTTP dan HTTPS: metode GET/POST, kode status (200, 404, 500), dan mengapa enkripsi penting.",
+     "Perintah Linux dasar: ls, cd, cat, grep, ps, chmod, dan membaca file log di /var/log.",
+     "Izin file Linux (baca, tulis, eksekusi) untuk pemilik, grup, dan lainnya."
+    ],
+    "terms": [
+     {
+      "t": "Port",
+      "d": "Nomor pintu layanan pada sebuah perangkat, misalnya 443 untuk HTTPS dan 22 untuk SSH."
+     },
+     {
+      "t": "DNS",
+      "d": "Sistem yang mengubah nama domain menjadi alamat IP."
+     },
+     {
+      "t": "grep",
+      "d": "Perintah untuk mencari baris yang memuat pola tertentu di dalam file."
+     }
+    ],
+    "practice": "Di terminal Linux atau WSL, gunakan grep untuk menghitung berapa kali kata \"Failed password\" muncul di /var/log/auth.log, lalu catat alamat IP yang paling sering muncul."
+   },
+   {
+    "topic": 2,
+    "title": "Dasar keamanan siber",
+    "overview": "Sebelum mendeteksi serangan, kamu perlu bahasa yang sama dengan dunia keamanan. Topik ini memperkenalkan CIA triad sebagai tujuan keamanan, jenis serangan yang umum, dan kontrol yang dipakai untuk mencegah, mendeteksi, dan memulihkan.",
+    "points": [
+     "CIA triad: Confidentiality (kerahasiaan), Integrity (keutuhan), Availability (ketersediaan).",
+     "Serangan umum: phishing, malware, ransomware, brute force, dan DDoS.",
+     "Kontrol keamanan: pencegahan (firewall, MFA), deteksi (IDS, log), dan pemulihan (cadangan).",
+     "Prinsip least privilege: beri akses seminimal yang dibutuhkan untuk bekerja."
+    ],
+    "terms": [
+     {
+      "t": "CIA triad",
+      "d": "Tiga tujuan keamanan informasi: kerahasiaan, keutuhan, ketersediaan."
+     },
+     {
+      "t": "Phishing",
+      "d": "Penipuan yang memancing korban memberi data atau mengklik tautan berbahaya."
+     },
+     {
+      "t": "MFA",
+      "d": "Verifikasi dua faktor atau lebih, misalnya kata sandi ditambah kode di ponsel."
+     }
+    ],
+    "practice": "Ambil contoh email phishing dari internet, lalu tandai tiga ciri yang mencurigakan (pengirim, tautan, nada mendesak) dan sebutkan aspek CIA mana yang terancam jika korban mengikutinya."
+   },
+   {
+    "topic": 3,
+    "title": "Analisis log dan SIEM",
+    "overview": "Log adalah catatan kejadian dari server, aplikasi, dan perangkat jaringan. SIEM mengumpulkan log dari banyak sumber, mengaitkannya, lalu memunculkan alert. Tugas analis adalah menilai alert mana yang nyata.",
+    "points": [
+     "Isi log yang berguna: waktu, sumber, pengguna, aksi, dan hasil (berhasil atau gagal).",
+     "Korelasi: banyak login gagal dari satu IP lalu satu login berhasil adalah pola yang layak diselidiki.",
+     "False positive adalah alarm palsu; tugas analis memilahnya tanpa mengabaikan yang asli.",
+     "Triase alert: nilai keparahan, konteks aset, dan kebutuhan eskalasi."
+    ],
+    "terms": [
+     {
+      "t": "SIEM",
+      "d": "Platform yang mengumpulkan dan mengorelasikan log untuk mendeteksi ancaman."
+     },
+     {
+      "t": "False positive",
+      "d": "Alert yang menandai aktivitas normal sebagai ancaman."
+     },
+     {
+      "t": "Korelasi",
+      "d": "Menghubungkan beberapa kejadian terpisah menjadi satu cerita serangan."
+     }
+    ],
+    "practice": "Buka contoh log autentikasi (dataset terbuka atau buatan sendiri), urutkan berdasarkan IP, dan cari pola puluhan login gagal yang diakhiri satu login berhasil."
+   },
+   {
+    "topic": 4,
+    "title": "Respons insiden",
+    "overview": "Saat serangan terjadi, urutan langkah yang jelas mencegah panik dan kerusakan berlipat. Topik ini mengajarkan alur respons insiden dan peran analis di setiap tahap, termasuk dokumentasi dan pelaporan.",
+    "points": [
+     "Tahapan umum: persiapan, identifikasi, penahanan (containment), pemberantasan, pemulihan, dan pelajaran yang dipetik.",
+     "Penahanan jangka pendek: isolasi perangkat dari jaringan tanpa mematikannya bila bukti perlu dijaga.",
+     "Catat linimasa kejadian, tindakan, dan siapa yang melakukannya.",
+     "Laporkan ke pihak yang tepat sesuai kebijakan, dan perbaiki penyebabnya agar tidak berulang."
+    ],
+    "terms": [
+     {
+      "t": "Containment",
+      "d": "Membatasi penyebaran insiden, misalnya mengisolasi perangkat yang terinfeksi."
+     },
+     {
+      "t": "Eskalasi",
+      "d": "Menyerahkan insiden ke level atau tim yang lebih berwenang."
+     },
+     {
+      "t": "Post-incident review",
+      "d": "Evaluasi setelah insiden untuk memperbaiki proses dan kontrol."
+     }
+    ],
+    "practice": "Tulis linimasa satu insiden fiktif (laptop terinfeksi ransomware): kapan terdeteksi, apa yang diisolasi, siapa yang dihubungi, dan apa perbaikan akhirnya."
+   }
+  ]
+ },
+ "ehs-specialist": {
+  "description": "Spesialis K3/EHS (Keselamatan dan Kesehatan Kerja, serta Lingkungan) memastikan tempat kerja aman: mengenali bahaya sebelum menjadi kecelakaan, menyusun pengendalian, dan membangun budaya selamat. Jalur ini cocok untuk kamu yang peduli keselamatan orang lain, teliti, dan nyaman berkomunikasi dengan pekerja di lapangan.\n\nKamu mulai dari tujuan dan regulasi K3 serta kewajiban pengusaha dan pekerja, lalu belajar mengidentifikasi bahaya dan menilai risiko dengan matriks. Berikutnya investigasi insiden yang berfokus pada akar penyebab, dan terakhir sistem manajemen K3 dengan siklus PDCA, audit internal, dan perbaikan berkelanjutan.\n\nSetelah jalur ini kamu bisa membedakan bahaya, risiko, insiden, dan nearmiss, menyusun penilaian risiko sederhana dengan hierarki pengendalian, dan menjelaskan bagaimana sebuah perusahaan memperbaiki K3 secara terus-menerus. Uji hasil belajarmu di simulasi karier Spesialis K3 / EHS.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar K3 dan regulasi",
+    "overview": "K3 bukan sekadar helm dan rompi. Ini sistem untuk mencegah cedera, penyakit akibat kerja, dan kerusakan. Topik ini menjelaskan tujuan K3, dasar hukum yang berlaku di Indonesia, serta hak dan kewajiban pengusaha dan pekerja.",
+    "points": [
+     "Tujuan K3: melindungi pekerja, aset, dan lingkungan, sekaligus menjaga produktivitas.",
+     "Dasar hukum yang sering dirujuk: UU No. 1 Tahun 1970 tentang Keselamatan Kerja dan PP No. 50 Tahun 2012 tentang SMK3.",
+     "Pengusaha wajib menyediakan tempat kerja aman, APD, dan pelatihan; pekerja wajib mematuhi prosedur dan memakai APD.",
+     "Pekerja berhak menolak pekerjaan yang membahayakan jika syarat keselamatan belum dipenuhi."
+    ],
+    "terms": [
+     {
+      "t": "APD",
+      "d": "Alat pelindung diri, seperti helm, sarung tangan, kacamata, dan sepatu safety."
+     },
+     {
+      "t": "SMK3",
+      "d": "Sistem Manajemen Keselamatan dan Kesehatan Kerja."
+     },
+     {
+      "t": "Penyakit akibat kerja",
+      "d": "Penyakit yang timbul karena pekerjaan atau lingkungan kerja."
+     }
+    ],
+    "practice": "Berkeliling di tempat kerja atau kampusmu, lalu catat tiga rambu K3 yang kamu temukan dan jelaskan apa kewajiban yang dikomunikasikan oleh masing-masing rambu."
+   },
+   {
+    "topic": 2,
+    "title": "Identifikasi bahaya dan penilaian risiko",
+    "overview": "Kecelakaan hampir selalu didahului bahaya yang bisa dikenali. Topik ini mengajarkan alur HIRADC: mengidentifikasi bahaya, menilai risiko dengan kemungkinan dan keparahan, lalu menentukan pengendalian menurut hierarki yang paling efektif.",
+    "points": [
+     "Bahaya adalah sumber potensi cedera; risiko adalah kombinasi kemungkinan dan tingkat keparahan.",
+     "Matriks risiko: nilai kemungkinan dikali keparahan untuk menentukan prioritas.",
+     "Hierarki pengendalian dari paling efektif: eliminasi, substitusi, rekayasa teknik, administratif, APD.",
+     "Nilai ulang risiko sisa (residual) setelah pengendalian dipasang."
+    ],
+    "terms": [
+     {
+      "t": "HIRADC",
+      "d": "Hazard Identification, Risk Assessment, and Determining Control."
+     },
+     {
+      "t": "Risiko residual",
+      "d": "Risiko yang masih tersisa setelah pengendalian diterapkan."
+     },
+     {
+      "t": "Substitusi",
+      "d": "Mengganti bahan atau proses berbahaya dengan yang lebih aman."
+     }
+    ],
+    "practice": "Pilih satu pekerjaan sehari-hari (misalnya mengangkat galon), tulis tiga bahayanya, beri skor kemungkinan dan keparahan 1 sampai 5, lalu tentukan pengendalian dari hierarki."
+   },
+   {
+    "topic": 3,
+    "title": "Investigasi insiden",
+    "overview": "Setelah insiden atau nearmiss, tujuan investigasi adalah mencegah terulang, bukan mencari siapa yang salah. Topik ini mengajarkan cara mengumpulkan fakta dan menemukan akar penyebab dengan metode seperti 5 Why.",
+    "points": [
+     "Bedakan accident (ada cedera atau kerugian) dan nearmiss (nyaris terjadi tanpa kerugian); keduanya wajib dilaporkan.",
+     "Kumpulkan fakta: lokasi, saksi, kondisi alat, prosedur yang berlaku, dan urutan kejadian.",
+     "5 Why: tanyakan \"mengapa\" berulang sampai ke penyebab sistem, bukan berhenti di kelalaian orang.",
+     "Tindakan korektif harus punya penanggung jawab dan batas waktu."
+    ],
+    "terms": [
+     {
+      "t": "Nearmiss",
+      "d": "Kejadian nyaris celaka yang tidak menimbulkan cedera atau kerugian."
+     },
+     {
+      "t": "Akar penyebab",
+      "d": "Penyebab mendasar yang jika diperbaiki mencegah insiden berulang."
+     },
+     {
+      "t": "Tindakan korektif",
+      "d": "Langkah memperbaiki penyebab agar insiden tidak terulang."
+     }
+    ],
+    "practice": "Ambil contoh insiden (misalnya terpeleset di lantai basah), lakukan 5 Why sampai lima tingkat, lalu tulis satu tindakan korektif dengan penanggung jawab dan tenggat."
+   },
+   {
+    "topic": 4,
+    "title": "Sistem manajemen K3",
+    "overview": "K3 yang bertahan lama membutuhkan sistem, bukan usaha sesaat. Topik ini menjelaskan siklus PDCA, peran audit internal, dan cara perbaikan berkelanjutan dijalankan dalam sistem manajemen K3 perusahaan.",
+    "points": [
+     "PDCA: Plan (rencana), Do (laksanakan), Check (periksa), Act (tindak lanjut).",
+     "Unsur penting: komitmen pimpinan, kebijakan, target, pelaksanaan, pemantauan, dan tinjauan manajemen.",
+     "Audit internal memeriksa kesesuaian praktik dengan prosedur dan menemukan celah sebelum auditor luar.",
+     "Indikator kinerja: angka kecelakaan, tingkat kepatuhan APD, jumlah nearmiss yang dilaporkan."
+    ],
+    "terms": [
+     {
+      "t": "PDCA",
+      "d": "Siklus Plan-Do-Check-Act untuk perbaikan berkelanjutan."
+     },
+     {
+      "t": "Audit internal",
+      "d": "Pemeriksaan sistematis oleh pihak internal terhadap penerapan sistem manajemen."
+     },
+     {
+      "t": "Temuan ketidaksesuaian",
+      "d": "Hasil audit berupa praktik yang tidak sesuai persyaratan atau prosedur."
+     }
+    ],
+    "practice": "Buat rencana PDCA satu halaman untuk mengurangi kecelakaan jari terjepit di sebuah workshop: target, tindakan, cara memeriksa, dan tindak lanjut."
+   }
+  ]
+ },
+ "procurement": {
+  "description": "Procurement Specialist memastikan perusahaan mendapat barang dan jasa yang tepat, dari vendor yang tepat, dengan harga dan syarat yang masuk akal. Jalur ini cocok untuk kamu yang teliti membandingkan angka, nyaman bernegosiasi, dan suka menjaga hubungan baik dengan banyak pihak.\n\nKamu mulai dari siklus pengadaan dari kebutuhan sampai pembayaran, lalu belajar mengevaluasi vendor dan tender dengan kriteria objektif. Berikutnya negosiasi dengan persiapan BATNA, dan ditutup dengan Excel untuk membandingkan penawaran memakai rumus dan tabel pivot.\n\nSetelah jalur ini kamu bisa menjelaskan alur pengadaan dengan kontrol yang menyertainya, menyusun matriks penilaian vendor, menyiapkan strategi negosiasi, dan menganalisis biaya total memakai Excel. Uji pemahamanmu lewat simulasi karier Procurement Specialist.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar pengadaan",
+    "overview": "Pengadaan bukan hanya membeli. Ada rangkaian langkah yang menjaga agar pembelian sah, terkendali, dan bisa dipertanggungjawabkan. Topik ini menjelaskan siklus procure-to-pay dan dokumen kuncinya.",
+    "points": [
+     "Alur umum: permintaan pembelian (PR), pemilihan vendor, pesanan pembelian (PO), penerimaan barang (GR), faktur vendor, lalu pembayaran.",
+     "Three-way matching: PO, bukti terima barang, dan faktur harus cocok sebelum pembayaran.",
+     "Pemisahan tugas: orang yang meminta, menyetujui, menerima, dan membayar sebaiknya berbeda untuk mencegah kecurangan.",
+     "Total cost of ownership: harga beli hanya satu bagian dari biaya sebenarnya."
+    ],
+    "terms": [
+     {
+      "t": "PO",
+      "d": "Purchase Order, dokumen resmi pesanan kepada vendor."
+     },
+     {
+      "t": "Three-way matching",
+      "d": "Mencocokkan PO, bukti terima barang, dan faktur sebelum membayar."
+     },
+     {
+      "t": "TCO",
+      "d": "Total Cost of Ownership: seluruh biaya selama masa pakai, bukan hanya harga beli."
+     }
+    ],
+    "practice": "Gambar alur procure-to-pay untuk pembelian laptop kantor dalam bentuk diagram sederhana, lalu tandai di langkah mana tiga dokumen dicocokkan."
+   },
+   {
+    "topic": 2,
+    "title": "Evaluasi vendor dan tender",
+    "overview": "Memilih vendor hanya karena paling murah sering berujung masalah kualitas dan keterlambatan. Topik ini mengajarkan cara menyusun kriteria penilaian yang objektif sebelum melihat penawaran, supaya keputusan adil dan bisa dipertanggungjawabkan.",
+    "points": [
+     "Tetapkan kriteria dan bobotnya lebih dulu: harga, kualitas, waktu kirim, pengalaman, dukungan purna jual.",
+     "Beri skor tiap vendor dengan skala yang sama dan catat alasan skornya.",
+     "Pastikan semua peserta mendapat informasi dan tenggat yang sama agar tender adil.",
+     "Hindari konflik kepentingan; nyatakan jika ada hubungan pribadi dengan vendor."
+    ],
+    "terms": [
+     {
+      "t": "RFQ",
+      "d": "Request for Quotation, permintaan penawaran harga untuk spesifikasi yang sudah jelas."
+     },
+     {
+      "t": "Bobot kriteria",
+      "d": "Persentase yang menunjukkan seberapa penting sebuah kriteria dalam penilaian."
+     },
+     {
+      "t": "Konflik kepentingan",
+      "d": "Situasi ketika kepentingan pribadi bisa memengaruhi keputusan profesional."
+     }
+    ],
+    "practice": "Buat matriks penilaian untuk memilih penyedia katering kantor dengan empat kriteria dan bobotnya, lalu beri skor tiga vendor fiktif."
+   },
+   {
+    "topic": 3,
+    "title": "Negosiasi",
+    "overview": "Negosiasi pengadaan bukan adu menang-kalah, melainkan mencari kesepakatan yang berkelanjutan. Persiapan menentukan hasil: kamu perlu tahu batasmu, kebutuhan pihak lain, dan alternatif jika tidak sepakat.",
+    "points": [
+     "BATNA: alternatif terbaik jika negosiasi gagal; semakin kuat, semakin besar posisi tawarmu.",
+     "Tentukan target, batas terendah yang dapat diterima, dan hal lain yang bisa dipertukarkan selain harga.",
+     "Gali kepentingan di balik posisi lawan bicara, misalnya kepastian volume atau percepatan pembayaran.",
+     "Catat kesepakatan secara tertulis dan konfirmasi sebelum menutup pembicaraan."
+    ],
+    "terms": [
+     {
+      "t": "BATNA",
+      "d": "Best Alternative To a Negotiated Agreement, alternatif terbaik jika tidak tercapai kesepakatan."
+     },
+     {
+      "t": "Win-win",
+      "d": "Kesepakatan yang memberi manfaat bagi kedua pihak."
+     },
+     {
+      "t": "Konsesi",
+      "d": "Hal yang diberikan sebagai imbalan atas hal lain dalam negosiasi."
+     }
+    ],
+    "practice": "Siapkan lembar negosiasi untuk memperpanjang kontrak vendor kebersihan: tulis target harga, batas bawah, BATNA, dan dua hal non-harga yang bisa kamu tawarkan."
+   },
+   {
+    "topic": 4,
+    "title": "Excel untuk analisis biaya",
+    "overview": "Membandingkan penawaran dari beberapa vendor dengan format berbeda menuntut tabel yang rapi. Topik ini mengajarkan rumus penting dan tabel pivot agar analisis biaya cepat, akurat, dan mudah dijelaskan.",
+    "points": [
+     "Rumus SUM, SUMIF, dan SUMIFS untuk menjumlah berdasarkan syarat.",
+     "VLOOKUP atau XLOOKUP untuk mencocokkan kode barang dengan harga dari daftar lain.",
+     "Tabel pivot merangkum pengeluaran per vendor, per kategori, atau per bulan.",
+     "Pemformatan bersyarat menandai harga yang melebihi anggaran atau penawaran terendah."
+    ],
+    "terms": [
+     {
+      "t": "Tabel pivot",
+      "d": "Ringkasan data yang bisa diubah susunannya dengan cepat tanpa rumus rumit."
+     },
+     {
+      "t": "XLOOKUP",
+      "d": "Fungsi pencarian modern untuk mengambil nilai dari kolom lain berdasarkan kunci."
+     },
+     {
+      "t": "Referensi absolut",
+      "d": "Alamat sel yang dikunci dengan tanda $ agar tidak bergeser saat rumus disalin."
+     }
+    ],
+    "practice": "Gabungkan tiga penawaran vendor dalam satu sheet, hitung total per vendor dengan SUMIFS, lalu buat tabel pivot yang menampilkan selisih terhadap penawaran termurah."
+   }
+  ]
+ },
+ "industrial-engineer": {
+  "description": "Industrial Engineer membuat proses kerja lebih efisien: mengurangi pemborosan, menyeimbangkan beban kerja, menjaga kualitas, dan memastikan bahan serta jadwal produksi tersedia tepat waktu. Jalur ini cocok untuk kamu yang suka memperbaiki cara kerja, nyaman dengan angka, dan senang melihat hasil nyata di lantai produksi.\n\nKamu mulai dari lean manufacturing dan tujuh pemborosan, lalu studi waktu dan metode untuk menghitung waktu baku. Berikutnya pengendalian kualitas statistik dengan peta kendali dan kapabilitas proses, dan terakhir dasar PPIC untuk merencanakan produksi dan kebutuhan bahan.\n\nSetelah jalur ini kamu bisa mengenali pemborosan di sebuah proses, menghitung waktu baku dan jumlah operator, membaca peta kendali, serta menyusun rencana kebutuhan bahan sederhana. Uji pemahamanmu di simulasi karier Industrial Engineer.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar lean manufacturing",
+    "overview": "Lean berfokus pada nilai bagi pelanggan dan membuang segala aktivitas yang tidak menambah nilai. Topik ini mengenalkan tujuh pemborosan (muda), konsep aliran nilai, dan cara melihat proses dari kacamata pelanggan.",
+    "points": [
+     "Tujuh pemborosan: produksi berlebih, menunggu, transportasi, proses berlebih, persediaan, gerakan, dan cacat.",
+     "Aktivitas dibedakan menjadi yang menambah nilai, tidak menambah nilai tetapi perlu, dan pemborosan murni.",
+     "Value stream mapping menggambar aliran material dan informasi dari pemasok sampai pelanggan.",
+     "5S: sortir, susun, bersihkan, standarkan, dan pertahankan."
+    ],
+    "terms": [
+     {
+      "t": "Muda",
+      "d": "Istilah Jepang untuk pemborosan."
+     },
+     {
+      "t": "Value stream map",
+      "d": "Peta aliran nilai yang memperlihatkan langkah, waktu proses, dan waktu tunggu."
+     },
+     {
+      "t": "Kaizen",
+      "d": "Perbaikan kecil yang dilakukan terus-menerus oleh semua orang."
+     }
+    ],
+    "practice": "Amati proses sederhana (misalnya antrean pesanan di kantin), catat setiap langkah, lalu tandai langkah mana yang menambah nilai dan mana yang termasuk pemborosan."
+   },
+   {
+    "topic": 2,
+    "title": "Studi waktu dan metode",
+    "overview": "Untuk merencanakan kapasitas dan menetapkan standar, kamu perlu tahu berapa lama sebuah pekerjaan wajar diselesaikan. Topik ini mengajarkan pengukuran waktu dengan stopwatch, faktor penyesuaian, kelonggaran, dan perhitungan waktu baku.",
+    "points": [
+     "Waktu normal = rata-rata waktu pengamatan dikali faktor penyesuaian (rating).",
+     "Waktu baku = waktu normal ditambah kelonggaran untuk kebutuhan pribadi, kelelahan, dan hambatan.",
+     "Kecukupan data diuji agar jumlah pengamatan cukup mewakili.",
+     "Analisis metode (peta proses, peta tangan kiri dan kanan) mencari cara kerja yang lebih sederhana."
+    ],
+    "terms": [
+     {
+      "t": "Waktu normal",
+      "d": "Waktu yang dibutuhkan pekerja dengan kecepatan wajar setelah disesuaikan."
+     },
+     {
+      "t": "Kelonggaran (allowance)",
+      "d": "Tambahan waktu untuk kebutuhan pribadi, kelelahan, dan hambatan tak terhindarkan."
+     },
+     {
+      "t": "Faktor penyesuaian",
+      "d": "Nilai yang mengoreksi kecepatan operator yang diamati terhadap kecepatan wajar."
+     }
+    ],
+    "practice": "Ukur waktu 10 kali untuk satu pekerjaan berulang (misalnya melipat dan memasukkan brosur ke amplop), hitung rata-ratanya, tentukan faktor penyesuaian, tambahkan kelonggaran 15%, dan tulis waktu bakunya."
+   },
+   {
+    "topic": 3,
+    "title": "Pengendalian kualitas statistik",
+    "overview": "Kualitas yang baik dijaga dengan data, bukan perasaan. Topik ini mengenalkan peta kendali untuk memantau stabilitas proses dan indeks kapabilitas untuk menilai apakah proses mampu memenuhi spesifikasi.",
+    "points": [
+     "Variasi umum (acak) normal terjadi; variasi khusus (assignable cause) perlu dicari penyebabnya.",
+     "Peta kendali memiliki garis tengah dan batas kendali atas dan bawah; titik di luar batas atau pola tak wajar adalah sinyal.",
+     "Batas kendali berasal dari data proses, sedangkan batas spesifikasi berasal dari kebutuhan pelanggan.",
+     "Cp dan Cpk menilai kemampuan proses; Cpk memperhitungkan posisi rata-rata proses."
+    ],
+    "terms": [
+     {
+      "t": "Peta kendali",
+      "d": "Grafik hasil pengukuran terhadap waktu dengan batas kendali untuk memantau stabilitas."
+     },
+     {
+      "t": "Cpk",
+      "d": "Indeks kapabilitas proses yang memperhitungkan posisi rata-rata terhadap batas spesifikasi."
+     },
+     {
+      "t": "Variasi khusus",
+      "d": "Variasi yang disebabkan faktor tertentu yang bisa diidentifikasi, bukan sekadar kebetulan."
+     }
+    ],
+    "practice": "Catat diameter 25 sampel produk (data contoh), hitung rata-rata dan simpangan baku, gambar peta kendali sederhana di Excel, lalu tandai titik yang di luar batas."
+   },
+   {
+    "topic": 4,
+    "title": "PPIC dasar",
+    "overview": "PPIC (Production Planning and Inventory Control) menjaga agar produksi berjalan sesuai permintaan dengan bahan yang cukup. Topik ini mengenalkan peramalan permintaan, rencana induk produksi, dan perhitungan kebutuhan bahan.",
+    "points": [
+     "Peramalan permintaan dengan rata-rata bergerak sederhana sebagai titik awal.",
+     "Rencana induk produksi (MPS) menentukan jumlah dan waktu produksi barang jadi.",
+     "MRP menghitung kebutuhan bahan dari daftar komponen (BOM), stok, dan lead time.",
+     "Kebutuhan bersih = kebutuhan kotor dikurangi stok dan pesanan yang akan datang."
+    ],
+    "terms": [
+     {
+      "t": "BOM",
+      "d": "Bill of Materials, daftar komponen dan jumlah yang dibutuhkan untuk satu produk."
+     },
+     {
+      "t": "MPS",
+      "d": "Master Production Schedule, jadwal induk produksi barang jadi."
+     },
+     {
+      "t": "Lead time",
+      "d": "Jarak waktu dari pemesanan sampai barang diterima atau selesai."
+     }
+    ],
+    "practice": "Untuk produk fiktif (satu meja = 4 kaki + 1 papan), hitung kebutuhan kaki dan papan untuk 50 meja jika stok kaki 80 dan papan 10."
+   }
+  ]
+ },
+ "learning-specialist": {
+  "description": "Learning & Development (L&D) Specialist membantu organisasi dan karyawannya berkembang lewat pelatihan yang benar-benar menjawab masalah kerja. Jalur ini cocok untuk kamu yang suka mengajar, merancang pengalaman belajar, dan ingin melihat orang berubah perilaku, bukan sekadar hadir di kelas.\n\nKamu mulai dari analisis kebutuhan pelatihan untuk memastikan masalahnya memang soal kompetensi, lalu desain instruksional dengan tujuan belajar yang terukur. Berikutnya fasilitasi dan public speaking untuk memandu sesi yang aktif, dan ditutup dengan evaluasi pelatihan memakai empat level Kirkpatrick.\n\nSetelah jalur ini kamu bisa membedakan masalah yang butuh pelatihan dan yang tidak, menulis tujuan belajar yang terukur, merencanakan sesi yang melibatkan peserta, dan merancang evaluasi yang mengukur hasil. Uji pemahamanmu di simulasi karier Learning & Development Specialist.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Analisis kebutuhan pelatihan",
+    "overview": "Pelatihan bukan obat untuk semua masalah. Topik ini mengajarkan cara menelusuri akar masalah kinerja: apakah karyawan tidak tahu caranya (kesenjangan kompetensi) atau ada hambatan lain seperti alat, proses, atau insentif.",
+    "points": [
+     "Kesenjangan kinerja = kinerja yang diharapkan dikurangi kinerja yang terjadi.",
+     "Tanyakan: tidak mampu, tidak tahu, atau tidak mau? Hanya yang pertama dan kedua yang cocok dijawab dengan pelatihan.",
+     "Data TNA datang dari wawancara, observasi, kuesioner, dan data kinerja.",
+     "Prioritaskan kebutuhan yang berdampak pada tujuan bisnis."
+    ],
+    "terms": [
+     {
+      "t": "TNA",
+      "d": "Training Needs Analysis, proses mengidentifikasi kebutuhan pelatihan."
+     },
+     {
+      "t": "Kesenjangan kompetensi",
+      "d": "Selisih antara kemampuan yang dibutuhkan dan yang dimiliki saat ini."
+     },
+     {
+      "t": "Akar masalah",
+      "d": "Penyebab mendasar yang membuat kinerja tidak sesuai harapan."
+     }
+    ],
+    "practice": "Ambil satu keluhan umum (misalnya laporan sering terlambat), tulis tiga kemungkinan penyebab, dan tandai mana yang diselesaikan dengan pelatihan dan mana yang tidak."
+   },
+   {
+    "topic": 2,
+    "title": "Desain instruksional",
+    "overview": "Pelatihan yang baik dirancang mundur dari hasil yang diinginkan. Topik ini mengajarkan penulisan tujuan belajar yang terukur dan penyusunan aktivitas yang membantu peserta mencapainya.",
+    "points": [
+     "Tujuan belajar memakai kata kerja yang bisa diamati (menjelaskan, menghitung, mempraktikkan), bukan \"memahami\".",
+     "Model ADDIE: Analyze, Design, Develop, Implement, Evaluate.",
+     "Susun aktivitas dari mudah ke sulit, dengan praktik dan umpan balik, bukan hanya ceramah.",
+     "Selaraskan tujuan, materi, aktivitas, dan penilaian."
+    ],
+    "terms": [
+     {
+      "t": "ADDIE",
+      "d": "Kerangka lima tahap untuk merancang pelatihan."
+     },
+     {
+      "t": "Tujuan belajar terukur",
+      "d": "Pernyataan hasil belajar yang dapat diamati dan dinilai."
+     },
+     {
+      "t": "Taksonomi Bloom",
+      "d": "Jenjang kemampuan berpikir dari mengingat sampai mencipta."
+     }
+    ],
+    "practice": "Tulis tiga tujuan belajar untuk pelatihan \"memberi umpan balik kepada anggota tim\" memakai kata kerja yang dapat diamati, lalu tentukan satu aktivitas untuk tiap tujuan."
+   },
+   {
+    "topic": 3,
+    "title": "Fasilitasi dan public speaking",
+    "overview": "Fasilitator yang baik membuat peserta berpikir dan berlatih, bukan hanya mendengar. Topik ini membahas cara membuka sesi, mengajukan pertanyaan, mengelola dinamika kelas, dan menyampaikan materi dengan percaya diri.",
+    "points": [
+     "Buka sesi dengan tujuan dan manfaat yang jelas bagi peserta.",
+     "Pakai pertanyaan terbuka untuk memancing diskusi, dan beri jeda agar peserta sempat berpikir.",
+     "Kelola peserta pasif dan dominan dengan membagi giliran dan kerja kelompok kecil.",
+     "Latih suara, jeda, dan kontak mata; atur waktu dengan rencana sesi."
+    ],
+    "terms": [
+     {
+      "t": "Fasilitasi",
+      "d": "Memandu proses belajar atau diskusi agar peserta aktif menemukan jawaban sendiri."
+     },
+     {
+      "t": "Pertanyaan terbuka",
+      "d": "Pertanyaan yang tidak bisa dijawab hanya dengan ya atau tidak."
+     },
+     {
+      "t": "Ice breaker",
+      "d": "Kegiatan singkat pembuka untuk mencairkan suasana."
+     }
+    ],
+    "practice": "Rencanakan sesi 30 menit untuk topik pilihanmu dengan pembagian waktu: pembukaan, penjelasan, praktik, dan refleksi. Latih lalu rekam suaramu untuk menilai kecepatan bicara."
+   },
+   {
+    "topic": 4,
+    "title": "Evaluasi pelatihan",
+    "overview": "Pelatihan yang tidak dievaluasi sulit dibuktikan manfaatnya. Topik ini memperkenalkan empat level Kirkpatrick dan cara merancang evaluasi dari reaksi peserta sampai dampak bisnis.",
+    "points": [
+     "Level 1 Reaksi: kepuasan dan relevansi menurut peserta.",
+     "Level 2 Pembelajaran: peningkatan pengetahuan atau keterampilan (tes, praktik).",
+     "Level 3 Perilaku: apakah peserta menerapkan di pekerjaan (observasi, umpan balik atasan).",
+     "Level 4 Hasil: dampak pada indikator bisnis seperti produktivitas, kualitas, atau penjualan."
+    ],
+    "terms": [
+     {
+      "t": "Model Kirkpatrick",
+      "d": "Empat level evaluasi pelatihan: reaksi, pembelajaran, perilaku, hasil."
+     },
+     {
+      "t": "Pre-test dan post-test",
+      "d": "Tes sebelum dan sesudah pelatihan untuk melihat peningkatan."
+     },
+     {
+      "t": "ROI pelatihan",
+      "d": "Perbandingan manfaat finansial pelatihan terhadap biayanya."
+     }
+    ],
+    "practice": "Rancang evaluasi empat level untuk pelatihan layanan pelanggan: tulis satu pertanyaan atau data yang kamu ambil di tiap level dan kapan mengambilnya."
+   }
+  ]
+ },
+ "logistik": {
+  "description": "Logistik & Import Specialist mengatur perjalanan barang dari pemasok sampai pelanggan: transportasi, dokumen impor, penyimpanan, dan stok. Jalur ini cocok untuk kamu yang teliti terhadap detail, suka mengatur proses, dan tidak keberatan menghadapi dokumen serta tenggat.\n\nKamu mulai dari dasar logistik dan rantai pasok (aliran barang, informasi, dan uang), lalu Incoterms dan dokumen impor untuk memahami pembagian risiko dan biaya. Berikutnya manajemen gudang dan stok dengan stok pengaman dan titik pesan ulang, dan ditutup dengan Excel untuk laporan stok dan biaya kirim.\n\nSetelah jalur ini kamu bisa menjelaskan alur rantai pasok, membaca syarat Incoterms, menghitung stok pengaman dan titik pesan ulang sederhana, serta menyusun laporan stok di Excel. Uji pemahamanmu di simulasi karier Logistik & Import Specialist.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar logistik dan rantai pasok",
+    "overview": "Rantai pasok adalah jaringan pemasok, pabrik, gudang, distributor, dan pelanggan. Topik ini menjelaskan tiga aliran yang harus selaras (barang, informasi, uang) dan fungsi utama logistik di dalamnya.",
+    "points": [
+     "Tiga aliran: barang dari hulu ke hilir, informasi dua arah, dan uang dari pelanggan ke pemasok.",
+     "Fungsi logistik: transportasi, pergudangan, pengelolaan persediaan, dan pemrosesan pesanan.",
+     "Bullwhip effect: perubahan kecil permintaan di hilir membesar di hulu karena kurangnya informasi.",
+     "Ukuran kinerja: ketepatan waktu kirim, tingkat pemenuhan pesanan, dan biaya logistik."
+    ],
+    "terms": [
+     {
+      "t": "Rantai pasok",
+      "d": "Jaringan organisasi yang bekerja sama menyediakan produk dari bahan baku sampai pelanggan."
+     },
+     {
+      "t": "Bullwhip effect",
+      "d": "Fluktuasi permintaan yang membesar semakin ke hulu rantai pasok."
+     },
+     {
+      "t": "Fill rate",
+      "d": "Persentase pesanan yang dipenuhi dari stok tersedia."
+     }
+    ],
+    "practice": "Gambar rantai pasok sebuah produk sederhana (misalnya sepatu) dari bahan baku sampai pembeli, lalu tandai satu titik di mana keterlambatan informasi bisa terjadi."
+   },
+   {
+    "topic": 2,
+    "title": "Inkoterm dan dokumen impor",
+    "overview": "Incoterms adalah aturan internasional yang menetapkan siapa menanggung biaya, risiko, dan tugas pengiriman antara penjual dan pembeli. Topik ini juga mengenalkan dokumen yang lazim dalam impor.",
+    "points": [
+     "EXW: penjual hanya menyiapkan barang di tempatnya; pembeli menanggung hampir semuanya.",
+     "FOB: risiko berpindah ke pembeli saat barang berada di atas kapal di pelabuhan muat.",
+     "CIF: penjual membayar pengangkutan dan asuransi sampai pelabuhan tujuan, tetapi risiko tetap berpindah di pelabuhan muat.",
+     "Dokumen umum: commercial invoice, packing list, bill of lading, dan dokumen kepabeanan (PIB)."
+    ],
+    "terms": [
+     {
+      "t": "Incoterms",
+      "d": "Aturan Kamar Dagang Internasional tentang pembagian biaya, risiko, dan tanggung jawab pengiriman."
+     },
+     {
+      "t": "Bill of Lading",
+      "d": "Dokumen pengangkutan laut yang berfungsi sebagai bukti terima barang dan kontrak angkut."
+     },
+     {
+      "t": "PIB",
+      "d": "Pemberitahuan Impor Barang, dokumen yang diajukan importir ke kepabeanan."
+     }
+    ],
+    "practice": "Bandingkan satu pesanan fiktif dengan syarat EXW, FOB, dan CIF dalam tabel: siapa membayar angkutan darat, angkutan laut, asuransi, dan siapa menanggung risiko di tiap tahap."
+   },
+   {
+    "topic": 3,
+    "title": "Manajemen gudang dan stok",
+    "overview": "Stok yang terlalu sedikit membuat pelanggan kecewa, stok terlalu banyak mengikat uang. Topik ini mengajarkan cara menentukan kapan dan berapa banyak memesan, serta cara mengatur gudang agar barang mudah ditemukan.",
+    "points": [
+     "Stok pengaman melindungi dari lonjakan permintaan dan keterlambatan pemasok.",
+     "Titik pesan ulang (ROP) = pemakaian per hari x lead time + stok pengaman.",
+     "FIFO mengeluarkan barang yang masuk lebih dulu; FEFO mengeluarkan yang paling dulu kedaluwarsa.",
+     "Analisis ABC mengelompokkan barang berdasarkan nilai pemakaian untuk menentukan perhatian."
+    ],
+    "terms": [
+     {
+      "t": "ROP",
+      "d": "Reorder Point, jumlah stok saat pemesanan ulang harus dilakukan."
+     },
+     {
+      "t": "Stok pengaman",
+      "d": "Persediaan cadangan untuk menghadapi ketidakpastian."
+     },
+     {
+      "t": "FEFO",
+      "d": "First Expired First Out, barang yang paling dulu kedaluwarsa dikeluarkan lebih dulu."
+     }
+    ],
+    "practice": "Hitung titik pesan ulang untuk barang dengan pemakaian 20 unit per hari, lead time 5 hari, stok pengaman 30 unit, lalu jelaskan apa yang terjadi jika lead time berubah menjadi 8 hari."
+   },
+   {
+    "topic": 4,
+    "title": "Excel untuk logistik",
+    "overview": "Laporan stok dan biaya kirim yang rapi membantu keputusan cepat. Topik ini mengajarkan rumus dan tabel pivot untuk merangkum mutasi stok, memantau biaya kirim, dan menandai barang yang perlu dipesan ulang.",
+    "points": [
+     "SUMIFS untuk total barang masuk dan keluar per kode barang.",
+     "IF dan pemformatan bersyarat menandai stok di bawah titik pesan ulang.",
+     "Tabel pivot meringkas biaya kirim per rute, per ekspedisi, atau per bulan.",
+     "Validasi data mencegah salah input kode atau satuan."
+    ],
+    "terms": [
+     {
+      "t": "Mutasi stok",
+      "d": "Catatan barang masuk dan keluar yang mengubah saldo persediaan."
+     },
+     {
+      "t": "Pemformatan bersyarat",
+      "d": "Pewarnaan sel otomatis berdasarkan aturan tertentu."
+     },
+     {
+      "t": "Validasi data",
+      "d": "Aturan yang membatasi isian sel agar sesuai pilihan atau format yang benar."
+     }
+    ],
+    "practice": "Buat sheet stok dengan kolom kode, masuk, keluar, saldo, dan ROP, lalu atur pemformatan bersyarat yang memberi warna merah pada saldo di bawah ROP."
+   }
+  ]
+ },
+ "partnership": {
+  "description": "Business Development & Partnership Specialist mencari peluang pertumbuhan lewat kerja sama: memetakan calon mitra, menyusun penawaran, dan menjaga hubungan sampai kesepakatan berjalan. Jalur ini cocok untuk kamu yang suka berkomunikasi, melihat peluang, dan tidak menyerah ketika harus menindaklanjuti.\n\nKamu mulai dari dasar bisnis dan nilai yang dipertukarkan dalam kemitraan, lalu riset pasar untuk memetakan calon mitra dan pesaing. Berikutnya presentasi dan proposal yang bercerita meyakinkan, dan ditutup dengan negosiasi serta pencatatan peluang memakai CRM.\n\nSetelah jalur ini kamu bisa menjelaskan nilai kemitraan untuk kedua pihak, memetakan calon mitra dengan kriteria, menyusun proposal ringkas, dan mengelola pipeline peluang secara rapi. Uji pemahamanmu di simulasi karier Business Development & Partnership.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar bisnis dan nilai kemitraan",
+    "overview": "Kemitraan bertahan jika kedua pihak merasa untung. Topik ini membahas cara kerja bisnis, proposisi nilai, dan jenis kemitraan umum, sehingga kamu bisa menjelaskan dengan jelas apa yang ditukar.",
+    "points": [
+     "Proposisi nilai: manfaat khusus yang membuat pelanggan atau mitra memilih kita.",
+     "Jenis kemitraan: distribusi, co-marketing, integrasi produk, dan reseller.",
+     "Setiap pihak perlu tahu apa yang ia beri dan apa yang ia dapat.",
+     "Ukur keberhasilan kemitraan dengan indikator seperti pendapatan bersama dan jumlah pelanggan baru."
+    ],
+    "terms": [
+     {
+      "t": "Proposisi nilai",
+      "d": "Pernyataan manfaat unik yang ditawarkan kepada pelanggan atau mitra."
+     },
+     {
+      "t": "Co-marketing",
+      "d": "Kerja sama dua merek untuk mempromosikan penawaran bersama."
+     },
+     {
+      "t": "Reseller",
+      "d": "Pihak yang menjual kembali produk pihak lain."
+     }
+    ],
+    "practice": "Pilih dua bisnis yang saling melengkapi (misalnya kedai kopi dan co-working space), lalu tulis apa yang diberikan dan diperoleh masing-masing dalam satu paragraf."
+   },
+   {
+    "topic": 2,
+    "title": "Riset pasar",
+    "overview": "Sebelum mendekati mitra, kamu perlu tahu siapa yang cocok dan bagaimana posisi pesaing. Topik ini mengajarkan cara memetakan calon mitra dengan kriteria, memakai data sekunder dan primer, dan membuat analisis ringkas.",
+    "points": [
+     "Data sekunder (laporan, situs resmi, berita) cepat dan murah; data primer (wawancara, survei) lebih spesifik.",
+     "Tentukan kriteria calon mitra: kecocokan audiens, reputasi, kapasitas, dan lokasi.",
+     "Analisis SWOT membantu menilai posisi kita dibanding pesaing.",
+     "Catat sumber dan tanggal data agar bisa diperiksa ulang."
+    ],
+    "terms": [
+     {
+      "t": "Data primer",
+      "d": "Data yang dikumpulkan langsung untuk tujuan riset sendiri."
+     },
+     {
+      "t": "SWOT",
+      "d": "Strengths, Weaknesses, Opportunities, Threats."
+     },
+     {
+      "t": "Segmentasi",
+      "d": "Pembagian pasar menjadi kelompok dengan kebutuhan serupa."
+     }
+    ],
+    "practice": "Buat tabel lima calon mitra untuk sebuah aplikasi kasir UMKM dengan kriteria dan skor 1 sampai 5, lalu pilih dua yang akan didekati lebih dulu dan alasannya."
+   },
+   {
+    "topic": 3,
+    "title": "Presentasi dan proposal",
+    "overview": "Proposal yang baik membuat mitra cepat memahami masalah, solusi, dan keuntungannya. Topik ini mengajarkan cara menyusun cerita bisnis yang ringkas, jelas, dan meyakinkan, baik dalam dokumen maupun presentasi.",
+    "points": [
+     "Struktur: masalah, solusi, manfaat bagi mitra, bukti (data atau contoh), dan langkah berikutnya.",
+     "Satu slide satu pesan; hindari dinding teks.",
+     "Gunakan angka yang dapat dipertanggungjawabkan dan sebut sumbernya.",
+     "Akhiri dengan ajakan bertindak yang spesifik, misalnya jadwal pertemuan lanjutan."
+    ],
+    "terms": [
+     {
+      "t": "Call to action",
+      "d": "Ajakan yang jelas tentang langkah berikutnya yang diharapkan dari pembaca."
+     },
+     {
+      "t": "Pitch deck",
+      "d": "Presentasi ringkas untuk meyakinkan calon mitra atau investor."
+     },
+     {
+      "t": "Studi kasus",
+      "d": "Contoh nyata yang menunjukkan hasil dari sebuah solusi."
+     }
+    ],
+    "practice": "Tulis proposal satu halaman untuk menawarkan kerja sama promosi ke sebuah komunitas: masalah, solusi, manfaat, bukti, dan satu ajakan bertindak."
+   },
+   {
+    "topic": 4,
+    "title": "Negosiasi dan CRM",
+    "overview": "Peluang kemitraan sering hilang karena tidak ditindaklanjuti. Topik ini mengajarkan tahapan pipeline, pencatatan di CRM, dan dasar negosiasi supaya kesepakatan tercapai dan hubungan tetap sehat.",
+    "points": [
+     "Tahapan pipeline umum: prospek, kontak awal, presentasi, negosiasi, penutupan, dan tindak lanjut.",
+     "CRM menyimpan kontak, riwayat percakapan, tahap peluang, dan jadwal tindak lanjut.",
+     "Catat hasil setiap interaksi segera, lengkap dengan tindakan berikutnya dan tenggatnya.",
+     "Negosiasi: pahami kepentingan, siapkan alternatif, dan tutup dengan ringkasan tertulis."
+    ],
+    "terms": [
+     {
+      "t": "Pipeline",
+      "d": "Daftar peluang kerja sama yang dikelompokkan menurut tahapannya."
+     },
+     {
+      "t": "CRM",
+      "d": "Customer Relationship Management, sistem pencatatan hubungan dengan pelanggan atau mitra."
+     },
+     {
+      "t": "Follow-up",
+      "d": "Tindak lanjut setelah pertemuan atau pengiriman proposal."
+     }
+    ],
+    "practice": "Buat tabel pipeline sederhana di spreadsheet dengan kolom nama mitra, tahap, nilai potensi, kontak terakhir, dan tindakan berikutnya, lalu isi lima peluang fiktif."
+   }
+  ]
+ },
+ "data-analyst": {
+  "description": "Data Analyst mengubah data mentah menjadi jawaban yang dipakai untuk mengambil keputusan: mengapa penjualan turun, kelompok pelanggan mana yang paling menguntungkan, atau kampanye mana yang layak dilanjutkan. Jalur ini cocok untuk kamu yang penasaran, teliti pada angka, dan ingin bisa menjelaskan temuan dengan sederhana.\n\nKamu mulai dari Excel untuk membersihkan data dan membuat tabel pivot, lalu SQL dasar untuk mengambil data dari basis data. Berikutnya statistik dasar agar kesimpulanmu tidak menyesatkan, dan ditutup dengan visualisasi serta dasbor yang menceritakan data.\n\nSetelah jalur ini kamu bisa membersihkan dan merangkum data, menulis query SQL dengan JOIN dan GROUP BY, menafsirkan rata-rata, sebaran, dan korelasi, serta memilih grafik yang tepat. Uji pemahamanmu di simulasi karier Data Analyst.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Excel untuk analisis data",
+    "overview": "Excel adalah alat pertama kebanyakan analis. Topik ini mengajarkan membersihkan data yang berantakan, memakai rumus penting, dan merangkum ribuan baris dengan tabel pivot.",
+    "points": [
+     "Pembersihan: hapus duplikat, TRIM untuk spasi berlebih, dan seragamkan format tanggal dan angka.",
+     "Rumus penting: SUMIFS, COUNTIFS, AVERAGEIFS, IF, dan XLOOKUP.",
+     "Tabel pivot meringkas data per kategori, bulan, atau wilayah hanya dengan menyeret kolom.",
+     "Pastikan data berbentuk tabel rapi: satu baris satu catatan, satu kolom satu atribut."
+    ],
+    "terms": [
+     {
+      "t": "Tabel pivot",
+      "d": "Alat merangkum data dengan mengelompokkan dan menghitung secara dinamis."
+     },
+     {
+      "t": "Data bersih",
+      "d": "Data tanpa duplikat, kolom seragam, dan nilai kosong yang sudah ditangani."
+     },
+     {
+      "t": "XLOOKUP",
+      "d": "Fungsi pencarian untuk mengambil nilai berdasarkan kunci dari tabel lain."
+     }
+    ],
+    "practice": "Ambil data penjualan contoh, hapus duplikat, lalu buat tabel pivot yang menampilkan total penjualan per produk per bulan beserta grafiknya."
+   },
+   {
+    "topic": 2,
+    "title": "SQL dasar",
+    "overview": "Sebagian besar data perusahaan tersimpan di basis data relasional. SQL memungkinkanmu mengambil, menyaring, menggabungkan, dan merangkum data langsung dari sumbernya.",
+    "points": [
+     "SELECT memilih kolom, FROM menentukan tabel, WHERE menyaring baris.",
+     "JOIN menggabungkan tabel lewat kolom kunci; INNER JOIN hanya baris yang cocok, LEFT JOIN menjaga semua baris tabel kiri.",
+     "GROUP BY dengan fungsi agregat (COUNT, SUM, AVG) merangkum data per kelompok.",
+     "HAVING menyaring hasil kelompok, sedangkan WHERE menyaring baris sebelum dikelompokkan."
+    ],
+    "terms": [
+     {
+      "t": "JOIN",
+      "d": "Menggabungkan baris dari dua tabel berdasarkan kolom yang saling berkaitan."
+     },
+     {
+      "t": "Agregat",
+      "d": "Fungsi yang meringkas banyak baris menjadi satu nilai, seperti SUM dan COUNT."
+     },
+     {
+      "t": "Primary key",
+      "d": "Kolom yang mengidentifikasi setiap baris secara unik dalam tabel."
+     }
+    ],
+    "practice": "Dengan SQLite atau dataset latihan, tulis query yang menampilkan total pembelian per pelanggan, urutkan dari terbesar, dan hanya tampilkan pelanggan dengan total di atas satu juta."
+   },
+   {
+    "topic": 3,
+    "title": "Statistik dasar",
+    "overview": "Angka tanpa konteks mudah menyesatkan. Topik ini mengajarkan ukuran pemusatan dan sebaran, korelasi, dan dasar uji hipotesis agar kesimpulanmu dapat dipercaya.",
+    "points": [
+     "Rata-rata mudah terpengaruh nilai ekstrem; median lebih tahan terhadap pencilan.",
+     "Simpangan baku menggambarkan seberapa tersebar data dari rata-ratanya.",
+     "Korelasi mengukur hubungan dua variabel, tetapi korelasi tidak sama dengan sebab-akibat.",
+     "Uji hipotesis dan nilai p membantu menilai apakah selisih yang teramati mungkin hanya kebetulan."
+    ],
+    "terms": [
+     {
+      "t": "Median",
+      "d": "Nilai tengah data yang sudah diurutkan."
+     },
+     {
+      "t": "Korelasi",
+      "d": "Ukuran kekuatan dan arah hubungan linear antara dua variabel."
+     },
+     {
+      "t": "Nilai p",
+      "d": "Peluang mendapatkan hasil seekstrem yang teramati jika tidak ada efek sebenarnya."
+     }
+    ],
+    "practice": "Ambil data gaji fiktif yang memuat satu nilai sangat tinggi, hitung rata-rata dan median, lalu jelaskan mana yang lebih mewakili kebanyakan orang."
+   },
+   {
+    "topic": 4,
+    "title": "Visualisasi dan dasbor",
+    "overview": "Temuan yang bagus tidak berguna jika tidak dipahami. Topik ini mengajarkan cara memilih grafik yang sesuai dengan pertanyaan, menyusun dasbor yang bersih, dan menceritakan data dengan jelas.",
+    "points": [
+     "Grafik garis untuk tren waktu, batang untuk perbandingan kategori, sebar untuk hubungan dua variabel.",
+     "Hindari grafik lingkaran dengan terlalu banyak irisan dan sumbu yang dipotong sehingga menyesatkan.",
+     "Mulai dari pertanyaan bisnis; tampilkan hanya metrik yang menjawabnya.",
+     "Beri judul yang menyatakan temuan, bukan sekadar nama grafik."
+    ],
+    "terms": [
+     {
+      "t": "Dasbor",
+      "d": "Halaman yang merangkum metrik utama dalam satu tampilan."
+     },
+     {
+      "t": "KPI",
+      "d": "Key Performance Indicator, ukuran utama keberhasilan."
+     },
+     {
+      "t": "Data storytelling",
+      "d": "Menyampaikan temuan data sebagai cerita dengan konteks dan kesimpulan."
+     }
+    ],
+    "practice": "Ubah tabel penjualan bulanan menjadi satu grafik garis dengan judul yang menyatakan temuan (misalnya \"Penjualan naik 18% sejak promo Maret\"), lalu minta temanmu menjelaskan apa yang ia tangkap dalam 10 detik."
+   }
+  ]
+ },
+ "software-developer": {
+  "description": "Software Developer (Web) membangun situs dan aplikasi yang dipakai orang setiap hari, dari tampilan yang kamu lihat sampai logika dan data di belakangnya. Jalur ini cocok untuk kamu yang suka memecahkan masalah, sabar menelusuri bug, dan senang melihat hasil kerja berjalan di layar.\n\nKamu mulai dari HTML, CSS, dan JavaScript untuk halaman yang responsif dan interaktif, lalu Git untuk bekerja dalam tim. Berikutnya backend dan basis data untuk merancang tabel dan membuat API, dan ditutup dengan framework dan deployment untuk membangun aplikasi utuh lalu menerbitkannya.\n\nSetelah jalur ini kamu bisa membuat halaman web yang responsif, memakai branch dan pull request, merancang tabel dan endpoint sederhana, serta menjelaskan bagaimana aplikasi sampai ke server. Uji pemahamanmu di simulasi karier Software Developer (Web).",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "HTML, CSS, dan JavaScript",
+    "overview": "Tiga bahasa ini membentuk hampir semua halaman web: HTML untuk struktur, CSS untuk tampilan, dan JavaScript untuk perilaku. Topik ini membangun halaman yang rapi di berbagai ukuran layar dan bisa merespons klik pengguna.",
+    "points": [
+     "HTML semantik (header, nav, main, section, button) membantu aksesibilitas dan SEO.",
+     "CSS: selector, box model, flexbox, grid, dan media query untuk tampilan responsif.",
+     "JavaScript: variabel, fungsi, event, dan memanipulasi DOM.",
+     "Uji di layar kecil lebih dulu (mobile first) lalu perluas ke layar besar."
+    ],
+    "terms": [
+     {
+      "t": "DOM",
+      "d": "Representasi halaman sebagai pohon objek yang bisa diubah oleh JavaScript."
+     },
+     {
+      "t": "Flexbox",
+      "d": "Sistem tata letak CSS satu dimensi untuk menyusun elemen sebaris atau sekolom."
+     },
+     {
+      "t": "Media query",
+      "d": "Aturan CSS yang aktif pada ukuran layar tertentu."
+     }
+    ],
+    "practice": "Buat halaman profil satu layar dengan tombol \"mode gelap\" yang mengganti warna latar lewat JavaScript, dan pastikan tampilannya tetap rapi di lebar 360 piksel."
+   },
+   {
+    "topic": 2,
+    "title": "Git dan kolaborasi",
+    "overview": "Git mencatat setiap perubahan kode dan memungkinkan banyak orang bekerja di proyek yang sama tanpa saling menimpa. Topik ini mengajarkan alur harian: commit, branch, merge, dan pull request.",
+    "points": [
+     "Commit menyimpan potret perubahan dengan pesan yang menjelaskan alasan.",
+     "Branch memisahkan pekerjaan fitur dari kode utama sampai siap digabung.",
+     "Pull request memungkinkan rekan meninjau perubahan sebelum digabung.",
+     "Konflik merge terjadi saat dua orang mengubah baris yang sama; selesaikan dengan memilih atau menggabungkan isinya."
+    ],
+    "terms": [
+     {
+      "t": "Branch",
+      "d": "Cabang pengembangan terpisah dalam repositori."
+     },
+     {
+      "t": "Pull request",
+      "d": "Permintaan menggabungkan perubahan dari satu branch ke branch lain dengan peninjauan."
+     },
+     {
+      "t": "Merge conflict",
+      "d": "Bentrokan perubahan pada bagian kode yang sama yang harus diselesaikan manual."
+     }
+    ],
+    "practice": "Buat repositori percobaan, buat branch baru, ubah satu file, commit dengan pesan jelas, lalu gabungkan ke branch utama. Sengaja buat satu konflik dan selesaikan."
+   },
+   {
+    "topic": 3,
+    "title": "Backend dan basis data",
+    "overview": "Di balik tampilan, backend menyimpan data, menerapkan aturan, dan melayani permintaan dari frontend lewat API. Topik ini mengajarkan perancangan tabel, relasi, dan endpoint dasar.",
+    "points": [
+     "Rancang tabel dengan primary key dan relasi lewat foreign key; hindari menyimpan data yang sama berulang.",
+     "API REST memakai metode HTTP: GET untuk membaca, POST untuk membuat, PUT atau PATCH untuk mengubah, DELETE untuk menghapus.",
+     "Validasi input di server; jangan percaya data dari browser.",
+     "Gunakan query berparameter untuk mencegah SQL injection."
+    ],
+    "terms": [
+     {
+      "t": "API",
+      "d": "Antarmuka yang memungkinkan program saling bertukar data."
+     },
+     {
+      "t": "Foreign key",
+      "d": "Kolom yang merujuk ke primary key tabel lain untuk menyatakan relasi."
+     },
+     {
+      "t": "SQL injection",
+      "d": "Serangan yang menyisipkan perintah SQL lewat input pengguna."
+     }
+    ],
+    "practice": "Rancang dua tabel (pengguna dan catatan) dengan relasi satu-ke-banyak, lalu tulis daftar endpoint yang dibutuhkan untuk membuat, melihat, mengubah, dan menghapus catatan."
+   },
+   {
+    "topic": 4,
+    "title": "Framework dan deployment",
+    "overview": "Framework menyediakan struktur dan fitur siap pakai sehingga kamu tidak membangun semuanya dari nol. Topik ini juga mengajarkan cara menerbitkan aplikasi agar bisa diakses orang lain dengan aman.",
+    "points": [
+     "Framework membantu routing, akses basis data, autentikasi, dan templating dengan pola yang konsisten.",
+     "Pisahkan konfigurasi (kunci, kata sandi) ke environment variable, jangan masukkan ke repositori.",
+     "Deployment: siapkan server atau platform, jalankan migrasi basis data, build aset, dan aktifkan HTTPS.",
+     "Pantau log galat setelah rilis dan siapkan cara kembali ke versi sebelumnya."
+    ],
+    "terms": [
+     {
+      "t": "Framework",
+      "d": "Kerangka kerja berisi struktur dan komponen siap pakai untuk membangun aplikasi."
+     },
+     {
+      "t": "Environment variable",
+      "d": "Pengaturan yang disimpan di luar kode, misalnya kunci API dan kredensial basis data."
+     },
+     {
+      "t": "Migrasi",
+      "d": "Skrip yang mengubah struktur basis data secara terkontrol."
+     }
+    ],
+    "practice": "Terbitkan aplikasi sederhana (misalnya daftar tugas) ke platform hosting gratis, simpan kunci rahasia di environment variable, dan pastikan situs memakai HTTPS."
+   }
+  ]
+ },
+ "ui-ux": {
+  "description": "UI/UX Designer merancang produk digital yang mudah dipahami dan nyaman dipakai: dari memahami masalah pengguna, menggambar alur layar, sampai menyusun tampilan dan menguji prototipe. Jalur ini cocok untuk kamu yang berempati, suka merapikan hal rumit, dan peka terhadap detail visual.\n\nKamu mulai dari dasar UX dan riset pengguna lewat wawancara dan observasi, lalu wireframe dan alur untuk menggambar struktur sebelum visual. Berikutnya dasar UI dan sistem desain (tipografi, warna, komponen konsisten), dan ditutup dengan prototipe dan uji kegunaan untuk memperbaiki desain berdasarkan temuan.\n\nSetelah jalur ini kamu bisa merumuskan masalah pengguna dari data wawancara, menggambar alur dan wireframe, menjaga konsistensi tampilan dengan komponen, dan menjalankan uji kegunaan sederhana. Uji pemahamanmu di simulasi karier UI/UX Designer.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar UX dan riset pengguna",
+    "overview": "Desain yang baik dimulai dari memahami manusia yang memakainya. Topik ini mengajarkan cara menggali kebutuhan dan masalah pengguna lewat wawancara dan observasi, lalu merangkum temuan menjadi wawasan yang bisa ditindaklanjuti.",
+    "points": [
+     "Wawancara: ajukan pertanyaan terbuka tentang pengalaman nyata, bukan menanyakan \"apakah kamu suka fitur ini?\".",
+     "Observasi memperlihatkan hal yang tidak diucapkan pengguna.",
+     "Persona dan peta perjalanan (journey map) merangkum kebutuhan dan titik masalah.",
+     "Rumuskan masalah sebagai kebutuhan pengguna, bukan solusi yang sudah dipilih."
+    ],
+    "terms": [
+     {
+      "t": "Persona",
+      "d": "Gambaran tokoh pengguna yang mewakili kelompok nyata berdasarkan data riset."
+     },
+     {
+      "t": "Journey map",
+      "d": "Peta langkah, perasaan, dan masalah pengguna selama menjalani suatu proses."
+     },
+     {
+      "t": "Pain point",
+      "d": "Hambatan atau kekesalan pengguna saat memakai produk."
+     }
+    ],
+    "practice": "Wawancarai tiga orang tentang cara mereka memesan makanan lewat aplikasi, catat tiga titik masalah yang berulang, dan tulis satu rumusan masalah dalam bentuk \"Pengguna butuh... karena...\"."
+   },
+   {
+    "topic": 2,
+    "title": "Wireframe dan alur",
+    "overview": "Sebelum memikirkan warna dan gaya, tentukan dulu apa yang ada di setiap layar dan bagaimana pengguna berpindah antar layar. Topik ini mengajarkan alur pengguna dan wireframe sederhana sebagai peta struktur produk.",
+    "points": [
+     "Alur pengguna (user flow) menggambarkan langkah dari tujuan awal sampai selesai.",
+     "Wireframe berfokus pada tata letak, hierarki, dan konten, tanpa dekorasi.",
+     "Pastikan setiap layar punya satu tujuan utama dan satu aksi utama yang jelas.",
+     "Pertimbangkan keadaan khusus: kosong, memuat, galat, dan berhasil."
+    ],
+    "terms": [
+     {
+      "t": "User flow",
+      "d": "Diagram langkah yang ditempuh pengguna untuk mencapai tujuan."
+     },
+     {
+      "t": "Wireframe",
+      "d": "Sketsa kasar tata letak layar tanpa tampilan visual akhir."
+     },
+     {
+      "t": "Hierarki informasi",
+      "d": "Pengaturan elemen berdasarkan tingkat kepentingannya."
+     }
+    ],
+    "practice": "Gambar alur lima layar untuk \"memesan tiket bioskop\" dan sketsa wireframe tiap layar di kertas, lalu tandai aksi utama di setiap layar."
+   },
+   {
+    "topic": 3,
+    "title": "Dasar UI dan sistem desain",
+    "overview": "Tampilan yang konsisten membuat produk terasa dapat dipercaya dan mudah dipelajari. Topik ini mengajarkan tipografi, warna, jarak, dan komponen yang disusun menjadi sistem desain.",
+    "points": [
+     "Tipografi: batasi jumlah huruf dan ukuran, gunakan skala yang konsisten untuk judul, isi, dan keterangan.",
+     "Warna: cek kontras teks terhadap latar agar terbaca; jangan hanya mengandalkan warna untuk menyampaikan makna.",
+     "Jarak dan grid menjaga keteraturan; pakai kelipatan satuan yang sama.",
+     "Sistem desain menyimpan komponen, gaya, dan aturan pemakaian agar tim bekerja seragam."
+    ],
+    "terms": [
+     {
+      "t": "Sistem desain",
+      "d": "Kumpulan komponen, gaya, dan pedoman yang dipakai bersama oleh tim produk."
+     },
+     {
+      "t": "Kontras",
+      "d": "Perbedaan terang gelap antara teks dan latar yang memengaruhi keterbacaan."
+     },
+     {
+      "t": "Komponen",
+      "d": "Elemen antarmuka yang dapat dipakai ulang, seperti tombol dan kartu."
+     }
+    ],
+    "practice": "Buat mini sistem desain: satu palet empat warna, dua ukuran judul, satu ukuran isi, dan tiga komponen (tombol, kolom isian, kartu) lalu terapkan pada satu layar."
+   },
+   {
+    "topic": 4,
+    "title": "Prototipe dan uji kegunaan",
+    "overview": "Desain terbaik pun perlu diuji pada orang sungguhan. Topik ini mengajarkan membuat prototipe yang bisa diklik dan menjalankan uji kegunaan untuk menemukan hambatan sebelum produk dibangun.",
+    "points": [
+     "Prototipe tidak perlu sempurna; cukup cukup nyata untuk diuji.",
+     "Beri peserta tugas realistis (misalnya \"pesan tiket untuk Sabtu\") dan amati tanpa membantu.",
+     "Catat di mana peserta ragu, salah klik, atau bertanya.",
+     "Kelompokkan temuan berdasarkan tingkat keparahan, perbaiki yang paling menghambat dulu, lalu uji ulang."
+    ],
+    "terms": [
+     {
+      "t": "Uji kegunaan",
+      "d": "Pengamatan pengguna menyelesaikan tugas untuk menemukan masalah desain."
+     },
+     {
+      "t": "Prototipe",
+      "d": "Model interaktif produk untuk diuji sebelum dibangun penuh."
+     },
+     {
+      "t": "Think aloud",
+      "d": "Teknik meminta peserta menyuarakan pikirannya selama mencoba produk."
+     }
+    ],
+    "practice": "Uji prototipe layar buatanmu pada tiga orang dengan satu tugas, catat waktu dan titik bingung, lalu perbaiki satu masalah paling parah dan uji ulang."
+   }
+  ]
+ },
+ "digital-marketing": {
+  "description": "Digital Marketing Specialist membantu bisnis ditemukan dan dipilih pelanggan secara online: lewat konten, mesin pencari, iklan berbayar, dan analisis hasil kampanye. Jalur ini cocok untuk kamu yang kreatif sekaligus suka membaca angka, dan senang mencoba lalu memperbaiki.\n\nKamu mulai dari dasar pemasaran digital dan funnel dari kesadaran sampai pembelian, lalu SEO dan konten untuk menjangkau orang yang mencari. Berikutnya iklan berbayar (target, anggaran, materi), dan ditutup dengan analitik kampanye untuk membaca konversi, biaya per hasil, dan retensi.\n\nSetelah jalur ini kamu bisa memetakan funnel, meneliti kata kunci dan menulis konten bermanfaat, menyusun kampanye iklan dengan target dan anggaran, serta menilai kampanye dari metrik yang tepat. Uji pemahamanmu di simulasi karier Digital Marketing Specialist.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar pemasaran digital",
+    "overview": "Pemasaran digital adalah memahami perjalanan calon pelanggan dari pertama kali mengenal sampai membeli, lalu hadir dengan pesan tepat di setiap tahap. Topik ini mengenalkan funnel, kanal utama, dan tujuan kampanye.",
+    "points": [
+     "Funnel: kesadaran, pertimbangan, konversi (pembelian), lalu loyalitas.",
+     "Kanal utama: mesin pencari, media sosial, email, dan iklan berbayar.",
+     "Tentukan tujuan yang terukur sebelum membuat konten atau iklan.",
+     "Kenali audiens: siapa mereka, apa masalahnya, dan di mana mereka berada."
+    ],
+    "terms": [
+     {
+      "t": "Funnel",
+      "d": "Gambaran tahapan calon pelanggan dari mengenal sampai membeli."
+     },
+     {
+      "t": "Konversi",
+      "d": "Tindakan yang diharapkan dari pengunjung, misalnya membeli atau mendaftar."
+     },
+     {
+      "t": "Persona pembeli",
+      "d": "Gambaran tokoh pelanggan ideal berdasarkan data."
+     }
+    ],
+    "practice": "Pilih satu produk fiktif (misalnya botol minum), tulis satu pesan untuk tiap tahap funnel dan kanal yang paling cocok untuk menyampaikannya."
+   },
+   {
+    "topic": 2,
+    "title": "SEO dan konten",
+    "overview": "SEO membantu situs muncul di hasil pencarian tanpa membayar per klik. Kuncinya memahami apa yang orang cari, lalu membuat konten yang paling menjawabnya.",
+    "points": [
+     "Riset kata kunci: kenali maksud pencarian (mencari informasi, membandingkan, atau siap membeli).",
+     "On-page: judul, deskripsi, subjudul, dan isi yang menjawab pertanyaan pembaca dengan jelas.",
+     "Kecepatan situs dan tampilan seluler memengaruhi pengalaman dan peringkat.",
+     "Tautan dari situs lain yang berkualitas menjadi sinyal kepercayaan."
+    ],
+    "terms": [
+     {
+      "t": "Maksud pencarian",
+      "d": "Tujuan di balik kata kunci yang diketik pengguna."
+     },
+     {
+      "t": "Meta description",
+      "d": "Ringkasan halaman yang sering tampil di hasil pencarian."
+     },
+     {
+      "t": "Backlink",
+      "d": "Tautan dari situs lain yang mengarah ke situsmu."
+     }
+    ],
+    "practice": "Pilih satu topik, cari lima kata kunci terkait, kelompokkan menurut maksud pencarian, lalu tulis kerangka artikel yang menjawab kata kunci utama."
+   },
+   {
+    "topic": 3,
+    "title": "Iklan berbayar",
+    "overview": "Iklan berbayar memberi hasil lebih cepat daripada SEO, tetapi menuntut target, anggaran, dan materi yang disusun dengan hati-hati. Topik ini mengenalkan cara membangun kampanye yang terukur.",
+    "points": [
+     "Pilih tujuan kampanye (kesadaran, lalu lintas, atau konversi) sebelum membuat iklan.",
+     "Targetkan audiens berdasarkan minat, lokasi, perilaku, atau data pelanggan sendiri.",
+     "Anggaran harian dan tawaran perlu diuji kecil dulu, baru ditingkatkan pada iklan yang berhasil.",
+     "Uji A/B pada satu elemen (judul, gambar, ajakan) untuk mengetahui mana yang lebih efektif."
+    ],
+    "terms": [
+     {
+      "t": "CTR",
+      "d": "Click-Through Rate, persentase tayangan yang berujung klik."
+     },
+     {
+      "t": "Uji A/B",
+      "d": "Membandingkan dua versi dengan hanya satu perbedaan untuk melihat mana yang lebih baik."
+     },
+     {
+      "t": "Retargeting",
+      "d": "Menampilkan iklan kepada orang yang pernah mengunjungi situs atau berinteraksi."
+     }
+    ],
+    "practice": "Rancang satu kampanye iklan untuk produk fiktif: tujuan, audiens, anggaran harian, dua versi judul untuk uji A/B, dan satu metrik keberhasilan."
+   },
+   {
+    "topic": 4,
+    "title": "Analitik kampanye",
+    "overview": "Kampanye yang tidak diukur hanyalah tebakan. Topik ini mengajarkan membaca metrik yang menghubungkan biaya dengan hasil, dan mengambil keputusan dari data.",
+    "points": [
+     "Tingkat konversi = jumlah konversi dibagi jumlah pengunjung.",
+     "Biaya per akuisisi (CPA) = total biaya dibagi jumlah konversi.",
+     "ROAS = pendapatan dari iklan dibagi biaya iklan.",
+     "Retensi menunjukkan berapa banyak pelanggan yang kembali; pelanggan lama biasanya lebih murah dipertahankan."
+    ],
+    "terms": [
+     {
+      "t": "CPA",
+      "d": "Cost per Acquisition, biaya rata-rata untuk memperoleh satu konversi."
+     },
+     {
+      "t": "ROAS",
+      "d": "Return on Ad Spend, pendapatan per rupiah biaya iklan."
+     },
+     {
+      "t": "Retensi",
+      "d": "Persentase pelanggan yang tetap aktif atau kembali setelah periode tertentu."
+     }
+    ],
+    "practice": "Dari data fiktif (biaya Rp2.000.000, 4.000 klik, 80 pembelian, pendapatan Rp8.000.000), hitung tingkat konversi, CPA, dan ROAS, lalu tulis satu keputusan berdasar angka tersebut."
+   }
+  ]
+ },
+ "akuntansi": {
+  "description": "Akuntan & Perpajakan mencatat transaksi bisnis dengan benar, menyusun laporan keuangan, dan memastikan kewajiban pajak terpenuhi. Jalur ini cocok untuk kamu yang rapi, teliti pada angka, dan nyaman bekerja mengikuti aturan yang jelas.\n\nKamu mulai dari siklus akuntansi (jurnal, buku besar, neraca saldo), lalu membaca laporan keuangan (neraca, laba rugi, arus kas). Berikutnya dasar perpajakan untuk memahami PPh, PPN, dan kewajiban pelaporan, dan ditutup dengan Excel untuk membuat rekonsiliasi dan laporan memakai rumus.\n\nSetelah jalur ini kamu bisa mencatat transaksi sederhana dalam jurnal, menjelaskan hubungan antar laporan keuangan, membedakan jenis pajak utama, dan menyusun rekonsiliasi di Excel. Uji pemahamanmu di simulasi karier Akuntan & Perpajakan.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Siklus akuntansi",
+    "overview": "Siklus akuntansi adalah rangkaian langkah dari transaksi sampai laporan. Topik ini membangun dasar: persamaan akuntansi, debit dan kredit, jurnal, buku besar, dan neraca saldo.",
+    "points": [
+     "Persamaan dasar: Aset = Liabilitas + Ekuitas.",
+     "Setiap transaksi dicatat dengan total debit sama dengan total kredit.",
+     "Jurnal mencatat transaksi berurutan waktu; buku besar mengelompokkannya per akun.",
+     "Neraca saldo memeriksa keseimbangan total debit dan kredit sebelum laporan disusun."
+    ],
+    "terms": [
+     {
+      "t": "Debit dan kredit",
+      "d": "Sisi kiri dan kanan pencatatan akun; debit menambah aset dan beban, kredit menambah liabilitas, ekuitas, dan pendapatan."
+     },
+     {
+      "t": "Neraca saldo",
+      "d": "Daftar saldo semua akun buku besar untuk memeriksa keseimbangan debit dan kredit."
+     },
+     {
+      "t": "Akun",
+      "d": "Kelompok pencatatan sejenis, seperti Kas, Piutang, dan Beban Gaji."
+     }
+    ],
+    "practice": "Catat lima transaksi toko fiktif (modal awal, beli perlengkapan tunai, jual tunai, bayar sewa, terima pembayaran piutang) dalam jurnal, pindahkan ke buku besar, dan susun neraca saldonya."
+   },
+   {
+    "topic": 2,
+    "title": "Laporan keuangan",
+    "overview": "Laporan keuangan merangkum kondisi dan kinerja bisnis. Topik ini mengajarkan membaca tiga laporan utama dan melihat bagaimana ketiganya saling terhubung.",
+    "points": [
+     "Neraca menunjukkan aset, liabilitas, dan ekuitas pada satu tanggal.",
+     "Laporan laba rugi menunjukkan pendapatan dikurangi beban dalam satu periode.",
+     "Laporan arus kas menunjukkan kas masuk dan keluar dari operasi, investasi, dan pendanaan.",
+     "Laba bukan berarti kas: bisnis bisa untung tetapi kehabisan kas bila piutangnya belum tertagih."
+    ],
+    "terms": [
+     {
+      "t": "Neraca",
+      "d": "Laporan posisi keuangan pada tanggal tertentu."
+     },
+     {
+      "t": "Laba bersih",
+      "d": "Pendapatan dikurangi seluruh beban dalam satu periode."
+     },
+     {
+      "t": "Arus kas operasi",
+      "d": "Kas yang dihasilkan atau dipakai oleh kegiatan usaha utama."
+     }
+    ],
+    "practice": "Ambil laporan keuangan ringkas perusahaan terbuka, lalu tulis laba bersih, total aset, dan arus kas operasinya, dan jelaskan dalam dua kalimat apakah perusahaan tampak sehat."
+   },
+   {
+    "topic": 3,
+    "title": "Dasar perpajakan",
+    "overview": "Pajak adalah bagian rutin dari bisnis. Topik ini memperkenalkan jenis pajak yang paling sering kamu temui, siapa yang memotong dan menyetor, dan kewajiban pelaporannya.",
+    "points": [
+     "PPh (Pajak Penghasilan) dikenakan atas penghasilan; PPh 21 atas penghasilan pegawai.",
+     "PPN (Pajak Pertambahan Nilai) dikenakan atas penyerahan barang dan jasa kena pajak dan dipungut dari konsumen.",
+     "Pemotong atau pemungut wajib menyetor dan melaporkan lewat SPT sesuai jatuh tempo.",
+     "Simpan bukti potong dan faktur pajak; keduanya dasar pengkreditan dan pemeriksaan."
+    ],
+    "terms": [
+     {
+      "t": "SPT",
+      "d": "Surat Pemberitahuan, laporan pajak yang disampaikan ke otoritas pajak."
+     },
+     {
+      "t": "PPN Masukan dan Keluaran",
+      "d": "PPN yang dibayar saat membeli dan PPN yang dipungut saat menjual."
+     },
+     {
+      "t": "Bukti potong",
+      "d": "Dokumen yang menunjukkan pajak sudah dipotong oleh pihak lain."
+     }
+    ],
+    "practice": "Buat tabel ringkas: jenis pajak (PPh 21, PPh 23, PPN), objeknya, siapa yang memotong atau memungut, dan kapan dilaporkan, berdasarkan sumber resmi DJP."
+   },
+   {
+    "topic": 4,
+    "title": "Excel untuk akuntansi",
+    "overview": "Excel mempercepat pekerjaan akuntansi rutin dan mengurangi salah hitung. Topik ini mengajarkan rumus yang sering dipakai, serta cara melakukan rekonsiliasi dan menyusun laporan sederhana.",
+    "points": [
+     "SUM, SUMIF, dan SUMIFS untuk menjumlah transaksi per akun atau periode.",
+     "XLOOKUP atau VLOOKUP untuk mencocokkan kode akun dengan nama akun atau saldo.",
+     "Rekonsiliasi bank mencocokkan catatan kas perusahaan dengan rekening koran dan mencari selisihnya.",
+     "Validasi data dan perlindungan sel menjaga rumus dari terhapus tidak sengaja."
+    ],
+    "terms": [
+     {
+      "t": "Rekonsiliasi bank",
+      "d": "Mencocokkan saldo buku kas dengan saldo rekening koran untuk menjelaskan selisih."
+     },
+     {
+      "t": "Referensi absolut",
+      "d": "Alamat sel dengan tanda $ yang tidak bergeser saat disalin."
+     },
+     {
+      "t": "Pembulatan",
+      "d": "Fungsi seperti ROUND untuk menyesuaikan angka desimal."
+     }
+    ],
+    "practice": "Buat rekonsiliasi bank sederhana: dua kolom data (catatan perusahaan dan rekening koran), cocokkan dengan XLOOKUP, dan tandai transaksi yang tidak cocok."
+   }
+  ]
+ },
+ "hr-talent": {
+  "description": "HR & Talent Acquisition mengurus orang di dalam organisasi: mencari dan memilih kandidat, memastikan hak dan kewajiban pekerja terpenuhi, serta mengelola gaji dan data karyawan. Jalur ini cocok untuk kamu yang pandai membaca orang, adil, dan tidak keberatan dengan administrasi yang rapi.\n\nKamu mulai dari dasar manajemen SDM yang mencakup rekrutmen sampai pemutusan hubungan kerja, lalu rekrutmen dan wawancara dengan pertanyaan perilaku. Berikutnya hukum ketenagakerjaan (kontrak kerja, lembur, pesangon), dan ditutup dengan payroll dan HRIS untuk menghitung gaji, iuran, dan pajak karyawan.\n\nSetelah jalur ini kamu bisa menjelaskan fungsi SDM, menyusun pertanyaan wawancara perilaku, memahami hak dasar pekerja menurut aturan, dan menghitung komponen gaji sederhana. Uji pemahamanmu di simulasi karier HR & Talent Acquisition.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar manajemen SDM",
+    "overview": "Manajemen SDM mengelola siklus orang di perusahaan. Topik ini memberi gambaran fungsi utama dan bagaimana setiap fungsi mendukung tujuan bisnis.",
+    "points": [
+     "Siklus karyawan: perencanaan tenaga kerja, rekrutmen, orientasi, pengembangan, penilaian kinerja, kompensasi, dan pemutusan hubungan kerja.",
+     "Uraian jabatan menjelaskan tugas, tanggung jawab, dan kualifikasi suatu posisi.",
+     "Penilaian kinerja yang adil memakai indikator yang jelas dan umpan balik berkala.",
+     "Keterlibatan karyawan (engagement) berhubungan dengan retensi dan produktivitas."
+    ],
+    "terms": [
+     {
+      "t": "Uraian jabatan",
+      "d": "Dokumen yang menjelaskan tugas, tanggung jawab, dan syarat sebuah posisi."
+     },
+     {
+      "t": "Onboarding",
+      "d": "Proses mengenalkan karyawan baru pada pekerjaan, tim, dan budaya."
+     },
+     {
+      "t": "Turnover",
+      "d": "Tingkat karyawan yang keluar dari perusahaan dalam periode tertentu."
+     }
+    ],
+    "practice": "Tulis uraian jabatan satu halaman untuk posisi admin penjualan: tujuan jabatan, lima tugas utama, dan tiga kualifikasi."
+   },
+   {
+    "topic": 2,
+    "title": "Rekrutmen dan wawancara",
+    "overview": "Rekrutmen yang baik mencari orang yang cocok dengan pekerjaan dan budaya, dengan proses yang adil. Topik ini mengajarkan menyaring CV dan mewawancarai dengan pertanyaan perilaku.",
+    "points": [
+     "Saring CV berdasarkan kriteria wajib yang tertulis, bukan kesan umum.",
+     "Pertanyaan perilaku menanyakan kejadian nyata masa lalu: situasi, tugas, tindakan, hasil (STAR).",
+     "Tanyakan hal yang sama kepada semua kandidat dan beri skor dengan rubrik agar adil.",
+     "Hindari pertanyaan yang diskriminatif tentang agama, suku, status pernikahan, atau kehamilan."
+    ],
+    "terms": [
+     {
+      "t": "STAR",
+      "d": "Situation, Task, Action, Result, kerangka menjawab dan menilai cerita pengalaman."
+     },
+     {
+      "t": "Rubrik penilaian",
+      "d": "Pedoman skor yang seragam untuk menilai jawaban kandidat."
+     },
+     {
+      "t": "Wawancara terstruktur",
+      "d": "Wawancara dengan pertanyaan dan kriteria penilaian yang sama untuk semua kandidat."
+     }
+    ],
+    "practice": "Tulis lima pertanyaan perilaku untuk posisi admin penjualan, lalu buat rubrik skor 1 sampai 5 untuk salah satunya."
+   },
+   {
+    "topic": 3,
+    "title": "Hukum ketenagakerjaan",
+    "overview": "HR harus memahami hak dan kewajiban dasar pekerja dan pemberi kerja agar keputusan tidak menimbulkan sengketa. Topik ini mengenalkan jenis perjanjian kerja, lembur, dan prinsip pesangon berdasarkan peraturan ketenagakerjaan di Indonesia.",
+    "points": [
+     "PKWT (perjanjian kerja waktu tertentu) dan PKWTT (waktu tidak tertentu) punya aturan berbeda; masa percobaan hanya untuk PKWTT.",
+     "Lembur dibayar berdasarkan upah per jam, yaitu 1/173 dari upah sebulan, dengan pengali yang diatur pemerintah.",
+     "Pemutusan hubungan kerja harus mengikuti alasan dan prosedur yang sah; hak seperti pesangon bergantung pada alasan dan masa kerja.",
+     "Rujuk aturan terbaru (UU Ketenagakerjaan dan perubahannya serta peraturan turunan) dan konsultasikan kasus rumit pada ahli."
+    ],
+    "terms": [
+     {
+      "t": "PKWT",
+      "d": "Perjanjian kerja untuk waktu tertentu atau pekerjaan tertentu."
+     },
+     {
+      "t": "PKWTT",
+      "d": "Perjanjian kerja waktu tidak tertentu, sering disebut karyawan tetap."
+     },
+     {
+      "t": "Upah lembur per jam",
+      "d": "Upah sebulan dibagi 173 sebagai dasar menghitung lembur."
+     }
+    ],
+    "practice": "Hitung upah per jam untuk gaji Rp8.650.000 per bulan memakai pembagi 173, lalu hitung bayaran dua jam lembur pertama hari kerja dengan pengali yang berlaku, dan cocokkan dengan sumber resmi."
+   },
+   {
+    "topic": 4,
+    "title": "Payroll dan HRIS",
+    "overview": "Payroll memastikan karyawan dibayar tepat waktu dan benar. Topik ini mengajarkan komponen gaji, iuran jaminan sosial, pajak, dan peran HRIS dalam menjaga data.",
+    "points": [
+     "Komponen gaji: gaji pokok, tunjangan tetap dan tidak tetap, lembur, dan potongan.",
+     "Iuran BPJS Kesehatan dan BPJS Ketenagakerjaan dibayar sebagian oleh perusahaan dan sebagian dipotong dari gaji.",
+     "PPh 21 dipotong dan disetor oleh perusahaan; periksa aturan dan tarif terbaru.",
+     "HRIS menyimpan data karyawan, absensi, cuti, dan gaji; batasi akses karena data bersifat rahasia."
+    ],
+    "terms": [
+     {
+      "t": "Payroll",
+      "d": "Proses menghitung dan membayar gaji beserta potongan dan pajaknya."
+     },
+     {
+      "t": "HRIS",
+      "d": "Human Resource Information System, sistem pengelolaan data dan proses SDM."
+     },
+     {
+      "t": "Gaji bersih (take-home pay)",
+      "d": "Jumlah yang diterima karyawan setelah potongan."
+     }
+    ],
+    "practice": "Buat slip gaji fiktif di spreadsheet: gaji pokok, tunjangan, potongan iuran, dan gaji bersih, dengan rumus yang menjumlah otomatis."
+   }
+  ]
+ },
+ "customer-service": {
+  "description": "Customer Experience & Service menjaga pelanggan merasa didengar dan terbantu dari awal sampai masalahnya selesai. Jalur ini cocok untuk kamu yang sabar, komunikatif, dan senang membantu orang menyelesaikan masalah sambil menjaga ketenangan.\n\nKamu mulai dari dasar layanan pelanggan (ekspektasi dan standar layanan), lalu komunikasi dan empati untuk meredakan emosi pelanggan. Berikutnya penanganan keluhan dengan alur dengar, minta maaf, selesaikan, dan tindak lanjut, dan ditutup dengan CRM dan sistem tiket untuk mencatat dan memprioritaskan kasus.\n\nSetelah jalur ini kamu bisa menangani pelanggan yang kesal dengan tenang, menulis balasan yang jelas dan sopan, mengikuti alur keluhan, dan mengelola tiket sesuai prioritas. Uji pemahamanmu di simulasi karier Customer Experience & Service.",
+  "topics": [
+   {
+    "topic": 1,
+    "title": "Dasar layanan pelanggan",
+    "overview": "Layanan yang baik bukan hanya ramah, tetapi juga konsisten dan sesuai janji. Topik ini membahas ekspektasi pelanggan, standar layanan, dan ukuran yang dipakai untuk menilainya.",
+    "points": [
+     "Pelanggan menilai layanan dari kecepatan, ketepatan solusi, kesopanan, dan konsistensi.",
+     "Standar layanan menetapkan target, misalnya waktu respons pertama dan batas waktu penyelesaian.",
+     "Jangan menjanjikan hal yang tidak pasti; lebih baik jujur dan tepati.",
+     "Ukuran umum: CSAT (kepuasan), First Response Time, dan First Contact Resolution."
+    ],
+    "terms": [
+     {
+      "t": "CSAT",
+      "d": "Customer Satisfaction Score, ukuran kepuasan pelanggan setelah interaksi."
+     },
+     {
+      "t": "SLA",
+      "d": "Service Level Agreement, komitmen standar layanan seperti waktu respons."
+     },
+     {
+      "t": "First Contact Resolution",
+      "d": "Masalah selesai pada kontak pertama tanpa perlu dihubungi ulang."
+     }
+    ],
+    "practice": "Amati satu pengalaman layanan sehari-hari (kasir, ojek online, atau bank), lalu tulis tiga hal yang membuatnya terasa baik atau buruk dan standar apa yang seharusnya ada."
+   },
+   {
+    "topic": 2,
+    "title": "Komunikasi dan empati",
+    "overview": "Cara menyampaikan sering sama pentingnya dengan isi jawaban. Topik ini mengajarkan mendengarkan aktif, memakai bahasa yang jelas, dan menunjukkan empati tanpa berlebihan.",
+    "points": [
+     "Dengarkan sampai selesai, ulangi inti masalah untuk memastikan pemahaman.",
+     "Empati: akui perasaan pelanggan (\"saya mengerti ini mengganggu\") sebelum menawarkan solusi.",
+     "Gunakan kalimat singkat dan positif; hindari istilah teknis yang membingungkan.",
+     "Dalam tulisan, mulai dengan salam dan inti jawaban, lalu langkah berikutnya."
+    ],
+    "terms": [
+     {
+      "t": "Mendengarkan aktif",
+      "d": "Memberi perhatian penuh dan memastikan pemahaman dengan merangkum."
+     },
+     {
+      "t": "Empati",
+      "d": "Kemampuan memahami dan mengakui perasaan orang lain."
+     },
+     {
+      "t": "Bahasa positif",
+      "d": "Menyampaikan apa yang bisa dilakukan, bukan hanya apa yang tidak bisa."
+     }
+    ],
+    "practice": "Tulis ulang tiga balasan yang kaku (\"Itu bukan tanggung jawab kami\") menjadi balasan yang empatik dan memberi langkah berikutnya."
+   },
+   {
+    "topic": 3,
+    "title": "Penanganan keluhan",
+    "overview": "Keluhan adalah kesempatan memperbaiki hubungan jika ditangani dengan benar. Topik ini mengajarkan alur yang konsisten dari mendengar sampai tindak lanjut.",
+    "points": [
+     "Alur: dengar, minta maaf atas ketidaknyamanan, selesaikan, dan tindak lanjut.",
+     "Minta maaf atas pengalaman pelanggan tanpa langsung menyalahkan pihak mana pun sebelum fakta jelas.",
+     "Tawarkan solusi dalam kewenanganmu; eskalasi bila di luar wewenang dan beri tahu pelanggan.",
+     "Catat akar masalah yang berulang untuk dilaporkan ke tim terkait."
+    ],
+    "terms": [
+     {
+      "t": "Eskalasi",
+      "d": "Menyerahkan kasus kepada level yang lebih berwenang."
+     },
+     {
+      "t": "Service recovery",
+      "d": "Upaya memperbaiki pengalaman buruk sehingga pelanggan tetap percaya."
+     },
+     {
+      "t": "Akar masalah",
+      "d": "Penyebab dasar keluhan yang jika diperbaiki mencegah keluhan serupa."
+     }
+    ],
+    "practice": "Susun alur tiga langkah menangani keluhan \"barang rusak saat tiba\" dalam bentuk skrip singkat yang memuat kalimat mendengar, minta maaf, solusi, dan tindak lanjut."
+   },
+   {
+    "topic": 4,
+    "title": "CRM dan sistem tiket",
+    "overview": "Tiket memastikan tidak ada keluhan yang terlupa dan memudahkan tim berbagi riwayat. Topik ini mengajarkan mencatat kasus, menentukan prioritas, dan memakai data untuk memperbaiki layanan.",
+    "points": [
+     "Satu tiket mencatat pelanggan, masalah, status, penanggung jawab, dan riwayat tindakan.",
+     "Prioritas ditentukan oleh dampak dan urgensi; masalah yang menghentikan layanan didahulukan.",
+     "Tag dan kategori membantu melihat masalah yang paling sering muncul.",
+     "Tutup tiket hanya setelah solusi dikonfirmasi pelanggan atau batas tindak lanjut terlewati."
+    ],
+    "terms": [
+     {
+      "t": "Tiket",
+      "d": "Catatan satu kasus pelanggan beserta statusnya."
+     },
+     {
+      "t": "Prioritas",
+      "d": "Tingkat urutan penanganan berdasarkan dampak dan urgensi."
+     },
+     {
+      "t": "Basis pengetahuan",
+      "d": "Kumpulan artikel solusi yang dipakai tim dan pelanggan untuk menjawab pertanyaan umum."
+     }
+    ],
+    "practice": "Buat spreadsheet tiket dengan kolom nomor, pelanggan, masalah, prioritas, status, dan catatan, lalu isi sepuluh kasus fiktif dan urutkan berdasarkan prioritas."
+   }
+  ]
+ }
+}

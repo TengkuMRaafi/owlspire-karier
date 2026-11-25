@@ -1,0 +1,92 @@
+/*
+ * Kunci jatah harian (komponen <x-quota-lock>, perilaku di resources/js/quota-lock.js).
+ * Menutup satu bagian halaman, bukan seluruh layar: isi di belakang dibuat redup dan tidak bisa disentuh,
+ * kartu penjelasan menempel di tengah bagian itu dan ikut turun saat bagian tinggi digulir.
+ */
+.ql { position: relative; }
+.ql.is-locked { min-height: 27rem; }
+
+/* Isi di belakang kunci: redup, tidak bisa diklik, dipilih, atau difokus (atribut inert dipasang server) */
+.ql.is-locked > .ql-body { opacity: .5; filter: blur(2.5px) saturate(.75); pointer-events: none; user-select: none; transition: opacity .3s ease; }
+
+.ql-veil { position: absolute; inset: 0; z-index: 5; display: flex; justify-content: center; align-items: flex-start; padding: 1rem; border-radius: var(--ql-r, 1.1rem); background: color-mix(in srgb, var(--pn-card, #fff) 55%, transparent); animation: ql-fade .35s ease both; }
+.ql-veil[hidden] { display: none; }
+
+.ql-card { position: sticky; top: 5.5rem; width: min(25rem, 100%); margin-block: auto; padding: 1.5rem 1.4rem 1.2rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.4rem; background: var(--pn-card, #fff); text-align: center; box-shadow: 0 26px 60px -26px rgb(27 38 56 / .55); outline: none; animation: ql-rise .4s cubic-bezier(.2, .8, .2, 1) both; }
+.ql-card h3 { margin-top: .55rem; font-family: var(--font-display, inherit); font-size: 1.2rem; font-weight: 600; letter-spacing: -.01em; color: var(--color-ink, #1b2638); }
+.ql-lead { margin-top: .45rem; font-size: .86rem; line-height: 1.6; color: var(--color-graphite-500, #667794); }
+
+/* Segel: cincin waktu menuju isi ulang, burung hantu tidur, dan gembok */
+.ql-seal { position: relative; width: 7.2rem; height: 7.2rem; margin: 0 auto; }
+.ql-ring { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.ql-ring circle { fill: none; stroke-width: 5; }
+.ql-ring-bg { stroke: var(--color-graphite-200, #e2e6ec); }
+.ql-ring-fg { stroke: var(--color-accent-600, #3b6cd4); stroke-linecap: round; stroke-dasharray: 276.46; stroke-dashoffset: 276.46; }
+.ql-owl { position: absolute; inset: 1.15rem 1.35rem; display: block; }
+.ql-owl .ow, .ql-lids { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ql-owl .ow-eye, .ql-owl .ow-iris { display: none; }
+.ql-lids { fill: none; stroke: #1f2a3d; stroke-width: 4.5; stroke-linecap: round; }
+.ql-badge { position: absolute; right: .1rem; bottom: .2rem; display: grid; place-items: center; width: 2rem; height: 2rem; border: 3px solid var(--pn-card, #fff); border-radius: 50%; background: var(--color-accent-600, #3b6cd4); color: #fff; }
+.ql-badge svg { width: .95rem; height: .95rem; }
+.ql-zz { position: absolute; top: .3rem; right: .35rem; width: 1.6rem; height: 1.6rem; pointer-events: none; }
+.ql-zz i { position: absolute; left: 0; bottom: 0; font-style: normal; font-weight: 800; font-size: .8rem; line-height: 1; color: var(--color-accent-600, #3b6cd4); opacity: 0; animation: ql-zz 3.6s ease-in-out infinite; }
+.ql-zz i:nth-child(2) { animation-delay: 1.2s; font-size: .95rem; }
+.ql-zz i:nth-child(3) { animation-delay: 2.4s; font-size: 1.1rem; }
+
+.ql-chip { display: inline-flex; margin-top: .85rem; padding: .22rem .7rem; border-radius: 999px; background: var(--color-accent-50, #eef4fd); font-size: .74rem; font-weight: 700; color: var(--color-accent-700, #2f58b3); font-variant-numeric: tabular-nums; }
+
+/* Hitung mundur */
+.ql-clock { display: grid; gap: .45rem; margin-top: 1.05rem; padding: .8rem .7rem .7rem; border-radius: 1rem; background: var(--color-graphite-100, #edf0f5); }
+.ql-clock-l { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-graphite-500, #667794); }
+.ql-digits { display: flex; align-items: flex-start; justify-content: center; gap: .35rem; }
+.ql-digits span { display: grid; gap: .1rem; min-width: 3.1rem; }
+.ql-digits b { font-family: var(--font-display, inherit); font-size: 1.7rem; font-weight: 600; line-height: 1.1; color: var(--color-ink, #1b2638); font-variant-numeric: tabular-nums; }
+.ql-digits small { font-size: .66rem; color: var(--color-graphite-500, #667794); }
+.ql-digits i { padding-top: .15rem; font-style: normal; font-size: 1.4rem; font-weight: 600; color: var(--color-graphite-300, #c5cfde); }
+.ql-at { font-size: .76rem; color: var(--color-graphite-500, #667794); }
+.ql-at b { font-weight: 700; color: var(--color-graphite-700, #33415a); }
+
+.ql-ready { margin-top: 1rem; padding: .7rem .8rem; border-radius: .9rem; background: #e6f6ee; font-size: .84rem; font-weight: 600; color: #146c43; }
+.ql-ready[hidden], .ql-card .ql-act > [hidden] { display: none; }
+
+.ql-act { display: grid; gap: .5rem; margin-top: 1.1rem; }
+.ql-act:empty { display: none; }
+.ql-keep { display: flex; align-items: flex-start; justify-content: center; gap: .4rem; margin-top: .95rem; font-size: .76rem; line-height: 1.45; color: var(--color-graphite-500, #667794); text-align: left; }
+.ql-keep svg { flex: none; width: .95rem; height: .95rem; margin-top: .08rem; color: #1f9d68; }
+
+/* Keadaan sudah terisi lagi: hitung mundur disembunyikan, pesan siap tampil */
+.ql-veil.is-ready .ql-clock, .ql-veil.is-ready .ql-keep { display: none; }
+.ql-veil.is-ready .ql-ring-fg { stroke: #1f9d68; }
+
+@keyframes ql-fade { from { opacity: 0; } }
+@keyframes ql-rise { from { opacity: 0; transform: translateY(10px) scale(.98); } }
+@keyframes ql-zz { 0% { opacity: 0; transform: translate(0, 0); } 25% { opacity: .9; } 100% { opacity: 0; transform: translate(.55rem, -1.3rem); } }
+
+/* ---------- Tema gelap ---------- */
+html[data-theme='dark'] .ql-veil { background: color-mix(in srgb, var(--pn-card) 60%, transparent); }
+html[data-theme='dark'] .ql-card { border-color: rgb(255 255 255 / .1); box-shadow: 0 26px 60px -24px rgb(0 0 0 / .8); }
+html[data-theme='dark'] .ql-card h3, html[data-theme='dark'] .ql-digits b { color: #f1f4f9; }
+html[data-theme='dark'] .ql-ring-bg { stroke: rgb(255 255 255 / .12); }
+html[data-theme='dark'] .ql-ring-fg, html[data-theme='dark'] .ql-zz i { stroke: var(--color-accent-400, #7fa8e8); color: var(--color-accent-400, #7fa8e8); }
+html[data-theme='dark'] .ql-chip { background: rgb(79 130 230 / .18); color: var(--color-accent-400, #7fa8e8); }
+html[data-theme='dark'] .ql-clock { background: rgb(255 255 255 / .06); }
+html[data-theme='dark'] .ql-at b { color: #d5dcea; }
+html[data-theme='dark'] .ql-digits i { color: rgb(255 255 255 / .22); }
+html[data-theme='dark'] .ql-lids { stroke: #0e1420; }
+html[data-theme='dark'] .ql-ready { background: rgb(31 157 104 / .18); color: #8fe0b9; }
+
+/* ---------- HP: ringan (tanpa blur, tanpa loop hiasan), kartu tidak lengket ---------- */
+@media (max-width: 767px) {
+    .ql.is-locked { min-height: 30rem; }
+    .ql.is-locked > .ql-body { filter: none; opacity: .35; }
+    .ql-veil { padding: .6rem; }
+    .ql-card { top: 4.5rem; padding: 1.3rem 1.05rem 1.05rem; }
+    .ql-zz i { animation: none; opacity: .85; }
+    .ql-zz i:nth-child(2) { transform: translate(.4rem, -.7rem); }
+    .ql-zz i:nth-child(3) { transform: translate(.8rem, -1.4rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ql-veil, .ql-card, .ql-zz i { animation: none; }
+    .ql.is-locked > .ql-body { transition: none; }
+}

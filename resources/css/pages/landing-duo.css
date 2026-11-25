@@ -1,0 +1,210 @@
+/* Karier (kiri) | Peringkat (kanan). Awalan: duo-. Dipakai partials/duo.blade.php
+   Tujuan: kedua papan muat dalam satu layar desktop (tinggi layar dikurangi navbar). */
+.duo { position: relative; display: flex; align-items: center; min-height: calc(100svh - 5.4rem); overflow: hidden; background: radial-gradient(60rem 28rem at 8% 0, rgb(79 130 230 / .10), transparent 70%), radial-gradient(50rem 26rem at 100% 100%, rgb(240 180 41 / .08), transparent 70%), linear-gradient(180deg, var(--color-surface, #f3f5f8), #fff 80%); }
+.duo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(59 108 212 / .05), transparent 60%); pointer-events: none; }
+.duo-in { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr); align-items: stretch; gap: 1.75rem; width: 100%; max-width: 88rem; margin: 0 auto; padding: 1.75rem 1.5rem; }
+.duo-mid { background: linear-gradient(180deg, transparent, var(--color-graphite-300, #c5cfde) 12%, var(--color-graphite-300, #c5cfde) 88%, transparent); }
+.duo-side { display: flex; flex-direction: column; min-width: 0; }
+/* Tinggi kolom kiri dan kanan disamakan: kartu yang lebih pendek meregang */
+.duo-l .tb, .duo-r .pk, .duo-r .pk > div { display: flex; flex: 1; flex-direction: column; }
+.duo-r .pk { background: none; }
+.duo-l .tb-board, .duo-r .pk-card { flex: 1; }
+
+/* Kepala bagian: eyebrow + tombol tautan sebaris, lalu judul dan satu kalimat */
+.duo-head { display: grid; gap: .4rem; }
+.duo-top { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.duo .eyebrow { margin: 0; }
+.duo h2 { margin: 0; font-size: clamp(1.55rem, 2.1vw, 2.15rem); font-weight: 600; line-height: 1.1; }
+.duo-sub { margin: 0; max-width: 40rem; font-size: .84rem; line-height: 1.45; color: var(--color-graphite-600, #4a5a73); }
+.duo .pk-all { min-height: 2.15rem; padding: .3rem .85rem; font-size: .78rem; }
+
+/* ===== Kiri: papan karier ===== */
+.duo .tb-board { display: flex; flex-direction: column; gap: .55rem; margin-top: 1rem; padding: .7rem; border-radius: 1.6rem; box-shadow: 0 34px 60px -38px rgb(27 38 56 / .85); }
+.duo .tb-lead { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: 'top top' 'no body' 'heat heat' 'stats stats'; align-content: start; align-items: center; gap: .45rem 1.1rem; min-height: 0; padding: .95rem 1.15rem 1.05rem; border-radius: 1.2rem; }
+.duo .tb-lead-top { grid-area: top; }
+.duo .tb-no { grid-area: no; font-size: clamp(3.4rem, 5.6vh, 4.6rem); }
+.duo .tb-lead-body { grid-area: body; align-self: center; margin-top: 0; }
+.duo .tb-name { font-size: clamp(1.35rem, 2.1vw, 1.8rem); }
+.duo .tb-div { font-size: .85rem; }
+.duo .tb-lead > .tb-heat { grid-area: heat; height: .4rem; }
+.duo .tb-stats { grid-area: stats; gap: .4rem; }
+.duo .tb-stats span { display: flex; align-items: baseline; gap: .4rem; padding: .4rem .7rem; border-radius: .75rem; }
+.duo .tb-stats b { font-size: 1.15rem; }
+.duo .tb-stats small { font-size: .72rem; }
+.duo .tb-more { display: none; }
+.duo .tb-crown { width: 1.4rem; height: 1.4rem; }
+.duo .tb-badge { font-size: .64rem; }
+.duo .tb-list { flex: 1; grid-template-rows: repeat(4, minmax(0, 1fr)); gap: .4rem; }
+.duo .tb-item { grid-template-columns: 2.4rem minmax(0, 1fr) auto auto; gap: .2rem .8rem; padding: .35rem 1rem .6rem; border-radius: .95rem; }
+.duo .tb-ino { font-size: 1.5rem; }
+.duo .tb-itxt b { font-size: .95rem; -webkit-line-clamp: 1; }
+.duo .tb-itxt small { font-size: .72rem; }
+.duo .tb-mini { gap: .25rem; }
+.duo .tb-mini span { min-width: 2.9rem; }
+.duo .tb-mini b { font-size: .95rem; }
+.duo .tb-mini small { font-size: .62rem; }
+.duo .tb-item .tb-heat { left: 1rem; right: 1rem; bottom: .38rem; height: .24rem; }
+.duo .tb-item:hover { transform: translateX(4px); }
+
+/* Baris info di dasar papan (meta + cara hitung) */
+.duo .tb-meta { position: relative; align-items: center; gap: .2rem 1rem; margin: 0; padding: .55rem .6rem .2rem; border-top: 1px solid rgb(255 255 255 / .09); font-size: .72rem; font-weight: 600; color: #aebbd0; }
+.duo .tb-live { color: #fff; }
+.duo .tb-live::before { content: ''; width: .5rem; height: .5rem; border-radius: 50%; background: #8392ab; }
+.duo .tb-live.is-live::before { background: #10b981; animation: duo-ping 2s infinite; }
+@keyframes duo-ping { 0% { box-shadow: 0 0 0 0 rgb(16 185 129 / .6); } 75%, 100% { box-shadow: 0 0 0 7px rgb(16 185 129 / 0); } }
+.duo .tb-tot { margin-left: 0; }
+.tb-note { margin-left: auto; }
+.tb-note summary { cursor: pointer; list-style: none; padding: .15rem .6rem; border: 1px solid rgb(255 255 255 / .18); border-radius: 99px; font-weight: 800; color: #d6e2fa; transition: background .2s; }
+.tb-note summary::-webkit-details-marker { display: none; }
+.tb-note summary:hover, .tb-note[open] summary { background: rgb(255 255 255 / .12); }
+.tb-note summary:focus-visible { outline: 2px solid var(--color-accent-400, #7fa8e8); outline-offset: 2px; }
+.tb-note p { position: absolute; right: .4rem; bottom: calc(100% + .35rem); z-index: 5; width: min(22rem, 90%); margin: 0; padding: .8rem .95rem; border: 1px solid rgb(255 255 255 / .16); border-radius: .9rem; background: #243350; box-shadow: 0 20px 40px -18px rgb(0 0 0 / .7); font-size: .76rem; font-weight: 500; line-height: 1.5; color: #e4ecfb; }
+
+/* ===== Kanan: papan peringkat (kartu gelap, podium kiri + daftar kanan) ===== */
+.duo .pk-card { display: flex; flex-direction: column; min-width: 0; margin-top: 1rem; border: 0; border-radius: 1.6rem; background: radial-gradient(90% 60% at 100% 0, rgb(79 130 230 / .28), transparent 60%), radial-gradient(70% 50% at 0 100%, rgb(240 180 41 / .07), transparent 70%), var(--color-graphite-900, #1b2638); box-shadow: 0 34px 60px -38px rgb(27 38 56 / .85); }
+.duo .pk-tabs { flex-wrap: nowrap; gap: .25rem; padding: .75rem .8rem .55rem; overflow-x: auto; border: 0; background: none; }
+.duo .pk-tab { flex: 1 1 auto; justify-content: center; min-height: 2.2rem; min-width: 0; padding: .35rem .6rem; font-size: .72rem; color: #aebbd0; }
+.duo .pk-tab:hover { background: rgb(255 255 255 / .1); color: #fff; }
+.duo .pk-tab.is-on { background: var(--color-accent-600, #3b6cd4); color: #fff; box-shadow: 0 10px 22px -12px rgb(79 130 230 / .9); }
+.duo .pk-tab .pk-logo { margin: 0 .4rem 0 -.15rem; }
+
+.duo .pk-pane:not([hidden]) { display: grid; flex: 1; grid-template-columns: minmax(0, .96fr) minmax(0, 1.04fr); grid-template-rows: minmax(0, 1fr) auto; }
+.duo .pk-stage { grid-row: 1; grid-column: 1; padding: .4rem .4rem 0 .9rem; background: none; }
+.duo .pk-stage-k { display: none; } /* nama seleksi sudah tampil di tab aktif */
+.duo .pk-glow { width: 16rem; height: 16rem; }
+.duo .pk-podium { min-height: 12rem; gap: .3rem; margin-top: 0; }
+.duo .pk-av { width: 2.5rem; height: 2.5rem; font-size: .95rem; }
+.duo .pk-p1 .pk-av { width: 3rem; height: 3rem; font-size: 1.15rem; }
+.duo .pk-crown { width: 1.4rem; height: 1.4rem; }
+.duo .pk-who b { font-size: .72rem; }
+.duo .pk-who small { font-size: .68rem; }
+.duo .pk-bar { padding-top: .45rem; font-size: 1.5rem; }
+.duo .pk-p1 .pk-bar { height: clamp(4.5rem, 12vh, 6.5rem); font-size: 2rem; }
+.duo .pk-p2 .pk-bar { height: clamp(3.2rem, 8.5vh, 4.6rem); }
+.duo .pk-p3 .pk-bar { height: clamp(2.4rem, 6.5vh, 3.4rem); }
+
+.duo .pk-side { display: contents; }
+.duo .pk-list { grid-row: 1; grid-column: 2; align-content: center; gap: .35rem; padding: .4rem 1rem 0 .4rem; }
+.duo .pk-row { grid-template-columns: 2rem minmax(0, 1fr) 3rem 3.9rem; gap: .6rem; padding: .42rem .7rem; border-color: rgb(255 255 255 / .09); border-radius: .85rem; background: rgb(255 255 255 / .06); }
+.duo .pk-row:not(.pk-head):hover { border-color: rgb(169 196 242 / .6); background: rgb(255 255 255 / .12); box-shadow: none; }
+.duo .pk-head { padding: 0 .7rem; border: 0; background: none; color: #8fa0ba; }
+.duo .pk-rank i { width: 1.6rem; height: 1.6rem; font-size: .78rem; background: rgb(255 255 255 / .12); color: #e4ecfb; }
+.duo .pk-t1 .pk-rank i { background: #f5c542; color: #1b2638; }
+.duo .pk-t2 .pk-rank i { background: #dfe5ee; color: #1b2638; }
+.duo .pk-t3 .pk-rank i { background: #f0c9a4; color: #4a2c12; }
+.duo .pk-name b { font-size: .84rem; color: #fff; }
+.duo .pk-name small { font-size: .68rem; color: #aebbd0; }
+.duo .pk-score { font-size: .98rem; color: var(--color-accent-400, #7fa8e8); }
+.duo .pk-time { font-size: .74rem; color: #c5cfde; }
+.duo .pk-row.is-empty { border-color: rgb(255 255 255 / .14); background: transparent; }
+.duo .pk-row.is-empty .pk-name b, .duo .pk-row.is-empty .pk-score, .duo .pk-row.is-empty .pk-time { color: #8392ab; }
+.duo .pk-row.is-me { border-color: var(--color-accent-400, #7fa8e8); background: rgb(79 130 230 / .22); }
+.duo .pk-me { background: rgb(127 168 232 / .25); color: #dce8fb; }
+
+.duo .pk-cta { grid-row: 2; grid-column: 1 / -1; flex-wrap: nowrap; gap: .5rem; margin: .5rem .7rem .7rem; padding-top: .7rem; border-top: 1px solid rgb(255 255 255 / .09); }
+.duo .pk-cta a { flex: 1 1 0; justify-content: center; min-height: 2.5rem; padding: .5rem 1rem; font-size: .85rem; text-align: center; }
+.duo .pk-cta .btn-outline { border-color: rgb(255 255 255 / .28); background: transparent; color: #fff; }
+.duo .pk-cta .btn-outline:hover { background: rgb(255 255 255 / .12); border-color: rgb(255 255 255 / .5); }
+
+/* Layar pendek: padatkan lagi supaya tetap satu layar */
+@media (min-width: 1101px) and (max-height: 820px) {
+    .duo-in { padding-block: 1rem; }
+    .duo-sub { display: none; }
+    .duo .tb-board, .duo .pk-card { margin-top: .75rem; }
+    .duo .tb-stats span { padding: .3rem .6rem; }
+}
+
+/* Tablet dan ponsel: tumpuk, tinggi mengikuti isi */
+@media (max-width: 1100px) {
+    .duo { display: block; min-height: 0; }
+    .duo-in { grid-template-columns: 1fr; gap: 2.5rem; padding-block: 3rem; }
+    .duo-mid { height: 1px; background: linear-gradient(90deg, transparent, var(--color-graphite-300, #c5cfde), transparent); }
+    .duo-l .tb, .duo-r .pk, .duo-r .pk > div, .duo .tb-board, .duo .pk-card { flex: none; }
+    .duo .tb-list { grid-template-rows: none; }
+}
+@media (max-width: 760px) {
+    .duo .pk-pane:not([hidden]) { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .duo .pk-stage, .duo .pk-list, .duo .pk-cta { grid-column: 1; grid-row: auto; }
+    .duo .pk-stage { padding: .4rem 1rem 0; }
+    .duo .pk-list { padding: .8rem 1rem 0; }
+    .duo .pk-podium { min-height: 12rem; }
+    .duo .pk-tab { flex: none; }
+}
+@media (max-width: 520px) {
+    .duo-in { padding-inline: 1rem; }
+    .duo-top { flex-wrap: wrap; }
+    .duo .tb-lead { grid-template-columns: 1fr; grid-template-areas: 'top' 'no' 'body' 'heat' 'stats'; }
+    .duo .tb-stats { grid-template-columns: 1fr 1fr 1fr; }
+    .duo .tb-stats span { flex-direction: column; align-items: flex-start; gap: 0; }
+    .duo .tb-item { grid-template-columns: 2.2rem minmax(0, 1fr) auto; grid-template-areas: 'no txt d' 'mini mini mini'; padding-bottom: 1rem; }
+    .duo .tb-item > .tb-ino { grid-area: no; } .duo .tb-item > .tb-itxt { grid-area: txt; } .duo .tb-item > .tb-d { grid-area: d; } .duo .tb-item > .tb-mini { grid-area: mini; justify-content: space-between; }
+    .duo .pk-row { grid-template-columns: 2rem minmax(0, 1fr) 3rem; }
+    .duo .pk-cta { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) { .duo .tb-live::before { animation: none; } }
+
+/* Tombol di dalam kartu hero: satu tombol panjang, rata tengah */
+.hx-go { display: flex; justify-content: center; margin-top: 1.4rem; }
+.hx-go a { width: min(100%, 26rem); justify-content: center; padding: .9rem 1.6rem; }
+
+/* ---------- HP (<= 640px), versi rapi: Top 5 karier dan peringkat tidak lagi padat ----------
+   Karier: baris ringkas (nomor, nama, perubahan) + statistik satu baris; info tambahan disembunyikan.
+   Peringkat: tab dibungkus, podium lebih pendek, daftar hanya peringkat 4-5 yang terisi (1-3 sudah di podium). */
+@media (max-width: 640px) {
+    .duo-in { gap: 2rem; padding-block: 2.2rem; }
+    .duo-head { gap: .35rem; }
+    .duo h2 { font-size: 1.45rem; }
+    .duo-sub { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: .8rem; }
+    .duo .pk-all { min-height: 2rem; padding: .25rem .7rem; font-size: .72rem; }
+    .duo .pk-all > svg:first-child { display: none; }
+
+    /* Top 5 karier */
+    .duo .tb-board { gap: .45rem; margin-top: .8rem; padding: .5rem; border-radius: 1.3rem; }
+    .duo .tb-lead { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: 'top top' 'no body' 'heat heat' 'stats stats'; gap: .4rem .8rem; padding: .85rem .9rem .9rem; }
+    .duo .tb-no { font-size: 3rem; }
+    .duo .tb-name { font-size: 1.2rem; }
+    .duo .tb-div { font-size: .78rem; }
+    .duo .tb-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; }
+    .duo .tb-stats span { flex-direction: column; align-items: flex-start; gap: 0; padding: .35rem .55rem; }
+    .duo .tb-stats b { font-size: 1rem; }
+    .duo .tb-stats small { font-size: .64rem; }
+    .duo .tb-list { gap: .35rem; }
+    .duo .tb-item { grid-template-columns: 1.9rem minmax(0, 1fr) auto; grid-template-areas: 'no txt d' '. mini mini'; gap: .1rem .6rem; padding: .55rem .8rem .85rem; border-radius: .9rem; }
+    .duo .tb-ino { font-size: 1.25rem; }
+    .duo .tb-itxt b { font-size: .88rem; }
+    .duo .tb-itxt small { font-size: .68rem; }
+    .duo .tb-item > .tb-mini { grid-area: mini; justify-content: flex-start; gap: .9rem; margin-top: 0; }
+    .duo .tb-mini span { display: flex; align-items: baseline; gap: .25rem; min-width: 0; }
+    .duo .tb-mini b { font-size: .8rem; }
+    .duo .tb-mini small { font-size: .64rem; }
+    .duo .tb-item .tb-heat { left: .8rem; right: .8rem; bottom: .35rem; }
+    .duo .tb-meta { gap: .2rem .8rem; padding: .5rem .4rem .1rem; font-size: .68rem; }
+    .duo .tb-meta > span:nth-child(n+3), .duo .tb-note { display: none; }
+
+    /* Peringkat */
+    .duo .pk-card { margin-top: .8rem; border-radius: 1.3rem; }
+    /* Tab seleksi: ikon saja, satu baris rata. Nama seleksi tampil di label atas podium. */
+    .duo .pk-tabs { flex-wrap: nowrap; gap: .35rem; padding: .6rem .6rem .4rem; overflow: visible; }
+    .duo .pk-tab { flex: 1 1 0; justify-content: center; min-height: 2.6rem; padding: .3rem; }
+    .duo .pk-tab .pk-tab-t { display: none; }
+    .duo .pk-tab .pk-logo { display: block; margin: 0; width: 1.3rem; height: 1.3rem; }
+    .duo .pk-tab:not(.is-on) .pk-logo { color: #aebbd0; background: rgb(255 255 255 / .08); }
+    .duo .pk-stage-k { display: inline-flex; margin-top: .2rem; }
+    .duo .pk-stage { padding: .2rem .8rem 0; }
+    .duo .pk-podium { min-height: 9.5rem; gap: .25rem; }
+    .duo .pk-av { width: 2.1rem; height: 2.1rem; font-size: .85rem; }
+    .duo .pk-p1 .pk-av { width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+    .duo .pk-crown { width: 1.2rem; height: 1.2rem; }
+    .duo .pk-who b { font-size: .68rem; }
+    .duo .pk-who small { font-size: .62rem; }
+    .duo .pk-bar { padding-top: .3rem; font-size: 1.1rem; }
+    .duo .pk-p1 .pk-bar { height: 4.4rem; font-size: 1.5rem; }
+    .duo .pk-p2 .pk-bar { height: 3.3rem; }
+    .duo .pk-p3 .pk-bar { height: 2.5rem; }
+    .duo .pk-list { gap: .3rem; padding: .7rem .8rem 0; }
+    .duo .pk-head, .duo .pk-t1, .duo .pk-t2, .duo .pk-t3, .duo .pk-row.is-empty { display: none; }
+    .duo .pk-list:not(:has(.pk-row:not(.pk-head):not(.pk-t1):not(.pk-t2):not(.pk-t3):not(.is-empty))) { display: none; }
+    .duo .pk-row { grid-template-columns: 1.8rem minmax(0, 1fr) auto; padding: .4rem .6rem; }
+    .duo .pk-cta { gap: .4rem; margin: .6rem .6rem .6rem; padding-top: .6rem; }
+    .duo .pk-cta a { flex: 1 1 100%; min-height: 2.3rem; font-size: .8rem; }
+}

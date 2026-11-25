@@ -1,0 +1,107 @@
+/*
+ * Penyempurnaan responsif (HP, tablet, laptop). Dimuat setelah mobile.css, sebelum dark.css.
+ * Isi: ukuran kolom isian anti-zoom iOS, target sentuh, tabel jadi kartu di HP, tinggi layar dinamis,
+ * area aman layar berponi, dan intro untuk HP landscape. Desktop tidak berubah.
+ */
+
+/* ---------- Tinggi layar dinamis: bilah alamat browser HP muncul/hilang tanpa memotong halaman ---------- */
+.au { min-height: 100vh; min-height: 100dvh; }
+.pn { min-height: 100vh; min-height: 100dvh; }
+
+/* ---------- Area aman (poni, bilah gestur) ---------- */
+.pn-main { padding-bottom: max(1.5rem, env(safe-area-inset-bottom)); padding-left: max(1.5rem, env(safe-area-inset-left)); padding-right: max(1.5rem, env(safe-area-inset-right)); }
+.au-main { padding-bottom: max(3rem, env(safe-area-inset-bottom)); }
+.ft-base { padding-bottom: env(safe-area-inset-bottom); }
+@media (max-width: 1023px) {
+    .pn-main { padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+}
+
+/* ---------- Layar sentuh: target minimal sekitar 44px ---------- */
+@media (pointer: coarse) {
+    .pn-tool, .pn-toggle { width: 2.75rem; height: 2.75rem; }
+    .pn-acct { height: 2.75rem; }
+    .pn-out { width: 2.75rem; height: 2.75rem; }
+    .pn-link { height: 2.85rem; }
+    .btn-sm, .site-header .btn-primary, .site-header .btn-outline-light { min-height: 2.5rem; }
+    .ui-act { height: 2.5rem; padding: 0 .85rem; }
+    .nav-link { min-height: 2.5rem; display: inline-flex; align-items: center; }
+    .au-eye { padding: 0 1.1rem; min-width: 4.5rem; }
+}
+@media (pointer: coarse) and (max-width: 480px) { .pn-tool, .pn-acct { width: 2.75rem; } }
+
+/* ---------- HP: kolom isian 16px agar Safari iOS tidak memperbesar halaman saat disentuh ---------- */
+@media (max-width: 767px) {
+    input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='file']):not([type='color']),
+    select, textarea, .field, .ui-input, .ui-input.is-sm, .ui-dd-btn, .ui-search input { font-size: 16px; }
+}
+
+/* ---------- Masuk dan Daftar di HP ---------- */
+@media (max-width: 639px) {
+    .au-main { align-items: flex-start; padding: 1.5rem 1rem max(2rem, env(safe-area-inset-bottom)); }
+    .au-mobile-logo { margin-bottom: 1.1rem; }
+    .au-h1 { font-size: 1.75rem; }
+    .au-lead { font-size: .94rem; }
+    .au-form { margin-top: 1.2rem; padding: 1.25rem 1.1rem; gap: 1rem; }
+    .au-alt { margin-top: 1.2rem; }
+}
+/* HP landscape: kartu tidak dipusatkan vertikal supaya judul tidak terpotong */
+@media (max-height: 520px) and (orientation: landscape) {
+    .au-main { align-items: flex-start; padding-top: 1.25rem; padding-bottom: 1.5rem; }
+}
+
+/* ---------- Tabel jadi kartu bertumpuk di HP (judul kolom dipasang otomatis sebagai data-label oleh ui.js) ---------- */
+@media (max-width: 640px) {
+    .ui-table-scroll { overflow: visible; background: none; }
+    .ui-table:not(.no-stack), .ui-table:not(.no-stack) tbody, .ui-table:not(.no-stack) tr, .ui-table:not(.no-stack) td { display: block; width: 100%; }
+    .ui-table:not(.no-stack) thead { display: none; }
+    .ui-table:not(.no-stack) tbody tr { padding: .45rem 0; border-bottom: 1px solid var(--color-graphite-200, #e2e6ec); }
+    .ui-table:not(.no-stack) tbody tr:last-child { border-bottom: 0; }
+    .ui-table:not(.no-stack) tbody tr:hover { background: none; }
+    .ui-table:not(.no-stack) td { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .45rem 1rem; border: 0; text-align: right; white-space: normal; }
+    .ui-table:not(.no-stack) td::before { content: attr(data-label); flex: none; max-width: 40%; font-size: .68rem; font-weight: 800; letter-spacing: .06em; text-align: left; text-transform: uppercase; color: var(--color-graphite-500, #667794); }
+    .ui-table:not(.no-stack) td:not([data-label])::before, .ui-table:not(.no-stack) td.is-aksi::before { content: none; }
+    .ui-table:not(.no-stack) .is-no { display: none; }
+    .ui-table:not(.no-stack) .is-aksi { width: 100%; justify-content: flex-end; padding-top: .6rem; }
+    .ui-table:not(.no-stack) .is-num, .ui-table:not(.no-stack) .is-end { text-align: right; }
+    .ui-table:not(.no-stack) .ui-cell { max-width: none; min-width: 0; text-align: left; }
+    /* Sel judul utama (nama + keterangan) tampil sebagai kepala kartu: rata kiri, tanpa label */
+    .ui-table:not(.no-stack) td:has(> .ui-cell) { justify-content: flex-start; padding-top: .7rem; }
+    .ui-table:not(.no-stack) td:has(> .ui-cell)::before { content: none; }
+    .ui-table:not(.no-stack) td:has(> .ui-cell) .ui-cell b { font-size: .95rem; }
+    .ui-table:not(.no-stack) .ui-cell b, .ui-table:not(.no-stack) .ui-cell small { white-space: normal; overflow: visible; }
+    .ui-table:not(.no-stack) .ui-table-desc { max-width: none; }
+    .ui-table:not(.no-stack) td.ui-table-empty, .ui-table:not(.no-stack) td[colspan] { display: block; text-align: center; padding: 2rem 1rem !important; }
+    .ui-table:not(.no-stack) td.ui-table-empty::before, .ui-table:not(.no-stack) td[colspan]::before { content: none; }
+    .ui-table:not(.no-stack) .ui-cell-meter { min-width: 8rem; }
+}
+
+/* ---------- Intro landing di HP landscape (lebar > 767px tetapi tinggi hanya sekitar 360-430px) ---------- */
+@media (orientation: landscape) and (max-height: 480px) and (min-width: 560px) {
+    .intro-stage { padding-bottom: 4.2rem; }
+    .intro-art svg, .art1, .art2, .art4 { max-width: min(38vh, 9rem); }
+    .art0 { max-width: min(38vh, 9rem); }
+    .art3 { height: 7.5rem; max-width: 12rem; }
+    .intro-title { min-height: 0; margin-top: .3rem; font-size: clamp(1.3rem, 4.2vh, 1.7rem); }
+    .intro-text { margin-top: .4rem; font-size: .84rem; line-height: 1.45; }
+    .intro-points { display: none; }
+    .intro-hint { display: none; }
+    .intro-btn.is-final { padding: .7rem 1.6rem; font-size: .95rem; }
+}
+
+/* ---------- HP: tiap baris tabel jadi kartu sendiri, dengan jarak dan bayangan supaya batas antar data jelas ---------- */
+@media (max-width: 640px) {
+    .ui-table:not(.no-stack) tbody { display: grid; gap: .75rem; padding: .75rem; background: var(--color-graphite-50, #f3f5f8); }
+    .ui-table:not(.no-stack) tbody tr,
+    .ui-table:not(.no-stack) tbody tr:last-child { padding: 0; overflow: hidden; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: var(--pn-card, #fff); box-shadow: 0 1px 3px rgb(16 24 40 / .07); }
+    .ui-table:not(.no-stack) td { padding-top: .4rem; padding-bottom: .4rem; font-size: .85rem; }
+    /* Baris kecil label-nilai (Kunci, Akses, dst.) dipisah garis tipis supaya rapi dibaca */
+    .ui-table:not(.no-stack) td[data-label]:not(.is-aksi):not(:has(> .ui-cell)):not(.is-title) { border-top: 1px dashed var(--color-graphite-100, #edf0f5); }
+    /* Isi utama kartu (mis. teks soal): rata kiri, tebal, tanpa label */
+    .ui-table:not(.no-stack) td.is-title { display: block; padding: .95rem 1rem .35rem; text-align: left; white-space: normal; font-size: .95rem; font-weight: 700; line-height: 1.45; color: var(--color-graphite-800, #1f2a3d); }
+    .ui-table:not(.no-stack) td.is-title::before { content: none; }
+    /* Teks soal satu baris saja di HP (dipotong ...) supaya tinggi tiap kartu seragam */
+    .ui-table:not(.no-stack) td.is-title.is-oneline { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: none; }
+    .ui-table:not(.no-stack) td.is-title + td:has(> .ui-cell) { padding-top: 0; padding-bottom: .65rem; }
+    /* Tombol aksi di kaki kartu */
+    .ui-table:not(.no-stack) td.is-aksi { margin-top: .35rem; padding: .65rem 1rem; border-top: 1px solid var(--color-graphite-100, #edf0f5); background: var(--color-graphite-50, #f3f5f8); }
+}

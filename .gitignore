@@ -1,0 +1,57 @@
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Local database - jangan upload database lokal/produksi
+/database/*.sqlite
+/database/*.sqlite-*
+*.sqlite
+*.sqlite-*
+*.db
+*.sql
+
+# Local-only files
+/database/migrations/2026_10_31_100100_reset_admin_account.php
+/qr.json
+
+# Private QRIS
+/public/images/qris.png
+
+# Laravel generated files
+/vendor
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/bootstrap/cache/*.php
+
+# Local runtime files
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+/storage/app/private/
+/storage/*.key
+/storage/pail
+
+# IDE and editor
+/.codex
+/.cursor/
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+.phpactor.json
+.phpunit.result.cache
+_ide_helper.php
+
+# Other local/system files
+/auth.json
+Homestead.json
+Homestead.yaml
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,10 @@
+/* Lencana status */
+.ui-badge { --bg: var(--color-graphite-100, #edf0f5); --fg: var(--color-graphite-700, #34435c); display: inline-flex; align-items: center; gap: .4rem; padding: .22rem .65rem; border-radius: 999px; background: var(--bg); color: var(--fg); font-size: .72rem; font-weight: 800; line-height: 1.2; white-space: nowrap; }
+.ui-badge.has-dot::before { content: ''; width: .4rem; height: .4rem; border-radius: 999px; background: currentColor; }
+.ui-badge svg { width: .8rem; height: .8rem; }
+.ui-badge.is-success { --bg: #d1fae5; --fg: #065f46; }
+.ui-badge.is-warning { --bg: #fef3c7; --fg: #92400e; }
+.ui-badge.is-danger { --bg: #fee2e2; --fg: #991b1b; }
+.ui-badge.is-accent { --bg: var(--color-accent-100, #dce8fb); --fg: var(--color-accent-800, #254690); }
+.ui-badge.is-dark { --bg: var(--color-graphite-900, #1b2638); --fg: #fff; }
+.ui-badge.is-premium { --bg: var(--color-accent-600, #3b6cd4); --fg: #fff; }

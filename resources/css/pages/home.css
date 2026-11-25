@@ -1,0 +1,41 @@
+/* Dipindah dari resources/views/home.blade.php */
+.fq { background: #fff; padding: 5rem 1rem; }
+.fq-wrap { display: grid; gap: 2.5rem; max-width: 72rem; margin: 0 auto; }
+.fq-title { margin-top: .5rem; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; line-height: 1.1; letter-spacing: -.02em; color: var(--color-ink, #1b2638); }
+.fq-sub { margin-top: 1rem; font-size: .85rem; color: var(--color-graphite-500, #667794); }
+
+.fq-list { display: grid; gap: .65rem; align-content: start; }
+.fq-item { position: relative; overflow: hidden; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: var(--color-graphite-50, #f3f5f8); transition: background .3s, border-color .3s, box-shadow .3s, transform .3s; transition-delay: 0s; }
+.fq-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--color-accent-400, #7fa8e8), var(--color-accent-600, #3b6cd4)); transform: scaleY(0); transform-origin: top; transition: transform .35s cubic-bezier(.2, .8, .2, 1); }
+.fq-item:hover { border-color: var(--color-graphite-300, #c5cfde); transform: translateX(3px); }
+.fq-item[open] { background: #fff; border-color: var(--color-accent-300, #a9c4f2); box-shadow: 0 18px 36px -24px rgb(59 108 212 / .45); transform: none; }
+.fq-item[open]::before { transform: scaleY(1); }
+
+.fq-q { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr) auto; align-items: center; gap: .75rem; padding: 1.1rem 1.2rem; list-style: none; cursor: pointer; }
+.fq-q::-webkit-details-marker { display: none; }
+.fq-no { font: 600 1.05rem var(--font-display, serif); font-variant-numeric: tabular-nums; color: var(--color-graphite-300, #c5cfde); transition: color .3s, transform .3s; }
+.fq-item:hover .fq-no { color: var(--color-graphite-500, #667794); } .fq-item[open] .fq-no { color: var(--color-accent-600, #3b6cd4); transform: scale(1.12); }
+.fq-qt { font-weight: 700; line-height: 1.35; color: var(--color-graphite-800, #1f2a3d); }
+.fq-ico { position: relative; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--color-graphite-100, #edf0f5); transition: background .3s, transform .4s cubic-bezier(.3, 1.5, .5, 1); }
+.fq-ico i { position: absolute; left: 50%; top: 50%; width: .8rem; height: 2px; margin: -1px 0 0 -.4rem; border-radius: 2px; background: var(--color-graphite-700, #34435c); transition: transform .35s, background .3s; }
+.fq-ico i + i { transform: rotate(90deg); }
+.fq-item[open] .fq-ico { background: var(--color-accent-600, #3b6cd4); transform: rotate(180deg); }
+.fq-item[open] .fq-ico i { background: #fff; } .fq-item[open] .fq-ico i + i { transform: rotate(0); }
+
+.fq-a { overflow: hidden; }
+.fq-a p { padding: 0 1.2rem 1.25rem calc(1.2rem + 2.2rem + .75rem); line-height: 1.65; font-size: .95rem; color: var(--color-graphite-600, #4a5a73); }
+.fq-item[open] .fq-a p { animation: fq-in .5s cubic-bezier(.2, .8, .2, 1) .08s both; }
+@keyframes fq-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.fq-item[data-reveal] { transition-delay: calc(var(--k, 0) * 60ms); }
+.fq-item[data-reveal].is-visible:hover, .fq-item[data-reveal].is-visible { transition-delay: 0s; }
+
+@media (min-width: 1024px) {
+    .fq-wrap { grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); gap: 4rem; }
+    .fq-side { position: sticky; top: 6.5rem; align-self: start; }
+}
+@media (max-width: 520px) { .fq-a p { padding-left: 1.2rem; } .fq-q { grid-template-columns: 1.8rem minmax(0, 1fr) auto; gap: .6rem; } }
+@media (prefers-reduced-motion: reduce) { .fq-item, .fq-item::before, .fq-ico, .fq-ico i, .fq-no { transition-duration: .01s !important; } .fq-item[open] .fq-a p { animation: none; } }
+
+/* Landing: FAQ langsung menempel ke footer, tanpa strip abu-abu di antaranya */
+body:has(.fq) > footer, body:has(.fq) footer { margin-top: 0; }

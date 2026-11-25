@@ -1,0 +1,29 @@
+/* Maskot Owlspire: gerak halus hanya di .ow-live (kedip, melirik, telinga). */
+.ow { overflow: visible; }
+.ow-eye, .ow-iris { transform-box: fill-box; transform-origin: center; }
+.ow-tuft { transform-box: fill-box; }
+.ow-tuft-l { transform-origin: 100% 100%; }
+.ow-tuft-r { transform-origin: 0 100%; }
+.ow-arrow { transform-box: fill-box; transform-origin: center; }
+.ow-live .ow-eye, .ow-live .ow-iris { animation: ow-blink 5.2s infinite; }
+.ow-live .ow-pupil { animation: ow-look 7s ease-in-out infinite; }
+.ow-live .ow-tuft-l { animation: ow-twitch-l 6.5s ease-in-out infinite; }
+.ow-live .ow-tuft-r { animation: ow-twitch-r 6.5s 1.1s ease-in-out infinite; }
+.ow-live .ow-arrow { animation: ow-rise 2.4s ease-in-out infinite; }
+@keyframes ow-blink { 0%, 92%, 100% { transform: scaleY(1); } 95.5% { transform: scaleY(.08); } }
+@keyframes ow-look { 0%, 18%, 100% { transform: translate(0, 0); } 28%, 46% { transform: translate(-3px, 1px); } 58%, 76% { transform: translate(3px, -1px); } }
+@keyframes ow-twitch-l { 0%, 86%, 100% { transform: rotate(0); } 90% { transform: rotate(-9deg); } 94% { transform: rotate(2deg); } }
+@keyframes ow-twitch-r { 0%, 86%, 100% { transform: rotate(0); } 90% { transform: rotate(9deg); } 94% { transform: rotate(-2deg); } }
+@keyframes ow-rise { 0%, 100% { transform: translateY(0); opacity: .75; } 50% { transform: translateY(-2.5px); opacity: 1; } }
+
+/* Muncul: badan "tergambar" lalu terisi (dipakai loading screen dan tutorial). */
+.ow-draw .ow-shape { stroke: #a9c4f2; stroke-width: 2; stroke-dasharray: 420; stroke-dashoffset: 420; fill-opacity: 0; animation: ow-stroke 1.1s .15s cubic-bezier(.4, 0, .2, 1) forwards, ow-fill .5s 1s ease-out forwards; }
+.ow-draw .ow-body > :not(.ow-shape) { opacity: 0; animation: ow-in .5s ease-out forwards; }
+.ow-draw .ow-body > :nth-child(2) { animation-delay: 1s; } .ow-draw .ow-body > :nth-child(3) { animation-delay: 1.05s; }
+.ow-draw .ow-body > :nth-child(4), .ow-draw .ow-body > :nth-child(5) { animation-delay: 1.1s; }
+.ow-draw .ow-body > :nth-child(n+6) { animation-delay: 1.25s; }
+.ow-draw .ow-eye { animation: ow-in .5s 1.25s ease-out forwards, ow-blink 5.2s 2.2s infinite; }
+@keyframes ow-stroke { to { stroke-dashoffset: 0; } }
+@keyframes ow-fill { to { fill-opacity: 1; stroke-opacity: 0; } }
+@keyframes ow-in { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .ow-live *, .ow-draw * { animation: none !important; opacity: 1 !important; stroke-dashoffset: 0 !important; fill-opacity: 1 !important; } .ow-draw .ow-shape { stroke-opacity: 0; } }

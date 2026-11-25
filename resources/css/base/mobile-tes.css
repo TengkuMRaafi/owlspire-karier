@@ -1,0 +1,225 @@
+/*
+ * Tampilan HP untuk dua tes: "Coba simulasi" (5 menit, 15 soal; prefix tx-) dan "Cari arah kariermu" (prefix kq- untuk soal,
+ * kr- untuk hasil). Dimuat paling akhir (setelah mobile-karier.css) dan memakai awalan .qz supaya menang atas <style> di halaman.
+ * Desktop tidak berubah: semua aturan ada di dalam @media.
+ *
+ * Skala huruf yang dipakai di semua bagian (supaya konsisten):
+ *   judul halaman 1.35rem | judul kartu 1rem | isi 0.88rem (baris 1.55) | pilihan jawaban 0.9rem | label kecil 0.64rem (huruf kapital)
+ *   angka besar (skor) 1.6rem | tombol 0.92rem
+ */
+@media (max-width: 860px) {
+
+    /* Teks rata kiri-kanan (rapi.css) membuat spasi melebar di kolom sempit HP: di dua tes ini dipaksa rata kiri, tanpa pemenggalan kata */
+    .qz .rapi.rapi, .qz .tx-confirm, .qz .tx-confirm * , .qz .kr-hero *, .qz .kq * {
+        text-align: left;
+        text-align-last: auto;
+        hyphens: none;
+        -webkit-hyphens: none;
+    }
+    .qz .tx-confirm, .qz .tx-confirm h3, .qz .tx-confirm p { text-align: center; }
+    .qz .kr-note, .qz .kr-note.rapi.rapi, .qz .kq .kq-calc, .qz .kq .kq-calc * { text-align: center; }
+
+    .qz-wrap { padding: 1rem .75rem 2.6rem; }
+
+    /* =====================================================================
+       A. COBA SIMULASI (tx-): pembuka
+       ===================================================================== */
+    .qz .tx { border-radius: 1.2rem; }
+    .qz .tx-intro { grid-template-columns: minmax(0, 1fr); }
+
+    /* panel gelap jadi pita ringkas di atas: jam di kiri, topik di kanan */
+    .qz .tx-i-side { order: -1; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; justify-items: start; gap: .9rem; padding: 1rem 1.1rem; }
+    .qz .tx-dial { width: 5.4rem; height: 5.4rem; }
+    .qz .tx-dial circle { stroke-width: 8; }
+    .qz .tx-dial b { font-size: 1.15rem; }
+    .qz .tx-dial small { font-size: .52rem; letter-spacing: .14em; }
+    .qz .tx-topics { justify-content: flex-start; gap: .3rem; max-width: none; max-height: 4.6rem; overflow: hidden; }
+    .qz .tx-topics li { padding: .18rem .5rem; font-size: .64rem; line-height: 1.3; }
+
+    .qz .tx-i-main { align-items: stretch; padding: 1.3rem 1.1rem 1.4rem; }
+    .qz .tx-eyebrow { font-size: .64rem; letter-spacing: .14em; }
+    .qz .tx-h { margin-top: .5rem; font-size: 1.35rem; line-height: 1.22; }
+    .qz .tx-lead { max-width: none; margin-top: .6rem; font-size: .88rem; line-height: 1.55; }
+    .qz .tx-rules { gap: .5rem; margin-top: 1.1rem; }
+    .qz .tx-rules li { align-items: center; gap: .65rem; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: .85rem; background: #fafbfd; font-size: .84rem; line-height: 1.4; }
+    .qz .tx-rules span { width: 1.8rem; height: 1.8rem; border-radius: .55rem; background: #eaf0fd; }
+    .qz .tx-start { align-self: stretch; width: 100%; margin-top: 1.2rem; padding: .85rem 1rem; border-radius: .9rem; font-size: .95rem; }
+    .qz .tx-i-note { margin-top: .6rem; text-align: center; font-size: .74rem; line-height: 1.45; }
+
+    /* =====================================================================
+       B. COBA SIMULASI: ruang soal
+       ===================================================================== */
+    .qz .tx-pos b { font-size: .92rem; }
+    .qz .tx-pos .tx-pos-m { font-size: .72rem; }
+    .qz .tx-pos-m b { font-size: .72rem; }
+    .qz .tx-clock { gap: .4rem; padding: .32rem .75rem; }
+    .qz .tx-clock svg { width: 1rem; height: 1rem; }
+    .qz .tx-clock b { font-size: 1rem; }
+    .qz .tx-qt { margin-top: .1rem; font-size: 1.02rem; line-height: 1.55; font-weight: 600; }
+    .qz .tx-opts { gap: .5rem; margin-top: .95rem; }
+    .qz .tx-opt { min-height: 2.9rem; padding: .6rem .8rem; border-radius: .85rem; font-size: .9rem; line-height: 1.45; }
+    .qz .tx-opt .let { width: 1.7rem; height: 1.7rem; font-size: .74rem; }
+    .qz .tx-foot .tx-btn { height: 2.9rem; border-radius: .85rem; font-size: .92rem; }
+
+    /* =====================================================================
+       C. COBA SIMULASI: hasil
+       ===================================================================== */
+    .qz .tx-out { padding: 1.2rem .95rem 1.4rem; }
+
+    /* ringkasan: cincin kiri, judul kanan; tiga kotak angka sebaris di bawahnya */
+    .qz .tx-sum { grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto auto; justify-items: start; align-items: center; gap: .3rem .95rem; text-align: left; }
+    .qz .tx-sum > div:not(.tx-ring) { display: contents; }
+    .qz .tx-sum .tx-ring { grid-column: 1; grid-row: 1 / span 2; }
+    .qz .tx-sum .tx-eyebrow { grid-column: 2; grid-row: 1; align-self: end; }
+    .qz .tx-sum h2 { grid-column: 2; grid-row: 2; align-self: start; }
+    .qz .tx-ring { width: 6.2rem; height: 6.2rem; }
+    .qz .tx-ring circle { stroke-width: 10; }
+    .qz .tx-ring b { font-size: 1.45rem; }
+    .qz .tx-ring small { font-size: .64rem; }
+    .qz .tx-sum h2 { margin-top: .2rem; font-size: 1.15rem; line-height: 1.25; }
+    .qz .tx-sum .tx-eyebrow { font-size: .64rem; letter-spacing: .14em; }
+    .qz .tx-tiles { grid-column: 1 / -1; grid-row: 3; width: 100%; gap: .45rem; margin-top: .5rem; }
+    .qz .tx-tiles li { padding: .6rem .3rem; border-radius: .8rem; text-align: center; }
+    .qz .tx-tiles b { font-size: 1.05rem; }
+    .qz .tx-tiles span { display: block; margin-top: .1rem; font-size: .68rem; line-height: 1.25; }
+
+    .qz .tx-stats { margin-top: 1.1rem; border-radius: 1.1rem; }
+    .qz .tx-stats-in { gap: .9rem; padding: 1rem; }
+    .qz .tx-stats h3, .qz .tx-sec-t { font-size: 1rem; }
+    .qz .tx-sec-t { margin-top: 1.4rem; }
+    .qz .tx-sec-s { font-size: .82rem; line-height: 1.5; }
+    .qz .tx-radar { max-width: 17rem; }
+    .qz .tx-radar text { font-size: 10.5px; }
+    .qz .tx-bars { gap: .65rem; margin-top: .8rem; }
+    .qz .tx-bars li { font-size: .82rem; }
+
+    .qz .tx-ins, .qz .tx-areas { gap: .55rem; margin-top: .8rem; }
+    .qz .tx-ins article, .qz .tx-area, .qz .tx-rcol, .qz .tx-rdet { padding: .85rem 1rem; border-radius: .95rem; }
+    .qz .tx-ins h4, .qz .tx-rcol h4 { font-size: .64rem; letter-spacing: .12em; }
+    .qz .tx-ins p, .qz .tx-area p, .qz .tx-rcol p, .qz .tx-rdet p { font-size: .86rem; line-height: 1.55; }
+    .qz .tx-area-h b, .qz .tx-rcol b, .qz .tx-rdet h4 { font-size: .94rem; }
+    .qz .tx-area-h em, .qz .tx-rdet h4 em { font-size: .78rem; }
+    .qz .tx-area p small, .qz .tx-rdet small { font-size: .78rem; }
+
+    .qz .tx-rv-wrap { margin-top: 1.2rem; border-radius: 1rem; }
+    .qz .tx-rv-h { padding: .85rem 1rem; gap: .7rem; }
+    .qz .tx-rv-h b { font-size: .95rem; }
+    .qz .tx-rv-h small { font-size: .76rem; }
+    .qz .tx-rv-h .tx-rv-act { padding: .35rem .7rem; font-size: .74rem; }
+    .qz .tx-rv-body { padding: 0 1rem 1rem; }
+    .qz .tx-rev { gap: .55rem; margin-top: 1rem; }
+    .qz .tx-rev li { padding: .75rem .9rem; font-size: .84rem; }
+    .qz .tx-rev b { font-size: .88rem; }
+
+    /* tab hasil: 3 kolom rata, huruf seragam */
+    .qz .tx-rt { margin: .9rem 0 0; border-radius: .95rem; }
+    .qz .tx-rt button { padding: .55rem .3rem; font-size: .8rem; }
+    .qz .tx-rp { margin: .8rem 0 0; }
+    /* pilih bidang: dropdown, bukan deretan tombol yang digeser ke samping */
+    .qz .tx-rsub { display: none; }
+    .qz .tx-rsel { display: block; margin-bottom: .7rem; }
+    .qz .tx-rsel .tx-rsel-k { display: block; margin-bottom: .3rem; font-size: .64rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--mut); }
+    .qz .tx-rsel .ui-dd { flex: none; width: 100%; }
+    .qz .tx-rsel .ui-dd-btn { height: 2.9rem; font-size: .9rem; font-weight: 700; }
+    .qz .tx-rsel .ui-dd-list li { font-size: .88rem; }
+
+    /* dialog "Kirim jawaban sekarang?" */
+    .qz .tx-confirm div { padding: 1.3rem 1.1rem 1.1rem; border-radius: 1.1rem; }
+    .qz .tx-confirm h3 { font-size: 1.05rem; }
+    .qz .tx-confirm p { font-size: .86rem; line-height: 1.55; }
+    .qz .tx-confirm nav { gap: .55rem; margin-top: 1rem; }
+    .qz .tx-confirm .tx-btn { flex: 1 1 0; justify-content: center; height: 2.8rem; padding: 0 .6rem; font-size: .88rem; text-align: center; white-space: nowrap; }
+    .qz .tx-rlist { border-radius: 1rem; }
+    .qz .tx-rlist summary { padding: .7rem .85rem; font-size: .84rem; }
+    .qz .tx-rlist div { font-size: .84rem; }
+
+    /* kartu "Perkuat dulu / Uji lagi": susun ke bawah supaya teks tidak sesak */
+    body .qz .tx-next { grid-template-columns: minmax(0, 1fr); gap: .55rem; margin-top: 1rem; }
+    body .qz .tx-next a { padding: .85rem 1rem; border-radius: .95rem; }
+    body .qz .tx-next small { font-size: .62rem; letter-spacing: .12em; }
+    body .qz .tx-next b { margin-top: .2rem; font-size: .96rem; }
+    body .qz .tx-next span { margin-top: .2rem; font-size: .82rem; line-height: 1.45; }
+    .qz .tx-again { width: 100%; margin-top: 1rem; padding: .75rem 1rem; border-radius: .9rem; font-size: .9rem; }
+
+    /* =====================================================================
+       D. CARI ARAH KARIER (kr-): hasil
+       ===================================================================== */
+    .qz .kr-hero { gap: .9rem; padding: 1.15rem 1.05rem 1.2rem; border-radius: 1.2rem; }
+    /* lencana (cincin + bidang) jadi satu baris di atas judul */
+    .qz .kr-badge { order: -1; display: flex; align-items: center; justify-content: flex-start; justify-self: stretch; gap: .8rem; }
+    .qz .kr-ring { width: 4.6rem; height: 4.6rem; flex: none; }
+    .qz .kr-ring circle { stroke-width: 9; }
+    .qz .kr-ring b { font-size: 1.15rem; }
+    .qz .kr-ring small { margin-top: .1rem; font-size: .5rem; letter-spacing: .12em; }
+    .qz .kr-div { max-width: none; padding: .3rem .75rem; font-size: .7rem; text-align: left; }
+    .qz .kr-eyebrow { font-size: .62rem; letter-spacing: .14em; }
+    .qz .kr-hero h2 { margin-top: .35rem; font-size: 1.35rem; line-height: 1.2; }
+    .qz .kr-lead { margin-top: .5rem; font-size: .86rem; line-height: 1.55; }
+    .qz .kr-cta { gap: .5rem; margin-top: .9rem; }
+    .qz .kr-cta .btn-primary, .qz .kr-cta .kr-again { min-height: 2.8rem; border-radius: .85rem; font-size: .9rem; }
+
+    .qz .kr-kpis { gap: .45rem; margin-top: .8rem; }
+    .qz .kr-kpis .kr-kpi { padding: .7rem .9rem; border-radius: .9rem; }
+    .qz .kr-kpi small { font-size: .62rem; letter-spacing: .12em; }
+    .qz .kr-kpi b { margin-top: .15rem; font-size: .95rem; }
+    .qz .kr-kpi b em { font-size: .85rem; }
+    .qz .kr-kpi p { font-size: .78rem; }
+
+    .qz .kr-tabs { margin-top: .8rem; border-radius: .95rem; }
+    .qz .kr-tab { padding: .6rem .2rem; font-size: .78rem; }
+    .qz .kr-pane { margin-top: .7rem; }
+    .qz .kr-card { padding: .95rem 1rem; border-radius: 1rem; }
+    .qz .kr-card > h3 { font-size: 1rem; }
+    .qz .kr-card > h3 small { display: block; margin-top: .1rem; font-size: .76rem; }
+    .qz .kr-two { gap: .6rem; }
+    .qz .kr-radar { max-width: 17rem; margin-top: .2rem; }
+    .qz .kr-radar text { font-size: 10px; }
+    .qz .kr-dims { gap: .5rem; margin-top: .7rem; }
+    .qz .kr-d { grid-template-columns: 4.4rem minmax(0, 1fr) 2.3rem; gap: .55rem; font-size: .8rem; }
+    .qz .kr-d em { font-size: .8rem; }
+    .qz .kr-insight { margin-top: .7rem; padding: .75rem .95rem; font-size: .84rem; line-height: 1.55; }
+
+    .qz .kr-careers { gap: .55rem; }
+    .qz .kr-c { padding: .9rem 1rem; border-radius: 1rem; }
+    .qz .kr-c small { font-size: .62rem; letter-spacing: .1em; }
+    .qz .kr-c strong { font-size: .98rem; }
+    .qz .kr-c-pct { margin-top: .65rem; gap: .6rem; }
+    .qz .kr-c-pct b { font-size: 1.2rem; }
+    .qz .kr-c p { margin-top: .55rem; font-size: .82rem; line-height: 1.5; }
+    .qz .kr-c .go { padding-top: .6rem; font-size: .8rem; }
+    .qz .kr-all { margin-top: .7rem; font-size: .84rem; }
+
+    .qz .kr-cols { gap: .55rem; }
+    .qz .kr-col { padding: .9rem 1rem; border-radius: 1rem; }
+    .qz .kr-col > h3 { font-size: .64rem; letter-spacing: .12em; }
+    .qz .kr-col h4 { font-size: .92rem; }
+    .qz .kr-col p { font-size: .84rem; line-height: 1.55; }
+    .qz .kr-steps { gap: .55rem; }
+    .qz .kr-steps li { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: .7rem; padding: .8rem .9rem; border-radius: .95rem; font-size: .86rem; line-height: 1.5; }
+    .qz .kr-steps li::before { width: 1.6rem; height: 1.6rem; margin: 0; font-size: .76rem; }
+    .qz .kr-evi-l { gap: .45rem; }
+    .qz .kr-evi-l li { font-size: .82rem; }
+    .qz .kr-note { margin-top: 1rem; font-size: .76rem; line-height: 1.5; }
+}
+
+/* =====================================================================
+   E. CARI ARAH KARIER (kq-): soal satu per layar
+   ===================================================================== */
+@media (max-width: 760px) {
+    .qz .kq { border-radius: 1.2rem; }
+    .qz .kq-head { padding: 1rem 1rem .95rem; }
+    .qz .kq-eyebrow { font-size: .6rem; letter-spacing: .12em; line-height: 1.4; }
+    .qz .kq-title { font-size: 1rem; line-height: 1.3; }
+    .qz .kq-count b { font-size: 1.3rem; }
+    .qz .kq-count span { font-size: .78rem; }
+    .qz .kq-segs { gap: .15rem; margin-top: .85rem; }
+    .qz .kq-body { padding: 1.1rem 1rem 1rem; }
+    .qz .kq-topic { padding: .22rem .65rem; font-size: .62rem; }
+    .qz .kq-qt { margin-top: .7rem; font-size: 1.02rem; line-height: 1.55; }
+    .qz .kq-opts { gap: .5rem; margin-top: 1rem; }
+    .qz .kq-opt { grid-template-columns: auto minmax(0, 1fr); gap: .7rem; padding: .75rem .85rem; border-radius: .9rem; font-size: .88rem; line-height: 1.5; }
+    .qz .kq-opt .let { width: 1.8rem; height: 1.8rem; font-size: .74rem; }
+    .qz .kq-foot { margin-top: 1rem; padding-top: .85rem; }
+    .qz .kq-back { padding: .5rem 1rem; font-size: .84rem; }
+    .qz .kq-calc { min-height: 14rem; font-size: .9rem; }
+}

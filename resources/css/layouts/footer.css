@@ -1,0 +1,43 @@
+/* Footer situs (prefix ft-). Merek + ajakan dan tiga kolom tautan yang rata; garis aksen di tepi atas memisahkan dari konten. */
+.ft { position: relative; background: var(--color-graphite-900, #1b2638); color: var(--color-graphite-300, #c5cfde); }
+/* Garis aksen tipis: penanda jelas bahwa band gelap di atas sudah selesai */
+.ft::before { content: ''; position: absolute; inset: 0 0 auto; height: 2px; background: linear-gradient(90deg, transparent, var(--color-accent-600, #3b6cd4) 25%, #f0b429 50%, var(--color-accent-600, #3b6cd4) 75%, transparent); opacity: .85; }
+
+.ft-main { display: grid; gap: 2.4rem; padding-top: 3.2rem; padding-bottom: 2.8rem; }
+.ft-about { max-width: 22rem; margin-top: 1rem; font-size: .9rem; line-height: 1.7; }
+.ft-cta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.3rem; }
+
+.ft-head { font-size: .9rem; font-weight: 700; color: #fff; }
+.ft-col ul { display: grid; gap: .1rem; margin-top: .6rem; font-size: .9rem; }
+/* Tanda panah kecil di tiap menu: penanda tautan, diam (tidak bergerak saat disorot) */
+.ft-col a { display: inline-flex; align-items: center; gap: .65rem; padding: .32rem 0; color: var(--color-graphite-300, #c5cfde); transition: color .2s ease; }
+.ft-col a::before { content: ''; flex: none; width: .38rem; height: .38rem; border-top: 2px solid var(--color-accent-400, #7fa8e8); border-right: 2px solid var(--color-accent-400, #7fa8e8); transform: rotate(45deg); opacity: .75; }
+.ft-col a:hover, .ft-col a:focus-visible { color: #fff; }
+.ft-head { padding-bottom: .55rem; border-bottom: 1px solid rgb(255 255 255 / .1); }
+
+/* Bar bawah punya latar sendiri agar terbaca sebagai lapisan terpisah */
+.ft-base { padding: 1.1rem 0; border-top: 1px solid rgb(255 255 255 / .1); background: rgb(0 0 0 / .18); font-size: .78rem; color: var(--color-graphite-400, #9aa8bf); }
+
+@media (min-width: 768px) {
+    .ft-main { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem 3rem; }
+}
+@media (min-width: 1024px) {
+    .ft-main { grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: 3rem; }
+}
+@media (max-width: 1023px) {
+    .ft-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 639px) {
+    .ft-main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.8rem 1.2rem; padding-top: 2.4rem; padding-bottom: 2rem; }
+    .ft-brand { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ft-col a { transition: none; }
+}
+
+/* Tagline merek di footer: satu baris, melebar ke kanan (tidak dipaksa selebar tulisan "Owlspire") */
+.ft-brand .logo-tag { white-space: nowrap; letter-spacing: .16em; }
+@media (max-width: 380px) { .ft-brand .logo-tag { letter-spacing: .1em; } }
+
+/* Halaman yang diakhiri section gelap (404, Segera Hadir, dst.): footer menempel langsung, tanpa celah terang di antaranya. */
+main:has(> section.on-dark:last-child) + .ft.mt-20 { margin-top: 0; }

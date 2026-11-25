@@ -1,0 +1,180 @@
+/*
+ * Penyesuaian layar HP (<= 639px). Dimuat paling akhir di app.css supaya menimpa ukuran desktop.
+ * Desktop tidak berubah: semua aturan di sini hanya aktif di bawah breakpoint sm (640px).
+ */
+@media (max-width: 639px) {
+
+    /* ---------- Skala judul ---------- */
+    .text-6xl, .text-5xl { font-size: 2.15rem; line-height: 1.1; }
+    .text-4xl { font-size: 1.8rem; line-height: 1.15; }
+    .text-lg { font-size: 1rem; }
+    .sx-title, .bl-title, .lw-title, .lb-title, .pm-title { font-size: clamp(1.85rem, 8.4vw, 2.15rem); line-height: 1.1; }
+    .lw-lead, .lb-lead { margin-top: .8rem; font-size: .96rem; line-height: 1.6; }
+    .sx-head h2, .bl-head h2 { font-size: 1.5rem; }
+    .fq-title { font-size: 1.7rem; }
+
+    /* ---------- Jarak antar-bagian ---------- */
+    .py-20 { padding-top: 3rem; padding-bottom: 3rem; }
+    .pt-20 { padding-top: 3rem; }
+    .py-14 { padding-top: 2.2rem; padding-bottom: 2.2rem; }
+    .px-8.py-14 { padding: 2.2rem 1.25rem; }
+    .fq { padding: 3rem 1rem; }
+    .of { padding: 3rem 0 3.5rem; }
+    footer.mt-20 { margin-top: 3rem; }
+    footer .py-12 { padding-top: 2rem; padding-bottom: 2rem; }
+    .px-7.py-3\.5 { padding: .7rem 1.2rem; font-size: .95rem; }
+
+    /* ---------- Header: satu baris + dropdown (lihat layouts/header.css) ---------- */
+    .site-header .btn-primary { padding: .4rem .9rem; font-size: .82rem; }
+
+    /* ---------- Hero halaman: lebih pendek, tanpa tinggi layar penuh ---------- */
+    [class*="min-h-[calc(100svh"] { min-height: 0; gap: 1.8rem; padding-top: 2rem; padding-bottom: 2.5rem; }
+    .sx-hero-grid, .bl-hero-grid, .pm-hero-grid { gap: 1.4rem; padding-top: 1.8rem; padding-bottom: 2rem; }
+    .lw-hero-grid { gap: 1.4rem; padding-top: 1.8rem; padding-bottom: 2.8rem; }
+    .lb-hero-grid { gap: 1.2rem; padding-top: 1.8rem; }
+    .lb-hero-grid > div:first-child { padding-bottom: 1rem; }
+    .lw-chips, .lb-chips { gap: .4rem; margin-top: 1rem; }
+    .lw-chips li, .lb-chips li { padding: .3rem .7rem; font-size: .78rem; }
+    .lw-cta, .lb-cta { margin-top: 1.2rem; gap: .6rem; }
+
+    /* ---------- Orbit Karier dan radar Lowongan: diperkecil utuh agar tidak keluar kotak ---------- */
+    .lw-radar { --r: 6.2rem; width: min(100%, 18.5rem); }
+    .lw-me { width: 3.8rem; height: 3.8rem; font-size: .72rem; }
+    .lw-dot em { font-size: .6rem; padding: .1rem .45rem; }
+    /* .hx-stage (hero landing) diatur di landing-hero.css; tinggi tetap di sini memotong deretan chip */
+
+    /* ---------- Papan Karier (landing) ---------- */
+    /* Nama dan bar tidak berebut ruang: bar pindah ke baris kedua di bawah nama */
+
+    /* ---------- Papan Peringkat ---------- */
+    .lb-podium { gap: .4rem; }
+    .lb-av { width: 2.7rem; height: 2.7rem; border-width: 2px; font-size: 1.1rem; }
+    .lb-p1 .lb-av { width: 3.5rem; height: 3.5rem; font-size: 1.4rem; }
+    .lb-crown-lg { width: 1.8rem; height: 1.8rem; }
+    .lb-bar span { font-size: 1.6rem; }
+    .lb-p1 .lb-bar { height: 6.4rem; }
+    .lb-p2 .lb-bar { height: 4.7rem; }
+    .lb-p3 .lb-bar { height: 3.7rem; }
+    .lb-row { grid-template-columns: 2.4rem minmax(0, 1fr) 2.8rem 3.6rem; gap: .4rem; padding: .55rem .7rem .55rem .35rem; }
+    .lb-rank { width: 2rem; height: 2rem; }
+    .lb-rank.lb-r1, .lb-rank.lb-r2, .lb-rank.lb-r3 { width: 2.2rem; height: 2.2rem; }
+    .lb-who2 b { font-size: .88rem; }
+    .lb-score { font-size: .95rem; }
+    .lb-t1 .lb-score { font-size: 1.05rem; }
+    .lb-time { font-size: .74rem; }
+    .lb-tabs { gap: .35rem; }
+    .lb-tabs a { flex: 1 1 auto; text-align: center; padding: .45rem .5rem; font-size: .76rem; }
+
+    /* ---------- Dashboard dan panel akun ---------- */
+    .pn-main { padding: 1rem; }
+    .pn-stack, .pn-split { gap: 1rem; }
+    .pn-card { padding: 1rem; }
+    .card { padding: 1.1rem; }
+    .ui-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+    .ui-stats > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+    .ui-stat { padding: .8rem .9rem; border-radius: .9rem; }
+    .ui-stat:hover { transform: none; }
+    .ui-stat-l { font-size: .64rem; letter-spacing: .06em; }
+    .ui-stat-ic { width: 1.7rem; height: 1.7rem; border-radius: .55rem; }
+    .ui-stat-ic svg { width: .95rem; height: .95rem; }
+    .ui-stat-v { margin-top: .4rem; font-size: 1.6rem; }
+    .ui-stat-h { font-size: .72rem; }
+    .ac-parts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+    .ac-score { font-size: 2.6rem; }
+}
+
+/* Header HP satu baris (sekitar 3,5rem): tinggi acuan section yang menempel di bawah header ikut disesuaikan. */
+@media (max-width: 767px) {
+    .journey, .rm { --hdr: 3.6rem; }
+    .duo { min-height: calc(100svh - 3.6rem); }
+}
+
+/*
+ * Kartu versi mini di HP (<= 639px): satu kartu = satu baris (ikon | teks | panah),
+ * supaya daftar tidak memanjang ke bawah. Desktop tidak berubah.
+ *   1. Jalur belajar   (.bl-card)  -> menu Belajar
+ *   2. Simulasi karier (.sx-card)  -> menu Simulasi
+ *   3. Karier sebidang (.kd-rel)   -> detail karier / rekomendasi karier
+ */
+@media (max-width: 639px) {
+
+    /* ---------- 1. Jalur belajar ---------- */
+    .bl-grid { gap: .6rem; grid-template-columns: minmax(0, 1fr); }
+    .bl-card { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; column-gap: .8rem; row-gap: .1rem; padding: .8rem .85rem; border-radius: 1rem; }
+    .bl-card:hover { transform: none; box-shadow: none; }
+    .bl-card-top { display: contents; }
+    .bl-ic { grid-column: 1; grid-row: 1 / span 4; width: 2.7rem; height: 2.7rem; }
+    .bl-card:hover .bl-ic { transform: none; }
+    .bl-card-meta { grid-column: 2; grid-row: 1; min-width: 0; }
+    .bl-cat { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .62rem; letter-spacing: .06em; }
+    .bl-stat { display: none; } /* jumlah topik: terlihat di halaman jalur */
+    .bl-card:has(.bl-badge) .bl-card-meta { padding-right: 3.6rem; }
+    .bl-badge { position: absolute; top: .6rem; right: .7rem; padding: .12rem .5rem; font-size: .6rem; }
+    .bl-mini { display: none; }
+    .bl-card h3 { grid-column: 2; grid-row: 2; margin-top: 0; font-size: 1rem; line-height: 1.25; }
+    .bl-sum { grid-column: 2; grid-row: 3; flex: none; margin-top: .1rem; font-size: .76rem; line-height: 1.45; -webkit-line-clamp: 2; }
+    .bl-prog { grid-column: 2; grid-row: 4; display: flex; align-items: center; gap: .5rem; margin-top: .4rem; }
+    .bl-prog span { flex: 1; height: 4px; }
+    .bl-prog small { margin-top: 0; font-size: .66rem; white-space: nowrap; }
+    .bl-go { grid-column: 3; grid-row: 1 / span 4; justify-self: end; margin-top: 0; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 999px; background: var(--color-accent-50, #eef4fd); }
+    .bl-go span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .bl-go svg { width: 1rem; height: 1rem; }
+    .bl-card:hover .bl-go svg { transform: none; }
+    .bl-go::after { border-radius: 1rem; }
+
+    /* ---------- 2. Simulasi karier ---------- */
+    .sx-grid { gap: .6rem; grid-template-columns: minmax(0, 1fr); }
+    .sx-card { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; column-gap: .8rem; row-gap: .1rem; padding: .8rem .85rem; border-radius: 1rem; }
+    .sx-card:hover { transform: none; box-shadow: none; }
+    .sx-card::before { display: none; }
+    .sx-card-top { display: contents; }
+    .sx-ic { grid-column: 1; grid-row: 1 / span 4; width: 2.7rem; height: 2.7rem; border-radius: .8rem; }
+    .sx-card:hover .sx-ic { transform: none; }
+    .sx-tag { grid-column: 2; grid-row: 1; justify-self: start; max-width: 100%; padding: .05rem 0 .1rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: none; font-size: .62rem; letter-spacing: .06em; color: var(--color-accent-700, #2f58b3); }
+    .sx-card h3 { grid-column: 2; grid-row: 2; margin-top: 0; font-size: .98rem; line-height: 1.25; }
+    .sx-div, .sx-skills { display: none; }
+    .sx-desc { grid-column: 2; grid-row: 3; flex: none; margin-top: .1rem; font-size: .76rem; line-height: 1.45; }
+    .sx-meta { grid-column: 2; grid-row: 4; flex-wrap: nowrap; gap: .8rem; margin: .35rem 0 0; font-size: .68rem; }
+    .sx-meta svg { width: .8rem; height: .8rem; }
+    .sx-lnk { grid-column: 3; grid-row: 1 / span 4; justify-self: end; width: 2rem; height: 2rem; padding: 0; gap: 0; border: 0; border-radius: 999px; background: var(--color-accent-50, #eef4fd); font-size: 0; color: var(--color-accent-700, #2f58b3); }
+    .sx-lnk::after { content: ''; position: absolute; inset: 0; border-radius: 1rem; } /* seluruh kartu bisa diketuk */
+    .sx-lnk:hover { box-shadow: none; }
+    .sx-lnk svg { width: 1rem; height: 1rem; }
+    .sx-lnk:hover svg { transform: none; }
+
+    /* ---------- 3. Karier sebidang / cocok dengan skillmu ---------- */
+    .kd-rel { grid-template-columns: minmax(0, 1fr); gap: .55rem; }
+    .kd-rel a { grid-template-columns: 4.6rem minmax(0, 1fr) auto; align-items: center; column-gap: .8rem; row-gap: .05rem; height: auto; padding: .6rem .8rem .6rem .6rem; border-radius: 1rem; }
+    .kd-rel a:hover { transform: none; box-shadow: none; }
+    .kd-rel-img { grid-column: 1; grid-row: 1 / span 3; margin-bottom: 0; border-radius: .65rem; }
+    .kd-rel a:hover img { transform: none; }
+    .kd-rel-pct { top: .25rem; left: .25rem; padding: .08rem .4rem; font-size: .6rem; }
+    .kd-rel b { grid-column: 2; grid-row: 1; padding-inline: 0; font-size: .9rem; line-height: 1.25; }
+    .kd-rel a > small { grid-column: 2; grid-row: 2; padding-inline: 0; font-size: .7rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .kd-rel-match { grid-column: 2; grid-row: 3; margin-top: .3rem; padding: 0; gap: .2rem; }
+    .kd-rel-match .kd-bar { height: .28rem; }
+    .kd-rel-match small { padding: 0; font-size: .64rem; }
+    .kd-rel a > svg { position: static; grid-column: 3; grid-row: 1 / span 3; width: 1rem; height: 1rem; }
+}
+
+/*
+ * Kartu mini dua kolom di HP (<= 639px): hanya Simulasi tampil (Belajar tetap satu baris per kartu, lihat blok di atas), tampil kiri-kanan seperti di desktop,
+ * isi diringkas (ikon, judul, label, aksi) supaya daftar tidak memanjang. Menimpa versi satu-baris di atas.
+ * Layar sangat sempit (< sekitar 330px) otomatis kembali satu kolom.
+ */
+@media (max-width: 639px) {
+    .sx-grid { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: .6rem; }
+
+    .sx-card { display: flex; flex-direction: column; align-items: flex-start; gap: 0; padding: .8rem; border-radius: 1rem; }
+    .sx-card-top { display: contents; }
+    .sx-ic { order: 1; width: 2.4rem; height: 2.4rem; }
+
+    .sx-card h3 { order: 2; width: 100%; margin-top: .55rem; font-size: .92rem; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .sx-tag { order: 3; margin-top: .2rem; font-size: .62rem; }
+    .sx-meta { order: 4; flex-wrap: wrap; gap: .1rem .6rem; margin: .45rem 0 0; font-size: .66rem; }
+
+    .sx-desc { display: none; }
+
+    .sx-lnk { order: 5; align-self: flex-end; margin-top: auto; }
+    .sx-meta { margin-bottom: .5rem; }
+}

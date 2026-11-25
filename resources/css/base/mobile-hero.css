@@ -1,0 +1,70 @@
+/*
+ * Hero mini di HP (<= 639px) untuk Lowongan, Belajar, dan Harga.
+ * Satu pola untuk ketiganya: teks di kiri, gambar di kanan (bukan teks atas, gambar bawah).
+ * Desktop dan tablet tidak berubah. Dimuat setelah mobile-*.css supaya menimpa aturan HP lama.
+ */
+@media (max-width: 639px) {
+    .lw-hero-grid, .bl-hero-grid, .pm-hero-grid {
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+        align-items: center;
+        gap: .75rem;
+        padding-top: 1.3rem;
+        padding-bottom: 1.5rem;
+    }
+    .lw-hero-grid { padding-bottom: 2.2rem; }
+
+    /* ---------- Teks (kiri) ---------- */
+    .lw-eyebrow, .bl-eyebrow, .pm-eyebrow { font-size: .6rem; letter-spacing: .12em; }
+    .lw-title, .bl-title, .pm-title { margin-top: .4rem; font-size: clamp(1.2rem, 5.6vw, 1.45rem); line-height: 1.12; }
+    .lw-title br, .bl-title br, .pm-title br { display: none; }
+    .lw-lead, .bl-lead, .pm-lead, .lw-lead.rapi, .bl-lead.rapi, .pm-lead.rapi {
+        margin-top: .5rem; font-size: .74rem; line-height: 1.5;
+        /* rata kiri-kanan seperti menu lain: perataan dan pemenggalan suku kata dari .rapi.rapi (rapi.css), tidak ditimpa lagi di sini */
+    }
+    .lw-title.rapi, .bl-title.rapi, .pm-title.rapi { text-align: left; hyphens: none; -webkit-hyphens: none; }
+    /* Tombol bot Telegram tampil di HP, ukuran sama dengan tombol hero Belajar dan Harga */
+    .bl-cta, .pm-cta .btn-primary, .lw-tg {
+        margin-top: .7rem !important; padding: .42rem .8rem; font-size: .72rem;
+    }
+    .pm-cta { margin-top: 0; }
+    .pm-cta .btn-outline-light { display: none; }
+
+    /* ---------- Gambar (kanan) ---------- */
+    /* Lowongan: adegan radar yang sama, dikecilkan utuh (zoom ikut mengecilkan ruang layout) */
+    .lw-scene { --r: 9rem; width: 22rem; zoom: .32; justify-self: center; overflow: hidden; }
+    .lw-card, .lw-src { display: none; } /* kartu dan label sumber terlalu kecil dibaca di mini */
+
+    /* Belajar: tangga animasi tampil lebar penuh di bawah teks (di samping teks terlalu kecil, label tidak terbaca) */
+    .bl-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
+    .bl-trail { width: 100%; max-width: 21rem; justify-self: center; }
+
+    /* Harga: kartu Premium versi mini (judul + tiga baris centang) */
+    .pm-stage { max-width: none; justify-self: stretch; perspective: 600px; }
+    .pm-card { padding: .7rem .7rem .8rem; border-radius: .9rem; transform: rotateY(-6deg) rotateX(2deg); }
+    .pm-badge { padding: .12rem .4rem; font-size: .52rem; white-space: nowrap; }
+    .pm-crown { width: 1.1rem; height: 1.1rem; }
+    .pm-card-name { margin-top: .5rem; font-size: 1.1rem; white-space: nowrap; }
+    .pm-feats { gap: .45rem; margin-top: .7rem; }
+    .pm-feats li:nth-child(n+4) { display: none; }
+    .pm-feats li { gap: .4rem; }
+    .pm-feats svg { width: .9rem; height: .9rem; margin-top: 0; }
+    .pm-feats span { flex: 1; height: .32rem; margin-top: .3rem; border-radius: 999px; background: rgb(255 255 255 / .24); font-size: 0; line-height: 0; color: transparent; overflow: hidden; }
+    .pm-spark { display: none; }
+}
+
+/*
+ * Kartu mini Simulasi: selalu 2 kolom (Belajar satu baris per kartu) di HP, isinya ikut membesar sedikit
+ * di layar lebar (iPhone Pro Max, dst.), jadi proporsinya sama seperti di layar 360px.
+ * Menimpa grid auto-fill di mobile.css yang hanya melebarkan kartu tanpa menskala isinya.
+ */
+@media (max-width: 639px) {
+    .sx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.6rem, 2.4vw, .8rem); }
+    .sx-card { padding: clamp(.8rem, 3.4vw, 1rem); }
+    .sx-ic { width: clamp(2.4rem, 10.5vw, 2.9rem); height: clamp(2.4rem, 10.5vw, 2.9rem); }
+    .sx-card h3 { margin-top: clamp(.55rem, 2.4vw, .7rem); font-size: clamp(.92rem, 3.7vw, 1.06rem); }
+    .sx-tag { font-size: clamp(.6rem, 2.3vw, .7rem); }
+    .sx-meta { font-size: clamp(.66rem, 2.6vw, .76rem); }
+}
+@media (max-width: 300px) {
+    .sx-grid { grid-template-columns: minmax(0, 1fr); }
+}

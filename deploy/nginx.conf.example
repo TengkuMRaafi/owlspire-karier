@@ -1,0 +1,30 @@
+server {
+    listen 80;
+    server_name contoh.id;
+    root /var/www/platform-karier/public;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+    }
+
+    # Halaman error bermaskot untuk gangguan yang terjadi sebelum Laravel (PHP-FPM mati, timeout, upload kebesaran).
+    # Berkas statis ini mandiri (tanpa Vite, tanpa database), jadi tetap tampil saat aplikasi mati.
+    client_max_body_size 10m;
+    error_page 502 /errors/502.html;
+    error_page 503 /errors/503.html;
+    error_page 504 /errors/504.html;
+    error_page 413 /errors/terlalu-besar.html;
+    location ^~ /errors/ {
+        internal;
+    }
+
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}

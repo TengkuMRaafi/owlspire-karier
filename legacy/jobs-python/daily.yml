@@ -1,0 +1,24 @@
+name: Daily Job Agent
+
+on:
+  schedule:
+    - cron: "0 5 * * *"    # 05:00 UTC = 12:00 WIB (siang)
+    - cron: "0 17 * * *"   # 17:00 UTC = 00:00 WIB (tengah malam)
+  workflow_dispatch:        # bisa dijalankan manual dari tab Actions
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python main.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GSHEET_WEBHOOK_URL: ${{ secrets.GSHEET_WEBHOOK_URL }}
+          GSHEET_SECRET: ${{ secrets.GSHEET_SECRET }}

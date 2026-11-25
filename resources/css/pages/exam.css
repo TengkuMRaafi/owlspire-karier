@@ -1,0 +1,216 @@
+/* Dipindah dari resources/views/exam/index.blade.php */
+/* ---------- Hero ---------- */
+.sx-hero { position: relative; overflow: hidden; background: #0e1319; color: #fff; }
+.sx-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 80% at 85% 20%, rgb(79 130 230 / .28), transparent 62%), radial-gradient(40% 60% at 0% 100%, rgb(59 108 212 / .16), transparent 70%); }
+.sx-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 120% at 85% 15%, rgb(255 255 255 / .10), transparent 70%); }
+.sx-hero-grid { position: relative; z-index: 1; display: grid; gap: 2.5rem; align-items: center; padding-top: 3.5rem; padding-bottom: 3.5rem; }
+@media (min-width: 960px) { .sx-hero-grid { grid-template-columns: 1.1fr .9fr; padding-top: 4.5rem; padding-bottom: 4.5rem; } }
+.sx-eyebrow { display: inline-flex; align-items: center; gap: .55rem; font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-400, #7fa8e8); }
+.sx-title { margin-top: .8rem; font-size: clamp(2.2rem, 5.2vw, 3.7rem); font-weight: 600; line-height: 1.06; letter-spacing: -.015em; }
+.sx-title em { font-style: italic; color: var(--color-accent-400, #7fa8e8); }
+.sx-lead { margin-top: 1.1rem; max-width: 34rem; font-size: 1.08rem; line-height: 1.65; color: var(--color-graphite-200, #e2e6ec); }
+.sx-chips { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; padding: 0; list-style: none; }
+.sx-chips li { padding: .4rem .85rem; border: 1px solid rgb(255 255 255 / .16); border-radius: 999px; background: rgb(255 255 255 / .06); font-size: .85rem; font-weight: 600; color: var(--color-graphite-100, #edf0f5); backdrop-filter: blur(6px); }
+.sx-chips b { color: #fff; font-variant-numeric: tabular-nums; }
+
+/* Lembar jawab */
+.sx-sheet-wrap { position: relative; justify-self: center; width: 100%; max-width: 25rem; perspective: 1200px; }
+.sx-sheet { padding: 1.1rem 1.2rem 1.2rem; border-radius: 1.2rem; background: #f7f4ee; color: var(--color-ink, #1b2638); box-shadow: 0 40px 80px -30px rgb(0 0 0 / .8), 0 0 0 1px rgb(255 255 255 / .6) inset; transform: rotate(2.2deg) rotateY(-6deg); animation: sx-sway 7s ease-in-out infinite alternate; }
+.sx-sheet-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: .9rem; border-bottom: 2px dashed var(--color-graphite-300, #c5cfde); }
+.sx-sheet-top small { display: block; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-graphite-500, #667794); }
+.sx-sheet-top strong { font-size: 1.05rem; font-weight: 800; }
+.sx-ring { position: relative; display: grid; place-items: center; width: 3.4rem; height: 3.4rem; }
+.sx-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.sx-ring circle { fill: none; stroke-width: 4; }
+.sx-ring-bg { stroke: var(--color-graphite-200, #e2e6ec); }
+.sx-ring-fg { stroke: var(--color-accent-600, #3b6cd4); stroke-linecap: round; stroke-dasharray: 100; animation: sx-ring 14s linear infinite; }
+.sx-ring span { font-size: .72rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.sx-rows { display: grid; gap: .55rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.sx-rows li { display: flex; align-items: center; gap: .55rem; }
+.sx-no { width: 1.4rem; font-size: .8rem; font-weight: 800; text-align: right; color: var(--color-graphite-500, #667794); }
+.sx-bub { display: grid; place-items: center; width: 2rem; height: 2rem; border: 1.8px solid var(--color-graphite-400, #94a3bb); border-radius: 999px; background: #fff; font-size: .72rem; font-weight: 700; color: var(--color-graphite-600, #4a5a73); transition: background .2s; }
+.sx-bub.is-pick { animation: sx-fill 10s ease-out infinite; animation-delay: calc(var(--r) * 1.3s); }
+.sx-sheet-foot { display: grid; gap: .45rem; margin-top: 1.1rem; }
+.sx-sheet-foot small { font-size: .72rem; font-weight: 600; color: var(--color-graphite-500, #667794); }
+.sx-bar { height: 6px; overflow: hidden; border-radius: 9px; background: var(--color-graphite-200, #e2e6ec); }
+.sx-bar i { display: block; height: 100%; border-radius: 9px; background: linear-gradient(90deg, var(--color-accent-400, #7fa8e8), var(--color-accent-600, #3b6cd4)); transform-origin: left; animation: sx-bar 10s linear infinite; }
+.sx-float { position: absolute; display: grid; gap: .1rem; padding: .6rem .9rem; border-radius: 14px; background: #fff; color: var(--color-ink, #1b2638); font-size: .72rem; font-weight: 700; box-shadow: 0 18px 40px rgb(0 0 0 / .45); animation: sx-bob 5s ease-in-out infinite; }
+.sx-float b { font-family: var(--font-display, serif); font-size: 1.5rem; line-height: 1; color: var(--color-accent-600, #3b6cd4); }
+.sx-f1 { left: -6%; top: 10%; }
+.sx-f2 { right: -4%; bottom: 12%; animation-delay: -2.4s; }
+
+/* ---------- Sedang berjalan ---------- */
+.sx-running { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-bottom: 2.5rem; padding: 1.1rem 1.3rem; border: 1px solid var(--color-accent-300, #a9c4f2); border-radius: 1.1rem; background: linear-gradient(100deg, var(--color-accent-50, #eef4fd), #fff); box-shadow: 0 12px 30px -22px rgb(59 108 212 / .6); }
+.sx-running-t { flex: 1 1 14rem; }
+.sx-running-t p { font-weight: 800; color: var(--color-graphite-800, #1f2a3d); }
+.sx-running-t small { font-size: .85rem; color: var(--color-graphite-600, #4a5a73); }
+.sx-empty { margin-bottom: 2rem; padding: 2.5rem; border: 1px dashed var(--color-graphite-300, #c5cfde); border-radius: 1.2rem; background: #fff; text-align: center; color: var(--color-graphite-500, #667794); }
+
+/* ---------- Judul bagian ---------- */
+.sx-head h2 { margin-top: .25rem; font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 600; letter-spacing: -.01em; color: var(--color-ink, #1b2638); }
+.sx-head p:last-of-type { margin-top: .4rem; max-width: 40rem; font-size: .95rem; color: var(--color-graphite-600, #4a5a73); }
+.sx-head-career { margin-top: 4.5rem; }
+
+/* ---------- Tiket ujian ---------- */
+.sx-tickets { display: grid; gap: 1.6rem; margin-top: 1.8rem; }
+@media (min-width: 720px) { .sx-tickets { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .sx-tickets { grid-template-columns: repeat(3, 1fr); } }
+.sx-ticket { position: relative; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--color-graphite-200, #e2e6ec); border-top: 3px solid var(--color-accent-600, #3b6cd4); border-radius: 1rem; background: #fff; transition: transform .3s cubic-bezier(.2, .8, .2, 1), border-color .25s, box-shadow .3s; }
+.sx-ticket[data-reveal] { transition: opacity .7s ease calc(var(--i) * 90ms), transform .7s ease calc(var(--i) * 90ms), border-color .25s, box-shadow .3s; }
+.sx-ticket.is-visible:hover { transform: translateY(-4px); border-color: var(--color-graphite-300, #c5cfde); border-top-color: var(--color-accent-600, #3b6cd4); box-shadow: 0 18px 30px -22px rgb(27 38 56 / .45); transition: transform .3s cubic-bezier(.2, .8, .2, 1), border-color .25s, box-shadow .3s; }
+.sx-ticket-top { padding: 1.3rem 1.3rem 1.2rem; border-bottom: 1px dashed var(--color-graphite-300, #c5cfde); background: var(--color-graphite-50, #f3f5f8); }
+.sx-ticket-head { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.sx-ticket-no { font-family: var(--font-display, serif); font-size: 1.1rem; font-weight: 600; letter-spacing: .04em; color: var(--color-accent-600, #3b6cd4); }
+.sx-time { display: inline-flex; align-items: center; gap: .35rem; padding: .25rem .65rem; border: 1px solid var(--color-graphite-300, #c5cfde); border-radius: 999px; background: #fff; font-size: .74rem; font-weight: 700; color: var(--color-graphite-700, #34435c); }
+.sx-time svg { width: .9rem; height: .9rem; fill: none; stroke: var(--color-accent-600, #3b6cd4); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sx-ticket-top h3 { margin-top: .9rem; font-size: 1.5rem; font-weight: 600; line-height: 1.15; color: var(--color-ink, #1b2638); }
+.sx-ticket-top p { margin-top: .4rem; font-size: .85rem; line-height: 1.55; color: var(--color-graphite-600, #4a5a73); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+.sx-ticket-body { display: flex; flex: 1; flex-direction: column; padding: 1.3rem; }
+.sx-seg-h { display: flex; justify-content: space-between; margin-bottom: .7rem; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--color-graphite-500, #667794); }
+.sx-segs { display: grid; gap: .75rem; margin: 0 0 1.4rem; padding: 0; list-style: none; }
+.sx-segs li > div { display: flex; justify-content: space-between; gap: .75rem; font-size: .84rem; }
+.sx-segs li > div span:first-child { font-weight: 700; color: var(--color-graphite-800, #1f2a3d); }
+.sx-segs li > div span:last-child { flex: none; font-size: .76rem; font-variant-numeric: tabular-nums; color: var(--color-graphite-500, #667794); }
+.sx-segs i { display: block; height: 6px; margin-top: .35rem; overflow: hidden; border-radius: 9px; background: var(--color-graphite-100, #edf0f5); }
+.sx-segs b { display: block; width: var(--w); height: 100%; border-radius: 9px; background: var(--color-accent-600, #3b6cd4); transform-origin: left; transform: scaleX(0); transition: transform 1s cubic-bezier(.2, .8, .2, 1) calc(.25s + var(--d) * 110ms); }
+.sx-ticket.is-visible .sx-segs b { transform: scaleX(1); }
+.sx-start { margin-top: auto; }
+
+/* Tombol papan peringkat: garis tegas, terisi gelap saat disentuh */
+.sx-rank { display: flex; align-items: center; justify-content: center; gap: .55rem; width: 100%; margin-top: .75rem; padding: .75rem 1rem; border: 1.5px solid var(--color-graphite-800, #1f2a3d); border-radius: .8rem; background: #fff; font-size: .88rem; font-weight: 800; color: var(--color-graphite-800, #1f2a3d); transition: background .2s, color .2s, transform .2s; }
+.sx-rank svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: var(--color-accent-600, #3b6cd4); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), stroke .2s; }
+.sx-rank:hover { background: var(--color-graphite-900, #1b2638); color: #fff; }
+.sx-rank:hover svg { stroke: var(--color-accent-400, #7fa8e8); transform: translateY(-2px) rotate(-8deg); }
+.sx-rank:active { transform: scale(.98); }
+.sx-rank:focus-visible, .sx-detail:focus-visible { outline: 3px solid var(--color-accent-600, #3b6cd4); outline-offset: 3px; }
+.sx-detail { display: block; margin-top: .8rem; text-align: center; font-size: .82rem; font-weight: 700; color: var(--color-graphite-600, #4a5a73); transition: color .2s; }
+.sx-detail span { display: inline-block; transition: transform .25s; }
+.sx-detail:hover { color: var(--color-accent-700, #2f58b3); }
+.sx-detail:hover span { transform: translateX(4px); }
+
+/* ---------- Kartu simulasi karier ---------- */
+.sx-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17.5rem), 1fr)); }
+@media (min-width: 1024px) { .sx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.sx-card { position: relative; display: flex; flex-direction: column; padding: 1.2rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.1rem; background: #fff; transition: transform .3s cubic-bezier(.2, .8, .2, 1), border-color .25s, box-shadow .3s; animation: sx-in .55s cubic-bezier(.2, .8, .2, 1) both; animation-delay: min(calc(var(--i) * 45ms), 450ms); }
+.sx-card::before { content: ''; position: absolute; left: 1.2rem; right: 1.2rem; top: -1px; height: 3px; border-radius: 0 0 4px 4px; background: var(--color-accent-500, #4f82e6); transform: scaleX(0); transform-origin: left; transition: transform .4s cubic-bezier(.2, .8, .2, 1); }
+.sx-card:hover { transform: translateY(-4px); border-color: var(--color-graphite-300, #c5cfde); box-shadow: 0 22px 36px -26px rgb(27 38 56 / .5); }
+.sx-card:hover::before { transform: scaleX(1); }
+.sx-card-top { display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
+.sx-ic { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; overflow: hidden; border-radius: .85rem; background: var(--color-accent-50, #eef4fd); transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+.sx-ic img { width: 100%; height: 100%; object-fit: cover; }
+.sx-card:hover .sx-ic { transform: rotate(-6deg) scale(1.08); }
+.sx-tag { padding: .2rem .6rem; border-radius: 999px; background: var(--color-graphite-100, #edf0f5); font-size: .68rem; font-weight: 800; letter-spacing: .04em; color: var(--color-graphite-600, #4a5a73); }
+.sx-card h3 { margin-top: .9rem; font-size: 1.05rem; font-weight: 800; line-height: 1.3; color: var(--color-graphite-800, #1f2a3d); }
+.sx-desc { flex: 1; margin-top: .35rem; font-size: .85rem; line-height: 1.55; color: var(--color-graphite-600, #4a5a73); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sx-meta { display: flex; flex-wrap: wrap; gap: .4rem .9rem; margin: .9rem 0 1.1rem; padding: 0; font-size: .76rem; font-weight: 700; color: var(--color-graphite-500, #667794); }
+.sx-meta span { display: inline-flex; align-items: center; gap: .3rem; }
+.sx-meta svg { width: .95rem; height: .95rem; fill: none; stroke: var(--color-accent-600, #3b6cd4); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- Keyframes ---------- */
+@keyframes sx-ping { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(1.9); opacity: 0; } }
+@keyframes sx-sway { to { transform: rotate(.8deg) rotateY(-2deg) translateY(-6px); } }
+@keyframes sx-bob { 50% { transform: translateY(-10px); } }
+@keyframes sx-ring { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 100; } }
+@keyframes sx-fill { 0% { background: #fff; border-color: var(--color-graphite-400, #94a3bb); color: var(--color-graphite-600, #4a5a73); } 6%, 88% { background: var(--color-graphite-900, #1b2638); border-color: var(--color-graphite-900, #1b2638); color: #fff; } 100% { background: #fff; border-color: var(--color-graphite-400, #94a3bb); color: var(--color-graphite-600, #4a5a73); } }
+@keyframes sx-bar { from { transform: scaleX(.04); } to { transform: scaleX(1); } }
+@keyframes sx-in { from { opacity: 0; transform: translateY(14px) scale(.98); } }
+
+@media (prefers-reduced-motion: reduce) {
+    .sx-sheet, .sx-float, .sx-ring-fg, .sx-bar i, .sx-card { animation: none; }
+    .sx-bub.is-pick { animation: none; background: var(--color-graphite-900, #1b2638); border-color: var(--color-graphite-900, #1b2638); color: #fff; }
+    .sx-segs b { transform: scaleX(1); transition: none; }
+    .sx-ticket, .sx-card, .sx-ic, .sx-rank, .sx-rank svg, .sx-lnk, .sx-all-btn, .sx-all-btn svg { transition: none; }
+}
+
+/* Info karier di kartu simulasi (hasil penggabungan menu Karier) */
+.sx-div { margin-top: .15rem; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-700, #2f58b3); }
+/* Tag skill: maksimal 2 baris (baris ke-3 dst. dipotong, tanpa scrollbar) */
+.sx-skills { display: flex; flex-wrap: wrap; gap: .35rem; max-height: calc(1.3rem * 2 + .35rem); margin: .7rem 0 0; padding: 0; overflow: hidden; list-style: none; }
+.sx-skills li { max-width: 100%; height: 1.3rem; padding: 0 .55rem; overflow: hidden; line-height: 1.3rem; text-overflow: ellipsis; white-space: nowrap; border-radius: 99px; background: var(--color-graphite-100, #edf0f5); font-size: .72rem; font-weight: 600; color: var(--color-graphite-700, #34435c); }
+/* Tombol satu-satunya di kartu: putih + garis tegas; saat disentuh tetap teks gelap (tidak jadi putih) */
+.sx-lnk { display: flex; align-items: center; justify-content: center; gap: .45rem; width: 100%; margin-top: 0; padding: .7rem 1rem; border: 1.5px solid var(--color-graphite-800, #1f2a3d); border-radius: .8rem; background: #fff; font-size: .85rem; font-weight: 800; color: var(--color-graphite-800, #1f2a3d); transition: background .2s, border-color .2s, transform .2s, box-shadow .2s; }
+.sx-lnk svg { flex: none; width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s cubic-bezier(.3, 1.6, .5, 1); }
+.sx-lnk:hover { background: var(--color-accent-50, #eef4fd); border-color: var(--color-accent-600, #3b6cd4); color: var(--color-graphite-900, #1b2638); box-shadow: 0 8px 18px -12px rgb(27 38 56 / .5); }
+.sx-lnk:hover svg { transform: translateX(4px); }
+.sx-lnk:active { transform: scale(.98); }
+.sx-lnk:focus-visible { outline: 3px solid var(--color-accent-600, #3b6cd4); outline-offset: 3px; }
+
+/* Tampilkan semua / lebih sedikit (halaman yang sama, tanpa scrollbar tambahan) */
+.sx-all { display: flex; justify-content: center; margin-top: 1rem; }
+.sx-all-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1.3rem; border: 1.5px solid var(--color-graphite-800, #1f2a3d); border-radius: .8rem; background: #fff; font-size: .88rem; font-weight: 800; color: var(--color-graphite-800, #1f2a3d); transition: background .2s, border-color .2s, transform .2s; }
+.sx-all-btn svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s cubic-bezier(.3, 1.6, .5, 1); }
+.sx-all-btn:hover { background: var(--color-accent-50, #eef4fd); border-color: var(--color-accent-600, #3b6cd4); color: var(--color-graphite-900, #1b2638); }
+.sx-all-btn:hover svg { transform: translateY(2px); }
+.sx-all-btn:active { transform: scale(.98); }
+.sx-all-btn:focus-visible { outline: 3px solid var(--color-accent-600, #3b6cd4); outline-offset: 3px; }
+.sx-card.is-kept { animation: none; }
+
+.sx-find { display: inline-flex; align-items: center; gap: .4rem; margin-top: .7rem; padding: .45rem .9rem; border-radius: 99px; background: var(--color-accent-50, #eef4fd); font-size: .85rem; font-weight: 800; color: var(--color-accent-700, #2f58b3); transition: background .2s; }
+.sx-find:hover { background: var(--color-accent-100, #dce8fb); }
+
+/* ---------- Kartu pilih simulasi (3 seleksi + 1 jalur karier), prefix sc- ---------- */
+.sc-grid { display: grid; gap: 1.2rem; margin-top: 1.8rem; }
+@media (min-width: 640px) { .sc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .sc-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; } }
+.sc-card { display: flex; flex-direction: column; padding: 1.4rem 1.3rem 1.3rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: #fff; }
+.sc-card[data-reveal] { transition: opacity .7s ease calc(var(--i) * 90ms), transform .7s ease calc(var(--i) * 90ms), border-color .25s, box-shadow .3s; }
+.sc-card.is-visible:hover { transform: translateY(-4px); border-color: var(--color-graphite-300, #c5cfde); box-shadow: 0 18px 30px -22px rgb(27 38 56 / .45); transition: transform .25s ease, border-color .25s, box-shadow .3s; }
+.sc-ic { display: grid; place-items: center; width: 3.1rem; height: 3.1rem; border-radius: .9rem; background: var(--color-accent-50, #eef4fd); color: var(--color-accent-600, #3b6cd4); }
+.sc-ic svg { width: 1.75rem; height: 1.75rem; }
+.sc-card h3 { margin-top: 1rem; font-size: 1.3rem; font-weight: 600; line-height: 1.2; color: var(--color-ink, #1b2638); }
+.sc-desc { margin-top: .5rem; font-size: .86rem; line-height: 1.6; color: var(--color-graphite-600, #4a5a73); }
+.sc-card:not(.sc-card-career) .sc-desc { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.sc-facts { display: grid; gap: .55rem; margin: 1.2rem 0 1.4rem; padding: 1.1rem 0 0; border-top: 1px dashed var(--color-graphite-300, #c5cfde); list-style: none; font-size: .84rem; font-weight: 700; color: var(--color-graphite-700, #33415a); }
+.sc-facts li { display: flex; align-items: center; gap: .55rem; }
+.sc-facts svg { flex: none; width: 1.05rem; height: 1.05rem; fill: none; stroke: var(--color-accent-600, #3b6cd4); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sc-btn { width: 100%; justify-content: center; margin-top: auto; padding: .8rem 1rem; text-align: center; }
+.sc-btn.is-off { opacity: .55; cursor: default; }
+
+/* Kartu jalur karier: gelap supaya terbaca sebagai pilihan yang beda dari tiga seleksi resmi */
+.sc-card-career { border-color: transparent; background: var(--color-graphite-900, #1b2638); color: #fff; }
+.sc-card-career .sc-ic { background: rgb(255 255 255 / .08); color: var(--color-accent-400, #7fa8e8); }
+.sc-card-career h3 { color: #fff; }
+.sc-card-career .sc-desc { color: var(--color-graphite-200, #e2e6ec); }
+.sc-card-career .sc-facts { border-top-color: rgb(255 255 255 / .18); color: var(--color-graphite-100, #edf0f5); }
+.sc-card-career .sc-facts svg { stroke: var(--color-accent-400, #7fa8e8); }
+.sc-card-career.is-visible:hover { border-color: transparent; box-shadow: 0 18px 30px -20px rgb(27 38 56 / .8); }
+.sc-label { margin-top: 1.1rem; font-size: .76rem; font-weight: 700; color: var(--color-graphite-200, #e2e6ec); }
+.sc-select { width: 100%; height: 2.75rem; margin-top: .4rem; padding: 0 2.4rem 0 .9rem; border: 1px solid rgb(255 255 255 / .22); border-radius: .75rem; background: rgb(255 255 255 / .06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237fa8e8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right .8rem center / 1rem; font: inherit; font-size: .86rem; font-weight: 600; color: #fff; appearance: none; text-overflow: ellipsis; }
+.sc-select option { color: var(--color-graphite-900, #1b2638); background: #fff; }
+.sc-select:focus-visible, .sc-btn:focus-visible { outline: 3px solid var(--color-accent-400, #7fa8e8); outline-offset: 2px; }
+.sc-card-career .sc-btn { margin-top: auto; }
+@media (prefers-reduced-motion: reduce) { .sc-card, .sc-card[data-reveal] { transition: none; } .sc-card.is-visible:hover { transform: none; } }
+
+/* HP: kartu simulasi di landing jadi carousel geser (scroll-snap), satu kartu penuh per geseran.
+   Dibatasi ke #pilih-simulasi supaya halaman /simulasi tidak ikut berubah.
+   Penyebab "terpotong" sebelumnya: (1) deskripsi dipotong line-clamp, (2) wadah scroll memotong bayangan dan efek hover kartu,
+   (3) kartu berikutnya mengintip separuh di tepi layar. Di sini deskripsi tampil utuh, ruang bayangan disediakan, dan penanda halaman (titik) dipasang. */
+.sc-nav { display: none; }
+@media (max-width: 639px) {
+    #pilih-simulasi { padding-block: 2.5rem; }
+    #pilih-simulasi .sc-grid { display: flex; align-items: stretch; gap: .8rem; margin: 1.2rem -1rem 0; padding: .6rem 1rem 1.6rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    #pilih-simulasi .sc-grid::-webkit-scrollbar { display: none; }
+    /* Lebar = satu layar penuh dikurangi tepi; kartu lain di luar layar, tidak ada yang separuh terlihat */
+    #pilih-simulasi .sc-card { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; box-shadow: 0 10px 22px -16px rgb(27 38 56 / .4); }
+    #pilih-simulasi .sc-card:not(.sc-card-career) .sc-desc { display: block; overflow: visible; -webkit-line-clamp: unset; }
+    /* Kartu di luar layar tidak boleh menunggu animasi masuk-saat-scroll vertikal */
+    #pilih-simulasi .sc-card[data-reveal] { opacity: 1; transform: none; }
+    #pilih-simulasi .sc-card:focus-within { border-color: var(--color-accent-400, #7fa8e8); }
+    .sc-nav { display: flex; align-items: center; justify-content: center; gap: .9rem; margin-top: -.4rem; }
+    .sc-nav-dots { display: flex; align-items: center; gap: .45rem; }
+    .sc-nav-dots button { width: .55rem; height: .55rem; padding: 0; border: 0; border-radius: 99px; background: var(--color-graphite-300, #c5cfde); cursor: pointer; transition: width .25s ease, background .25s ease; -webkit-tap-highlight-color: transparent; }
+    .sc-nav-dots button.is-on { width: 1.5rem; background: var(--color-accent-600, #3b6cd4); }
+    .sc-nav-dots button::after { content: ''; position: absolute; inset: -.7rem -.3rem; }
+    .sc-nav-dots button { position: relative; }
+    .sc-nav-n { font-size: .78rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--color-graphite-500, #667794); }
+}
+/* Layar sentuh: tanpa efek angkat saat hover (tidak ada kursor, dan memotong di tepi wadah scroll) */
+@media (hover: none) { .sc-card.is-visible:hover, .sc-card-career.is-visible:hover { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .sc-nav-dots button { transition: none; } }
+
+/* Preferensi ruang ujian (Pengaturan > Simulasi): teks besar dan timer yang muncul di 5 menit terakhir. */
+.xr-lg .xr-q { font-size: 1.6rem; line-height: 1.6; }
+.xr-lg .xr-opt-t { font-size: 1.15rem; }
+.xr-clock.is-hidden { visibility: hidden; }
+@media (max-width: 640px) { .xr-lg .xr-q { font-size: 1.35rem; } }

@@ -1,0 +1,21 @@
+/* Alert: satu tampilan untuk pesan sukses, galat, peringatan, dan info di seluruh situs. */
+.ui-alert { --al-bg: var(--color-graphite-50, #f3f5f8); --al-bd: var(--color-graphite-200, #e2e6ec); --al-fg: var(--color-graphite-800, #1f2a3d); --al-ic: var(--color-accent-600, #3b6cd4);
+    position: relative; display: flex; align-items: flex-start; gap: .8rem; padding: .85rem 1rem; border: 1px solid var(--al-bd); border-radius: 1rem; background: var(--al-bg); color: var(--al-fg); font-size: .875rem; line-height: 1.5; animation: ui-in .4s cubic-bezier(.2, .8, .2, 1) both; }
+.ui-alert + .ui-alert { margin-top: .6rem; }
+.ui-alert-ic { flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; margin-top: -.05rem; border-radius: 999px; background: color-mix(in srgb, var(--al-ic) 14%, transparent); color: var(--al-ic); }
+.ui-alert-ic svg { width: 1.05rem; height: 1.05rem; }
+.ui-alert-body { min-width: 0; flex: 1; padding-top: .2rem; }
+.ui-alert-t { font-weight: 800; }
+.ui-alert-body p + p, .ui-alert-t + p, .ui-alert-body ul { margin-top: .2rem; }
+.ui-alert-body ul { padding-left: 1.1rem; list-style: disc; }
+.ui-alert-body a { font-weight: 800; text-decoration: underline; text-underline-offset: 2px; }
+.ui-alert-x { flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; margin: -.1rem -.35rem 0 0; border-radius: .6rem; color: var(--al-fg); opacity: .55; transition: opacity .2s, background .2s; }
+.ui-alert-x:hover { opacity: 1; background: color-mix(in srgb, var(--al-ic) 12%, transparent); }
+.ui-alert-x svg { width: 1rem; height: 1rem; }
+.ui-alert.is-success { --al-bg: #ecfdf5; --al-bd: #a7f3d0; --al-fg: #064e3b; --al-ic: #059669; }
+.ui-alert.is-error { --al-bg: #fef2f2; --al-bd: #fecaca; --al-fg: #7f1d1d; --al-ic: #dc2626; }
+.ui-alert.is-warning { --al-bg: #fffbeb; --al-bd: #fde68a; --al-fg: #78350f; --al-ic: #d97706; }
+.ui-alert.is-leaving { opacity: 0; transform: translateY(-6px); transition: opacity .25s, transform .25s; }
+@keyframes ui-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ui-alert { animation: none; } .ui-alert.is-leaving { transition: none; } }
+.ui-flash { display: grid; gap: .6rem; }

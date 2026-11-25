@@ -1,0 +1,19 @@
+/* Pagination: sama untuk daftar yang dimuat langsung (Karier, Belajar, Simulasi) dan tabel panel. */
+.ui-pager { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: .6rem; margin-top: 2.25rem; }
+.ui-pg-nums { display: inline-flex; align-items: center; gap: .4rem; }
+.ui-pg { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-width: 2.6rem; height: 2.6rem; padding: 0 .7rem; border: 1px solid var(--color-graphite-300, #c5cfde); border-radius: .75rem; background: var(--pn-card, #fff); font-size: .85rem; font-weight: 700; line-height: 1; white-space: nowrap; color: var(--color-graphite-800, #1f2a3d); transition: background .2s, border-color .2s, color .2s, transform .2s; }
+.ui-pg svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.ui-pg-edge { padding: 0 1rem; }
+a.ui-pg:hover { border-color: var(--color-graphite-800, #1f2a3d); transform: translateY(-1px); }
+.ui-pg.is-cur { border-color: var(--color-accent-600, #3b6cd4); background: var(--color-accent-600, #3b6cd4); color: #fff; }
+.ui-pg.is-off { opacity: .4; }
+.ui-gap { display: inline-flex; align-items: center; height: 2.6rem; padding: 0 .1rem; color: var(--color-graphite-400, #94a3bb); }
+@media (max-width: 560px) { .ui-pg-x, .ui-gap { display: none; } .ui-pg-t { display: none; } .ui-pg-edge { padding: 0; width: 2.6rem; } .ui-pager { gap: .4rem; } }
+
+/* Varian kecil untuk kaki tabel di panel */
+.ui-pager.is-sm { margin-top: 1.25rem; justify-content: flex-end; gap: .4rem; }
+.is-sm .ui-pg { min-width: 2.2rem; height: 2.2rem; border-radius: .65rem; font-size: .8rem; }
+.is-sm .ui-pg-edge { padding: 0 .8rem; }
+.is-sm .ui-gap { height: 2.2rem; }
+.ui-pager-info { font-size: .8rem; color: var(--color-graphite-500, #667794); }
+.ui-pager-info b { color: var(--color-graphite-800, #1f2a3d); font-variant-numeric: tabular-nums; }

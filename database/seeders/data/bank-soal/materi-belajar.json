@@ -1,0 +1,2042 @@
+[
+ {
+  "uid": "f7ee651d-c5de-5df9-8826-6ca9159adf9d",
+  "examType": "karier-ai-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar Python untuk data",
+  "difficulty": 2,
+  "q": "Dalam pandas, objek yang paling tepat untuk menyimpan data berbentuk tabel dengan baris dan kolom bernama adalah...",
+  "opts": {
+   "A": "Tuple",
+   "B": "Set",
+   "C": "String",
+   "D": "DataFrame"
+  },
+  "ans": "D",
+  "exp": "DataFrame adalah struktur tabel utama pandas. Tuple, set, dan string tidak menyimpan kolom bernama. Materi: jalur belajar AI Engineer, topik \"Dasar Python untuk data\".",
+  "isTrial": false
+ },
+ {
+  "uid": "79558299-529f-51e2-85b7-21e4de217f9f",
+  "examType": "karier-ai-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar Python untuk data",
+  "difficulty": 2,
+  "q": "Kamu menerima file CSV penjualan dengan beberapa sel kosong di kolom harga. Langkah paling aman sebelum menghitung rata-rata harga adalah...",
+  "opts": {
+   "A": "Mengganti semua sel kosong dengan angka 999",
+   "B": "Langsung menghitung rata-rata tanpa memeriksa apa pun",
+   "C": "Menghapus seluruh kolom harga",
+   "D": "Memeriksa jumlah nilai kosong, lalu memutuskan membuang atau mengisinya sesuai konteks data"
+  },
+  "ans": "D",
+  "exp": "Nilai kosong perlu dicek dulu: berapa banyak, dan apakah wajar dibuang atau diisi (misalnya dengan median). Mengisi angka sembarang atau menghapus kolom merusak analisis. Materi: jalur belajar AI Engineer, topik \"Dasar Python untuk data\".",
+  "isTrial": false
+ },
+ {
+  "uid": "95dbb4fd-4acc-50e4-9a43-aa5f45d3e7db",
+  "examType": "karier-ai-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar machine learning",
+  "difficulty": 2,
+  "q": "Model mendapat akurasi 99% pada data latih tetapi hanya 70% pada data uji. Gejala ini paling menunjukkan...",
+  "opts": {
+   "A": "Underfitting",
+   "B": "Data uji terlalu bersih",
+   "C": "Metrik yang salah dihitung pasti",
+   "D": "Overfitting"
+  },
+  "ans": "D",
+  "exp": "Jarak besar antara skor latih dan skor uji adalah tanda khas overfitting: model menghafal data latih. Materi: jalur belajar AI Engineer, topik \"Dasar machine learning\".",
+  "isTrial": false
+ },
+ {
+  "uid": "79557db1-9040-501d-bbab-dd5f420a229c",
+  "examType": "karier-ai-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar machine learning",
+  "difficulty": 2,
+  "q": "Sebuah model mendeteksi penyakit langka. Dari 100 pasien sakit, model hanya menemukan 40. Metrik yang langsung menggambarkan masalah ini adalah...",
+  "opts": {
+   "A": "Nilai R-kuadrat",
+   "B": "Akurasi pasti tinggi",
+   "C": "Precision yang tinggi",
+   "D": "Recall yang rendah (0,4)"
+  },
+  "ans": "D",
+  "exp": "Recall mengukur berapa persen kasus positif yang berhasil ditemukan: 40 dari 100 = 0,4. Pada kasus medis, recall rendah berarti banyak pasien sakit terlewat. Materi: jalur belajar AI Engineer, topik \"Dasar machine learning\".",
+  "isTrial": false
+ },
+ {
+  "uid": "13826d1f-17d3-5dac-9019-256a2776caf2",
+  "examType": "karier-ai-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: Deep learning dan NLP",
+  "difficulty": 2,
+  "q": "Dalam NLP, embedding kata digunakan untuk...",
+  "opts": {
+   "A": "Mengubah kata menjadi vektor angka yang menangkap kemiripan makna",
+   "B": "Menerjemahkan kata ke bahasa lain secara otomatis",
+   "C": "Menghapus kata yang tidak penting",
+   "D": "Menghitung jumlah huruf dalam kata"
+  },
+  "ans": "A",
+  "exp": "Embedding memetakan kata ke vektor sehingga kata bermakna mirip (misalnya \"mobil\" dan \"kendaraan\") berada berdekatan di ruang vektor. Materi: jalur belajar AI Engineer, topik \"Deep learning dan NLP\".",
+  "isTrial": false
+ },
+ {
+  "uid": "810e4aa7-0b93-5c14-8ada-154912a17f16",
+  "examType": "karier-ai-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: Deep learning dan NLP",
+  "difficulty": 2,
+  "q": "Saat training, loss tidak turun sama sekali dan bobot berubah liar. Penyebab yang paling mungkin untuk diperiksa pertama adalah...",
+  "opts": {
+   "A": "Learning rate yang terlalu besar",
+   "B": "Nama variabel yang terlalu panjang",
+   "C": "Jumlah epoch yang terlalu sedikit",
+   "D": "Versi Python yang berbeda"
+  },
+  "ans": "A",
+  "exp": "Learning rate yang terlalu besar membuat langkah pembaruan melompati titik minimum sehingga loss tidak stabil. Kecilkan learning rate lalu coba lagi. Materi: jalur belajar AI Engineer, topik \"Deep learning dan NLP\".",
+  "isTrial": false
+ },
+ {
+  "uid": "c58aa5a9-3c2e-5a89-922d-4b1e069565aa",
+  "examType": "karier-ai-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: Aplikasi LLM dan RAG",
+  "difficulty": 2,
+  "q": "Tujuan utama RAG pada aplikasi LLM adalah...",
+  "opts": {
+   "A": "Membuat jawaban berdasar pada dokumen yang diambil, sehingga lebih akurat dan bisa ditelusuri",
+   "B": "Mengecilkan ukuran model",
+   "C": "Menghapus kebutuhan akan prompt",
+   "D": "Mempercepat training model dari nol"
+  },
+  "ans": "A",
+  "exp": "RAG mengambil dokumen relevan lebih dulu lalu memberikannya ke model sebagai konteks, sehingga jawaban berpijak pada sumber, bukan hanya ingatan model. Materi: jalur belajar AI Engineer, topik \"Aplikasi LLM dan RAG\".",
+  "isTrial": false
+ },
+ {
+  "uid": "c8b4c434-d36b-599f-8b7d-684c6025948a",
+  "examType": "karier-ai-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: Aplikasi LLM dan RAG",
+  "difficulty": 2,
+  "q": "Asisten RAG menjawab pertanyaan kebijakan cuti dengan angka yang salah, padahal dokumen yang benar ada. Pemeriksaan pertama yang paling masuk akal adalah...",
+  "opts": {
+   "A": "Menambah jumlah epoch training",
+   "B": "Memeriksa apakah potongan dokumen yang diambil memang memuat aturan cuti",
+   "C": "Memperbesar ukuran font antarmuka",
+   "D": "Mengganti bahasa pemrograman"
+  },
+  "ans": "B",
+  "exp": "Jika retrieval mengambil potongan yang salah, LLM tidak punya bahan benar. Periksa dulu hasil pencarian sebelum menyalahkan model. Materi: jalur belajar AI Engineer, topik \"Aplikasi LLM dan RAG\".",
+  "isTrial": false
+ },
+ {
+  "uid": "9a80c03a-84c1-5385-a60e-3efb3fd3e631",
+  "examType": "karier-soc-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar jaringan dan Linux",
+  "difficulty": 2,
+  "q": "Layanan SSH untuk akses terminal jarak jauh secara bawaan memakai port...",
+  "opts": {
+   "A": "3306",
+   "B": "22",
+   "C": "443",
+   "D": "80"
+  },
+  "ans": "B",
+  "exp": "SSH memakai port 22. Port 80 untuk HTTP, 443 untuk HTTPS, dan 3306 untuk MySQL. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Dasar jaringan dan Linux\".",
+  "isTrial": false
+ },
+ {
+  "uid": "a362122a-2e20-5970-ba59-2daed5c912e9",
+  "examType": "karier-soc-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar jaringan dan Linux",
+  "difficulty": 2,
+  "q": "Kamu ingin mencari semua baris berisi \"Failed password\" di file log autentikasi pada Linux. Perintah yang paling tepat adalah...",
+  "opts": {
+   "A": "ps \"Failed password\" auth.log",
+   "B": "chmod \"Failed password\" auth.log",
+   "C": "grep \"Failed password\" auth.log",
+   "D": "cd \"Failed password\" auth.log"
+  },
+  "ans": "C",
+  "exp": "grep mencari pola teks di dalam file. chmod mengubah izin, ps menampilkan proses, dan cd berpindah direktori. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Dasar jaringan dan Linux\".",
+  "isTrial": false
+ },
+ {
+  "uid": "9c36a1b1-4c22-5769-9edd-982bb9fe2111",
+  "examType": "karier-soc-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar keamanan siber",
+  "difficulty": 2,
+  "q": "Serangan DDoS yang membuat situs tidak bisa diakses pengguna terutama mengganggu aspek...",
+  "opts": {
+   "A": "Availability (ketersediaan)",
+   "B": "Non-repudiation saja",
+   "C": "Integrity (keutuhan)",
+   "D": "Confidentiality (kerahasiaan)"
+  },
+  "ans": "A",
+  "exp": "DDoS membanjiri layanan sehingga tidak dapat melayani pengguna sah, yaitu gangguan ketersediaan. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Dasar keamanan siber\".",
+  "isTrial": false
+ },
+ {
+  "uid": "b9dd831e-f315-5969-ba95-08e908e5b42a",
+  "examType": "karier-soc-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar keamanan siber",
+  "difficulty": 2,
+  "q": "Seorang karyawan keuangan menerima email \"mendesak\" dari alamat mirip direktur, meminta transfer dana lewat tautan. Tindakan terbaik adalah...",
+  "opts": {
+   "A": "Memverifikasi lewat kanal lain (telepon atau chat resmi) dan melaporkan ke tim keamanan",
+   "B": "Membalas email dengan data rekening perusahaan",
+   "C": "Langsung mengklik tautan agar cepat selesai",
+   "D": "Meneruskan email ke seluruh rekan kerja"
+  },
+  "ans": "A",
+  "exp": "Ciri phishing: mendesak, pengirim mirip, tautan tidak biasa. Verifikasi lewat kanal terpisah dan laporkan agar tim keamanan bisa bertindak. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Dasar keamanan siber\".",
+  "isTrial": false
+ },
+ {
+  "uid": "7f55d314-cde9-56af-8686-999a1f514d20",
+  "examType": "karier-soc-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: Analisis log dan SIEM",
+  "difficulty": 2,
+  "q": "Alert yang menandai aktivitas normal sebagai serangan disebut...",
+  "opts": {
+   "A": "False positive",
+   "B": "False negative",
+   "C": "Zero-day",
+   "D": "True positive"
+  },
+  "ans": "A",
+  "exp": "False positive berarti alarm berbunyi padahal tidak ada ancaman nyata. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Analisis log dan SIEM\".",
+  "isTrial": false
+ },
+ {
+  "uid": "c1c32aeb-d862-5aeb-9742-b7081196c09c",
+  "examType": "karier-soc-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: Analisis log dan SIEM",
+  "difficulty": 2,
+  "q": "SIEM menampilkan 80 login gagal dari satu IP eksternal dalam 5 menit, disusul 1 login berhasil ke akun admin dari IP yang sama. Penilaian awal yang paling tepat adalah...",
+  "opts": {
+   "A": "Kemungkinan brute force berhasil, eskalasikan dan amankan akun admin",
+   "B": "Bug tampilan SIEM",
+   "C": "Aktivitas normal, abaikan",
+   "D": "Masalah printer jaringan"
+  },
+  "ans": "A",
+  "exp": "Banyak kegagalan diikuti satu keberhasilan dari IP yang sama adalah pola khas brute force yang berhasil. Akun harus diamankan dan insiden dieskalasi. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Analisis log dan SIEM\".",
+  "isTrial": false
+ },
+ {
+  "uid": "6a1ff149-03a9-5a69-aea4-3b4e8ea43ac6",
+  "examType": "karier-soc-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: Respons insiden",
+  "difficulty": 2,
+  "q": "Setelah sebuah laptop terdeteksi terinfeksi malware, langkah penahanan yang tepat adalah...",
+  "opts": {
+   "A": "Menghapus semua log di server",
+   "B": "Langsung memformat tanpa mencatat apa pun",
+   "C": "Membiarkannya tetap terhubung agar pengguna bisa bekerja",
+   "D": "Mengisolasi laptop dari jaringan sambil menjaga bukti"
+  },
+  "ans": "D",
+  "exp": "Isolasi menghentikan penyebaran, sementara menjaga kondisi perangkat membantu investigasi. Menghapus log atau memformat seketika menghilangkan bukti. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Respons insiden\".",
+  "isTrial": false
+ },
+ {
+  "uid": "a355f025-acfb-5bef-a761-9753bb723e9c",
+  "examType": "karier-soc-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: Respons insiden",
+  "difficulty": 2,
+  "q": "Tim menemukan akar penyebab insiden adalah kata sandi lemah di satu akun. Langkah pada tahap \"pelajaran yang dipetik\" yang paling tepat adalah...",
+  "opts": {
+   "A": "Menutup kasus tanpa dokumentasi",
+   "B": "Mematikan seluruh akun pengguna selamanya",
+   "C": "Mewajibkan MFA dan kebijakan kata sandi yang lebih kuat",
+   "D": "Menyalahkan pemilik akun di depan tim"
+  },
+  "ans": "C",
+  "exp": "Tahap akhir menutup celah penyebab supaya tidak berulang. MFA dan kebijakan kata sandi mengatasi akar masalah, bukan hanya menyalahkan orang. Materi: jalur belajar Analis Keamanan Siber (SOC), topik \"Respons insiden\".",
+  "isTrial": false
+ },
+ {
+  "uid": "84d9d329-681d-5022-a2e4-ccad387426dc",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar K3 dan regulasi",
+  "difficulty": 2,
+  "q": "Dasar hukum pokok keselamatan kerja di Indonesia yang terbit tahun 1970 adalah...",
+  "opts": {
+   "A": "Undang-Undang Perlindungan Konsumen",
+   "B": "Peraturan internal perusahaan",
+   "C": "UU No. 1 Tahun 1970 tentang Keselamatan Kerja",
+   "D": "UU No. 13 Tahun 2003 tentang Ketenagakerjaan saja"
+  },
+  "ans": "C",
+  "exp": "UU No. 1 Tahun 1970 adalah undang-undang keselamatan kerja yang menjadi dasar peraturan K3 turunannya. Materi: jalur belajar Spesialis K3 / EHS, topik \"Dasar K3 dan regulasi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "07338c29-168a-53de-8e43-2a50509d726b",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar K3 dan regulasi",
+  "difficulty": 2,
+  "q": "Di sebuah pabrik, APD sudah dibagikan tetapi beberapa operator tidak memakainya. Pendekatan K3 yang paling tepat adalah...",
+  "opts": {
+   "A": "Menghukum tanpa penjelasan",
+   "B": "Mencari tahu alasan, memberi edukasi, dan menegakkan aturan secara konsisten",
+   "C": "Menghapus kewajiban APD",
+   "D": "Mengabaikan karena sudah dibagikan"
+  },
+  "ans": "B",
+  "exp": "Kepatuhan APD dibangun lewat pemahaman alasan, edukasi, dan penegakan yang konsisten. Mengabaikan atau menghukum tanpa dialog tidak mengubah perilaku. Materi: jalur belajar Spesialis K3 / EHS, topik \"Dasar K3 dan regulasi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "0b68e98e-96c3-5266-83e5-7c2269b62a0f",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Identifikasi bahaya dan penilaian risiko",
+  "difficulty": 2,
+  "q": "Dalam hierarki pengendalian bahaya, tindakan yang paling efektif adalah...",
+  "opts": {
+   "A": "Alat pelindung diri",
+   "B": "Rambu peringatan",
+   "C": "Eliminasi",
+   "D": "Pelatihan singkat"
+  },
+  "ans": "C",
+  "exp": "Eliminasi menghilangkan bahaya dari sumbernya sehingga paling efektif. APD adalah pilihan terakhir karena hanya melindungi pekerja, bukan mengurangi bahaya. Materi: jalur belajar Spesialis K3 / EHS, topik \"Identifikasi bahaya dan penilaian risiko\".",
+  "isTrial": false
+ },
+ {
+  "uid": "30b8275d-b581-593a-b84f-cc3623b129ed",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Identifikasi bahaya dan penilaian risiko",
+  "difficulty": 2,
+  "q": "Pelarut berbahaya di bengkel bisa diganti dengan produk berbahan lebih aman yang fungsinya sama. Penggantian ini termasuk pengendalian...",
+  "opts": {
+   "A": "Administratif",
+   "B": "Eliminasi total",
+   "C": "APD",
+   "D": "Substitusi"
+  },
+  "ans": "D",
+  "exp": "Substitusi mengganti bahan atau proses berbahaya dengan yang lebih aman, sedangkan eliminasi menghilangkan bahayanya sama sekali. Materi: jalur belajar Spesialis K3 / EHS, topik \"Identifikasi bahaya dan penilaian risiko\".",
+  "isTrial": false
+ },
+ {
+  "uid": "e1ad081d-f7e3-5feb-9a07-5669c563518d",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Investigasi insiden",
+  "difficulty": 2,
+  "q": "Kejadian operator nyaris tertimpa material yang jatuh tetapi tidak ada yang terluka disebut...",
+  "opts": {
+   "A": "Penyakit akibat kerja",
+   "B": "Nearmiss",
+   "C": "Audit",
+   "D": "Accident"
+  },
+  "ans": "B",
+  "exp": "Nearmiss adalah kejadian nyaris celaka tanpa cedera atau kerugian. Tetap harus dilaporkan karena menunjukkan bahaya yang nyata. Materi: jalur belajar Spesialis K3 / EHS, topik \"Investigasi insiden\".",
+  "isTrial": false
+ },
+ {
+  "uid": "d0aa7cd6-7ce8-554f-adc2-ba08e322e5b1",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Investigasi insiden",
+  "difficulty": 2,
+  "q": "Operator terpeleset di lantai licin. Hasil 5 Why menunjukkan lantai licin karena bocoran oli, bocoran karena segel aus, dan tidak ada jadwal perawatan segel. Akar penyebabnya adalah...",
+  "opts": {
+   "A": "Lantai terlalu mengilap",
+   "B": "Operator kurang hati-hati",
+   "C": "Sepatu operator murah",
+   "D": "Tidak adanya jadwal perawatan segel"
+  },
+  "ans": "D",
+  "exp": "5 Why berujung ke penyebab sistem: tidak ada perawatan terjadwal. Menyalahkan kehati-hatian operator tidak memperbaiki sumber bocoran. Materi: jalur belajar Spesialis K3 / EHS, topik \"Investigasi insiden\".",
+  "isTrial": false
+ },
+ {
+  "uid": "7e9928fd-4e30-561c-9015-66762fd9dca9",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Sistem manajemen K3",
+  "difficulty": 2,
+  "q": "Pada siklus PDCA, tahap \"Check\" berarti...",
+  "opts": {
+   "A": "Melaksanakan pekerjaan",
+   "B": "Menutup sistem",
+   "C": "Menyusun rencana awal",
+   "D": "Memantau dan memeriksa hasil pelaksanaan terhadap rencana"
+  },
+  "ans": "D",
+  "exp": "Check memeriksa apakah pelaksanaan sesuai rencana dan target. Plan adalah perencanaan, Do adalah pelaksanaan, dan Act adalah tindak lanjut. Materi: jalur belajar Spesialis K3 / EHS, topik \"Sistem manajemen K3\".",
+  "isTrial": false
+ },
+ {
+  "uid": "94466176-d2d7-5a88-9ac1-6a2b0cfd1331",
+  "examType": "karier-ehs-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Sistem manajemen K3",
+  "difficulty": 2,
+  "q": "Audit internal menemukan alat pemadam kebakaran di gudang sudah kedaluwarsa. Tindak lanjut yang paling sesuai dengan prinsip perbaikan berkelanjutan adalah...",
+  "opts": {
+   "A": "Mencabut semua alat pemadam",
+   "B": "Mengganti alat, menetapkan jadwal inspeksi rutin, lalu memverifikasi hasilnya",
+   "C": "Menyembunyikan temuan dari manajemen",
+   "D": "Mencatat temuan tanpa tindakan"
+  },
+  "ans": "B",
+  "exp": "Tindakan korektif menutup temuan sekaligus mencegah terulang lewat inspeksi rutin dan verifikasi, sesuai siklus PDCA. Materi: jalur belajar Spesialis K3 / EHS, topik \"Sistem manajemen K3\".",
+  "isTrial": false
+ },
+ {
+  "uid": "73a03325-ad4d-5dbd-91a1-3b2eb6aecfeb",
+  "examType": "karier-procurement",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar pengadaan",
+  "difficulty": 2,
+  "q": "Sebelum membayar faktur vendor, tiga dokumen yang dicocokkan dalam three-way matching adalah...",
+  "opts": {
+   "A": "Laporan laba rugi, neraca, dan arus kas",
+   "B": "PO, bukti penerimaan barang, dan faktur",
+   "C": "Kontrak kerja, slip gaji, dan NPWP",
+   "D": "Brosur, kartu nama, dan kuitansi parkir"
+  },
+  "ans": "B",
+  "exp": "Three-way matching memastikan barang yang dipesan (PO), yang diterima, dan yang ditagih (faktur) sama sebelum pembayaran dilakukan. Materi: jalur belajar Procurement Specialist, topik \"Dasar pengadaan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "c631ad69-995e-5fda-97c6-750c4b94e0a3",
+  "examType": "karier-procurement",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar pengadaan",
+  "difficulty": 2,
+  "q": "Satu staf bisa membuat PO, menyetujuinya, menerima barang, sekaligus menyetujui pembayaran. Risiko utamanya adalah...",
+  "opts": {
+   "A": "Kecurangan karena tidak ada pemisahan tugas",
+   "B": "Harga barang pasti naik",
+   "C": "Barang selalu terlambat",
+   "D": "Vendor akan menolak kontrak"
+  },
+  "ans": "A",
+  "exp": "Tanpa pemisahan tugas, satu orang bisa melakukan dan menutupi kecurangan. Kontrol dasar pengadaan adalah membagi peran. Materi: jalur belajar Procurement Specialist, topik \"Dasar pengadaan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "ba883cb2-dcbc-514f-b161-2ae3194b93c3",
+  "examType": "karier-procurement",
+  "segmentId": "konsep",
+  "topic": "Materi: Evaluasi vendor dan tender",
+  "difficulty": 2,
+  "q": "Agar penilaian vendor objektif, kriteria dan bobotnya sebaiknya ditetapkan...",
+  "opts": {
+   "A": "Setelah melihat vendor favorit",
+   "B": "Oleh vendor yang menang",
+   "C": "Setelah kontrak ditandatangani",
+   "D": "Sebelum penawaran dibuka"
+  },
+  "ans": "D",
+  "exp": "Menetapkan kriteria dan bobot lebih dulu mencegah penilaian dibengkokkan untuk memenangkan vendor tertentu. Materi: jalur belajar Procurement Specialist, topik \"Evaluasi vendor dan tender\".",
+  "isTrial": false
+ },
+ {
+  "uid": "79dab928-5485-5412-b3a6-430c82ec67f9",
+  "examType": "karier-procurement",
+  "segmentId": "kasus",
+  "topic": "Materi: Evaluasi vendor dan tender",
+  "difficulty": 2,
+  "q": "Vendor A harga paling murah tetapi pengiriman sering terlambat; Vendor B 8% lebih mahal tetapi tepat waktu dan bergaransi. Bobotmu: harga 40%, ketepatan 30%, kualitas 30%. Langkah terbaik adalah...",
+  "opts": {
+   "A": "Memberi skor tiap kriteria lalu membandingkan total berbobot",
+   "B": "Memilih yang termurah otomatis",
+   "C": "Memilih secara acak",
+   "D": "Memilih yang paling dikenal"
+  },
+  "ans": "A",
+  "exp": "Skor berbobot menggabungkan harga dan faktor lain secara transparan. Termurah belum tentu terbaik jika keterlambatan merugikan. Materi: jalur belajar Procurement Specialist, topik \"Evaluasi vendor dan tender\".",
+  "isTrial": false
+ },
+ {
+  "uid": "695df563-4bfc-5776-8c2e-87a5f59535a9",
+  "examType": "karier-procurement",
+  "segmentId": "konsep",
+  "topic": "Materi: Negosiasi",
+  "difficulty": 2,
+  "q": "Dalam negosiasi, BATNA berarti...",
+  "opts": {
+   "A": "Daftar pertanyaan untuk vendor",
+   "B": "Nama dokumen kontrak",
+   "C": "Batas harga tertinggi yang dibuka kepada lawan",
+   "D": "Alternatif terbaik jika kesepakatan tidak tercapai"
+  },
+  "ans": "D",
+  "exp": "BATNA adalah pilihan terbaikmu di luar kesepakatan ini. Mengetahuinya membuatmu berani menolak penawaran yang buruk. Materi: jalur belajar Procurement Specialist, topik \"Negosiasi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "502381d5-623e-560e-80f9-e717ae47799b",
+  "examType": "karier-procurement",
+  "segmentId": "kasus",
+  "topic": "Materi: Negosiasi",
+  "difficulty": 2,
+  "q": "Vendor menolak menurunkan harga tetapi bersedia memberi tempo pembayaran 60 hari bila volume pesanan dijamin setahun. Respons yang paling sejalan dengan prinsip win-win adalah...",
+  "opts": {
+   "A": "Menerima tanpa menghitung dampaknya",
+   "B": "Langsung menolak dan mengakhiri pembicaraan",
+   "C": "Mempertimbangkan pertukaran: kepastian volume untuk tempo bayar dan syarat lain",
+   "D": "Mengancam pindah vendor tanpa alternatif"
+  },
+  "ans": "C",
+  "exp": "Menukar sesuatu yang berharga bagi vendor (kepastian volume) dengan sesuatu yang berharga bagimu (tempo bayar) adalah inti negosiasi win-win. Tetap hitung dampaknya. Materi: jalur belajar Procurement Specialist, topik \"Negosiasi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "904d437f-cb87-5a8b-90b3-d09f7a279122",
+  "examType": "karier-procurement",
+  "segmentId": "konsep",
+  "topic": "Materi: Excel untuk analisis biaya",
+  "difficulty": 2,
+  "q": "Untuk menjumlahkan total pembelian hanya untuk vendor tertentu di Excel, rumus yang paling tepat adalah...",
+  "opts": {
+   "A": "TRIM",
+   "B": "LEN",
+   "C": "COUNTA",
+   "D": "SUMIF"
+  },
+  "ans": "D",
+  "exp": "SUMIF menjumlahkan nilai yang memenuhi satu syarat. COUNTA menghitung sel terisi, LEN menghitung panjang teks, dan TRIM membuang spasi berlebih. Materi: jalur belajar Procurement Specialist, topik \"Excel untuk analisis biaya\".",
+  "isTrial": false
+ },
+ {
+  "uid": "96e289e0-b5d1-58a7-ab44-b362aca86df9",
+  "examType": "karier-procurement",
+  "segmentId": "kasus",
+  "topic": "Materi: Excel untuk analisis biaya",
+  "difficulty": 2,
+  "q": "Kamu menyalin rumus yang merujuk ke sel kurs di B1, tetapi hasilnya salah di baris bawah karena rujukan ikut bergeser. Perbaikan yang tepat adalah...",
+  "opts": {
+   "A": "Mengganti font sel",
+   "B": "Mengunci sel kurs dengan referensi absolut ($B$1)",
+   "C": "Mengetik ulang semua angka manual",
+   "D": "Menghapus kolom kurs"
+  },
+  "ans": "B",
+  "exp": "Tanda $ mengunci kolom dan baris sehingga rujukan tidak bergeser saat rumus disalin ke bawah. Materi: jalur belajar Procurement Specialist, topik \"Excel untuk analisis biaya\".",
+  "isTrial": false
+ },
+ {
+  "uid": "66732f81-fc86-53f1-b9ba-19f070d9af21",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar lean manufacturing",
+  "difficulty": 2,
+  "q": "Operator berjalan jauh bolak-balik mengambil komponen karena tata letak yang buruk. Jenis pemborosan ini termasuk...",
+  "opts": {
+   "A": "Gerakan (motion) dan transportasi",
+   "B": "Cacat produk",
+   "C": "Produksi berlebih",
+   "D": "Persediaan berlebih"
+  },
+  "ans": "A",
+  "exp": "Gerakan operator yang tidak perlu dan perpindahan material yang berlebihan adalah pemborosan motion dan transportasi. Materi: jalur belajar Industrial Engineer, topik \"Dasar lean manufacturing\".",
+  "isTrial": false
+ },
+ {
+  "uid": "5f3b2ab2-37b2-588c-bcc2-26f86b8858e6",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar lean manufacturing",
+  "difficulty": 2,
+  "q": "Gudang menimbun komponen untuk tiga bulan padahal pemakaian sebulan sekali. Dalam lean, kondisi ini paling dekat dengan pemborosan...",
+  "opts": {
+   "A": "Cacat",
+   "B": "Persediaan berlebih",
+   "C": "Proses berlebih",
+   "D": "Menunggu"
+  },
+  "ans": "B",
+  "exp": "Menyimpan stok jauh melebihi kebutuhan mengikat modal dan ruang, yaitu pemborosan persediaan. Materi: jalur belajar Industrial Engineer, topik \"Dasar lean manufacturing\".",
+  "isTrial": false
+ },
+ {
+  "uid": "d8f49d1d-2fa3-5adf-8117-df4d234b9e8c",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: Studi waktu dan metode",
+  "difficulty": 2,
+  "q": "Waktu baku diperoleh dari...",
+  "opts": {
+   "A": "Waktu pengamatan terpendek",
+   "B": "Jumlah seluruh waktu istirahat",
+   "C": "Waktu pengamatan tertinggi",
+   "D": "Waktu normal ditambah kelonggaran"
+  },
+  "ans": "D",
+  "exp": "Waktu baku = waktu normal + kelonggaran. Kelonggaran memperhitungkan kebutuhan pribadi, kelelahan, dan hambatan. Materi: jalur belajar Industrial Engineer, topik \"Studi waktu dan metode\".",
+  "isTrial": false
+ },
+ {
+  "uid": "3df566ea-ad10-5173-879e-0f370d68be04",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: Studi waktu dan metode",
+  "difficulty": 2,
+  "q": "Rata-rata waktu pengamatan sebuah pekerjaan 40 detik, faktor penyesuaian 1,10, kelonggaran 10% dari waktu normal. Waktu baku yang paling mendekati adalah...",
+  "opts": {
+   "A": "40 detik",
+   "B": "44 detik",
+   "C": "52 detik",
+   "D": "48,4 detik"
+  },
+  "ans": "D",
+  "exp": "Waktu normal = 40 x 1,10 = 44 detik. Kelonggaran 10% = 4,4 detik. Waktu baku = 44 + 4,4 = 48,4 detik. Materi: jalur belajar Industrial Engineer, topik \"Studi waktu dan metode\".",
+  "isTrial": false
+ },
+ {
+  "uid": "91f923c6-f144-540a-83e4-76fcf5f178fd",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: Pengendalian kualitas statistik",
+  "difficulty": 2,
+  "q": "Titik pada peta kendali yang berada di luar batas kendali atas menunjukkan...",
+  "opts": {
+   "A": "Kemungkinan adanya variasi khusus yang perlu diselidiki",
+   "B": "Spesifikasi pelanggan berubah",
+   "C": "Alat ukur tidak diperlukan",
+   "D": "Proses pasti sempurna"
+  },
+  "ans": "A",
+  "exp": "Titik di luar batas kendali adalah sinyal adanya penyebab khusus. Proses perlu diperiksa untuk menemukan penyebabnya. Materi: jalur belajar Industrial Engineer, topik \"Pengendalian kualitas statistik\".",
+  "isTrial": false
+ },
+ {
+  "uid": "91f896de-686d-531c-a43c-c9fdfa6a76fc",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: Pengendalian kualitas statistik",
+  "difficulty": 2,
+  "q": "Proses stabil di peta kendali, tetapi banyak produk tetap ditolak karena di luar spesifikasi pelanggan. Kesimpulan yang paling tepat adalah...",
+  "opts": {
+   "A": "Pelanggan pasti keliru",
+   "B": "Peta kendali salah dan harus dibuang",
+   "C": "Proses stabil namun tidak mampu memenuhi spesifikasi; perlu perbaikan proses atau pemusatan rata-rata",
+   "D": "Tidak ada yang perlu dilakukan"
+  },
+  "ans": "C",
+  "exp": "Stabil berarti variasinya terkendali, bukan berarti memenuhi spesifikasi. Kapabilitas rendah memerlukan pengurangan variasi atau penggeseran rata-rata. Materi: jalur belajar Industrial Engineer, topik \"Pengendalian kualitas statistik\".",
+  "isTrial": false
+ },
+ {
+  "uid": "295c0d76-2eba-5502-9328-8f05612a0aba",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "konsep",
+  "topic": "Materi: PPIC dasar",
+  "difficulty": 2,
+  "q": "Daftar komponen dan jumlah yang dibutuhkan untuk membuat satu unit produk disebut...",
+  "opts": {
+   "A": "Peta kendali",
+   "B": "Laporan laba rugi",
+   "C": "Bill of Materials (BOM)",
+   "D": "Jadwal cuti"
+  },
+  "ans": "C",
+  "exp": "BOM merinci komponen dan kuantitasnya per unit produk, dasar perhitungan MRP. Materi: jalur belajar Industrial Engineer, topik \"PPIC dasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "fdf1e85e-0464-5759-a29c-62bd19115717",
+  "examType": "karier-industrial-engineer",
+  "segmentId": "kasus",
+  "topic": "Materi: PPIC dasar",
+  "difficulty": 2,
+  "q": "Satu meja membutuhkan 4 kaki. Untuk 50 meja dibutuhkan 200 kaki, stok yang ada 80, dan tidak ada pesanan masuk. Kebutuhan bersih kaki adalah...",
+  "opts": {
+   "A": "80",
+   "B": "120",
+   "C": "200",
+   "D": "280"
+  },
+  "ans": "B",
+  "exp": "Kebutuhan bersih = kebutuhan kotor dikurangi stok = 200 - 80 = 120 kaki. Materi: jalur belajar Industrial Engineer, topik \"PPIC dasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "919c9363-6a09-5fac-9688-3800c7a6491b",
+  "examType": "karier-learning-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Analisis kebutuhan pelatihan",
+  "difficulty": 2,
+  "q": "Sebuah tim sering salah input karena formulir lama membingungkan, padahal semua anggota sudah paham cara kerja yang benar. Solusi yang paling tepat adalah...",
+  "opts": {
+   "A": "Memperbaiki desain formulir, bukan menambah pelatihan",
+   "B": "Mengadakan pelatihan tiga hari",
+   "C": "Mengganti seluruh anggota tim",
+   "D": "Menurunkan target"
+  },
+  "ans": "A",
+  "exp": "Masalahnya ada pada alat (formulir), bukan kompetensi. Pelatihan tidak akan menyelesaikan hambatan proses. Materi: jalur belajar Learning & Development Specialist, topik \"Analisis kebutuhan pelatihan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "0c94aa52-5d52-5745-adbf-2f4632019923",
+  "examType": "karier-learning-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Analisis kebutuhan pelatihan",
+  "difficulty": 2,
+  "q": "Hasil TNA menunjukkan kinerja tim penjualan turun karena produk baru belum dipahami. Respons pelatihan yang paling tepat adalah...",
+  "opts": {
+   "A": "Menaikkan gaji tanpa evaluasi",
+   "B": "Memindahkan kantor",
+   "C": "Pelatihan memasak",
+   "D": "Pelatihan pengetahuan produk dengan praktik penjelasan ke pelanggan"
+  },
+  "ans": "D",
+  "exp": "Masalah kompetensi (pengetahuan produk) bisa dijawab pelatihan yang sasarannya jelas dan relevan dengan pekerjaan. Materi: jalur belajar Learning & Development Specialist, topik \"Analisis kebutuhan pelatihan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "515f5ccd-9440-5de1-b5c7-11af2d55b605",
+  "examType": "karier-learning-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Desain instruksional",
+  "difficulty": 2,
+  "q": "Tujuan belajar yang paling terukur di antara berikut adalah...",
+  "opts": {
+   "A": "Peserta mampu menyusun rencana proyek satu halaman dalam 20 menit",
+   "B": "Peserta memahami manajemen proyek",
+   "C": "Peserta menyukai pelatihan",
+   "D": "Peserta sadar pentingnya proyek"
+  },
+  "ans": "A",
+  "exp": "Tujuan terukur memakai kata kerja yang bisa diamati dan kriteria jelas. \"Memahami\" dan \"menyukai\" sulit dinilai. Materi: jalur belajar Learning & Development Specialist, topik \"Desain instruksional\".",
+  "isTrial": false
+ },
+ {
+  "uid": "e79552a0-b660-5b23-9bbd-be18f5481fa0",
+  "examType": "karier-learning-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Desain instruksional",
+  "difficulty": 2,
+  "q": "Dalam ADDIE, tahap pembuatan materi, slide, dan latihan sesuai rancangan adalah...",
+  "opts": {
+   "A": "Develop",
+   "B": "Analyze",
+   "C": "Evaluate",
+   "D": "Implement"
+  },
+  "ans": "A",
+  "exp": "Develop adalah tahap membuat materi sesuai desain. Implement adalah pelaksanaan, Analyze analisis kebutuhan, dan Evaluate penilaian hasil. Materi: jalur belajar Learning & Development Specialist, topik \"Desain instruksional\".",
+  "isTrial": false
+ },
+ {
+  "uid": "1e8cc327-4aeb-53a2-9e4d-e2813d012b2f",
+  "examType": "karier-learning-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Fasilitasi dan public speaking",
+  "difficulty": 2,
+  "q": "Contoh pertanyaan terbuka yang baik untuk memancing diskusi adalah...",
+  "opts": {
+   "A": "Apakah kamu setuju?",
+   "B": "Apa tantangan terbesar yang kamu hadapi saat memberi umpan balik?",
+   "C": "Sudah selesai?",
+   "D": "Paham, kan?"
+  },
+  "ans": "B",
+  "exp": "Pertanyaan terbuka mendorong peserta bercerita dan berpikir. Pertanyaan ya atau tidak membuat diskusi cepat mati. Materi: jalur belajar Learning & Development Specialist, topik \"Fasilitasi dan public speaking\".",
+  "isTrial": false
+ },
+ {
+  "uid": "4d388a68-ae3d-52b6-ad85-a5ca4a5197b0",
+  "examType": "karier-learning-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Fasilitasi dan public speaking",
+  "difficulty": 2,
+  "q": "Dalam diskusi kelompok, satu peserta mendominasi dan yang lain diam. Langkah fasilitator yang paling tepat adalah...",
+  "opts": {
+   "A": "Membagi kelompok kecil dan memberi giliran bicara terstruktur",
+   "B": "Memarahi peserta dominan di depan kelas",
+   "C": "Membiarkan saja",
+   "D": "Menyuruh yang diam keluar"
+  },
+  "ans": "A",
+  "exp": "Struktur giliran dan kelompok kecil memberi ruang yang adil tanpa mempermalukan siapa pun. Materi: jalur belajar Learning & Development Specialist, topik \"Fasilitasi dan public speaking\".",
+  "isTrial": false
+ },
+ {
+  "uid": "19dc7767-cd2e-5797-b141-def0ce501e9b",
+  "examType": "karier-learning-specialist",
+  "segmentId": "konsep",
+  "topic": "Materi: Evaluasi pelatihan",
+  "difficulty": 2,
+  "q": "Dalam model Kirkpatrick, mengukur apakah peserta menerapkan keterampilan baru di pekerjaannya termasuk level...",
+  "opts": {
+   "A": "Level 4 (Hasil)",
+   "B": "Level 1 (Reaksi)",
+   "C": "Level 3 (Perilaku)",
+   "D": "Level 2 (Pembelajaran)"
+  },
+  "ans": "C",
+  "exp": "Level 3 menilai perubahan perilaku di tempat kerja, biasanya beberapa minggu setelah pelatihan. Materi: jalur belajar Learning & Development Specialist, topik \"Evaluasi pelatihan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "df5e1da1-2c0e-501e-a197-b00c99bc75e2",
+  "examType": "karier-learning-specialist",
+  "segmentId": "kasus",
+  "topic": "Materi: Evaluasi pelatihan",
+  "difficulty": 2,
+  "q": "Setelah pelatihan layanan pelanggan, skor kepuasan peserta tinggi tetapi keluhan pelanggan tidak berubah. Kesimpulan yang tepat adalah...",
+  "opts": {
+   "A": "Pelanggan tidak penting",
+   "B": "Pelatihan pasti sukses sepenuhnya",
+   "C": "Evaluasi tidak perlu lagi",
+   "D": "Level 1 tercapai, tetapi perilaku dan hasil belum berubah sehingga perlu ditelusuri"
+  },
+  "ans": "D",
+  "exp": "Kepuasan peserta (level 1) tidak menjamin perubahan perilaku (level 3) atau hasil (level 4). Perlu dicari hambatan penerapan. Materi: jalur belajar Learning & Development Specialist, topik \"Evaluasi pelatihan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "eba68779-0129-51a8-a2a6-2d6fb1c5f589",
+  "examType": "karier-logistik",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar logistik dan rantai pasok",
+  "difficulty": 2,
+  "q": "Tiga aliran utama dalam rantai pasok adalah...",
+  "opts": {
+   "A": "Barang, informasi, dan uang",
+   "B": "Pajak, bea, dan denda",
+   "C": "Visi, misi, dan nilai",
+   "D": "Gaji, cuti, dan lembur"
+  },
+  "ans": "A",
+  "exp": "Rantai pasok yang baik menyelaraskan aliran barang, informasi, dan uang antar pihak. Materi: jalur belajar Logistik & Import Specialist, topik \"Dasar logistik dan rantai pasok\".",
+  "isTrial": false
+ },
+ {
+  "uid": "a1551ffc-b9c0-5c71-8388-103f3db9a433",
+  "examType": "karier-logistik",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar logistik dan rantai pasok",
+  "difficulty": 2,
+  "q": "Toko menaikkan pesanan sedikit saat promo, distributor memesan lebih banyak ke pabrik, lalu pabrik memesan jauh lebih banyak ke pemasok bahan. Fenomena ini disebut...",
+  "opts": {
+   "A": "Bullwhip effect",
+   "B": "Fill rate",
+   "C": "Cross docking",
+   "D": "Just in time"
+  },
+  "ans": "A",
+  "exp": "Bullwhip effect: variasi kecil permintaan membesar ke hulu karena informasi permintaan akhir tidak dibagikan. Materi: jalur belajar Logistik & Import Specialist, topik \"Dasar logistik dan rantai pasok\".",
+  "isTrial": false
+ },
+ {
+  "uid": "22724919-d247-5412-9f63-95d648b847e0",
+  "examType": "karier-logistik",
+  "segmentId": "konsep",
+  "topic": "Materi: Inkoterm dan dokumen impor",
+  "difficulty": 2,
+  "q": "Dalam syarat FOB, risiko kerusakan barang berpindah dari penjual ke pembeli ketika...",
+  "opts": {
+   "A": "Barang tiba di gudang pembeli",
+   "B": "Barang berada di atas kapal di pelabuhan muat",
+   "C": "Kontrak ditandatangani",
+   "D": "Barang selesai diproduksi"
+  },
+  "ans": "B",
+  "exp": "FOB: penjual menyerahkan barang di atas kapal di pelabuhan muat, dan sejak itu risiko ditanggung pembeli. Materi: jalur belajar Logistik & Import Specialist, topik \"Inkoterm dan dokumen impor\".",
+  "isTrial": false
+ },
+ {
+  "uid": "6a377766-8689-53f0-85e3-93431204d408",
+  "examType": "karier-logistik",
+  "segmentId": "kasus",
+  "topic": "Materi: Inkoterm dan dokumen impor",
+  "difficulty": 2,
+  "q": "Pembeli ingin penjual mengurus kontrak angkut laut dan asuransi sampai pelabuhan tujuan. Syarat Incoterms yang paling sesuai adalah...",
+  "opts": {
+   "A": "FCA",
+   "B": "EXW",
+   "C": "CIF",
+   "D": "FOB"
+  },
+  "ans": "C",
+  "exp": "CIF mewajibkan penjual membayar biaya, asuransi, dan pengangkutan sampai pelabuhan tujuan. Perlu diingat risikonya tetap pindah di pelabuhan muat. Materi: jalur belajar Logistik & Import Specialist, topik \"Inkoterm dan dokumen impor\".",
+  "isTrial": false
+ },
+ {
+  "uid": "002c2b6d-dbfc-511f-bf1e-546712d681bf",
+  "examType": "karier-logistik",
+  "segmentId": "konsep",
+  "topic": "Materi: Manajemen gudang dan stok",
+  "difficulty": 2,
+  "q": "Pemakaian 20 unit per hari, lead time 5 hari, stok pengaman 30 unit. Titik pesan ulang (ROP) adalah...",
+  "opts": {
+   "A": "150 unit",
+   "B": "100 unit",
+   "C": "30 unit",
+   "D": "130 unit"
+  },
+  "ans": "D",
+  "exp": "ROP = 20 x 5 + 30 = 130 unit. Saat stok turun ke 130, pesanan baru harus dibuat. Materi: jalur belajar Logistik & Import Specialist, topik \"Manajemen gudang dan stok\".",
+  "isTrial": false
+ },
+ {
+  "uid": "ef53cc16-c0d5-503c-ad4d-902ac32c9942",
+  "examType": "karier-logistik",
+  "segmentId": "kasus",
+  "topic": "Materi: Manajemen gudang dan stok",
+  "difficulty": 2,
+  "q": "Gudang menyimpan susu yang punya tanggal kedaluwarsa berbeda-beda. Metode pengeluaran yang paling tepat adalah...",
+  "opts": {
+   "A": "FEFO",
+   "B": "Acak",
+   "C": "Berdasarkan ukuran kardus",
+   "D": "LIFO"
+  },
+  "ans": "A",
+  "exp": "FEFO mengeluarkan barang dengan kedaluwarsa paling dekat lebih dulu agar tidak terbuang. Materi: jalur belajar Logistik & Import Specialist, topik \"Manajemen gudang dan stok\".",
+  "isTrial": false
+ },
+ {
+  "uid": "db9b0818-1134-5fd5-b8c0-e6b5d7357ad0",
+  "examType": "karier-logistik",
+  "segmentId": "konsep",
+  "topic": "Materi: Excel untuk logistik",
+  "difficulty": 2,
+  "q": "Untuk menampilkan peringatan otomatis saat saldo stok di bawah titik pesan ulang, fitur Excel yang paling tepat adalah...",
+  "opts": {
+   "A": "Pemformatan bersyarat",
+   "B": "Word Art",
+   "C": "Hyperlink",
+   "D": "Protect Workbook"
+  },
+  "ans": "A",
+  "exp": "Pemformatan bersyarat mengubah warna sel secara otomatis sesuai aturan, misalnya saldo lebih kecil dari ROP. Materi: jalur belajar Logistik & Import Specialist, topik \"Excel untuk logistik\".",
+  "isTrial": false
+ },
+ {
+  "uid": "b71fa851-8e1d-5579-ad9d-22319259cd43",
+  "examType": "karier-logistik",
+  "segmentId": "kasus",
+  "topic": "Materi: Excel untuk logistik",
+  "difficulty": 2,
+  "q": "Saldo stok dihitung dari saldo awal ditambah barang masuk dikurangi barang keluar. Jika kolom B saldo awal, C masuk, D keluar, rumus saldo di sel E2 adalah...",
+  "opts": {
+   "A": "=B2+C2-D2",
+   "B": "=B2*C2*D2",
+   "C": "=B2-C2+D2",
+   "D": "=B2+C2+D2"
+  },
+  "ans": "A",
+  "exp": "Saldo akhir = saldo awal + masuk - keluar, sehingga rumusnya =B2+C2-D2. Materi: jalur belajar Logistik & Import Specialist, topik \"Excel untuk logistik\".",
+  "isTrial": false
+ },
+ {
+  "uid": "1866cc47-6b4a-50c2-94d7-6fdf8b5f1338",
+  "examType": "karier-partnership",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar bisnis dan nilai kemitraan",
+  "difficulty": 2,
+  "q": "Kemitraan antara toko online dan jasa pengiriman yang memberi diskon ongkir bagi pelanggan toko adalah contoh kemitraan...",
+  "opts": {
+   "A": "Distribusi atau layanan terintegrasi yang saling menguntungkan",
+   "B": "Akuisisi paksa",
+   "C": "Merger penuh",
+   "D": "Kompetisi harga"
+  },
+  "ans": "A",
+  "exp": "Toko mendapat harga dan layanan lebih baik, jasa kirim mendapat volume. Itulah nilai yang dipertukarkan kedua pihak. Materi: jalur belajar Business Development & Partnership, topik \"Dasar bisnis dan nilai kemitraan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "632e317b-2b82-5a36-b452-94f960130ce9",
+  "examType": "karier-partnership",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar bisnis dan nilai kemitraan",
+  "difficulty": 2,
+  "q": "Calon mitra bertanya \"apa untungnya bagi kami?\". Respons terbaik adalah...",
+  "opts": {
+   "A": "Menghindari pertanyaan",
+   "B": "Mengulang manfaat bagi perusahaan sendiri",
+   "C": "Menawarkan diskon tanpa penjelasan",
+   "D": "Menjelaskan manfaat spesifik bagi mereka, dengan contoh angka atau skenario"
+  },
+  "ans": "D",
+  "exp": "Kemitraan dibangun atas nilai dua arah. Jawab dari sudut pandang mitra dengan manfaat yang konkret. Materi: jalur belajar Business Development & Partnership, topik \"Dasar bisnis dan nilai kemitraan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "8e45966f-f9b6-5f99-ac31-9fefef237498",
+  "examType": "karier-partnership",
+  "segmentId": "konsep",
+  "topic": "Materi: Riset pasar",
+  "difficulty": 2,
+  "q": "Data hasil wawancara langsung dengan calon pelanggan disebut...",
+  "opts": {
+   "A": "Data historis nasional",
+   "B": "Data primer",
+   "C": "Data sekunder",
+   "D": "Data acak"
+  },
+  "ans": "B",
+  "exp": "Data primer dikumpulkan sendiri untuk tujuan riset, misalnya lewat wawancara atau survei. Materi: jalur belajar Business Development & Partnership, topik \"Riset pasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "4c2770f8-6edc-5cfb-8ded-6117dc0e4f3f",
+  "examType": "karier-partnership",
+  "segmentId": "kasus",
+  "topic": "Materi: Riset pasar",
+  "difficulty": 2,
+  "q": "Dalam analisis SWOT, kenaikan minat pasar terhadap produk sejenis yang dapat dimanfaatkan termasuk...",
+  "opts": {
+   "A": "Threat (ancaman)",
+   "B": "Strength (kekuatan)",
+   "C": "Weakness (kelemahan)",
+   "D": "Opportunity (peluang)"
+  },
+  "ans": "D",
+  "exp": "Faktor eksternal yang menguntungkan adalah peluang. Kekuatan dan kelemahan bersifat internal. Materi: jalur belajar Business Development & Partnership, topik \"Riset pasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "22c72786-5b9d-5a00-9b65-64aac244b646",
+  "examType": "karier-partnership",
+  "segmentId": "konsep",
+  "topic": "Materi: Presentasi dan proposal",
+  "difficulty": 2,
+  "q": "Urutan struktur proposal yang paling logis adalah...",
+  "opts": {
+   "A": "Bukti, salam, harga, solusi",
+   "B": "Masalah, solusi, manfaat, bukti, langkah berikutnya",
+   "C": "Langkah berikutnya, masalah, harga",
+   "D": "Harga, penutup, masalah, salam"
+  },
+  "ans": "B",
+  "exp": "Proposal efektif dimulai dari masalah yang dirasakan mitra, lalu solusi, manfaat, bukti, dan diakhiri langkah berikutnya. Materi: jalur belajar Business Development & Partnership, topik \"Presentasi dan proposal\".",
+  "isTrial": false
+ },
+ {
+  "uid": "dbbb80f3-b58c-5166-857a-d18c4f0570fe",
+  "examType": "karier-partnership",
+  "segmentId": "kasus",
+  "topic": "Materi: Presentasi dan proposal",
+  "difficulty": 2,
+  "q": "Slide presentasi kamu penuh paragraf panjang dan audiens tampak bosan. Perbaikan terbaik adalah...",
+  "opts": {
+   "A": "Mengubahnya menjadi satu pesan utama per slide dengan visual atau angka pendukung",
+   "B": "Membaca slide kata demi kata",
+   "C": "Menambah paragraf",
+   "D": "Memperkecil huruf agar muat"
+  },
+  "ans": "A",
+  "exp": "Satu slide satu pesan membuat audiens fokus. Teks panjang membuat audiens membaca, bukan mendengar. Materi: jalur belajar Business Development & Partnership, topik \"Presentasi dan proposal\".",
+  "isTrial": false
+ },
+ {
+  "uid": "352162f9-10b9-5bde-991c-32e1b99593fe",
+  "examType": "karier-partnership",
+  "segmentId": "konsep",
+  "topic": "Materi: Negosiasi dan CRM",
+  "difficulty": 2,
+  "q": "Fungsi utama CRM bagi tim kemitraan adalah...",
+  "opts": {
+   "A": "Mengatur jadwal piket kantor",
+   "B": "Mencatat kontak, riwayat interaksi, dan tahap peluang agar tindak lanjut tidak terlewat",
+   "C": "Menghitung gaji karyawan",
+   "D": "Mencetak kartu nama"
+  },
+  "ans": "B",
+  "exp": "CRM menyimpan riwayat dan tahap peluang sehingga tim dapat menindaklanjuti tepat waktu. Materi: jalur belajar Business Development & Partnership, topik \"Negosiasi dan CRM\".",
+  "isTrial": false
+ },
+ {
+  "uid": "9b0862e3-3e61-52c6-9eb3-b0a7ccc3a992",
+  "examType": "karier-partnership",
+  "segmentId": "kasus",
+  "topic": "Materi: Negosiasi dan CRM",
+  "difficulty": 2,
+  "q": "Setelah rapat dengan calon mitra, mereka berkata akan mempertimbangkan. Tindakan terbaik adalah...",
+  "opts": {
+   "A": "Menghubungi tiap hari dengan nada menekan",
+   "B": "Mengirim ringkasan hasil rapat, mencatat di CRM, dan menjadwalkan tindak lanjut dengan tanggal",
+   "C": "Menghapus kontak",
+   "D": "Menunggu tanpa mencatat"
+  },
+  "ans": "B",
+  "exp": "Ringkasan tertulis dan jadwal tindak lanjut menjaga momentum tanpa menekan, dan CRM memastikan tidak terlupa. Materi: jalur belajar Business Development & Partnership, topik \"Negosiasi dan CRM\".",
+  "isTrial": false
+ },
+ {
+  "uid": "59e52c79-8c79-5bf7-bb52-9b11b7411eff",
+  "examType": "karier-data-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: Excel untuk analisis data",
+  "difficulty": 2,
+  "q": "Fitur Excel yang paling cocok untuk merangkum total penjualan per wilayah dari ribuan baris data adalah...",
+  "opts": {
+   "A": "Tabel pivot",
+   "B": "Freeze panes",
+   "C": "Format painter",
+   "D": "Spell check"
+  },
+  "ans": "A",
+  "exp": "Tabel pivot mengelompokkan dan menjumlahkan data dengan cepat tanpa rumus manual. Materi: jalur belajar Data Analyst, topik \"Excel untuk analisis data\".",
+  "isTrial": false
+ },
+ {
+  "uid": "74fbc0d5-5fa9-5e75-aeb7-ed28779f1434",
+  "examType": "karier-data-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: Excel untuk analisis data",
+  "difficulty": 2,
+  "q": "Data pelanggan berisi nama yang sama ditulis \"Budi \", \"budi\", dan \"Budi\". Langkah pembersihan awal yang tepat adalah...",
+  "opts": {
+   "A": "Menghapus seluruh kolom nama",
+   "B": "Mengganti semua nama menjadi \"Pelanggan\"",
+   "C": "Membiarkannya karena terlihat mirip",
+   "D": "Menyeragamkan dengan TRIM dan huruf besar kecil, lalu memeriksa duplikat"
+  },
+  "ans": "D",
+  "exp": "Spasi berlebih dan perbedaan huruf membuat data yang sama dianggap berbeda. TRIM dan penyeragaman mencegah salah hitung. Materi: jalur belajar Data Analyst, topik \"Excel untuk analisis data\".",
+  "isTrial": false
+ },
+ {
+  "uid": "af123176-612d-52f7-b3e6-b2521c8cff63",
+  "examType": "karier-data-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: SQL dasar",
+  "difficulty": 2,
+  "q": "Untuk menyaring hasil kelompok setelah GROUP BY, misalnya hanya kelompok dengan COUNT lebih dari 5, klausa yang dipakai adalah...",
+  "opts": {
+   "A": "HAVING",
+   "B": "ORDER BY",
+   "C": "WHERE",
+   "D": "LIMIT"
+  },
+  "ans": "A",
+  "exp": "HAVING menyaring hasil agregat setelah pengelompokan. WHERE bekerja pada baris sebelum dikelompokkan. Materi: jalur belajar Data Analyst, topik \"SQL dasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "004cac04-4f91-5fa9-be74-1e3f684f6801",
+  "examType": "karier-data-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: SQL dasar",
+  "difficulty": 2,
+  "q": "Kamu ingin menampilkan semua pelanggan beserta jumlah pesanannya, termasuk pelanggan yang belum pernah memesan. JOIN yang tepat adalah...",
+  "opts": {
+   "A": "UNION tanpa kunci",
+   "B": "CROSS APPLY saja",
+   "C": "INNER JOIN",
+   "D": "LEFT JOIN dari tabel pelanggan ke tabel pesanan"
+  },
+  "ans": "D",
+  "exp": "LEFT JOIN mempertahankan semua baris tabel pelanggan walau tidak ada pesanan yang cocok. INNER JOIN akan membuang pelanggan tanpa pesanan. Materi: jalur belajar Data Analyst, topik \"SQL dasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "2375775e-5341-51f4-bb9a-7c4eea0f16e1",
+  "examType": "karier-data-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: Statistik dasar",
+  "difficulty": 2,
+  "q": "Gaji 9 karyawan sekitar 5 juta, tetapi gaji direktur 100 juta. Ukuran yang paling mewakili gaji tipikal adalah...",
+  "opts": {
+   "A": "Nilai maksimum",
+   "B": "Median",
+   "C": "Rata-rata",
+   "D": "Jumlah total"
+  },
+  "ans": "B",
+  "exp": "Median tidak banyak terpengaruh pencilan seperti gaji direktur, sedangkan rata-rata tertarik naik. Materi: jalur belajar Data Analyst, topik \"Statistik dasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "0058a6a7-e23d-5b7e-82a3-59f320afb193",
+  "examType": "karier-data-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: Statistik dasar",
+  "difficulty": 2,
+  "q": "Data menunjukkan penjualan es krim dan jumlah kasus tenggelam sama-sama naik di musim panas, korelasinya tinggi. Kesimpulan yang tepat adalah...",
+  "opts": {
+   "A": "Data pasti salah",
+   "B": "Korelasi tidak membuktikan sebab-akibat; ada faktor lain (cuaca) yang memengaruhi keduanya",
+   "C": "Es krim menyebabkan tenggelam",
+   "D": "Tenggelam meningkatkan penjualan es krim"
+  },
+  "ans": "B",
+  "exp": "Dua variabel bisa berkorelasi karena faktor ketiga (musim panas). Korelasi saja tidak menunjukkan sebab-akibat. Materi: jalur belajar Data Analyst, topik \"Statistik dasar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "7f8bd1c8-f5c1-5234-aee8-03557d95a82d",
+  "examType": "karier-data-analyst",
+  "segmentId": "konsep",
+  "topic": "Materi: Visualisasi dan dasbor",
+  "difficulty": 2,
+  "q": "Untuk menampilkan perubahan penjualan sepanjang 12 bulan, jenis grafik yang paling tepat adalah...",
+  "opts": {
+   "A": "Grafik radar",
+   "B": "Grafik garis",
+   "C": "Peta pohon",
+   "D": "Grafik lingkaran"
+  },
+  "ans": "B",
+  "exp": "Grafik garis paling jelas memperlihatkan tren dan perubahan dari waktu ke waktu. Materi: jalur belajar Data Analyst, topik \"Visualisasi dan dasbor\".",
+  "isTrial": false
+ },
+ {
+  "uid": "6956c020-beca-540d-b76e-3e2e5f50c2e6",
+  "examType": "karier-data-analyst",
+  "segmentId": "kasus",
+  "topic": "Materi: Visualisasi dan dasbor",
+  "difficulty": 2,
+  "q": "Sumbu vertikal grafik batang dimulai dari 95, bukan 0, sehingga selisih kecil tampak sangat besar. Masalahnya adalah...",
+  "opts": {
+   "A": "Grafik terlalu rapi",
+   "B": "Judul grafik terlalu panjang",
+   "C": "Sumbu yang dipotong membuat perbandingan menyesatkan",
+   "D": "Warna batang kurang menarik"
+  },
+  "ans": "C",
+  "exp": "Batang yang tidak dimulai dari nol melebih-lebihkan selisih. Mulailah dari nol agar perbandingan jujur. Materi: jalur belajar Data Analyst, topik \"Visualisasi dan dasbor\".",
+  "isTrial": false
+ },
+ {
+  "uid": "d1b5dfd2-cdea-5e85-b2a8-87bd7043e74f",
+  "examType": "karier-software-developer",
+  "segmentId": "konsep",
+  "topic": "Materi: HTML, CSS, dan JavaScript",
+  "difficulty": 2,
+  "q": "Untuk membuat tampilan berubah pada lebar layar tertentu, fitur CSS yang digunakan adalah...",
+  "opts": {
+   "A": "Fetch API",
+   "B": "Event bubbling",
+   "C": "Local storage",
+   "D": "Media query"
+  },
+  "ans": "D",
+  "exp": "Media query menerapkan aturan CSS hanya ketika kondisi layar terpenuhi, dasar desain responsif. Materi: jalur belajar Software Developer (Web), topik \"HTML, CSS, dan JavaScript\".",
+  "isTrial": false
+ },
+ {
+  "uid": "ab240308-6f86-55cb-a318-7b7166b809e7",
+  "examType": "karier-software-developer",
+  "segmentId": "kasus",
+  "topic": "Materi: HTML, CSS, dan JavaScript",
+  "difficulty": 2,
+  "q": "Tombol di halaman tidak bereaksi saat diklik. Kamu sudah memastikan HTML-nya benar. Langkah debugging berikutnya yang paling masuk akal adalah...",
+  "opts": {
+   "A": "Membeli komputer baru",
+   "B": "Menghapus seluruh CSS",
+   "C": "Mengganti font",
+   "D": "Membuka konsol browser untuk melihat error JavaScript dan memeriksa apakah event listener terpasang"
+  },
+  "ans": "D",
+  "exp": "Konsol browser menampilkan galat dan memungkinkan memeriksa apakah penangan klik terpasang pada elemen yang benar. Materi: jalur belajar Software Developer (Web), topik \"HTML, CSS, dan JavaScript\".",
+  "isTrial": false
+ },
+ {
+  "uid": "19d227ca-a71b-5111-8e8e-626065bdf210",
+  "examType": "karier-software-developer",
+  "segmentId": "konsep",
+  "topic": "Materi: Git dan kolaborasi",
+  "difficulty": 2,
+  "q": "Alasan utama membuat branch baru untuk setiap fitur adalah...",
+  "opts": {
+   "A": "Membuat kode lebih cepat berjalan",
+   "B": "Memisahkan pekerjaan agar kode utama tetap stabil sampai fitur siap",
+   "C": "Menghindari penulisan pesan commit",
+   "D": "Menghapus riwayat commit"
+  },
+  "ans": "B",
+  "exp": "Branch mengisolasi perubahan sehingga kode utama tidak rusak oleh pekerjaan yang belum selesai. Materi: jalur belajar Software Developer (Web), topik \"Git dan kolaborasi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "2a9d5fc6-f7c1-59c9-a6b7-342dc57b5aa4",
+  "examType": "karier-software-developer",
+  "segmentId": "kasus",
+  "topic": "Materi: Git dan kolaborasi",
+  "difficulty": 2,
+  "q": "Dua rekan mengubah baris yang sama di file yang sama lalu Git menolak menggabungkan otomatis. Tindakan yang tepat adalah...",
+  "opts": {
+   "A": "Menyelesaikan merge conflict dengan memeriksa kedua perubahan lalu memilih atau menggabungkannya",
+   "B": "Mengabaikan perubahan rekan",
+   "C": "Memaksa push tanpa melihat",
+   "D": "Menghapus repositori"
+  },
+  "ans": "A",
+  "exp": "Konflik harus diselesaikan manual dengan memahami maksud kedua perubahan agar tidak ada pekerjaan yang hilang. Materi: jalur belajar Software Developer (Web), topik \"Git dan kolaborasi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "022a1f33-6656-5ccc-bcf7-af0d708f33da",
+  "examType": "karier-software-developer",
+  "segmentId": "konsep",
+  "topic": "Materi: Backend dan basis data",
+  "difficulty": 2,
+  "q": "Metode HTTP yang lazim dipakai untuk membuat data baru melalui API REST adalah...",
+  "opts": {
+   "A": "GET",
+   "B": "DELETE",
+   "C": "HEAD",
+   "D": "POST"
+  },
+  "ans": "D",
+  "exp": "POST dipakai untuk membuat sumber daya baru. GET membaca, DELETE menghapus, HEAD hanya meminta header. Materi: jalur belajar Software Developer (Web), topik \"Backend dan basis data\".",
+  "isTrial": false
+ },
+ {
+  "uid": "a8285ac2-5771-590f-bfbc-1e08efc30773",
+  "examType": "karier-software-developer",
+  "segmentId": "kasus",
+  "topic": "Materi: Backend dan basis data",
+  "difficulty": 2,
+  "q": "Formulir pencarian menyusun query SQL dengan menyambung teks input pengguna langsung ke string query. Risiko utamanya adalah...",
+  "opts": {
+   "A": "Halaman menjadi lambat dimuat ulang",
+   "B": "Font tidak terbaca",
+   "C": "SQL injection",
+   "D": "Warna tombol berubah"
+  },
+  "ans": "C",
+  "exp": "Menyambung input mentah ke query membuka celah SQL injection. Gunakan query berparameter. Materi: jalur belajar Software Developer (Web), topik \"Backend dan basis data\".",
+  "isTrial": false
+ },
+ {
+  "uid": "e901b3ae-6b2e-556a-b09b-d5b9d25f80e6",
+  "examType": "karier-software-developer",
+  "segmentId": "konsep",
+  "topic": "Materi: Framework dan deployment",
+  "difficulty": 2,
+  "q": "Tempat yang tepat menyimpan kunci API rahasia suatu aplikasi adalah...",
+  "opts": {
+   "A": "Langsung di dalam kode di repositori publik",
+   "B": "Environment variable di server, di luar repositori",
+   "C": "Di komentar HTML",
+   "D": "Di judul halaman"
+  },
+  "ans": "B",
+  "exp": "Kunci yang masuk repositori mudah bocor. Simpan di environment variable atau pengelola rahasia. Materi: jalur belajar Software Developer (Web), topik \"Framework dan deployment\".",
+  "isTrial": false
+ },
+ {
+  "uid": "1d65d0bd-aeec-5fb0-bfc6-2890be81e249",
+  "examType": "karier-software-developer",
+  "segmentId": "kasus",
+  "topic": "Materi: Framework dan deployment",
+  "difficulty": 2,
+  "q": "Setelah rilis, sebagian pengguna melaporkan error 500 pada halaman pembayaran. Langkah paling tepat adalah...",
+  "opts": {
+   "A": "Menutup situs tanpa pemberitahuan",
+   "B": "Menghapus semua pengguna",
+   "C": "Memeriksa log galat server, memulihkan versi sebelumnya bila perlu, lalu memperbaiki penyebabnya",
+   "D": "Mengabaikan karena hanya sebagian"
+  },
+  "ans": "C",
+  "exp": "Log menunjukkan penyebab, dan rollback cepat mengurangi dampak sambil perbaikan disiapkan. Materi: jalur belajar Software Developer (Web), topik \"Framework dan deployment\".",
+  "isTrial": false
+ },
+ {
+  "uid": "56c282a1-383a-5cc7-8d76-5282e00b8a4a",
+  "examType": "karier-ui-ux",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar UX dan riset pengguna",
+  "difficulty": 2,
+  "q": "Pertanyaan wawancara yang paling baik untuk menggali pengalaman nyata pengguna adalah...",
+  "opts": {
+   "A": "Berapa bintang yang kamu beri?",
+   "B": "Apakah aplikasi ini bagus, ya atau tidak?",
+   "C": "Ceritakan terakhir kali kamu memesan makanan lewat aplikasi, apa yang kamu lakukan?",
+   "D": "Kamu pasti suka fitur ini, kan?"
+  },
+  "ans": "C",
+  "exp": "Pertanyaan tentang kejadian nyata menghasilkan cerita dan detail perilaku. Pertanyaan menggiring atau ya-tidak hanya menghasilkan jawaban dangkal. Materi: jalur belajar UI/UX Designer, topik \"Dasar UX dan riset pengguna\".",
+  "isTrial": false
+ },
+ {
+  "uid": "39ad35c1-a816-5303-bd32-a0ce431bf510",
+  "examType": "karier-ui-ux",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar UX dan riset pengguna",
+  "difficulty": 2,
+  "q": "Tiga dari lima pengguna yang diwawancarai berhenti di langkah pengisian alamat karena formulir terlalu panjang. Temuan ini paling tepat dirumuskan sebagai...",
+  "opts": {
+   "A": "Pain point: formulir alamat terlalu panjang sehingga pengguna berhenti",
+   "B": "Pengguna malas",
+   "C": "Pengguna tidak peduli pada produk",
+   "D": "Warna tombol salah"
+  },
+  "ans": "A",
+  "exp": "Temuan harus menyebut masalah spesifik dan konteksnya, bukan menyalahkan pengguna. Materi: jalur belajar UI/UX Designer, topik \"Dasar UX dan riset pengguna\".",
+  "isTrial": false
+ },
+ {
+  "uid": "c2adb5f3-c5eb-5fb1-909c-75ee814039a7",
+  "examType": "karier-ui-ux",
+  "segmentId": "konsep",
+  "topic": "Materi: Wireframe dan alur",
+  "difficulty": 2,
+  "q": "Tujuan utama wireframe adalah...",
+  "opts": {
+   "A": "Menentukan palet warna akhir",
+   "B": "Memilih nama merek",
+   "C": "Menentukan struktur dan tata letak sebelum desain visual",
+   "D": "Menulis kode produksi"
+  },
+  "ans": "C",
+  "exp": "Wireframe memfokuskan diskusi pada struktur dan alur, sehingga perubahan murah dilakukan sebelum visual dibuat. Materi: jalur belajar UI/UX Designer, topik \"Wireframe dan alur\".",
+  "isTrial": false
+ },
+ {
+  "uid": "421b0bf7-0460-5f35-8f2a-2b209508975e",
+  "examType": "karier-ui-ux",
+  "segmentId": "kasus",
+  "topic": "Materi: Wireframe dan alur",
+  "difficulty": 2,
+  "q": "Layar daftar pesanan pengguna baru tampak kosong dan membingungkan. Perbaikan UX yang tepat adalah...",
+  "opts": {
+   "A": "Menambahkan keadaan kosong yang menjelaskan dan mengajak membuat pesanan pertama",
+   "B": "Membiarkan layar kosong",
+   "C": "Menyembunyikan menu",
+   "D": "Menambah banyak iklan"
+  },
+  "ans": "A",
+  "exp": "Keadaan kosong yang baik menjelaskan situasi dan memberi langkah berikutnya, bukan sekadar layar hampa. Materi: jalur belajar UI/UX Designer, topik \"Wireframe dan alur\".",
+  "isTrial": false
+ },
+ {
+  "uid": "fb2aa042-0688-51a9-8129-65301ffb75ec",
+  "examType": "karier-ui-ux",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar UI dan sistem desain",
+  "difficulty": 2,
+  "q": "Alasan utama memakai sistem desain dalam tim adalah...",
+  "opts": {
+   "A": "Menjaga konsistensi dan mempercepat kerja karena komponen dipakai ulang",
+   "B": "Membuat setiap halaman tampak berbeda",
+   "C": "Menghilangkan kebutuhan riset pengguna",
+   "D": "Mengurangi jumlah pengguna"
+  },
+  "ans": "A",
+  "exp": "Komponen dan aturan bersama menjaga konsistensi tampilan serta menghemat waktu desain dan pengembangan. Materi: jalur belajar UI/UX Designer, topik \"Dasar UI dan sistem desain\".",
+  "isTrial": false
+ },
+ {
+  "uid": "618a2935-87e4-5f3e-8687-1ddad44e5008",
+  "examType": "karier-ui-ux",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar UI dan sistem desain",
+  "difficulty": 2,
+  "q": "Teks abu-abu muda di atas latar putih sulit dibaca oleh banyak pengguna. Perbaikan yang tepat adalah...",
+  "opts": {
+   "A": "Meningkatkan kontras warna teks terhadap latar",
+   "B": "Memperkecil ukuran teks",
+   "C": "Mengganti nama halaman",
+   "D": "Menambah animasi pada teks"
+  },
+  "ans": "A",
+  "exp": "Kontras yang cukup membuat teks terbaca, terutama bagi pengguna dengan penglihatan terbatas atau layar di bawah terik matahari. Materi: jalur belajar UI/UX Designer, topik \"Dasar UI dan sistem desain\".",
+  "isTrial": false
+ },
+ {
+  "uid": "50f3aa5a-98e5-5f1d-adaa-47874c55af96",
+  "examType": "karier-ui-ux",
+  "segmentId": "konsep",
+  "topic": "Materi: Prototipe dan uji kegunaan",
+  "difficulty": 2,
+  "q": "Saat uji kegunaan, peran fasilitator yang paling tepat adalah...",
+  "opts": {
+   "A": "Membela desain saat peserta salah",
+   "B": "Mengambil alih perangkat peserta",
+   "C": "Memberi tugas dan mengamati tanpa mengarahkan jawaban",
+   "D": "Menjelaskan cara memakai setiap tombol sebelum mulai"
+  },
+  "ans": "C",
+  "exp": "Tujuan uji adalah melihat kesulitan nyata. Jika fasilitator menolong, masalah desain tersembunyi. Materi: jalur belajar UI/UX Designer, topik \"Prototipe dan uji kegunaan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "1af83241-3626-5734-a2e0-794fd86888a6",
+  "examType": "karier-ui-ux",
+  "segmentId": "kasus",
+  "topic": "Materi: Prototipe dan uji kegunaan",
+  "difficulty": 2,
+  "q": "Dari lima peserta, empat gagal menemukan tombol \"Bayar\". Prioritas tindakan yang paling tepat adalah...",
+  "opts": {
+   "A": "Menganggap itu salah peserta",
+   "B": "Memperbaiki visibilitas tombol Bayar lalu menguji ulang",
+   "C": "Menghapus tombol lain",
+   "D": "Menunda sampai rilis"
+  },
+  "ans": "B",
+  "exp": "Masalah yang dialami hampir semua peserta dan menghambat tujuan utama harus diperbaiki lebih dulu, lalu diverifikasi. Materi: jalur belajar UI/UX Designer, topik \"Prototipe dan uji kegunaan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "22269ccc-4a2d-5962-8265-62dd6dfbf860",
+  "examType": "karier-digital-marketing",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar pemasaran digital",
+  "difficulty": 2,
+  "q": "Pada tahap funnel mana video edukasi singkat yang memperkenalkan masalah dan solusi paling cocok?",
+  "opts": {
+   "A": "Penagihan",
+   "B": "Konversi akhir",
+   "C": "Kesadaran (awareness)",
+   "D": "Loyalitas pelanggan lama"
+  },
+  "ans": "C",
+  "exp": "Pada tahap kesadaran, audiens belum mengenal merek; konten edukatif memperkenalkan masalah dan solusi tanpa menekan membeli. Materi: jalur belajar Digital Marketing Specialist, topik \"Dasar pemasaran digital\".",
+  "isTrial": false
+ },
+ {
+  "uid": "48521f19-d97b-5469-90d7-524493f26c6b",
+  "examType": "karier-digital-marketing",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar pemasaran digital",
+  "difficulty": 2,
+  "q": "Toko online ingin menaikkan penjualan tetapi belum punya target angka. Langkah pertama yang tepat adalah...",
+  "opts": {
+   "A": "Membeli iklan sebanyak mungkin",
+   "B": "Menghapus akun media sosial",
+   "C": "Menetapkan tujuan terukur, misalnya jumlah pesanan per bulan",
+   "D": "Menambah kanal tanpa alasan"
+  },
+  "ans": "C",
+  "exp": "Tujuan yang terukur menjadi dasar memilih kanal, anggaran, dan cara menilai hasil. Materi: jalur belajar Digital Marketing Specialist, topik \"Dasar pemasaran digital\".",
+  "isTrial": false
+ },
+ {
+  "uid": "28516052-3e38-55b7-9828-08a117daaa97",
+  "examType": "karier-digital-marketing",
+  "segmentId": "konsep",
+  "topic": "Materi: SEO dan konten",
+  "difficulty": 2,
+  "q": "Orang mengetik \"cara memilih laptop untuk kuliah\". Maksud pencariannya paling tepat disebut...",
+  "opts": {
+   "A": "Keluhan layanan",
+   "B": "Navigasi ke situs tertentu",
+   "C": "Transaksi siap bayar",
+   "D": "Informasional, mencari panduan sebelum membeli"
+  },
+  "ans": "D",
+  "exp": "Kata \"cara memilih\" menandakan pencarian informasi. Konten panduan atau perbandingan paling sesuai. Materi: jalur belajar Digital Marketing Specialist, topik \"SEO dan konten\".",
+  "isTrial": false
+ },
+ {
+  "uid": "64b8a323-4974-5f3f-b3b2-0eb8796b44b0",
+  "examType": "karier-digital-marketing",
+  "segmentId": "kasus",
+  "topic": "Materi: SEO dan konten",
+  "difficulty": 2,
+  "q": "Artikel blog dipenuhi kata kunci yang diulang-ulang tanpa menjawab pertanyaan pembaca. Dampak yang paling mungkin adalah...",
+  "opts": {
+   "A": "Pembaca makin senang",
+   "B": "Situs menjadi lebih cepat",
+   "C": "Pengalaman membaca buruk dan nilai di mata mesin pencari rendah",
+   "D": "Peringkat otomatis naik"
+  },
+  "ans": "C",
+  "exp": "Mengulang kata kunci berlebihan merusak kualitas. Mesin pencari menghargai konten yang menjawab kebutuhan pembaca. Materi: jalur belajar Digital Marketing Specialist, topik \"SEO dan konten\".",
+  "isTrial": false
+ },
+ {
+  "uid": "95291c3c-3d90-584e-9ee4-c7239f644531",
+  "examType": "karier-digital-marketing",
+  "segmentId": "konsep",
+  "topic": "Materi: Iklan berbayar",
+  "difficulty": 2,
+  "q": "CTR (Click-Through Rate) dihitung dari...",
+  "opts": {
+   "A": "Jumlah klik dibagi jumlah tayangan",
+   "B": "Jumlah pembelian dibagi jumlah klik",
+   "C": "Total biaya dibagi total klik",
+   "D": "Jumlah tayangan dibagi anggaran"
+  },
+  "ans": "A",
+  "exp": "CTR = klik / tayangan. Metrik ini menunjukkan seberapa menarik iklan bagi yang melihatnya. Materi: jalur belajar Digital Marketing Specialist, topik \"Iklan berbayar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "32a49ff9-6a57-56e5-a406-dc16cdd7833f",
+  "examType": "karier-digital-marketing",
+  "segmentId": "kasus",
+  "topic": "Materi: Iklan berbayar",
+  "difficulty": 2,
+  "q": "Kamu ingin tahu apakah judul iklan A atau B lebih efektif. Cara pengujian yang benar adalah...",
+  "opts": {
+   "A": "Menjalankan keduanya bersamaan pada audiens sebanding dengan hanya judul yang berbeda",
+   "B": "Memilih berdasarkan selera tim",
+   "C": "Mengubah judul, gambar, dan target sekaligus",
+   "D": "Hanya menjalankan A selama sebulan"
+  },
+  "ans": "A",
+  "exp": "Uji A/B yang valid mengubah satu elemen saja agar perbedaan hasil bisa dikaitkan dengan elemen tersebut. Materi: jalur belajar Digital Marketing Specialist, topik \"Iklan berbayar\".",
+  "isTrial": false
+ },
+ {
+  "uid": "01ff22a7-63c7-513e-9261-0727a6d110ce",
+  "examType": "karier-digital-marketing",
+  "segmentId": "konsep",
+  "topic": "Materi: Analitik kampanye",
+  "difficulty": 2,
+  "q": "Biaya iklan Rp2.000.000 menghasilkan 80 pembelian. Biaya per akuisisi (CPA) adalah...",
+  "opts": {
+   "A": "Rp250.000",
+   "B": "Rp2.000",
+   "C": "Rp25.000",
+   "D": "Rp80.000"
+  },
+  "ans": "C",
+  "exp": "CPA = 2.000.000 / 80 = Rp25.000 per pembelian. Materi: jalur belajar Digital Marketing Specialist, topik \"Analitik kampanye\".",
+  "isTrial": false
+ },
+ {
+  "uid": "014b79db-3a43-5e18-9bb7-4653176f5694",
+  "examType": "karier-digital-marketing",
+  "segmentId": "kasus",
+  "topic": "Materi: Analitik kampanye",
+  "difficulty": 2,
+  "q": "Iklan A punya CTR tinggi tetapi hampir tidak ada pembelian; iklan B CTR lebih rendah tetapi pembeliannya banyak. Jika tujuan kampanye adalah penjualan, kesimpulan yang tepat adalah...",
+  "opts": {
+   "A": "Iklan B lebih sesuai tujuan; periksa mengapa pengunjung dari iklan A tidak membeli",
+   "B": "Iklan A pasti terbaik karena CTR tinggi",
+   "C": "Matikan semua iklan",
+   "D": "Abaikan data"
+  },
+  "ans": "A",
+  "exp": "Metrik harus selaras dengan tujuan. Klik tinggi tanpa konversi menandakan ketidaksesuaian pesan atau halaman tujuan. Materi: jalur belajar Digital Marketing Specialist, topik \"Analitik kampanye\".",
+  "isTrial": false
+ },
+ {
+  "uid": "573ba1b3-a8c1-57f6-b31f-1f6790909019",
+  "examType": "karier-akuntansi",
+  "segmentId": "konsep",
+  "topic": "Materi: Siklus akuntansi",
+  "difficulty": 2,
+  "q": "Persamaan dasar akuntansi yang harus selalu seimbang di setiap pencatatan adalah...",
+  "opts": {
+   "A": "Laba = Aset - Kas",
+   "B": "Aset = Pendapatan - Beban",
+   "C": "Aset = Liabilitas + Ekuitas",
+   "D": "Ekuitas = Aset + Liabilitas"
+  },
+  "ans": "C",
+  "exp": "Seluruh sumber daya (aset) dibiayai oleh kewajiban (liabilitas) dan modal pemilik (ekuitas). Materi: jalur belajar Akuntan & Perpajakan, topik \"Siklus akuntansi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "45d40fa1-a683-5808-8213-60f72f5a4e57",
+  "examType": "karier-akuntansi",
+  "segmentId": "kasus",
+  "topic": "Materi: Siklus akuntansi",
+  "difficulty": 2,
+  "q": "Perusahaan membeli perlengkapan kantor Rp500.000 secara tunai. Jurnal yang tepat adalah...",
+  "opts": {
+   "A": "Debit Perlengkapan 500.000, Kredit Kas 500.000",
+   "B": "Debit Perlengkapan 500.000, Kredit Modal 500.000",
+   "C": "Debit Beban Gaji 500.000, Kredit Kas 500.000",
+   "D": "Debit Kas 500.000, Kredit Perlengkapan 500.000"
+  },
+  "ans": "A",
+  "exp": "Aset perlengkapan bertambah (debit) dan aset kas berkurang (kredit) dengan nilai sama. Materi: jalur belajar Akuntan & Perpajakan, topik \"Siklus akuntansi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "d4abd92f-2ca9-522b-93ac-772bbdc67ed2",
+  "examType": "karier-akuntansi",
+  "segmentId": "konsep",
+  "topic": "Materi: Laporan keuangan",
+  "difficulty": 2,
+  "q": "Laporan yang menunjukkan pendapatan dan beban selama satu periode adalah...",
+  "opts": {
+   "A": "Daftar inventaris",
+   "B": "Neraca saldo",
+   "C": "Neraca",
+   "D": "Laporan laba rugi"
+  },
+  "ans": "D",
+  "exp": "Laporan laba rugi merangkum kinerja selama periode. Neraca adalah potret posisi pada satu tanggal. Materi: jalur belajar Akuntan & Perpajakan, topik \"Laporan keuangan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "2b8018bc-0e56-5f8f-ab2e-62318ac2534d",
+  "examType": "karier-akuntansi",
+  "segmentId": "kasus",
+  "topic": "Materi: Laporan keuangan",
+  "difficulty": 2,
+  "q": "Sebuah toko melaporkan laba besar, tetapi kasnya menipis karena banyak penjualan kredit belum dibayar. Penjelasan yang tepat adalah...",
+  "opts": {
+   "A": "Laba dan kas selalu sama",
+   "B": "Laporan pasti salah",
+   "C": "Laba dicatat saat penjualan terjadi, sedangkan kas baru masuk saat piutang dibayar",
+   "D": "Kas tidak penting"
+  },
+  "ans": "C",
+  "exp": "Dasar akrual mengakui pendapatan saat terjadi, bukan saat kas diterima. Karena itu arus kas perlu dipantau terpisah. Materi: jalur belajar Akuntan & Perpajakan, topik \"Laporan keuangan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "ee9b6979-9763-5c5e-a622-b9eae95c61cd",
+  "examType": "karier-akuntansi",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar perpajakan",
+  "difficulty": 2,
+  "q": "PPh 21 adalah pajak atas...",
+  "opts": {
+   "A": "Penghasilan yang diterima pegawai atas pekerjaan",
+   "B": "Penjualan barang oleh pabrik",
+   "C": "Bangunan dan tanah",
+   "D": "Kendaraan bermotor"
+  },
+  "ans": "A",
+  "exp": "PPh 21 dikenakan atas penghasilan berupa gaji, upah, honorarium, dan sejenisnya sehubungan dengan pekerjaan. Materi: jalur belajar Akuntan & Perpajakan, topik \"Dasar perpajakan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "dfa43272-8c8d-53d4-a87a-505fa0f758d9",
+  "examType": "karier-akuntansi",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar perpajakan",
+  "difficulty": 2,
+  "q": "Perusahaan kena pajak menjual barang dan memungut PPN dari pembeli. Selisih antara PPN Keluaran dan PPN Masukan yang bisa dikreditkan akan...",
+  "opts": {
+   "A": "Disetor ke negara bila PPN Keluaran lebih besar",
+   "B": "Selalu menjadi laba perusahaan",
+   "C": "Dibagikan ke karyawan",
+   "D": "Diabaikan"
+  },
+  "ans": "A",
+  "exp": "Setoran PPN adalah PPN Keluaran dikurangi PPN Masukan yang dapat dikreditkan. Jika Keluaran lebih besar, selisihnya disetor. Materi: jalur belajar Akuntan & Perpajakan, topik \"Dasar perpajakan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "9f7e9f74-4382-587d-a41c-bdcd77304b71",
+  "examType": "karier-akuntansi",
+  "segmentId": "konsep",
+  "topic": "Materi: Excel untuk akuntansi",
+  "difficulty": 2,
+  "q": "Tujuan rekonsiliasi bank adalah...",
+  "opts": {
+   "A": "Membuat faktur penjualan",
+   "B": "Menyusun anggaran tahunan",
+   "C": "Mencocokkan saldo buku kas dengan rekening koran dan menjelaskan selisihnya",
+   "D": "Menghitung pajak penghasilan"
+  },
+  "ans": "C",
+  "exp": "Rekonsiliasi memastikan catatan kas perusahaan sesuai dengan catatan bank dan menemukan transaksi yang belum tercatat. Materi: jalur belajar Akuntan & Perpajakan, topik \"Excel untuk akuntansi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "cdb20c11-c25c-5173-9832-873ca5922ce3",
+  "examType": "karier-akuntansi",
+  "segmentId": "kasus",
+  "topic": "Materi: Excel untuk akuntansi",
+  "difficulty": 2,
+  "q": "Saldo kas menurut buku Rp10.000.000, rekening koran Rp9.700.000. Selisih terjadi karena cek Rp300.000 sudah dicatat perusahaan tetapi belum dicairkan. Penjelasan ini disebut...",
+  "opts": {
+   "A": "Pajak bank",
+   "B": "Penyusutan aset",
+   "C": "Kesalahan pembulatan",
+   "D": "Cek beredar (outstanding check) sebagai item rekonsiliasi"
+  },
+  "ans": "D",
+  "exp": "Cek yang sudah dicatat perusahaan tetapi belum dicairkan oleh penerima adalah cek beredar, item pencocok yang wajar. Materi: jalur belajar Akuntan & Perpajakan, topik \"Excel untuk akuntansi\".",
+  "isTrial": false
+ },
+ {
+  "uid": "57821ee6-81ea-53a5-b2fa-1907b0f67e24",
+  "examType": "karier-hr-talent",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar manajemen SDM",
+  "difficulty": 2,
+  "q": "Dokumen yang memuat tugas, tanggung jawab, dan kualifikasi sebuah posisi disebut...",
+  "opts": {
+   "A": "Surat peringatan",
+   "B": "Notulen rapat",
+   "C": "Uraian jabatan (job description)",
+   "D": "Slip gaji"
+  },
+  "ans": "C",
+  "exp": "Uraian jabatan menjadi dasar rekrutmen, penilaian, dan kompensasi untuk posisi tersebut. Materi: jalur belajar HR & Talent Acquisition, topik \"Dasar manajemen SDM\".",
+  "isTrial": false
+ },
+ {
+  "uid": "f25e7897-e79b-5526-b841-906ab6e4144c",
+  "examType": "karier-hr-talent",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar manajemen SDM",
+  "difficulty": 2,
+  "q": "Karyawan baru kebingungan pada minggu pertama karena tidak tahu harus bertanya ke siapa. Perbaikan SDM yang paling tepat adalah...",
+  "opts": {
+   "A": "Menyusun program onboarding dengan pendamping dan jadwal pengenalan",
+   "B": "Mengganti nama jabatan",
+   "C": "Membiarkan karyawan belajar sendiri",
+   "D": "Menaikkan target"
+  },
+  "ans": "A",
+  "exp": "Onboarding terstruktur mempercepat adaptasi dan mengurangi risiko karyawan baru keluar cepat. Materi: jalur belajar HR & Talent Acquisition, topik \"Dasar manajemen SDM\".",
+  "isTrial": false
+ },
+ {
+  "uid": "36a519b1-2168-56ef-8536-40aa37452e81",
+  "examType": "karier-hr-talent",
+  "segmentId": "konsep",
+  "topic": "Materi: Rekrutmen dan wawancara",
+  "difficulty": 2,
+  "q": "Contoh pertanyaan perilaku yang baik adalah...",
+  "opts": {
+   "A": "Apa kelebihanmu?",
+   "B": "Apakah kamu suka bekerja keras?",
+   "C": "Kapan kamu berencana menikah?",
+   "D": "Ceritakan saat kamu harus menyelesaikan pekerjaan dengan tenggat sangat ketat, apa yang kamu lakukan?"
+  },
+  "ans": "D",
+  "exp": "Pertanyaan perilaku meminta kejadian nyata dan menilai tindakan. Pertanyaan terakhir bersifat diskriminatif dan tidak relevan dengan pekerjaan. Materi: jalur belajar HR & Talent Acquisition, topik \"Rekrutmen dan wawancara\".",
+  "isTrial": false
+ },
+ {
+  "uid": "de86d60d-eae6-5eb1-acbc-951a154c3952",
+  "examType": "karier-hr-talent",
+  "segmentId": "kasus",
+  "topic": "Materi: Rekrutmen dan wawancara",
+  "difficulty": 2,
+  "q": "Dua pewawancara menilai kandidat dengan kesan masing-masing sehingga hasilnya sering bertentangan. Perbaikan terbaik adalah...",
+  "opts": {
+   "A": "Menghapus wawancara",
+   "B": "Menambah jumlah pewawancara tanpa pedoman",
+   "C": "Memakai pertanyaan yang sama dan rubrik skor tertulis",
+   "D": "Memilih kandidat yang paling akrab"
+  },
+  "ans": "C",
+  "exp": "Rubrik dan pertanyaan seragam mengurangi bias sehingga penilaian lebih adil dan konsisten. Materi: jalur belajar HR & Talent Acquisition, topik \"Rekrutmen dan wawancara\".",
+  "isTrial": false
+ },
+ {
+  "uid": "a4259aed-0b23-5c21-8f18-8f5462aa0a9c",
+  "examType": "karier-hr-talent",
+  "segmentId": "konsep",
+  "topic": "Materi: Hukum ketenagakerjaan",
+  "difficulty": 2,
+  "q": "Dasar umum menghitung upah lembur per jam bagi pekerja bulanan adalah...",
+  "opts": {
+   "A": "Upah sebulan dibagi 173",
+   "B": "Upah sebulan dikali 12",
+   "C": "Upah sebulan dibagi 10",
+   "D": "Upah sebulan dibagi 30"
+  },
+  "ans": "A",
+  "exp": "Upah per jam untuk lembur dihitung dari 1/173 upah sebulan, lalu dikalikan pengali sesuai ketentuan. Materi: jalur belajar HR & Talent Acquisition, topik \"Hukum ketenagakerjaan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "d0441930-e6a9-5fb2-b3e9-d4b5a8f2bda2",
+  "examType": "karier-hr-talent",
+  "segmentId": "kasus",
+  "topic": "Materi: Hukum ketenagakerjaan",
+  "difficulty": 2,
+  "q": "Perusahaan ingin menerapkan masa percobaan tiga bulan pada karyawan dengan kontrak PKWT. Pernyataan yang tepat adalah...",
+  "opts": {
+   "A": "Masa percobaan boleh enam bulan pada PKWT",
+   "B": "Masa percobaan tidak diperbolehkan pada PKWT",
+   "C": "Masa percobaan wajib pada PKWT",
+   "D": "Masa percobaan menggantikan kontrak"
+  },
+  "ans": "B",
+  "exp": "Peraturan membolehkan masa percobaan hanya untuk PKWTT. Pada PKWT, masa percobaan tidak diperkenankan. Materi: jalur belajar HR & Talent Acquisition, topik \"Hukum ketenagakerjaan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "4cecb0f4-96a9-5a67-a686-952b2907f3b9",
+  "examType": "karier-hr-talent",
+  "segmentId": "konsep",
+  "topic": "Materi: Payroll dan HRIS",
+  "difficulty": 2,
+  "q": "Gaji bersih (take-home pay) dihitung dari...",
+  "opts": {
+   "A": "Hanya tunjangan",
+   "B": "Gaji pokok ditambah semua potongan",
+   "C": "Total penghasilan dikurangi potongan seperti iuran dan pajak",
+   "D": "Total biaya perusahaan"
+  },
+  "ans": "C",
+  "exp": "Karyawan menerima penghasilan setelah dikurangi potongan wajib (iuran dan pajak) dan potongan lain yang berlaku. Materi: jalur belajar HR & Talent Acquisition, topik \"Payroll dan HRIS\".",
+  "isTrial": false
+ },
+ {
+  "uid": "bc148e97-d2ed-5feb-af18-c089367033e8",
+  "examType": "karier-hr-talent",
+  "segmentId": "kasus",
+  "topic": "Materi: Payroll dan HRIS",
+  "difficulty": 2,
+  "q": "Staf payroll membagikan file gaji seluruh karyawan ke grup chat tim agar mudah diakses. Masalahnya adalah...",
+  "opts": {
+   "A": "Tidak ada masalah",
+   "B": "Tampilannya kurang rapi",
+   "C": "File terlalu besar",
+   "D": "Data gaji bersifat rahasia dan harus dibatasi aksesnya"
+  },
+  "ans": "D",
+  "exp": "Data gaji adalah data pribadi dan rahasia. Akses harus dibatasi pada pihak berwenang, bukan disebar di grup. Materi: jalur belajar HR & Talent Acquisition, topik \"Payroll dan HRIS\".",
+  "isTrial": false
+ },
+ {
+  "uid": "ccf614d2-1d76-5665-9867-59e17c7155fc",
+  "examType": "karier-customer-service",
+  "segmentId": "konsep",
+  "topic": "Materi: Dasar layanan pelanggan",
+  "difficulty": 2,
+  "q": "First Contact Resolution (FCR) berarti...",
+  "opts": {
+   "A": "Pelanggan dihubungi berulang kali",
+   "B": "Masalah pelanggan selesai pada kontak pertama",
+   "C": "Pelanggan menunggu sampai besok",
+   "D": "Tiket ditutup otomatis"
+  },
+  "ans": "B",
+  "exp": "FCR mengukur seberapa sering masalah terselesaikan tanpa pelanggan harus menghubungi lagi. Materi: jalur belajar Customer Experience & Service, topik \"Dasar layanan pelanggan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "6cbdeabf-c1e3-5758-9445-72f6ba8f3408",
+  "examType": "karier-customer-service",
+  "segmentId": "kasus",
+  "topic": "Materi: Dasar layanan pelanggan",
+  "difficulty": 2,
+  "q": "Pelanggan bertanya kapan barang tiba, tetapi kamu belum memastikan jadwalnya. Respons terbaik adalah...",
+  "opts": {
+   "A": "Menyalahkan kurir",
+   "B": "Jujur bahwa kamu akan memeriksa ke bagian pengiriman dan menyebut kapan akan memberi kabar",
+   "C": "Menjanjikan \"besok pasti sampai\" agar pelanggan tenang",
+   "D": "Mengabaikan pesan"
+  },
+  "ans": "B",
+  "exp": "Janji yang tidak pasti merusak kepercayaan bila tidak terpenuhi. Kejujuran dan tindak lanjut yang jelas lebih baik. Materi: jalur belajar Customer Experience & Service, topik \"Dasar layanan pelanggan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "c3730399-5e08-59b4-bb9e-b58b62814f72",
+  "examType": "karier-customer-service",
+  "segmentId": "konsep",
+  "topic": "Materi: Komunikasi dan empati",
+  "difficulty": 2,
+  "q": "Respons yang menunjukkan empati kepada pelanggan yang kesal adalah...",
+  "opts": {
+   "A": "Tenang saja, jangan marah.",
+   "B": "Itu bukan urusan saya.",
+   "C": "Itu aturan perusahaan.",
+   "D": "Saya mengerti ini sangat mengganggu, saya bantu cek sekarang."
+  },
+  "ans": "D",
+  "exp": "Empati mengakui perasaan pelanggan lebih dulu lalu menawarkan tindakan. Kalimat lain meremehkan atau menolak. Materi: jalur belajar Customer Experience & Service, topik \"Komunikasi dan empati\".",
+  "isTrial": false
+ },
+ {
+  "uid": "45aedc3a-8684-5b15-bb84-7b9187c2e22f",
+  "examType": "karier-customer-service",
+  "segmentId": "kasus",
+  "topic": "Materi: Komunikasi dan empati",
+  "difficulty": 2,
+  "q": "Pelanggan menulis dengan huruf kapital dan nada marah soal tagihan ganda. Pendekatan komunikasi yang tepat adalah...",
+  "opts": {
+   "A": "Menutup percakapan",
+   "B": "Membalas dengan huruf kapital pula",
+   "C": "Tetap tenang, akui keluhan, minta data yang perlu, dan jelaskan langkah penyelesaian",
+   "D": "Mengabaikan sampai ia tenang"
+  },
+  "ans": "C",
+  "exp": "Menjaga ketenangan meredakan emosi, dan langkah yang jelas memberi rasa kendali kepada pelanggan. Materi: jalur belajar Customer Experience & Service, topik \"Komunikasi dan empati\".",
+  "isTrial": false
+ },
+ {
+  "uid": "aefb2464-6b6d-5f9b-847a-c9d49b7a795e",
+  "examType": "karier-customer-service",
+  "segmentId": "konsep",
+  "topic": "Materi: Penanganan keluhan",
+  "difficulty": 2,
+  "q": "Urutan penanganan keluhan yang tepat adalah...",
+  "opts": {
+   "A": "Tunda, tunggu, hapus",
+   "B": "Selesaikan, tutup, abaikan, lupakan",
+   "C": "Dengar, minta maaf, selesaikan, tindak lanjut",
+   "D": "Bantah, jelaskan aturan, tutup"
+  },
+  "ans": "C",
+  "exp": "Alur ini memastikan pelanggan merasa didengar, masalah selesai, dan hubungan dijaga dengan tindak lanjut. Materi: jalur belajar Customer Experience & Service, topik \"Penanganan keluhan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "422a5be5-c848-5c6c-a81d-76eac3c1d8d8",
+  "examType": "karier-customer-service",
+  "segmentId": "kasus",
+  "topic": "Materi: Penanganan keluhan",
+  "difficulty": 2,
+  "q": "Pelanggan meminta ganti rugi di luar batas wewenangmu. Tindakan yang paling tepat adalah...",
+  "opts": {
+   "A": "Menjelaskan akan mengeskalasi ke atasan, menyebut perkiraan waktu, dan menindaklanjuti",
+   "B": "Menyuruh pelanggan menghubungi lagi besok",
+   "C": "Menolak tanpa penjelasan",
+   "D": "Menjanjikan ganti rugi tanpa izin"
+  },
+  "ans": "A",
+  "exp": "Jangan berjanji di luar wewenang. Eskalasi dengan transparan dan tindak lanjut menjaga kepercayaan. Materi: jalur belajar Customer Experience & Service, topik \"Penanganan keluhan\".",
+  "isTrial": false
+ },
+ {
+  "uid": "e78ffda8-667c-593d-a453-2837f2b2c993",
+  "examType": "karier-customer-service",
+  "segmentId": "konsep",
+  "topic": "Materi: CRM dan sistem tiket",
+  "difficulty": 2,
+  "q": "Dari tiga tiket berikut, yang diprioritaskan lebih dulu adalah...",
+  "opts": {
+   "A": "Pertanyaan warna kemasan",
+   "B": "Saran fitur baru",
+   "C": "Permintaan stiker",
+   "D": "Pelanggan tidak bisa login dan transaksi bisnis terhenti"
+  },
+  "ans": "D",
+  "exp": "Masalah yang menghentikan layanan atau pekerjaan pelanggan berdampak besar dan mendesak sehingga didahulukan. Materi: jalur belajar Customer Experience & Service, topik \"CRM dan sistem tiket\".",
+  "isTrial": false
+ },
+ {
+  "uid": "fa37f321-0f77-50a8-83a9-6b20a4da435d",
+  "examType": "karier-customer-service",
+  "segmentId": "kasus",
+  "topic": "Materi: CRM dan sistem tiket",
+  "difficulty": 2,
+  "q": "Banyak tiket berisi pertanyaan yang sama tentang cara mengganti kata sandi. Tindakan perbaikan yang tepat adalah...",
+  "opts": {
+   "A": "Menghapus kategori itu",
+   "B": "Membuat artikel panduan di basis pengetahuan dan melaporkan agar alurnya dibuat lebih jelas",
+   "C": "Menutup semua tiket sekaligus",
+   "D": "Menjawab satu per satu selamanya tanpa perubahan"
+  },
+  "ans": "B",
+  "exp": "Pola pertanyaan berulang menunjukkan peluang perbaikan: panduan swalayan mengurangi beban tim dan mempercepat pelanggan. Materi: jalur belajar Customer Experience & Service, topik \"CRM dan sistem tiket\".",
+  "isTrial": false
+ }
+]

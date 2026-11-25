@@ -1,0 +1,47 @@
+/*
+ * Mode ringan: mengurangi kerja gambar di HP tanpa mengubah tata letak.
+ * Dimuat paling akhir di app.css supaya menimpa aturan animasi di file halaman (karena itu memakai !important).
+ *
+ * Penyebab lag di HP yang ditangani di sini:
+ *  1. Animasi CSS pada elemen SVG berjalan di thread utama dan menggambar ulang SVG tiap frame.
+ *  2. filter: drop-shadow / blur dan backdrop-filter dihitung ulang setiap isi di dalamnya bergerak.
+ *  3. Animasi yang mengubah width / background / box-shadow memicu layout atau paint, bukan hanya komposit.
+ *  4. Bagian halaman yang sudah di luar layar tetap menjalankan animasinya (dijeda lewat kelas .is-off, diatur di app.js).
+ */
+
+/* Bagian di luar layar: semua animasi CSS di dalamnya dijeda */
+.is-off, .is-off *, .is-off *::before, .is-off *::after { animation-play-state: paused !important; }
+
+@media (max-width: 767px) {
+    /* ---------- Blur latar kaca dimatikan (latar sudah semi-transparan, jadi tampilan tetap terbaca) ---------- */
+    .hx, .hx *, .sb *, .rm *, .dr *, .duo *, .pk *, .fc, .art1 .q, .site-header, .site-header * { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+
+    /* ---------- Hero ---------- */
+    /* Bayangan blur besar di belakang adegan dihitung ulang tiap frame karena isinya bergerak */
+    .hx-art, .hx-laptop { filter: none !important; }
+    /* Detail tambahan hero: tetap tampil statis, tanpa animasi */
+    .hxn, .hxn *, .n-pal i, .hx-screen::after { animation: none !important; }
+    .hx-fx, .n-pk { display: none !important; }
+    /* Hiasan latar yang bergerak terus (tidak membawa cerita) */
+    .hx-mist, .hx-land .hx-tw, .k-cloud, .k-stars circle, .k-bird, .hx-sym text, .hx-scr, .hx-led, .hx-clk, .hx-hand,
+    .hx-steam, .hx-flow, .room-glow, .lamp-cone, .hx-win, .hx-bx .hx-win, .k-cloth, .notes circle, .books rect { animation: none !important; }
+    /* Animasi yang mengubah width/background/box-shadow: memicu layout dan paint tiap frame */
+    .hx-keys i, .hx-prog b, .hx-opt.is-picked, .hx-laptop { animation: none !important; }
+    .hx-prog b { width: 62%; }
+    .hx-opt.is-picked { border-color: #3b6cd4; background: #eef4fd; }
+
+    /* ---------- Arah karier ---------- */
+    .dr-chip-1, .dr-chip-2, .dr-clock svg { animation: none !important; }
+
+    /* ---------- Banner berjalan: bintang berputar dimatikan (belasan lapisan sekaligus) ---------- */
+    .mq-star { animation: none !important; }
+
+    /* ---------- Pemandu burung hantu: diam, hanya mata yang mengikuti gulir ---------- */
+    .og-owl, .og-shadow { animation: none !important; }
+    .og-shadow { filter: none; }
+    .og .ow-live .ow-eye, .og .ow-live .ow-iris, .og .ow-live .ow-tuft-l, .og .ow-live .ow-tuft-r, .og .ow-live .ow-arrow { animation: none !important; }
+
+    /* ---------- Perpindahan halaman: tanpa memudarkan seluruh <main> (lapisan sangat tinggi) di browser tanpa View Transitions ---------- */
+    html:not(.vt-on) main, html:not(.vt-on) footer { animation: none !important; }
+    html.is-leaving main, html.is-leaving footer { transition: none; opacity: 1; }
+}

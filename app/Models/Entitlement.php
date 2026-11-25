@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Entitlement extends Model
+{
+    protected $table = 'entitlements';
+
+    protected $guarded = [];
+
+    protected $casts = [
+        'expires_at' => 'datetime',
+    ];
+}

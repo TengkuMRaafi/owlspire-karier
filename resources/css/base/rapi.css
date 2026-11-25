@@ -1,0 +1,18 @@
+/*
+ * Teks paragraf rata kiri-kanan yang rapi.
+ * Kelas .rapi dipasang otomatis oleh resources/js/rapi.js pada paragraf berisi kalimat (>= 5 kata, rata kiri).
+ * Kata dipenggal per suku kata (soft hyphen) dan tiap baris disetel jarak hurufnya, jadi spasi tidak melebar.
+ * Pengecualian: tambahkan data-no-rapi pada elemen yang tidak boleh disentuh. Teks tengah/kanan dan judul tebal dilewati.
+ */
+.rapi.rapi {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+    overflow-wrap: break-word;
+    text-wrap: wrap;
+}
+
+/* Placeholder yang kepanjangan dipotong dengan titik tiga, bukan terpotong di tengah huruf. */
+.ui-input::placeholder { text-overflow: ellipsis; }

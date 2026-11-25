@@ -1,0 +1,43 @@
+/* Dialog konfirmasi dan toast (fb-). Hanya transform dan opacity yang dianimasikan. */
+.fb-dlg { width: min(92vw, 26rem); margin: auto; padding: 0; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1.5rem; background: var(--pn-card, #fff); color: var(--color-ink, #1b2638); overflow: visible; box-shadow: 0 28px 60px -24px rgb(22 32 51 / .35), 0 2px 6px rgb(22 32 51 / .06); }
+.fb-dlg[open] { animation: fb-pop .3s cubic-bezier(.2, .9, .3, 1.1); }
+.fb-dlg::backdrop { background: rgb(255 255 255 / .55); backdrop-filter: blur(5px); }
+.fb-dlg[open]::backdrop { animation: fb-fade .25s ease-out; }
+.fb-dlg-in { padding: 2.2rem 1.75rem 1.6rem; text-align: center; }
+.fb-dlg { --t: var(--color-accent-600, #3b6cd4); --t-fg: #fff; --t-sh: rgb(59 108 212 / .55); }
+.fb-dlg[data-tone=danger] { --t: #dc2626; --t-sh: rgb(220 38 38 / .5); }
+.fb-dlg[data-tone=warning] { --t: #f6c445; --t-fg: #5b4300; --t-sh: rgb(246 196 69 / .65); }
+.fb-dlg[data-tone=logout] { --t: var(--color-graphite-800, #1f2a3d); --t-sh: rgb(31 42 61 / .5); }
+.fb-dlg-ic { display: grid; place-items: center; width: 4rem; height: 4rem; margin: -4.3rem auto 1rem; border: 4px solid #fff; border-radius: 50%; background: var(--t); color: var(--t-fg); box-shadow: 0 10px 22px -8px var(--t-sh); }
+.fb-dlg-ic svg { width: 1.8rem; height: 1.8rem; fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.fb-dlg h2 { margin: 0; font-size: 1.35rem; font-weight: 700; letter-spacing: -.01em; }
+.fb-dlg-p { margin: .5rem 0 0; font-size: .9rem; line-height: 1.6; color: var(--color-graphite-600, #4a5a73); }
+.fb-dlg-act { display: grid; gap: .6rem; margin-top: 1.5rem; }
+.fb-btn { display: inline-flex; align-items: center; justify-content: center; height: 3.1rem; padding: 0 1.4rem; border: 1.5px solid var(--color-graphite-300, #c5cfde); border-radius: .85rem; background: var(--pn-card, #fff); font: inherit; font-size: .92rem; font-weight: 700; color: var(--color-ink, #1b2638); cursor: pointer; transition: border-color .15s, background .15s, transform .15s; }
+.fb-btn:hover { border-color: var(--color-ink, #1b2638); }
+.fb-btn:focus-visible { outline: 2px solid var(--color-accent-500, #4f82e6); outline-offset: 2px; }
+.fb-btn.is-main { order: -1; border-color: var(--t); background: var(--t); color: var(--t-fg); box-shadow: 0 10px 20px -12px var(--t-sh); }
+.fb-btn.is-main:hover { filter: brightness(.94); }
+
+/* Toast: kanan atas, di bawah header */
+.fb-toasts { position: fixed; z-index: 100; top: 5rem; right: 1rem; display: grid; gap: .6rem; width: min(24rem, calc(100vw - 2rem)); pointer-events: none; }
+.fb-toast { --c: var(--color-accent-600, #3b6cd4); position: relative; display: flex; align-items: flex-start; gap: .75rem; padding: .85rem .9rem .95rem; overflow: hidden; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: 1rem; background: var(--pn-card, #fff); color: var(--color-ink, #1b2638); box-shadow: 0 18px 40px -20px rgb(22 32 51 / .45), 0 2px 6px rgb(22 32 51 / .06); pointer-events: auto; animation: fb-toast-in .45s cubic-bezier(.2, .9, .3, 1.1) both; }
+.fb-toast.is-success { --c: #059669; } .fb-toast.is-error { --c: #dc2626; } .fb-toast.is-warning { --c: #d97706; }
+.fb-toast-ic { flex: none; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: color-mix(in srgb, var(--c) 14%, #fff); color: var(--c); }
+.fb-toast-ic svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.fb-toast-body { min-width: 0; flex: 1; padding-top: .15rem; font-size: .875rem; line-height: 1.5; }
+.fb-toast-body b { display: block; font-weight: 800; }
+.fb-toast-body p { margin: 0; color: var(--color-graphite-700, #34435c); }
+.fb-toast-body ul { margin: .2rem 0 0; padding-left: 1.1rem; list-style: disc; color: var(--color-graphite-700, #34435c); }
+.fb-toast-x { flex: none; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; margin: -.1rem -.2rem 0 0; border: 0; border-radius: .6rem; background: none; color: var(--color-graphite-500, #667794); cursor: pointer; transition: background .2s, color .2s; }
+.fb-toast-x:hover { background: var(--color-graphite-100, #edf0f5); color: var(--color-ink, #1b2638); }
+.fb-toast-x svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.fb-toast-bar { position: absolute; inset: auto 0 0 0; height: 3px; background: var(--c); transform-origin: 0 50%; opacity: .75; }
+.fb-toast.is-leaving { opacity: 0; transform: translateX(1.2rem); transition: opacity .25s, transform .25s; }
+
+@keyframes fb-pop { from { opacity: 0; transform: translateY(14px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes fb-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fb-toast-in { from { opacity: 0; transform: translateX(1.5rem); } to { opacity: 1; transform: none; } }
+@keyframes fb-bar { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@media (max-width: 640px) { .fb-toasts { top: 4.5rem; right: .75rem; left: .75rem; width: auto; } }
+@media (prefers-reduced-motion: reduce) { .fb-dlg[open], .fb-dlg[open]::backdrop, .fb-toast { animation: none; } .fb-toast.is-leaving { transition: none; } .fb-toast-bar { display: none; } }

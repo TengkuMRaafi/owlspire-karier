@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Simulasi BUMN">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a33"/><stop offset=".55" stop-color="#14467a"/><stop offset="1" stop-color="#1f5fbf"/></linearGradient>
+<radialGradient id="r" cx=".72" cy=".35" r=".6"><stop offset="0" stop-color="#6cc0ff" stop-opacity=".45"/><stop offset="1" stop-color="#6cc0ff" stop-opacity="0"/></radialGradient>
+<radialGradient id="w" cx=".12" cy="1" r=".6"><stop offset="0" stop-color="#5eead4" stop-opacity=".35"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+<pattern id="d" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#fff" opacity=".13"/></pattern>
+</defs>
+<rect width="800" height="500" fill="url(#g)"/><rect width="800" height="500" fill="url(#d)"/><rect width="800" height="500" fill="url(#r)"/><rect width="800" height="500" fill="url(#w)"/>
+<g fill="none" stroke="#a9c4f2" stroke-opacity=".22" stroke-width="2"><circle cx="560" cy="250" r="190"/><circle cx="560" cy="250" r="250"/><circle cx="560" cy="250" r="310"/></g>
+<g fill="none" stroke="#5eead4" stroke-width="3" stroke-linecap="round" opacity=".9"><path d="M60 410h120"/><path d="M60 428h70" opacity=".6"/></g>
+
+<g fill="none" stroke="#e8f0ff" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round" transform="translate(410 100) scale(12.5)"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></g>
+</svg>

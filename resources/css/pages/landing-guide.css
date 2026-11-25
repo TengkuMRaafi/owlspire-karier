@@ -1,0 +1,86 @@
+/* Pemandu Owlspire di landing (resources/views/partials/guide.blade.php). Awalan: og- */
+.og { position: fixed; left: 0; bottom: .9rem; z-index: 35; display: flex; flex-direction: column; align-items: flex-end; gap: .55rem; width: min(19.5rem, calc(100vw - 1.5rem)); pointer-events: none; will-change: transform; }
+.og[hidden] { display: none; }
+.og[data-side='left'] { align-items: flex-start; }
+.og > * { pointer-events: auto; }
+
+/* Gelembung */
+.og-bubble { position: relative; width: 100%; padding: .85rem .95rem .8rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-top: 3px solid var(--color-accent-600, #3b6cd4); border-radius: 1.15rem; background: #fff; box-shadow: 0 26px 50px -20px rgb(15 23 38 / .55), 0 0 0 1px rgb(15 23 38 / .04); color: var(--color-graphite-700, #34435c); opacity: 0; transform: translateY(10px) scale(.96); transform-origin: 85% 100%; transition: opacity .25s ease, transform .35s cubic-bezier(.3, 1.4, .5, 1); }
+.og[data-side='left'] .og-bubble { transform-origin: 15% 100%; }
+.og[hidden] .og-bubble, .og-bubble[hidden] { display: none; }
+.og-bubble.is-on { opacity: 1; transform: none; }
+.og.is-flying .og-bubble { opacity: 0; }
+.og-tail { position: absolute; bottom: -.45rem; right: 2.1rem; width: .8rem; height: .8rem; border-right: 1px solid var(--color-graphite-200, #e2e6ec); border-bottom: 1px solid var(--color-graphite-200, #e2e6ec); background: #fff; rotate: 45deg; }
+.og[data-side='left'] .og-tail { right: auto; left: 2.1rem; }
+
+.og-top { display: flex; align-items: center; gap: .5rem; margin-bottom: .45rem; }
+.og-name { display: inline-flex; align-items: center; gap: .4rem; font-size: .78rem; font-weight: 800; color: var(--color-ink, #1b2638); }
+.og-name i { width: .5rem; height: .5rem; border-radius: 50%; background: #10b981; animation: og-ping 2.2s infinite; }
+@keyframes og-ping { 0% { box-shadow: 0 0 0 0 rgb(16 185 129 / .55); } 75%, 100% { box-shadow: 0 0 0 7px rgb(16 185 129 / 0); } }
+.og-step { padding: .1rem .5rem; border-radius: 99px; background: var(--color-accent-100, #dce8fb); font-size: .66rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--color-accent-800, #254690); }
+.og-min { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; margin-left: auto; border-radius: 50%; color: var(--color-graphite-500, #667794); transition: background .2s, color .2s; }
+.og-min:hover { background: var(--color-graphite-100, #edf0f5); color: var(--color-ink, #1b2638); }
+
+.og-txt { min-height: 4.3em; font-size: .86rem; font-weight: 500; line-height: 1.55; color: var(--color-graphite-700, #34435c); }
+.og-txt.is-typing::after { content: ''; display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -.15em; background: var(--color-accent-600, #3b6cd4); animation: og-caret .7s steps(1) infinite; }
+@keyframes og-caret { 50% { opacity: 0; } }
+.og-cta { display: inline-flex; align-items: center; min-height: 2.25rem; margin-top: .55rem; padding: .4rem .9rem; border-radius: .7rem; background: var(--color-accent-600, #3b6cd4); font-size: .8rem; font-weight: 800; color: #fff; transition: background .2s, translate .2s; }
+.og-cta[hidden] { display: none; }
+.og-cta:hover { background: var(--color-accent-700, #2f58b3); translate: 0 -1px; }
+
+.og-nav { display: flex; align-items: center; gap: .5rem; margin-top: .7rem; padding-top: .65rem; border-top: 1px solid var(--color-graphite-100, #edf0f5); }
+.og-btn { display: inline-flex; align-items: center; justify-content: center; gap: .3rem; min-width: 2.25rem; min-height: 2.25rem; padding: 0 .65rem; border: 1px solid var(--color-graphite-200, #e2e6ec); border-radius: .7rem; background: #fff; font-size: .78rem; font-weight: 800; color: var(--color-graphite-700, #34435c); transition: background .2s, border-color .2s, color .2s; }
+.og-btn:hover { border-color: var(--color-accent-600, #3b6cd4); color: var(--color-accent-700, #2f58b3); }
+.og-next { margin-left: auto; border-color: var(--color-graphite-900, #1b2638); background: var(--color-graphite-900, #1b2638); color: #fff; }
+.og-next:hover { background: var(--color-accent-700, #2f58b3); border-color: var(--color-accent-700, #2f58b3); color: #fff; }
+.og-next svg { animation: og-nudge 1.6s ease-in-out infinite; }
+@keyframes og-nudge { 50% { translate: 0 3px; } }
+.og-dots { display: flex; flex: 1; justify-content: center; gap: .1rem; }
+.og-dot { position: relative; width: 1.1rem; height: 1.6rem; }
+.og-dot::before { content: ''; position: absolute; left: 50%; top: 50%; width: .4rem; height: .4rem; margin: -.2rem 0 0 -.2rem; border-radius: 50%; background: var(--color-graphite-300, #c5cfde); transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), background .3s; }
+.og-dot.is-done::before { background: var(--color-accent-400, #7fa8e8); }
+.og-dot.is-on::before { background: var(--color-accent-600, #3b6cd4); transform: scale(1.7); }
+.og-dot:hover::before { background: var(--color-accent-500, #4f82e6); }
+
+/* Burung hantu */
+.og-owl { position: relative; display: block; width: 4.1rem; border-radius: 50%; cursor: pointer; filter: drop-shadow(0 12px 14px rgb(15 23 38 / .45)); animation: og-bob 3.4s ease-in-out infinite; }
+.og-ow { display: block; width: 100%; height: auto; }
+@keyframes og-bob { 50% { transform: translateY(-5px); } }
+.og-owl:hover .og-ow { animation: og-wiggle .6s ease-in-out; }
+@keyframes og-wiggle { 25% { transform: rotate(-7deg); } 75% { transform: rotate(7deg); } }
+.og-shadow { position: absolute; bottom: -.35rem; width: 3rem; height: .5rem; border-radius: 50%; background: rgb(15 23 38 / .35); filter: blur(4px); animation: og-shad 3.4s ease-in-out infinite; pointer-events: none; }
+.og { --sh-x: 0px; }
+.og[data-side='right'] .og-shadow { right: .55rem; } .og[data-side='left'] .og-shadow { left: .55rem; }
+@keyframes og-shad { 50% { transform: scale(.82); opacity: .6; } }
+
+/* Mata mengikuti kursor / arah gulir (menggantikan lirikan acak bawaan maskot) */
+.og .ow-live .ow-pupil { animation: none; transform: translate(calc(var(--lx, 0) * 1px), calc(var(--ly, 0) * 1px)); transition: transform .22s ease-out; }
+/* Saat terbang, telinga mengepak seperti sayap */
+.og.is-flying .ow-tuft-l { animation: og-flap-l .2s ease-in-out infinite alternate; }
+.og.is-flying .ow-tuft-r { animation: og-flap-r .2s ease-in-out infinite alternate; }
+@keyframes og-flap-l { to { transform: rotate(-32deg) translateY(-2px); } }
+@keyframes og-flap-r { to { transform: rotate(32deg) translateY(-2px); } }
+.og.is-flying .og-owl { animation: none; }
+.og.is-flying .og-shadow { opacity: .25; transform: scale(.6); transition: opacity .3s, transform .3s; }
+
+/* Penanda pesan baru saat pemandu diminimalkan */
+.og-ping { position: absolute; top: -.1rem; right: -.1rem; width: .85rem; height: .85rem; border: 2px solid #fff; border-radius: 50%; background: #f5b942; opacity: 0; scale: .4; transition: opacity .25s, scale .3s cubic-bezier(.3, 1.6, .5, 1); }
+.og-ping.is-on { opacity: 1; scale: 1; animation: og-pulse 1.8s ease-out infinite; }
+@keyframes og-pulse { 0% { box-shadow: 0 0 0 0 rgb(245 185 66 / .6); } 80%, 100% { box-shadow: 0 0 0 9px rgb(245 185 66 / 0); } }
+
+@media (max-width: 639px) {
+    .og { bottom: .6rem; }
+    .og-owl { width: 3.4rem; }
+    .og-txt { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .og *, .og *::before, .og *::after { animation: none !important; transition-duration: .01s !important; }
+}
+@media print { .og { display: none !important; } }
+
+/* Petunjuk arah: lencana langkah memuat nama bagian, tombol lanjut memuat nama tujuan */
+.og-step { max-width: 11rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.og-step.is-peek { background: var(--color-graphite-900, #1b2638); color: #fff; }
+.og-next { max-width: 9.5rem; }
+.og-next [data-og-nextl] { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.og-btn:disabled { opacity: .35; pointer-events: none; }

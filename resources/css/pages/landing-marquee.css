@@ -1,0 +1,30 @@
+/* Dipindah dari resources/views/partials/marquee.blade.php */
+.mq { position: relative; height: 9.5rem; margin: 1rem 0 2rem; overflow: hidden; }
+.mq-band { position: absolute; left: -5%; width: 110%; overflow: hidden; padding: .85rem 0; box-shadow: 0 14px 30px -16px rgb(27 38 56 / .55); }
+.mq-a { top: 1.6rem; transform: rotate(-2deg); background: var(--color-accent-600, #3b6cd4); color: #fff; z-index: 2; }
+.mq-b { top: 3.9rem; transform: rotate(1.6deg); background: var(--color-graphite-900, #1b2638); color: #fff; z-index: 1; }
+
+.mq-track { display: flex; width: max-content; will-change: transform; }
+.mq-a .mq-track { animation: mq-left 38s linear infinite; }
+.mq-b .mq-track { animation: mq-right 46s linear infinite; }
+.mq-set { display: flex; align-items: center; flex: none; gap: 1.6rem; padding-right: 1.6rem; }
+@keyframes mq-left { to { transform: translateX(-50%); } }
+@keyframes mq-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+.mq-item { white-space: nowrap; font: 600 1.55rem/1 var(--font-display, serif); letter-spacing: -.01em; }
+.mq-a .mq-item { text-transform: uppercase; font-size: 1.25rem; font-weight: 800; letter-spacing: .08em; font-family: var(--font-sans, sans-serif); }
+.mq-star { flex: none; width: 1.1rem; height: 1.1rem; fill: #dce8fb; animation: mq-spin 6s linear infinite; }
+@keyframes mq-spin { to { transform: rotate(360deg); } }
+
+.mq-pill { padding: .35rem 1rem; border-radius: 99px; border: 1px solid rgb(255 255 255 / .22); font-size: 1.05rem; font-family: var(--font-sans, sans-serif); font-weight: 700; background: rgb(255 255 255 / .06); }
+.mq-dot { flex: none; width: 1px; height: 1.1rem; border-radius: 0; background: linear-gradient(180deg, transparent, var(--color-accent-400, #7fa8e8), transparent); }
+
+@media (max-width: 640px) {
+    .mq { height: 8rem; }
+    .mq-a { top: 1.2rem; } .mq-b { top: 3.3rem; }
+    .mq-a .mq-item { font-size: 1rem; } .mq-pill { font-size: .9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .mq-track, .mq-star { animation: none !important; }
+    .mq-band { overflow-x: auto; }
+}

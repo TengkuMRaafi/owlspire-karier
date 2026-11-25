@@ -1,0 +1,3824 @@
+{
+ "exam_type": "cpns",
+ "label": "Simulasi CPNS",
+ "exported_at": "2026-11-16",
+ "source": "ci_db.sql + questions.js; direvisi: kunci diperbaiki, posisi jawaban diseimbangkan, topik diberi label, soal TIU ditambah",
+ "segments": {
+  "twk": {
+   "segment_id": "twk",
+   "segment_name": "Tes Wawasan Kebangsaan (TWK)",
+   "total_soal": 78,
+   "soal": [
+    {
+     "uid": "6a17d5c3c24e8894fc",
+     "question": "Sila pertama Pancasila, Ketuhanan Yang Maha Esa, mengandung makna...",
+     "options": [
+      "A. Pemaksaan agama oleh aparatur negara",
+      "B. Negara menjamin kemerdekaan tiap penduduk untuk memeluk agama",
+      "C. Pemerintah mengatur peribadatan secara ketat",
+      "D. Negara berdasar atas hukum agama tertentu",
+      "E. Kebebasan tidak beragama diakui negara"
+     ],
+     "answer": "B",
+     "explanation": "Sila pertama menjamin kemerdekaan beragama bagi seluruh rakyat Indonesia sesuai UUD 1945 Pasal 29.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a17d5c3c2e652be55",
+     "question": "Makna dari semboyan Bhinneka Tunggal Ika dalam konteks berbangsa adalah...",
+     "options": [
+      "A. Berbeda-beda namun tetap satu kesatuan utuh",
+      "B. Menyeragamkan seluruh adat kebudayaan",
+      "C. Keberagaman yang menjadi pemicu konflik",
+      "D. Pemisahan kelompok suku dan ras",
+      "E. Menghapus perbedaan demi persatuan"
+     ],
+     "answer": "A",
+     "explanation": "Bhinneka Tunggal Ika bermakna berbeda-beda tetapi tetap satu, mengakui keberagaman sebagai kekayaan.",
+     "topic": "Bhinneka Tunggal Ika"
+    },
+    {
+     "uid": "6a17d5c3c361ac9d54",
+     "question": "Lembaga negara yang bertugas memutus sengketa kewenangan lembaga negara adalah...",
+     "options": [
+      "A. Mahkamah Konstitusi",
+      "B. MPR",
+      "C. Komisi Yudisial",
+      "D. Mahkamah Agung",
+      "E. DPR"
+     ],
+     "answer": "A",
+     "explanation": "Sesuai Pasal 24C UUD 1945, Mahkamah Konstitusi berwenang memutus sengketa kewenangan lembaga negara.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3c3c21fa939",
+     "question": "Sikap bela negara yang paling tepat ditunjukkan oleh seorang pelajar adalah...",
+     "options": [
+      "A. Menjadi relawan perang di luar negeri",
+      "B. Belajar dengan giat dan meraih prestasi",
+      "C. Melawan kebijakan secara anarkis",
+      "D. Mengikuti wajib militer",
+      "E. Mengikuti demonstrasi setiap minggu"
+     ],
+     "answer": "B",
+     "explanation": "Bagi pelajar, bentuk bela negara yang sesuai kapasitasnya adalah belajar giat memajukan bangsa.",
+     "topic": "Bela negara"
+    },
+    {
+     "uid": "6a17d5c3c467f31fa6",
+     "question": "Asas pemilu di Indonesia adalah LUBER JURDIL. Yang dimaksud dengan JURDIL adalah...",
+     "options": [
+      "A. Jujur dan Adil",
+      "B. Jujur dan Disiplin",
+      "C. Jujur dan Jelas",
+      "D. Jaringan dan Adil",
+      "E. Jelas dan Adil"
+     ],
+     "answer": "A",
+     "explanation": "JURDIL singkatan dari Jujur dan Adil, bagian dari asas Langsung, Umum, Bebas, Rahasia.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3c505431aca",
+     "question": "Pancasila sebagai dasar negara pertama kali dirumuskan oleh...",
+     "options": [
+      "A. BPUPKI",
+      "B. Soekarno",
+      "C. PPKI",
+      "D. Moh. Yamin",
+      "E. Soepomo"
+     ],
+     "answer": "A",
+     "explanation": "Pancasila sebagai dasar negara dirumuskan oleh BPUPKI dalam sidang-sidangnya.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a17d5c3c5861fe98e",
+     "question": "Pasal berapa UUD 1945 yang mengatur hak atas pendidikan?",
+     "options": [
+      "A. Pasal 28",
+      "B. Pasal 33",
+      "C. Pasal 31",
+      "D. Pasal 27",
+      "E. Pasal 29"
+     ],
+     "answer": "C",
+     "explanation": "Pasal 31 UUD 1945 menjamin hak setiap warga negara untuk mendapat pendidikan.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3c5fd5c920f",
+     "question": "Nilai integritas dalam konteks aparatur sipil negara berarti...",
+     "options": [
+      "A. Patuh pada perintah atasan tanpa mempertanyakan",
+      "B. Menghindari tanggung jawab yang berat",
+      "C. Bersikap netral dalam segala situasi",
+      "D. Bertindak konsisten sesuai nilai, norma, dan etika",
+      "E. Mengutamakan keuntungan pribadi"
+     ],
+     "answer": "D",
+     "explanation": "Integritas berarti bertindak konsisten sesuai dengan nilai, norma, dan etika yang berlaku.",
+     "topic": "Integritas dan antikorupsi"
+    },
+    {
+     "uid": "6a17d5c3c677e419d2",
+     "question": "Sistem pemerintahan Indonesia berdasarkan UUD 1945 adalah...",
+     "options": [
+      "A. Parlementer",
+      "B. Presidensial murni",
+      "C. Monarki konstitusional",
+      "D. Semi presidensial",
+      "E. Oligarki"
+     ],
+     "answer": "B",
+     "explanation": "Indonesia menganut sistem presidensial di mana presiden adalah kepala negara sekaligus kepala pemerintahan.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3c6f863588e",
+     "question": "Hak yang tidak dapat dikurangi dalam keadaan apapun (non-derogable rights) menurut UUD 1945 adalah...",
+     "options": [
+      "A. Hak memilih dalam pemilu",
+      "B. Hak memiliki properti",
+      "C. Hak mendapat pendidikan",
+      "D. Hak untuk hidup dan bebas dari penyiksaan",
+      "E. Hak atas pekerjaan"
+     ],
+     "answer": "D",
+     "explanation": "Non-derogable rights mencakup hak untuk hidup, tidak disiksa, dan pengakuan sebagai pribadi.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3c75fcb8d07",
+     "question": "Semboyan 'Tut Wuri Handayani' bermakna...",
+     "options": [
+      "A. Di tengah membangun semangat",
+      "B. Di mana-mana menjadi panutan",
+      "C. Selalu hadir menemani",
+      "D. Di depan memberi teladan",
+      "E. Di belakang memberi dorongan"
+     ],
+     "answer": "E",
+     "explanation": "Tut Wuri Handayani berasal dari Ki Hajar Dewantara, berarti di belakang memberi dorongan.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a17d5c3c7d31a2600",
+     "question": "Prinsip negara hukum (rechtstaat) mensyaratkan bahwa...",
+     "options": [
+      "A. Setiap tindakan pemerintah harus berdasarkan hukum",
+      "B. Presiden dapat bertindak sewenang-wenang demi kepentingan negara",
+      "C. Keputusan pengadilan dapat diabaikan pemerintah",
+      "D. Hukum hanya berlaku bagi rakyat biasa",
+      "E. Kekuasaan tertinggi ada di tangan militer"
+     ],
+     "answer": "A",
+     "explanation": "Dalam negara hukum, setiap tindakan penguasa harus berdasarkan dan sesuai dengan hukum yang berlaku.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3c8386c0fb1",
+     "question": "Fungsi MPR setelah amandemen UUD 1945 adalah...",
+     "options": [
+      "A. Menetapkan APBN negara",
+      "B. Mengawasi jalannya pemerintahan",
+      "C. Menetapkan presiden dan wakil presiden",
+      "D. Mengubah dan menetapkan UUD",
+      "E. Membuat undang-undang bersama DPR"
+     ],
+     "answer": "D",
+     "explanation": "Setelah amandemen, fungsi utama MPR adalah mengubah dan menetapkan Undang-Undang Dasar.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3c8ad3e5474",
+     "question": "Apa yang dimaksud dengan demokrasi Pancasila?",
+     "options": [
+      "A. Demokrasi berbasis musyawarah mufakat yang berlandaskan nilai Pancasila",
+      "B. Demokrasi yang hanya berlaku bagi golongan tertentu",
+      "C. Demokrasi yang mengutamakan kebebasan individu mutlak",
+      "D. Demokrasi yang menolak pemilihan umum",
+      "E. Demokrasi yang dikendalikan partai penguasa"
+     ],
+     "answer": "A",
+     "explanation": "Demokrasi Pancasila mengutamakan musyawarah mufakat dan berlandaskan pada nilai-nilai Pancasila.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a17d5c3c91df1aacd",
+     "question": "Pembukaan UUD 1945 alinea keempat memuat...",
+     "options": [
+      "A. Alasan penjajahan tidak sesuai perikemanusiaan",
+      "B. Hak-hak dasar warga negara",
+      "C. Pernyataan kemerdekaan",
+      "D. Sumber hukum tertinggi",
+      "E. Tujuan negara dan dasar negara Pancasila"
+     ],
+     "answer": "E",
+     "explanation": "Alinea keempat Pembukaan UUD 1945 memuat tujuan negara dan Pancasila sebagai dasar negara.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3c97a7276ac",
+     "question": "Kewajiban warga negara yang tercantum dalam UUD 1945 Pasal 27 ayat 1 adalah...",
+     "options": [
+      "A. Menjunjung hukum dan pemerintahan",
+      "B. Membayar pajak",
+      "C. Membela negara",
+      "D. Mengikuti pendidikan dasar",
+      "E. Mengikuti pemilihan umum"
+     ],
+     "answer": "A",
+     "explanation": "Pasal 27 ayat 1 UUD 1945 mewajibkan warga negara menjunjung hukum dan pemerintahan.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3c9c3d2595b",
+     "question": "Sidang pertama BPUPKI pada 29 Mei–1 Juni 1945 membahas tentang...",
+     "options": [
+      "A. Persiapan proklamasi",
+      "B. Penyusunan teks proklamasi",
+      "C. Pembentukan PPKI",
+      "D. Wilayah Indonesia merdeka",
+      "E. Dasar negara Indonesia merdeka"
+     ],
+     "answer": "E",
+     "explanation": "Sidang pertama BPUPKI (29 Mei-1 Juni 1945) membahas dasar negara; Muh. Yamin, Soepomo, dan Soekarno menyampaikan gagasannya. Bentuk negara dan wilayah baru dibahas pada sidang kedua (Juli 1945), sehingga pilihan lain keliru.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a17d5c3ca19cf61b2",
+     "question": "Trias Politika yang diterapkan di Indonesia membagi kekuasaan menjadi...",
+     "options": [
+      "A. Pusat, Daerah, Militer",
+      "B. Presiden, DPR, MPR",
+      "C. Legislatif, Eksekutif, Federatif",
+      "D. Eksekutif, Militer, Yudikatif",
+      "E. Legislatif, Eksekutif, Yudikatif"
+     ],
+     "answer": "E",
+     "explanation": "Trias Politika membagi kekuasaan negara menjadi legislatif (pembuat UU), eksekutif (pelaksana), dan yudikatif (kehakiman).",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3ca671b5cce",
+     "question": "Hak interpelasi DPR adalah hak untuk...",
+     "options": [
+      "A. Meminta keterangan kepada pemerintah mengenai kebijakan penting",
+      "B. Mengesahkan anggaran negara",
+      "C. Mengusulkan rancangan undang-undang",
+      "D. Mengajukan mosi tidak percaya pada presiden",
+      "E. Memilih pimpinan lembaga negara"
+     ],
+     "answer": "A",
+     "explanation": "Hak interpelasi adalah hak DPR untuk meminta keterangan pemerintah tentang kebijakan strategis.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3cac1281e0d",
+     "question": "Komisi Pemberantasan Korupsi (KPK) merupakan lembaga...",
+     "options": [
+      "A. Bagian dari Kejaksaan Agung",
+      "B. Lembaga independen yang dibentuk undang-undang",
+      "C. Kementerian di bawah presiden",
+      "D. Unit di bawah Polri",
+      "E. Lembaga bentukan MPR"
+     ],
+     "answer": "B",
+     "explanation": "KPK adalah lembaga negara yang bersifat independen dan bebas dari kekuasaan manapun.",
+     "topic": "Integritas dan antikorupsi"
+    },
+    {
+     "uid": "6a17d5c3cb1970357b",
+     "question": "Asas otonomi daerah yang memberikan wewenang seluas-luasnya kepada daerah disebut...",
+     "options": [
+      "A. Federalisasi",
+      "B. Tugas pembantuan",
+      "C. Sentralisasi",
+      "D. Dekonsentrasi",
+      "E. Desentralisasi"
+     ],
+     "answer": "E",
+     "explanation": "Desentralisasi adalah penyerahan wewenang pemerintahan oleh pusat kepada daerah otonom.",
+     "topic": "Integritas dan antikorupsi"
+    },
+    {
+     "uid": "6a17d5c3cb66a1e824",
+     "question": "Peristiwa Rengasdengklok pada 16 Agustus 1945 bertujuan untuk...",
+     "options": [
+      "A. Menerima penyerahan kekuasaan Jepang",
+      "B. Mengadakan sidang PPKI pertama",
+      "C. Menjauhkan Soekarno-Hatta dari pengaruh Jepang agar segera memproklamasikan kemerdekaan",
+      "D. Membentuk pemerintahan sementara",
+      "E. Menyusun teks proklamasi"
+     ],
+     "answer": "C",
+     "explanation": "Peristiwa Rengasdengklok adalah upaya golongan muda menjauhkan Soekarno-Hatta dari pengaruh Jepang.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a17d5c3cbbc30b44d",
+     "question": "Nilai sila keempat Pancasila 'Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan' menekankan...",
+     "options": [
+      "A. Peraturan berdasarkan suara mayoritas semata",
+      "B. Pemilihan umum sebagai satu-satunya mekanisme demokrasi",
+      "C. Musyawarah dan mufakat dalam pengambilan keputusan",
+      "D. Kepemimpinan tokoh yang bijaksana tanpa pemilu",
+      "E. Kekuasaan absolut rakyat"
+     ],
+     "answer": "C",
+     "explanation": "Sila keempat menekankan musyawarah mufakat berdasarkan hikmat kebijaksanaan.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a17d5c3cc0c68c5e1",
+     "question": "Lembaga negara yang berwenang memeriksa dan memutus perselisihan hasil pemilihan umum adalah...",
+     "options": [
+      "A. Komisi Pemilihan Umum (KPU)",
+      "B. Dewan Kehormatan Penyelenggara Pemilu",
+      "C. Badan Pengawas Pemilu (Bawaslu)",
+      "D. Mahkamah Agung",
+      "E. Mahkamah Konstitusi"
+     ],
+     "answer": "E",
+     "explanation": "Mahkamah Konstitusi berwenang memutus perselisihan hasil pemilihan umum sesuai UUD 1945.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3cc6d644bcb",
+     "question": "Nilai patriotisme mencakup...",
+     "options": [
+      "A. Mengutamakan keselamatan diri di atas kepentingan negara",
+      "B. Menolak pengaruh budaya asing sepenuhnya",
+      "C. Hanya taat kepada pimpinan daerah setempat",
+      "D. Sikap nasionalisme yang berlebihan hingga memusuhi bangsa lain",
+      "E. Cinta tanah air dan rela berkorban untuk bangsa"
+     ],
+     "answer": "E",
+     "explanation": "Patriotisme mencakup rasa cinta tanah air dan kesediaan berkorban demi kepentingan bangsa dan negara.",
+     "topic": "Nasionalisme"
+    },
+    {
+     "uid": "6a17d5c3ccc82146fc",
+     "question": "Menurut UUD 1945, kekuasaan kehakiman dilakukan oleh...",
+     "options": [
+      "A. Presiden dan Mahkamah Agung",
+      "B. DPR dan Mahkamah Agung",
+      "C. Komisi Yudisial dan Mahkamah Agung",
+      "D. Mahkamah Agung dan Mahkamah Konstitusi",
+      "E. Kejaksaan Agung dan Mahkamah Agung"
+     ],
+     "answer": "D",
+     "explanation": "Pasal 24 UUD 1945 menyatakan kekuasaan kehakiman dilaksanakan oleh Mahkamah Agung dan Mahkamah Konstitusi.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3cd19ae59f1",
+     "question": "Apa landasan hukum penyelenggaraan pemerintahan daerah di Indonesia?",
+     "options": [
+      "A. UU No. 14 Tahun 2008",
+      "B. UU No. 30 Tahun 2002",
+      "C. UU No. 5 Tahun 2014",
+      "D. UU No. 12 Tahun 2011",
+      "E. UU No. 23 Tahun 2014"
+     ],
+     "answer": "E",
+     "explanation": "UU No. 23 Tahun 2014 tentang Pemerintahan Daerah adalah landasan hukum otonomi daerah saat ini.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3cd698a4685",
+     "question": "Prinsip persatuan dalam Pancasila mewajibkan setiap warga negara untuk...",
+     "options": [
+      "A. Mengurangi komunikasi dengan warga negara lain",
+      "B. Mendahulukan kepentingan nasional di atas kepentingan golongan",
+      "C. Menolak pengaruh budaya luar negeri",
+      "D. Menghapus identitas suku dan agama",
+      "E. Mendukung satu partai politik tertentu"
+     ],
+     "answer": "B",
+     "explanation": "Persatuan Indonesia mengharuskan kepentingan nasional di atas kepentingan golongan atau kelompok.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a17d5c3cdb989edb8",
+     "question": "Keputusan yang diambil melalui musyawarah mufakat harus...",
+     "options": [
+      "A. Dapat dibatalkan oleh minoritas yang menolak",
+      "B. Diterima dan dilaksanakan dengan penuh tanggung jawab",
+      "C. Menguntungkan pihak yang lebih kuat",
+      "D. Mengutamakan kepentingan pemimpin rapat",
+      "E. Ditinjau ulang setiap saat oleh pihak yang tidak setuju"
+     ],
+     "answer": "B",
+     "explanation": "Hasil musyawarah mufakat harus diterima dan dilaksanakan semua pihak dengan penuh tanggung jawab.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a17d5c3ce0b42d216",
+     "question": "Undang-Undang Nomor 5 Tahun 2014 mengatur tentang...",
+     "options": [
+      "A. Pemilihan Umum",
+      "B. Otonomi Daerah",
+      "C. Kebebasan Pers",
+      "D. Aparatur Sipil Negara (ASN)",
+      "E. Pemberantasan Korupsi"
+     ],
+     "answer": "D",
+     "explanation": "UU No. 5 Tahun 2014 mengatur tentang Aparatur Sipil Negara termasuk PNS dan PPPK.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a17d5c3ce5ca3f5da",
+     "question": "Wawasan nusantara memandang wilayah Indonesia sebagai...",
+     "options": [
+      "A. Wilayah yang diperebutkan antar daerah",
+      "B. Zona penyangga antara dua benua besar",
+      "C. Kumpulan pulau yang berdiri sendiri",
+      "D. Archipelago tanpa batas kedaulatan",
+      "E. Satu kesatuan wilayah, bangsa, budaya, dan ekonomi yang utuh"
+     ],
+     "answer": "E",
+     "explanation": "Wawasan nusantara memandang Indonesia sebagai satu kesatuan yang utuh dalam segala aspek kehidupan.",
+     "topic": "NKRI dan wawasan nusantara"
+    },
+    {
+     "uid": "6a2eac71d2fb09a1d1",
+     "question": "Berikut ini merupakan unsur konstitutif (mutlak) berdirinya suatu negara, kecuali...",
+     "options": [
+      "A. Adanya tata hukum",
+      "B. Rakyat",
+      "C. Wilayah",
+      "D. Pemerintah yang berdaulat",
+      "E. Pengakuan dari negara lain"
+     ],
+     "answer": "E",
+     "explanation": "Pengakuan dari negara lain adalah unsur deklaratif (tambahan), sedangkan unsur konstitutifnya adalah rakyat, wilayah, dan pemerintah yang berdaulat.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a2eac71d3a5506836",
+     "question": "Bentuk negara Indonesia adalah Kesatuan dengan sistem pemerintahan yang bersifat desentralisasi. Penyerahan wewenang dari pemerintah pusat kepada daerah otonom disebut...",
+     "options": [
+      "A. Otonomi khusus",
+      "B. Tugas pembantuan",
+      "C. Sentralisasi",
+      "D. Dekonsentrasi",
+      "E. Desentralisasi"
+     ],
+     "answer": "E",
+     "explanation": "Desentralisasi adalah penyerahan wewenang pemerintahan oleh pemerintah pusat kepada daerah otonom untuk mengatur dan mengurus urusan pemerintahan.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a2eac71d44f1da655",
+     "question": "Sikap menghargai hasil karya orang lain, tidak bersikap boros, dan tidak bergaya hidup mewah merupakan perwujudan nyata dari Pancasila sila...",
+     "options": [
+      "A. Kelima",
+      "B. Ketiga",
+      "C. Pertama",
+      "D. Keempat",
+      "E. Kedua"
+     ],
+     "answer": "A",
+     "explanation": "Menghargai hasil karya orang lain dan tidak hidup boros adalah nilai praksis dari sila kelima, Keadilan Sosial bagi Seluruh Rakyat Indonesia.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a2eac71d4e55913bc",
+     "question": "Dalam hierarki peraturan perundang-undangan di Indonesia menurut UU No. 12 Tahun 2011, peraturan yang berada tepat di bawah UUD 1945 adalah...",
+     "options": [
+      "A. Peraturan Presiden",
+      "B. Ketetapan MPR",
+      "C. Peraturan Daerah",
+      "D. Peraturan Pemerintah",
+      "E. Undang-Undang"
+     ],
+     "answer": "B",
+     "explanation": "Hierarki peraturan perundang-undangan: UUD 1945 -> Tap MPR -> UU/Perppu -> PP -> Perpres -> Perda Provinsi -> Perda Kab/Kota.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71d582695a20",
+     "question": "Indonesia aktif bergabung dalam Gerakan Non-Blok (GNB) sebagai wujud penerapan politik luar negeri Indonesia yang...",
+     "options": [
+      "A. Mandiri",
+      "B. Bebas dan aktif",
+      "C. Anti imperialisme",
+      "D. Cinta damai",
+      "E. Demokrasi"
+     ],
+     "answer": "B",
+     "explanation": "Keikutsertaan dalam GNB membuktikan Indonesia tidak memihak blok manapun (bebas) dan turut serta menjaga perdamaian dunia (aktif).",
+     "topic": "Politik luar negeri"
+    },
+    {
+     "uid": "6a2eac71d61085e244",
+     "question": "Organisasi kebangkitan nasional yang didirikan oleh para pemuda STOVIA pada tanggal 20 Mei 1908 adalah...",
+     "options": [
+      "A. Indische Partij",
+      "B. Sarekat Islam",
+      "C. Budi Utomo",
+      "D. Perhimpunan Indonesia",
+      "E. Muhammadiyah"
+     ],
+     "answer": "C",
+     "explanation": "Budi Utomo didirikan pada 20 Mei 1908 oleh para pelajar STOVIA, yang kini diperingati sebagai Hari Kebangkitan Nasional.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71d6a50dca45",
+     "question": "Seorang ASN ditawari sejumlah uang oleh warga agar proses perizinannya dipercepat. Sikap ASN yang menolak tegas tawaran tersebut mencerminkan nilai integritas, yaitu...",
+     "options": [
+      "A. Keadilan",
+      "B. Kejujuran",
+      "C. Keterbukaan",
+      "D. Kepedulian",
+      "E. Kedisiplinan"
+     ],
+     "answer": "B",
+     "explanation": "Menolak uang suap atau gratifikasi merupakan bentuk nyata dari sikap integritas yang berpusat pada nilai kejujuran dan antikorupsi.",
+     "topic": "Integritas dan antikorupsi"
+    },
+    {
+     "uid": "6a2eac71d7462abde0",
+     "question": "Peristiwa Rengasdengklok terjadi akibat adanya perbedaan pendapat antara golongan muda dan golongan tua mengenai...",
+     "options": [
+      "A. Keterlibatan Jepang dalam proklamasi",
+      "B. Pembentukan naskah proklamasi",
+      "C. Waktu pelaksanaan proklamasi kemerdekaan",
+      "D. Pemilihan presiden dan wakil presiden",
+      "E. Tempat pembacaan teks proklamasi"
+     ],
+     "answer": "C",
+     "explanation": "Golongan muda mendesak proklamasi segera dilaksanakan, sementara golongan tua menunggu sidang PPKI agar tidak memicu konflik berdarah dengan Jepang.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71d7d63477b5",
+     "question": "Alinea pertama Pembukaan UUD 1945 menyatakan 'Bahwa sesungguhnya Kemerdekaan itu ialah hak segala bangsa...'. Kalimat ini bermakna bangsa Indonesia...",
+     "options": [
+      "A. Menolak segala bentuk kerjasama dengan negara penjajah",
+      "B. Bersifat tertutup terhadap budaya asing",
+      "C. Menentang segala bentuk penjajahan di atas dunia",
+      "D. Mendukung kemerdekaan wilayah jajahannya sendiri",
+      "E. Berhak menguasai wilayah negara tetangga"
+     ],
+     "answer": "C",
+     "explanation": "Alinea pertama Pembukaan UUD 1945 menjadi landasan objektif dan universal bahwa penjajahan tidak sesuai dengan perikemanusiaan dan perikeadilan.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71d86fedc050",
+     "question": "Pancasila memiliki kedudukan sebagai pandangan hidup bangsa Indonesia. Makna dari kedudukan tersebut adalah...",
+     "options": [
+      "A. Pancasila sebagai sumber dari segala sumber hukum",
+      "B. Pancasila sebagai dasar pembentukan undang-undang",
+      "C. Pancasila sebagai landasan sistem ketatanegaraan",
+      "D. Pancasila sebagai pedoman tingkah laku dan perbuatan warga negara dalam kehidupan sehari-hari",
+      "E. Pancasila sebagai perjanjian luhur bangsa"
+     ],
+     "answer": "D",
+     "explanation": "Sebagai pandangan hidup (way of life), Pancasila dijadikan petunjuk atau pedoman dalam kehidupan sehari-hari.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a2eac71d8f9d6aad3",
+     "question": "Seseorang yang memiliki dua kewarganegaraan karena terlahir dari orang tua yang negaranya menganut asas ius sanguinis, namun lahir di negara yang menganut asas ius soli, disebut mengalami status...",
+     "options": [
+      "A. Stelsel aktif",
+      "B. Apatride",
+      "C. Repudiasi",
+      "D. Bipatride",
+      "E. Multipatride"
+     ],
+     "answer": "D",
+     "explanation": "Bipatride adalah kondisi seseorang memiliki status kewarganegaraan ganda akibat perbedaan asas kewarganegaraan antar negara yang bersangkutan.",
+     "topic": "NKRI dan wawasan nusantara"
+    },
+    {
+     "uid": "6a2eac71d9a896dd86",
+     "question": "Di bawah ini yang merupakan salah satu wewenang dari Komisi Yudisial (KY) sesuai UUD 1945 adalah...",
+     "options": [
+      "A. Mengusulkan pengangkatan hakim agung",
+      "B. Melakukan uji materiil terhadap undang-undang",
+      "C. Mengadili tingkat kasasi",
+      "D. Memutus pembubaran partai politik",
+      "E. Memutus sengketa hasil pemilu"
+     ],
+     "answer": "A",
+     "explanation": "Berdasarkan Pasal 24B UUD 1945, Komisi Yudisial berwenang mengusulkan pengangkatan hakim agung serta menjaga keluhuran martabat hakim.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71da5df964cd",
+     "question": "Tujuan Negara Republik Indonesia secara eksplisit tercantum dalam Pembukaan UUD 1945 pada alinea ke-...",
+     "options": [
+      "A. Pertama",
+      "B. Kedua",
+      "C. Kelima",
+      "D. Keempat",
+      "E. Ketiga"
+     ],
+     "answer": "D",
+     "explanation": "Tujuan negara (melindungi segenap bangsa, memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa, dan ikut melaksanakan ketertiban dunia) terdapat di Alinea Keempat.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71db090a46af",
+     "question": "Perlawanan rakyat di Bali terhadap Belanda yang dilakukan secara habis-habisan sampai titik darah penghabisan dikenal dengan istilah...",
+     "options": [
+      "A. Perang Puputan",
+      "B. Perang Saparua",
+      "C. Perang Banjar",
+      "D. Perang Padri",
+      "E. Perang Diponegoro"
+     ],
+     "answer": "A",
+     "explanation": "Perang Puputan adalah istilah di Bali yang berarti perang habis-habisan secara ksatria (misal: Puputan Margarana yang dipimpin I Gusti Ngurah Rai).",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71dc4666796e",
+     "question": "Keputusan untuk memusatkan pemerintahan dengan sistem Parlementer berganti menjadi sistem Presidensial kembali pada awal kemerdekaan dipertegas melalui Dekrit Presiden yang dikeluarkan pada tanggal...",
+     "options": [
+      "A. 17 Agustus 1950",
+      "B. 5 Juli 1959",
+      "C. 11 Maret 1966",
+      "D. 18 Agustus 1945",
+      "E. 21 Mei 1998"
+     ],
+     "answer": "B",
+     "explanation": "Dekrit Presiden 5 Juli 1959 membubarkan Konstituante dan mengembalikan konstitusi ke UUD 1945 yang secara otomatis menerapkan sistem Presidensial.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71dce030bc67",
+     "question": "Pahlawan Nasional wanita yang gigih memperjuangkan emansipasi wanita dengan mendirikan sekolah dan menyebarkan gagasan persamaaan derajat melalui surat-suratnya adalah...",
+     "options": [
+      "A. Cut Nyak Dien",
+      "B. R.A. Kartini",
+      "C. Dewi Sartika",
+      "D. Nyi Ageng Serang",
+      "E. Martha Christina Tiahahu"
+     ],
+     "answer": "B",
+     "explanation": "R.A. Kartini sangat dikenal lewat surat-suratnya kepada temannya di Belanda yang kemudian dibukukan menjadi 'Habis Gelap Terbitlah Terang', memperjuangkan hak perempuan.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71dd7f27f642",
+     "question": "Ketua PPKI (Panitia Persiapan Kemerdekaan Indonesia) yang ditugaskan meneruskan pekerjaan BPUPKI untuk mempersiapkan kemerdekaan adalah...",
+     "options": [
+      "A. Ir. Soekarno",
+      "B. Achmad Soebardjo",
+      "C. Dr. Radjiman Wedyodiningrat",
+      "D. Mohammad Hatta",
+      "E. Sutan Syahrir"
+     ],
+     "answer": "A",
+     "explanation": "Ir. Soekarno merupakan Ketua PPKI, dan wakilnya adalah Drs. Mohammad Hatta.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71de1639be3a",
+     "question": "Setiap keputusan musyawarah yang telah disepakati bersama harus dipertanggung jawabkan secara moral kepada Tuhan Yang Maha Esa dan dilaksanakan dengan itikad baik. Hal ini sesuai dengan pengamalan Pancasila sila ke-...",
+     "options": [
+      "A. Kedua",
+      "B. Pertama",
+      "C. Keempat",
+      "D. Kelima",
+      "E. Ketiga"
+     ],
+     "answer": "C",
+     "explanation": "Menerima dan melaksanakan hasil keputusan musyawarah dengan itikad baik serta rasa tanggung jawab adalah nilai pengamalan sila keempat Pancasila.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a2eac71dee7421153",
+     "question": "Puncak dari semangat persatuan yang mengawali tonggak sejarah perjuangan bangsa Indonesia secara nasional adalah peristiwa...",
+     "options": [
+      "A. Budi Utomo",
+      "B. Bandung Lautan Api",
+      "C. Perjanjian Roem-Royen",
+      "D. Sumpah Pemuda",
+      "E. Proklamasi Kemerdekaan"
+     ],
+     "answer": "D",
+     "explanation": "Sumpah Pemuda pada 28 Oktober 1928 menyatukan semangat kedaerahan menjadi satu bangsa, bahasa, dan tanah air Indonesia.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71df7d678237",
+     "question": "UUD 1945 pasal 1 ayat (3) hasil amandemen secara tegas menyatakan bahwa Negara Indonesia adalah negara...",
+     "options": [
+      "A. Kepulauan",
+      "B. Demokrasi",
+      "C. Hukum",
+      "D. Republik",
+      "E. Kesatuan"
+     ],
+     "answer": "C",
+     "explanation": "Berdasarkan Pasal 1 ayat (3) UUD 1945 pasca amandemen, Negara Indonesia adalah negara hukum.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71e011e422f1",
+     "question": "Tindakan memberikan hadiah kepada pegawai negeri dengan maksud untuk mempengaruhi keputusan atau jabatannya diklasifikasikan sebagai...",
+     "options": [
+      "A. Gratifikasi",
+      "B. Suap",
+      "C. Penggelapan",
+      "D. Uang pelicin",
+      "E. Pemerasan"
+     ],
+     "answer": "B",
+     "explanation": "Suap memiliki unsur kesepakatan atau 'meeting of minds' untuk mempengaruhi keputusan. Jika tidak ada kesepakatan namun ada pemberian karena jabatan, disebut gratifikasi.",
+     "topic": "Integritas dan antikorupsi"
+    },
+    {
+     "uid": "6a2eac71e0a98db0e1",
+     "question": "Menurut UUD 1945 hasil amandemen, lembaga yang berwenang melantik Presiden dan/atau Wakil Presiden adalah...",
+     "options": [
+      "A. Komisi Pemilihan Umum",
+      "B. Dewan Perwakilan Rakyat",
+      "C. Mahkamah Konstitusi",
+      "D. Mahkamah Agung",
+      "E. Majelis Permusyawaratan Rakyat"
+     ],
+     "answer": "E",
+     "explanation": "Sesuai Pasal 3 ayat (2) UUD 1945, MPR berwenang melantik Presiden dan/atau Wakil Presiden.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71e17cdea182",
+     "question": "Paham kebangsaan yang dilandasi oleh semangat cinta tanah air dan rela berkorban untuk kepentingan bangsa disebut...",
+     "options": [
+      "A. Fasisme",
+      "B. Primordialisme",
+      "C. Etnosentrisme",
+      "D. Patriotisme",
+      "E. Sukuisme"
+     ],
+     "answer": "D",
+     "explanation": "Patriotisme adalah sikap kerelaan berkorban segala-galanya termasuk nyawa sekalipun untuk mempertahankan kejayaan negara.",
+     "topic": "Nasionalisme"
+    },
+    {
+     "uid": "6a2eac71e24a8800de",
+     "question": "Bhinneka Tunggal Ika menjadi sangat penting bagi bangsa Indonesia yang plural. Sikap yang paling tepat dalam menerapkan semboyan tersebut di lingkungan kerja adalah...",
+     "options": [
+      "A. Berkumpul hanya dengan rekan satu daerah agar kompak",
+      "B. Menghindari rekan yang berbeda agama dalam satu tim kerja",
+      "C. Menghargai perbedaan pendapat dan latar belakang setiap rekan kerja",
+      "D. Melarang penggunaan simbol budaya saat bekerja",
+      "E. Mempelajari semua bahasa daerah di Indonesia"
+     ],
+     "answer": "C",
+     "explanation": "Menghargai keberagaman (toleransi) dalam tindakan nyata seperti saat berdiskusi dan berinteraksi di tempat kerja adalah implementasi Bhinneka Tunggal Ika.",
+     "topic": "Bhinneka Tunggal Ika"
+    },
+    {
+     "uid": "6a2eac71e2fb45ec6c",
+     "question": "Ketika Presiden Soekarno dan Wapres Moh. Hatta ditangkap Belanda saat Agresi Militer II, mandat untuk membentuk Pemerintahan Darurat Republik Indonesia (PDRI) diberikan kepada...",
+     "options": [
+      "A. Sjafruddin Prawiranegara",
+      "B. A.A. Maramis",
+      "C. Sutan Syahrir",
+      "D. Jenderal Sudirman",
+      "E. Sri Sultan Hamengkubuwono IX"
+     ],
+     "answer": "A",
+     "explanation": "Sjafruddin Prawiranegara menerima mandat untuk mendirikan PDRI di Bukittinggi, Sumatera Barat, untuk menunjukkan kepada dunia bahwa RI masih ada.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71e3a0eabbe6",
+     "question": "Hak untuk hidup, hak untuk tidak disiksa, hak kemerdekaan pikiran dan hati nurani, adalah hak asasi yang tidak dapat dikurangi dalam keadaan apapun. Hal ini ditegaskan dalam UUD 1945 pasal...",
+     "options": [
+      "A. 28E",
+      "B. 28G",
+      "C. 28J",
+      "D. 28I ayat (1)",
+      "E. 28A"
+     ],
+     "answer": "D",
+     "explanation": "Pasal 28I ayat (1) mengatur tentang hak-hak asasi manusia yang sifatnya non-derogable (tidak dapat dikurangi dalam kondisi apapun).",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71e4551784d0",
+     "question": "Berdasarkan UUD 1945 Pasal 22C, anggota Dewan Perwakilan Daerah (DPD) dari setiap provinsi ditetapkan sebanyak...",
+     "options": [
+      "A. 5 orang",
+      "B. 3 orang",
+      "C. 4 orang",
+      "D. 6 orang",
+      "E. Tergantung luas dan jumlah penduduk provinsi"
+     ],
+     "answer": "C",
+     "explanation": "Anggota DPD dari setiap provinsi ditetapkan dalam jumlah yang sama, yaitu 4 (empat) orang di setiap provinsinya.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71e4f5050145",
+     "question": "Pancasila disebut sebagai ideologi terbuka karena...",
+     "options": [
+      "A. Nilai-nilainya dapat menyesuaikan diri dengan perkembangan zaman tanpa mengubah nilai dasarnya",
+      "B. Terbuka untuk menerima ideologi komunisme dan liberalisme",
+      "C. Dapat diubah nilai-nilai dasarnya setiap saat",
+      "D. Siapapun boleh menafsirkan Pancasila sesuai kepentingan kelompoknya",
+      "E. Terbuka terhadap masuknya budaya asing yang bebas"
+     ],
+     "answer": "A",
+     "explanation": "Ideologi terbuka berarti Pancasila fleksibel dan mampu berinteraksi dengan dinamika zaman tanpa harus mengubah nilai-nilai dasarnya (Ketuhanan, Kemanusiaan, dll).",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a2eac71e58e564d0e",
+     "question": "Sarekat Dagang Islam (SDI) yang didirikan oleh K.H. Samanhudi pada tahun 1911 kemudian berubah nama menjadi Sarekat Islam (SI) di bawah pimpinan...",
+     "options": [
+      "A. Douwes Dekker",
+      "B. K.H. Ahmad Dahlan",
+      "C. Ki Hajar Dewantara",
+      "D. Dr. Cipto Mangunkusumo",
+      "E. H.O.S. Tjokroaminoto"
+     ],
+     "answer": "E",
+     "explanation": "H.O.S. Tjokroaminoto merubah SDI menjadi SI agar organisasinya tidak hanya fokus di bidang ekonomi, melainkan juga politik dan agama secara luas.",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71e62cae4676",
+     "question": "Amandemen keempat UUD 1945 disahkan pada Sidang Tahunan MPR tahun...",
+     "options": [
+      "A. 1999",
+      "B. 2000",
+      "C. 2001",
+      "D. 2002",
+      "E. 2003"
+     ],
+     "answer": "D",
+     "explanation": "Proses amandemen UUD 1945 berlangsung empat kali: I (1999), II (2000), III (2001), dan IV (2002).",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71e6b9f3289a",
+     "question": "Wawasan Nusantara adalah cara pandang bangsa Indonesia terhadap diri dan lingkungannya. Tujuan ke luar dari wawasan nusantara adalah...",
+     "options": [
+      "A. Ikut serta mewujudkan ketertiban dan perdamaian dunia bagi seluruh umat manusia",
+      "B. Mengutamakan kepentingan daerah asal di atas kepentingan nasional",
+      "C. Mewujudkan kesatuan di semua aspek kehidupan nasional",
+      "D. Melindungi kekayaan alam nusantara secara eksklusif",
+      "E. Membangun pertahanan militer yang ofensif"
+     ],
+     "answer": "A",
+     "explanation": "Tujuan ke luar Wawasan Nusantara adalah menjamin kepentingan nasional dalam era globalisasi dan ikut serta melaksanakan ketertiban dunia.",
+     "topic": "NKRI dan wawasan nusantara"
+    },
+    {
+     "uid": "6a2eac71e74bbf1f67",
+     "question": "Seorang ASN harus memberikan laporan kinerja secara berkala dan terbuka sebagai bentuk pertanggung jawaban atas tugas yang diembannya. Prinsip integritas dan tata kelola ini disebut...",
+     "options": [
+      "A. Transparansi",
+      "B. Akuntabilitas",
+      "C. Efisiensi",
+      "D. Responsibilitas",
+      "E. Independensi"
+     ],
+     "answer": "B",
+     "explanation": "Akuntabilitas adalah kewajiban untuk menyampaikan pertanggung jawaban atau untuk menjawab, menerangkan kinerja seseorang/institusi kepada pihak yang berhak.",
+     "topic": "Integritas dan antikorupsi"
+    },
+    {
+     "uid": "6a2eac71e7d903c549",
+     "question": "Pelaksanaan pemilihan umum di Indonesia didasarkan pada asas LUBER JURDIL. Makna asas JURDIL adalah...",
+     "options": [
+      "A. Langsung, Umum, Bebas, Rahasia",
+      "B. Jelas dan Akuntabel",
+      "C. Jaminan Umum dan Rahasia Demokrasi Nasional",
+      "D. Jujur dan Adil",
+      "E. Jangan Ragu, Dipilih Secara Langsung"
+     ],
+     "answer": "D",
+     "explanation": "Asas Pemilu LUBER JURDIL singkatan dari Langsung, Umum, Bebas, Rahasia, Jujur, dan Adil.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a2eac71e86392b395",
+     "question": "Turut serta dalam aksi penggalangan dana untuk korban bencana alam merupakan salah satu contoh perilaku yang sesuai dengan nilai-nilai Pancasila, khususnya sila...",
+     "options": [
+      "A. Keempat",
+      "B. Ketiga",
+      "C. Kedua",
+      "D. Kelima",
+      "E. Pertama"
+     ],
+     "answer": "C",
+     "explanation": "Gemar melakukan kegiatan kemanusiaan dan menolong sesama adalah butir pengamalan sila kedua: Kemanusiaan yang Adil dan Beradab.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a2eac71e8fb33ef52",
+     "question": "Sidang Kedua BPUPKI yang dilaksanakan pada tanggal 10 - 17 Juli 1945 menghasilkan kesepakatan penting, yaitu...",
+     "options": [
+      "A. Pembentukan PPKI",
+      "B. Perumusan Dasar Negara",
+      "C. Merumuskan dan menyusun Rancangan Undang-Undang Dasar",
+      "D. Mengesahkan Piagam Jakarta sebagai Pembukaan UUD",
+      "E. Pemilihan Presiden dan Wakil Presiden"
+     ],
+     "answer": "C",
+     "explanation": "Sidang Pertama BPUPKI merumuskan dasar negara (Pancasila). Sidang Kedua berfokus membahas Rancangan Undang-Undang Dasar (Batang Tubuh).",
+     "topic": "Sejarah kebangsaan"
+    },
+    {
+     "uid": "6a2eac71e99139f611",
+     "question": "Menurut UUD 1945 Pasal 34 ayat (1), fakir miskin dan anak-anak yang terlantar dipelihara oleh...",
+     "options": [
+      "A. Dinas Sosial",
+      "B. Lembaga Swadaya Masyarakat",
+      "C. Negara",
+      "D. Pemerintah Daerah",
+      "E. Masyarakat"
+     ],
+     "answer": "C",
+     "explanation": "Bunyi Pasal 34 ayat (1) UUD 1945 dengan sangat jelas menyebutkan: 'Fakir miskin dan anak-anak yang terlantar dipelihara oleh negara.'",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71ea480d38ac",
+     "question": "Bela negara tidak selalu diartikan mengangkat senjata. Di masa damai, salah satu bentuk perwujudan bela negara oleh masyarakat umum yang paling mendasar adalah...",
+     "options": [
+      "A. Bergabung dengan organisasi paramiliter",
+      "B. Taat membayar pajak tepat waktu",
+      "C. Menjaga batas wilayah perbatasan secara sukarela",
+      "D. Mendaftar menjadi anggota Polri",
+      "E. Mengikuti wajib militer"
+     ],
+     "answer": "B",
+     "explanation": "Membayar pajak adalah wujud nyata kontribusi warga negara untuk membiayai penyelenggaraan dan pertahanan negara di era modern (Bela Negara non-fisik).",
+     "topic": "Bela negara"
+    },
+    {
+     "uid": "6a2eac71eaf92accd3",
+     "question": "Menurut UUD 1945 pasal 20 ayat (1), kekuasaan membentuk Undang-Undang berada pada lembaga...",
+     "options": [
+      "A. Majelis Permusyawaratan Rakyat",
+      "B. Mahkamah Konstitusi",
+      "C. Presiden",
+      "D. Mahkamah Agung",
+      "E. Dewan Perwakilan Rakyat"
+     ],
+     "answer": "E",
+     "explanation": "Sejak amandemen UUD 1945, pemegang kekuasaan legislatif (membentuk undang-undang) dialihkan dari Presiden kepada Dewan Perwakilan Rakyat (DPR).",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71eba7c94840",
+     "question": "Sikap primordialisme yang berlebihan di masyarakat multikultural dapat memicu disintegrasi bangsa karena...",
+     "options": [
+      "A. Membuat pemerintah kehilangan wibawa internasional",
+      "B. Meningkatkan persaingan ekonomi global",
+      "C. Mendorong kemajuan budaya lokal secara drastis",
+      "D. Memudarkan rasa kebersamaan dan memicu konflik antarkelompok",
+      "E. Menambah pendapatan asli daerah"
+     ],
+     "answer": "D",
+     "explanation": "Primordialisme berlebihan (mengikat diri kuat pada kelompok/daerahnya) menimbulkan eksklusivisme yang berpotensi memicu gesekan sosial dan disintegrasi.",
+     "topic": "Bhinneka Tunggal Ika"
+    },
+    {
+     "uid": "6a2eac71ec49d8ded9",
+     "question": "Penyerahan kedaulatan Indonesia dari pihak Belanda yang menandai berdirinya Republik Indonesia Serikat (RIS) merupakan kesepakatan dalam peristiwa...",
+     "options": [
+      "A. Perjanjian Roem-Royen",
+      "B. Perjanjian Renville",
+      "C. Konferensi Inter-Indonesia",
+      "D. Konferensi Meja Bundar (KMB)",
+      "E. Perjanjian Linggarjati"
+     ],
+     "answer": "D",
+     "explanation": "KMB (23 Agustus - 2 November 1949) menghasilkan pengakuan dan penyerahan kedaulatan kepada RIS pada 27 Desember 1949.",
+     "topic": "NKRI dan wawasan nusantara"
+    },
+    {
+     "uid": "6a2eac71ed011bdd91",
+     "question": "Negara memprioritaskan anggaran pendidikan sekurang-kurangnya dari Anggaran Pendapatan dan Belanja Negara (APBN) sebesar...",
+     "options": [
+      "A. 10%",
+      "B. 15%",
+      "C. 20%",
+      "D. 25%",
+      "E. 30%"
+     ],
+     "answer": "C",
+     "explanation": "Pasal 31 ayat (4) UUD 1945 mengamanatkan bahwa anggaran pendidikan diprioritaskan sekurang-kurangnya 20% dari APBN dan APBD.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a2eac71ed90bbfee7",
+     "question": "Badan Pemeriksa Keuangan (BPK) adalah lembaga negara yang bebas dan mandiri. Hasil pemeriksaan keuangan negara oleh BPK diserahkan kepada...",
+     "options": [
+      "A. Menteri Keuangan",
+      "B. Presiden dan Wakil Presiden",
+      "C. Mahkamah Agung",
+      "D. KPK dan Kejaksaan",
+      "E. DPR, DPD, dan DPRD"
+     ],
+     "answer": "E",
+     "explanation": "Pasal 23E ayat (2) UUD 1945 menyatakan bahwa hasil pemeriksaan keuangan negara diserahkan kepada DPR, DPD, dan DPRD sesuai dengan kewenangannya.",
+     "topic": "Lembaga negara dan pemerintahan"
+    },
+    {
+     "uid": "6a2eac71ee44c3a904",
+     "question": "Dalam upaya pencegahan tindak pidana korupsi, dikenal istilah *Whistleblower*. Definisi yang paling tepat untuk istilah ini adalah...",
+     "options": [
+      "A. Pihak yang menyuap aparatur negara",
+      "B. Seseorang yang melaporkan terjadinya dugaan pelanggaran hukum/korupsi di instansinya",
+      "C. Pejabat yang merangkap jabatan di instansi swasta",
+      "D. Penegak hukum yang bertugas menyita aset koruptor",
+      "E. Saksi palsu yang memberatkan tersangka di pengadilan"
+     ],
+     "answer": "B",
+     "explanation": "Whistleblower (peniup peluit) adalah pelapor tindak pidana yang mengetahui dan melaporkan tindak pidana tertentu (seperti korupsi) yang terjadi di dalam organisasi tempatnya bekerja.",
+     "topic": "Integritas dan antikorupsi"
+    },
+    {
+     "uid": "6a2eac71eed80c33a6",
+     "question": "Pancasila memiliki peran untuk membedakan bangsa Indonesia dengan bangsa lain dalam hal watak, perilaku, dan kebiasaan. Dalam hal ini, Pancasila berkedudukan sebagai...",
+     "options": [
+      "A. Kepribadian bangsa Indonesia",
+      "B. Sumber hukum nasional",
+      "C. Perjanjian luhur",
+      "D. Jiwa bangsa Indonesia",
+      "E. Dasar negara Indonesia"
+     ],
+     "answer": "A",
+     "explanation": "Sebagai kepribadian bangsa, Pancasila memberikan corak khas bangsa Indonesia dan menjadi pembeda dengan bangsa lain.",
+     "topic": "Pancasila"
+    },
+    {
+     "uid": "6a2eac71ef6cb9e2e5",
+     "question": "Pengakuan hukum internasional terhadap konsep kepulauan (Archipelagic State) yang menyatukan wilayah daratan dan laut Indonesia, diawali dari langkah berani pemerintah mengeluarkan...",
+     "options": [
+      "A. Supersemar",
+      "B. Dekrit Presiden 1959",
+      "C. Deklarasi Bangkok",
+      "D. Piagam PBB",
+      "E. Deklarasi Djuanda"
+     ],
+     "answer": "E",
+     "explanation": "Deklarasi Djuanda (13 Desember 1957) menyatakan bahwa laut Indonesia adalah termasuk laut sekitar, di antara, dan di dalam kepulauan Indonesia menjadi satu kesatuan wilayah NKRI.",
+     "topic": "NKRI dan wawasan nusantara"
+    },
+    {
+     "uid": "6a2eac71f07761bb67",
+     "question": "Menurut Pasal 24 UUD 1945, kekuasaan kehakiman dilakukan oleh sebuah Mahkamah Agung dan badan peradilan yang berada di bawahnya, serta oleh sebuah...",
+     "options": [
+      "A. Kejaksaan Agung",
+      "B. Pengadilan HAM Ad Hoc",
+      "C. Mahkamah Konstitusi",
+      "D. Komisi Yudisial",
+      "E. Badan Arbitrase Nasional"
+     ],
+     "answer": "C",
+     "explanation": "Pasal 24 ayat (2) menyatakan kekuasaan kehakiman dilakukan oleh sebuah Mahkamah Agung (beserta badan peradilan di bawahnya) dan oleh sebuah Mahkamah Konstitusi.",
+     "topic": "UUD 1945 dan konstitusi"
+    },
+    {
+     "uid": "6a2eac71f1574e30f6",
+     "question": "Seorang warga negara menunjukkan kecintaannya pada tanah air dengan bangga menggunakan produk-produk buatan dalam negeri. Tindakan ini mencerminkan sila Pancasila ke-...",
+     "options": [
+      "A. Kelima",
+      "B. Keempat",
+      "C. Kedua",
+      "D. Ketiga",
+      "E. Pertama"
+     ],
+     "answer": "D",
+     "explanation": "Cinta tanah air, bangga sebagai bangsa Indonesia, dan rela berkorban (termasuk mendukung produk lokal/nasional) adalah wujud pengamalan Sila ke-3, Persatuan Indonesia.",
+     "topic": "Pancasila"
+    }
+   ]
+  },
+  "tiu": {
+   "segment_id": "tiu",
+   "segment_name": "Tes Intelegensia Umum (TIU)",
+   "total_soal": 98,
+   "soal": [
+    {
+     "uid": "6a17d5c3cead7fe559",
+     "question": "SINONIM dari kata 'EFEKTIF' adalah...",
+     "options": [
+      "A. Berhasil guna",
+      "B. Lambat",
+      "C. Rumit",
+      "D. Tertunda",
+      "E. Boros"
+     ],
+     "answer": "A",
+     "explanation": "Efektif berarti ada hasilnya atau berhasil guna; pilihan lain bermakna tidak berhasil, lambat, atau menghambat.",
+     "topic": "Verbal: sinonim"
+    },
+    {
+     "uid": "6a17d5c3ceffe5ca2b",
+     "question": "Jika semua dokter adalah orang pintar, dan beberapa orang pintar adalah musisi. Kesimpulannya...",
+     "options": [
+      "A. Semua dokter adalah musisi",
+      "B. Beberapa dokter adalah musisi",
+      "C. Tidak dapat ditarik kesimpulan pasti",
+      "D. Semua musisi adalah dokter",
+      "E. Beberapa orang pintar bukan musisi"
+     ],
+     "answer": "C",
+     "explanation": "Tidak ada irisan pasti yang dapat ditarik antara himpunan dokter dan musisi dari premis tersebut.",
+     "topic": "Logika: silogisme"
+    },
+    {
+     "uid": "6a17d5c3cf5200fc54",
+     "question": "Deret angka: 2, 6, 12, 20, 30, ... Angka selanjutnya adalah...",
+     "options": [
+      "A. 38",
+      "B. 40",
+      "C. 42",
+      "D. 44",
+      "E. 46"
+     ],
+     "answer": "C",
+     "explanation": "Polanya penambahan bertingkat: +4, +6, +8, +10. Selanjutnya +12 (30 + 12 = 42).",
+     "topic": "Numerik: deret"
+    },
+    {
+     "uid": "6a17d5c3cfc7bcbe67",
+     "question": "Sebuah proyek dikerjakan 8 orang selesai 15 hari. Jika ingin diselesaikan 10 hari, berapa tambahan pekerja?",
+     "options": [
+      "A. 4 orang",
+      "B. 8 orang",
+      "C. 6 orang",
+      "D. 2 orang",
+      "E. 12 orang"
+     ],
+     "answer": "A",
+     "explanation": "Perbandingan berbalik nilai: (8 x 15) / 10 = 12 total. Tambahan = 12 - 8 = 4 orang.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d0256015d5",
+     "question": "ANTONIM dari kata 'APRIORI' adalah...",
+     "options": [
+      "A. Deduktif",
+      "B. Aposteriori",
+      "C. Prioritas",
+      "D. Mayor",
+      "E. Proporsi"
+     ],
+     "answer": "B",
+     "explanation": "Apriori (sebelum mengetahui fakta) berlawanan dengan Aposteriori (setelah mengetahui fakta).",
+     "topic": "Verbal: antonim"
+    },
+    {
+     "uid": "6a17d5c3d08eeb378a",
+     "question": "Deret: 3, 7, 15, 31, 63... Angka berikutnya adalah...",
+     "options": [
+      "A. 120",
+      "B. 100",
+      "C. 121",
+      "D. 125",
+      "E. 127"
+     ],
+     "answer": "E",
+     "explanation": "Pola: kalikan 2 lalu tambah 1. 63 x 2 + 1 = 127.",
+     "topic": "Numerik: deret"
+    },
+    {
+     "uid": "6a17d5c3d0ea85ac19",
+     "question": "ANALOGI: Termometer : Suhu = Barometer : ...",
+     "options": [
+      "A. Hujan",
+      "B. Tekanan udara",
+      "C. Kecepatan",
+      "D. Kelembapan",
+      "E. Angin"
+     ],
+     "answer": "B",
+     "explanation": "Termometer mengukur suhu, sedangkan barometer mengukur tekanan udara.",
+     "topic": "Verbal: analogi"
+    },
+    {
+     "uid": "6a17d5c3d13736be37",
+     "question": "Jika x + y = 10 dan x - y = 4, maka nilai x adalah...",
+     "options": [
+      "A. 5",
+      "B. 6",
+      "C. 7",
+      "D. 8",
+      "E. 3"
+     ],
+     "answer": "C",
+     "explanation": "Dari eliminasi: 2x = 14, x = 7.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d1918a9efc",
+     "question": "SINONIM: DEPRIVASI",
+     "options": [
+      "A. Kemakmuran",
+      "B. Penyetaraan",
+      "C. Pencabutan hak",
+      "D. Kelebihan",
+      "E. Pemberian hadiah"
+     ],
+     "answer": "C",
+     "explanation": "Deprivasi berarti pencabutan hak atau kekurangan kebutuhan dasar.",
+     "topic": "Verbal: sinonim"
+    },
+    {
+     "uid": "6a17d5c3d1e7d80118",
+     "question": "Seorang pedagang membeli barang seharga Rp200.000 dan menjual dengan keuntungan 25%. Harga jualnya...",
+     "options": [
+      "A. Rp225.000",
+      "B. Rp240.000",
+      "C. Rp250.000",
+      "D. Rp260.000",
+      "E. Rp275.000"
+     ],
+     "answer": "C",
+     "explanation": "Harga jual = 200.000 x 1,25 = Rp250.000.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d233260618",
+     "question": "Semua pegawai negeri harus disiplin. Hendra adalah pegawai negeri. Kesimpulan...",
+     "options": [
+      "A. Hendra mungkin disiplin",
+      "B. Tidak ada kesimpulan",
+      "C. Hendra bukan pegawai yang baik",
+      "D. Hendra harus disiplin",
+      "E. Hendra tidak perlu disiplin"
+     ],
+     "answer": "D",
+     "explanation": "Silogisme: Semua P adalah Q, Hendra adalah P, maka Hendra adalah Q (harus disiplin).",
+     "topic": "Logika: silogisme"
+    },
+    {
+     "uid": "6a17d5c3d3097871a8",
+     "question": "Deret: 100, 50, 25, 12,5, ... Nilai berikutnya adalah...",
+     "options": [
+      "A. 6,25",
+      "B. 7",
+      "C. 4",
+      "D. 5",
+      "E. 6"
+     ],
+     "answer": "A",
+     "explanation": "Deret geometri dengan rasio 0,5: 12,5 x 0,5 = 6,25.",
+     "topic": "Numerik: deret"
+    },
+    {
+     "uid": "6a17d5c3d35ebc603a",
+     "question": "ANTONIM: KONKRET",
+     "options": [
+      "A. Padat",
+      "B. Nyata",
+      "C. Keras",
+      "D. Abstrak",
+      "E. Jelas"
+     ],
+     "answer": "D",
+     "explanation": "Antonim dari konkret (nyata/berwujud) adalah abstrak (tidak berwujud).",
+     "topic": "Verbal: antonim"
+    },
+    {
+     "uid": "6a17d5c3d3b00783a7",
+     "question": "Sebuah lingkaran memiliki jari-jari 7 cm. Luasnya adalah... (π = 22/7)",
+     "options": [
+      "A. 154 cm²",
+      "B. 144 cm²",
+      "C. 174 cm²",
+      "D. 184 cm²",
+      "E. 164 cm²"
+     ],
+     "answer": "A",
+     "explanation": "Luas = π r² = 22/7 x 7 x 7 = 154 cm².",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d3fe5694b8",
+     "question": "Kata yang tepat untuk melengkapi analogi: Padi : Petani = Ikan : ...",
+     "options": [
+      "A. Peternak",
+      "B. Tukang",
+      "C. Koki",
+      "D. Nelayan",
+      "E. Pedagang"
+     ],
+     "answer": "D",
+     "explanation": "Padi dihasilkan/ditangkap petani, ikan dihasilkan/ditangkap nelayan.",
+     "topic": "Verbal: analogi"
+    },
+    {
+     "uid": "6a17d5c3d458a58ef8",
+     "question": "Jika nilai rata-rata 5 bilangan adalah 12, dan salah satu bilangan adalah 20, maka rata-rata 4 bilangan lainnya...",
+     "options": [
+      "A. 10",
+      "B. 12",
+      "C. 8",
+      "D. 9",
+      "E. 11"
+     ],
+     "answer": "A",
+     "explanation": "Total = 5 x 12 = 60. Sisa 4 bilangan = 60 - 20 = 40. Rata-rata = 40/4 = 10.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d4d03938f1",
+     "question": "SINONIM: REKONSILIASI",
+     "options": [
+      "A. Permusuhan",
+      "B. Pertikaian",
+      "C. Pemisahan",
+      "D. Pengadilan",
+      "E. Perdamaian kembali"
+     ],
+     "answer": "E",
+     "explanation": "Rekonsiliasi berarti upaya perdamaian kembali setelah perselisihan.",
+     "topic": "Verbal: sinonim"
+    },
+    {
+     "uid": "6a17d5c3d52a0a8301",
+     "question": "Deret huruf: Z, X, V, T, ... Huruf berikutnya adalah...",
+     "options": [
+      "A. Q",
+      "B. O",
+      "C. R",
+      "D. P",
+      "E. S"
+     ],
+     "answer": "C",
+     "explanation": "Polanya melompat 2 huruf ke belakang alphabet: Z, X, V, T, R.",
+     "topic": "Numerik: deret"
+    },
+    {
+     "uid": "6a17d5c3d57c1be9dc",
+     "question": "Sebuah keran dapat mengisi bak mandi dalam 6 jam. Keran lain mengisinya dalam 3 jam. Jika keduanya dibuka bersamaan, waktu yang dibutuhkan...",
+     "options": [
+      "A. 2 jam",
+      "B. 1,5 jam",
+      "C. 9 jam",
+      "D. 4 jam",
+      "E. 4,5 jam"
+     ],
+     "answer": "A",
+     "explanation": "Kecepatan gabungan = 1/6 + 1/3 = 1/2. Waktu = 2 jam.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d5d06aeccb",
+     "question": "ANTONIM: EKSPLISIT",
+     "options": [
+      "A. Implisit",
+      "B. Jelas",
+      "C. Tepat",
+      "D. Tersurat",
+      "E. Spesifik"
+     ],
+     "answer": "A",
+     "explanation": "Eksplisit (tersurat/jelas) berlawanan dengan implisit (tersirat/tidak langsung).",
+     "topic": "Verbal: antonim"
+    },
+    {
+     "uid": "6a17d5c3d624a65020",
+     "question": "Jika hari ini Rabu, maka 100 hari lagi adalah hari...",
+     "options": [
+      "A. Sabtu",
+      "B. Minggu",
+      "C. Selasa",
+      "D. Kamis",
+      "E. Jumat"
+     ],
+     "answer": "E",
+     "explanation": "100 hari = 14 minggu + 2 hari. Rabu + 2 = Jumat.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d67479604e",
+     "question": "Seorang siswa mendapat nilai 80, 75, 90, dan 85. Nilai rata-ratanya adalah...",
+     "options": [
+      "A. 85",
+      "B. 83",
+      "C. 81",
+      "D. 82,5",
+      "E. 80"
+     ],
+     "answer": "D",
+     "explanation": "(80+75+90+85)/4 = 330/4 = 82,5.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d6c1f120c7",
+     "question": "ANALOGI: Kompas : Arah = Jam : ...",
+     "options": [
+      "A. Warna",
+      "B. Angka",
+      "C. Waktu",
+      "D. Jarak",
+      "E. Berat"
+     ],
+     "answer": "C",
+     "explanation": "Kompas digunakan untuk menentukan arah, jam digunakan untuk menentukan waktu.",
+     "topic": "Verbal: analogi"
+    },
+    {
+     "uid": "6a17d5c3d7117d74bb",
+     "question": "Deret angka: 1, 1, 2, 3, 5, 8, 13, ... Angka berikutnya adalah...",
+     "options": [
+      "A. 18",
+      "B. 20",
+      "C. 21",
+      "D. 22",
+      "E. 24"
+     ],
+     "answer": "C",
+     "explanation": "Deret Fibonacci: setiap angka adalah penjumlahan dua angka sebelumnya. 8 + 13 = 21.",
+     "topic": "Numerik: deret"
+    },
+    {
+     "uid": "6a17d5c3d774b3b5b9",
+     "question": "Jika 5 buku seharga Rp75.000, maka harga 8 buku adalah...",
+     "options": [
+      "A. Rp120.000",
+      "B. Rp130.000",
+      "C. Rp112.000",
+      "D. Rp115.000",
+      "E. Rp100.000"
+     ],
+     "answer": "A",
+     "explanation": "Harga per buku = 75.000/5 = 15.000. Harga 8 buku = 8 x 15.000 = 120.000.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d7c72dd892",
+     "question": "SINONIM: PARADOKS",
+     "options": [
+      "A. Persamaan makna",
+      "B. Pertentangan yang tampak namun mungkin benar",
+      "C. Kesimpulan logis",
+      "D. Kepastian mutlak",
+      "E. Keselarasan"
+     ],
+     "answer": "B",
+     "explanation": "Paradoks adalah pernyataan yang tampak bertentangan namun mengandung kebenaran.",
+     "topic": "Verbal: sinonim"
+    },
+    {
+     "uid": "6a17d5c3d8214a0b0e",
+     "question": "Sebuah mobil menempuh jarak 240 km dalam 4 jam. Kecepatan rata-ratanya adalah...",
+     "options": [
+      "A. 60 km/jam",
+      "B. 70 km/jam",
+      "C. 55 km/jam",
+      "D. 50 km/jam",
+      "E. 65 km/jam"
+     ],
+     "answer": "A",
+     "explanation": "Kecepatan = jarak/waktu = 240/4 = 60 km/jam.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d88b150faa",
+     "question": "ANTONIM: PROLIFERASI",
+     "options": [
+      "A. Penyebaran",
+      "B. Penyusutan",
+      "C. Pertumbuhan",
+      "D. Perkembangbiakan",
+      "E. Penyebaran senjata"
+     ],
+     "answer": "B",
+     "explanation": "Proliferasi berarti pertumbuhan/penyebaran cepat, antonimnya penyusutan/pengurangan.",
+     "topic": "Verbal: antonim"
+    },
+    {
+     "uid": "6a17d5c3d8ee7a0b14",
+     "question": "Deret: 4, 8, 16, 32, 64, ... Angka berikutnya adalah...",
+     "options": [
+      "A. 100",
+      "B. 112",
+      "C. 120",
+      "D. 128",
+      "E. 130"
+     ],
+     "answer": "D",
+     "explanation": "Deret geometri dengan rasio 2: 64 x 2 = 128.",
+     "topic": "Numerik: deret"
+    },
+    {
+     "uid": "6a17d5c3d95cc305d9",
+     "question": "Toko A menjual barang dengan diskon 30%, toko B dengan diskon 20% kemudian 10%. Manakah yang lebih murah?",
+     "options": [
+      "A. Sama saja",
+      "B. Toko A lebih murah",
+      "C. Tergantung harga awal",
+      "D. Toko B lebih murah",
+      "E. Tidak bisa dibandingkan"
+     ],
+     "answer": "B",
+     "explanation": "Toko A: sisa 70%. Toko B: sisa 80% x 90% = 72%. Toko A (70%) lebih murah.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3d9bae7e75d",
+     "question": "Jika p = 3 dan q = -2, nilai dari 2p² - 3q adalah...",
+     "options": [
+      "A. 18",
+      "B. 6",
+      "C. 12",
+      "D. 24",
+      "E. 15"
+     ],
+     "answer": "D",
+     "explanation": "2(9) - 3(-2) = 18 + 6 = 24.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a17d5c3da0c59097b",
+     "question": "Sebuah segitiga memiliki alas 10 cm dan tinggi 8 cm. Luasnya adalah...",
+     "options": [
+      "A. 80 cm²",
+      "B. 35 cm²",
+      "C. 30 cm²",
+      "D. 40 cm²",
+      "E. 50 cm²"
+     ],
+     "answer": "D",
+     "explanation": "Luas segitiga = ½ x alas x tinggi = ½ x 10 x 8 = 40 cm².",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": "6a2eaf1f1220caa502",
+     "question": "EVOKASI = ...",
+     "options": [
+      "A. Izin",
+      "B. Penilaian",
+      "C. Penggugah rasa",
+      "D. Penyelidikan",
+      "E. Provokasi"
+     ],
+     "answer": "C",
+     "explanation": "Evokasi memiliki arti daya penggugah rasa atau pemanggilan (menggugah) kenangan.",
+     "topic": "Verbal: lainnya"
+    },
+    {
+     "uid": "6a2eaf1f297a263b42",
+     "question": "TENDENSI = ...",
+     "options": [
+      "A. Kecepatan",
+      "B. Tekanan",
+      "C. Kelurusan",
+      "D. Kecenderungan",
+      "E. Kesamaan"
+     ],
+     "answer": "D",
+     "explanation": "Tendensi dalam Kamus Besar Bahasa Indonesia (KBBI) berarti kecenderungan atau kecondongan pada suatu hal.",
+     "topic": "Verbal: lainnya"
+    },
+    {
+     "uid": "6a2eaf1f2a8d3dc941",
+     "question": "Lawan kata dari PROMINEN adalah...",
+     "options": [
+      "A. Biasa",
+      "B. Mutlak",
+      "C. Menonjol",
+      "D. Konsisten",
+      "E. Berharga"
+     ],
+     "answer": "A",
+     "explanation": "Prominen artinya terkemuka, menonjol, atau luar biasa. Sehingga antonim (lawan kata) yang tepat adalah biasa.",
+     "topic": "Verbal: antonim"
+    },
+    {
+     "uid": "6a2eaf1f2bb2f9f983",
+     "question": "Lawan kata dari 'SPORADIS' adalah...",
+     "options": [
+      "A. Bersatu",
+      "B. Sendirian",
+      "C. Terpisah",
+      "D. Jarang",
+      "E. Merata"
+     ],
+     "answer": "E",
+     "explanation": "Sporadis berarti tersebar tidak merata dan terjadi sewaktu-waktu. Lawan katanya yang paling tepat adalah merata.",
+     "topic": "Verbal: antonim"
+    },
+    {
+     "uid": "6a2eaf1f2d0dc856f5",
+     "question": "MATA : MELIHAT = TELINGA : ...",
+     "options": [
+      "A. Mendengar",
+      "B. Bising",
+      "C. Nada",
+      "D. Suara",
+      "E. Tuli"
+     ],
+     "answer": "A",
+     "explanation": "Hubungan analogi fungsi. Fungsi mata adalah untuk melihat, sebagaimana fungsi telinga adalah untuk mendengar.",
+     "topic": "Verbal: analogi"
+    },
+    {
+     "uid": "6a2eaf1f2e26fb5c0a",
+     "question": "GANDUM : ROTI = KAYU : ...",
+     "options": [
+      "A. Triplek",
+      "B. Pohon",
+      "C. Lemari",
+      "D. Papan",
+      "E. Hutan"
+     ],
+     "answer": "C",
+     "explanation": "Hubungan analogi bahan baku dan hasil jadi. Gandum diolah menjadi roti, sebagaimana kayu diolah menjadi barang jadi seperti lemari.",
+     "topic": "Verbal: analogi"
+    },
+    {
+     "uid": "6a2eaf1f2f2c2dcc5f",
+     "question": "Semua pegawai wajib memakai seragam. Sebagian pegawai memakai topi.",
+     "options": [
+      "A. Sebagian pegawai tidak memakai seragam",
+      "B. Semua pegawai memakai topi",
+      "C. Tidak semua pegawai memakai seragam",
+      "D. Semua pegawai memakai seragam dan topi",
+      "E. Sebagian pegawai memakai seragam dan topi"
+     ],
+     "answer": "E",
+     "explanation": "Karena seragam diwajibkan untuk semua, dan topi hanya dipakai sebagian, maka kesimpulan yang pasti adalah sebagian pegawai memakai seragam dan topi.",
+     "topic": "Logika: silogisme"
+    },
+    {
+     "uid": null,
+     "question": "ANALOGI: Dokter : Stetoskop = Arsitek : ...",
+     "options": [
+      "A. Kalkulator",
+      "B. Pensil",
+      "C. Meteran",
+      "D. Gambar teknik",
+      "E. Helm"
+     ],
+     "answer": "C",
+     "explanation": "Dokter menggunakan stetoskop sebagai alat kerjanya; arsitek menggunakan meteran.",
+     "topic": "Verbal: analogi"
+    },
+    {
+     "uid": null,
+     "question": "Nilai dari 3! + 4! adalah...",
+     "options": [
+      "A. 36",
+      "B. 28",
+      "C. 26",
+      "D. 24",
+      "E. 30"
+     ],
+     "answer": "E",
+     "explanation": "3! = 6, 4! = 24. Jumlah = 30.",
+     "topic": "Numerik: berhitung"
+    },
+    {
+     "uid": null,
+     "question": "Kata yang memiliki makna berlawanan dengan 'AMBIGU' adalah...",
+     "options": [
+      "A. Samar",
+      "B. Kabur",
+      "C. Jelas",
+      "D. Rancu",
+      "E. Multitafsir"
+     ],
+     "answer": "C",
+     "explanation": "Ambigu berarti bermakna ganda/tidak jelas. Antonimnya adalah jelas/tegas.",
+     "topic": "Verbal: antonim"
+    },
+    {
+     "uid": "f15e964f97e6722720",
+     "question": "Lanjutan deret: 4, 9, 14, 19, 24, 29, ...",
+     "options": [
+      "A. 19",
+      "B. 34",
+      "C. 39",
+      "D. 49",
+      "E. 59"
+     ],
+     "answer": "B",
+     "explanation": "Selisih antar suku tetap 5, sehingga suku berikutnya 29 + 5 = 34.",
+     "topic": "Numerik: deret",
+     "difficulty": 2
+    },
+    {
+     "uid": "4db067132605273acd",
+     "question": "Lanjutan deret: 7, 13, 19, 25, 31, 37, ...",
+     "options": [
+      "A. 13",
+      "B. 25",
+      "C. 31",
+      "D. 37",
+      "E. 43"
+     ],
+     "answer": "E",
+     "explanation": "Selisih antar suku tetap 6, sehingga suku berikutnya 37 + 6 = 43.",
+     "topic": "Numerik: deret",
+     "difficulty": 2
+    },
+    {
+     "uid": "d4a7dee0d672db0a7c",
+     "question": "Lanjutan deret: 12, 21, 30, 39, 48, 57, ...",
+     "options": [
+      "A. 12",
+      "B. 21",
+      "C. 66",
+      "D. 93",
+      "E. 111"
+     ],
+     "answer": "C",
+     "explanation": "Selisih antar suku tetap 9, sehingga suku berikutnya 57 + 9 = 66.",
+     "topic": "Numerik: deret",
+     "difficulty": 2
+    },
+    {
+     "uid": "c3a339b022c55b1ec9",
+     "question": "Lanjutan deret: 3, 11, 19, 27, 35, 43, ...",
+     "options": [
+      "A. 11",
+      "B. 19",
+      "C. 35",
+      "D. 51",
+      "E. 91"
+     ],
+     "answer": "D",
+     "explanation": "Selisih antar suku tetap 8, sehingga suku berikutnya 43 + 8 = 51.",
+     "topic": "Numerik: deret",
+     "difficulty": 2
+    },
+    {
+     "uid": "6c98dd5856805c35f1",
+     "question": "Lanjutan deret: 2, 6, 18, 54, 162, ...",
+     "options": [
+      "A. 486",
+      "B. 648",
+      "C. 702",
+      "D. 756",
+      "E. 810"
+     ],
+     "answer": "A",
+     "explanation": "Setiap suku dikalikan 3, sehingga suku berikutnya 162 x 3 = 486.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "475bef986820dd798f",
+     "question": "Lanjutan deret: 5, 10, 20, 40, 80, ...",
+     "options": [
+      "A. 160",
+      "B. 200",
+      "C. 240",
+      "D. 320",
+      "E. 400"
+     ],
+     "answer": "A",
+     "explanation": "Setiap suku dikalikan 2, sehingga suku berikutnya 80 x 2 = 160.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "342efae8d9a01a0827",
+     "question": "Lanjutan deret: 3, 12, 48, 192, 768, ...",
+     "options": [
+      "A. 2688",
+      "B. 3072",
+      "C. 3264",
+      "D. 3456",
+      "E. 4224"
+     ],
+     "answer": "B",
+     "explanation": "Setiap suku dikalikan 4, sehingga suku berikutnya 768 x 4 = 3072.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "a97147a063b00832d5",
+     "question": "Lanjutan deret: 3, 10, 6, 13, 9, 16, ...",
+     "options": [
+      "A. 6",
+      "B. 9",
+      "C. 12",
+      "D. 24",
+      "E. 30"
+     ],
+     "answer": "C",
+     "explanation": "Deret terdiri dari dua pola. Suku ganjil bertambah +3, suku genap bertambah +3. Suku berikutnya adalah suku ganjil: 9 +3 = 12.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "09823e5a94c118dfc2",
+     "question": "Lanjutan deret: 5, 2, 9, 8, 13, 14, ...",
+     "options": [
+      "A. -7",
+      "B. -3",
+      "C. 9",
+      "D. 17",
+      "E. 41"
+     ],
+     "answer": "D",
+     "explanation": "Deret terdiri dari dua pola. Suku ganjil bertambah +4, suku genap bertambah +6. Suku berikutnya adalah suku ganjil: 13 +4 = 17.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "0520658ab02ba79e5c",
+     "question": "Lanjutan deret: 20, 4, 18, 9, 16, 14, ...",
+     "options": [
+      "A. 2",
+      "B. 4",
+      "C. 6",
+      "D. 10",
+      "E. 14"
+     ],
+     "answer": "E",
+     "explanation": "Deret terdiri dari dua pola. Suku ganjil bertambah -2, suku genap bertambah +5. Suku berikutnya adalah suku ganjil: 16 -2 = 14.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "2402d41f7661231b43",
+     "question": "Lanjutan deret: 2, 3, 5, 8, 12, 17, ...",
+     "options": [
+      "A. 23",
+      "B. 25",
+      "C. 27",
+      "D. 28",
+      "E. 29"
+     ],
+     "answer": "A",
+     "explanation": "Selisih antar suku naik tetap 1: 1, 2, 3, 4, 5, lalu 6. Suku berikutnya 17 + 6 = 23.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "c8b35016877594dad8",
+     "question": "Lanjutan deret: 5, 7, 11, 17, 25, 35, ...",
+     "options": [
+      "A. 35",
+      "B. 47",
+      "C. 49",
+      "D. 55",
+      "E. 59"
+     ],
+     "answer": "B",
+     "explanation": "Selisih antar suku naik tetap 2: 2, 4, 6, 8, 10, lalu 12. Suku berikutnya 35 + 12 = 47.",
+     "topic": "Numerik: deret",
+     "difficulty": 3
+    },
+    {
+     "uid": "99c651918bb46d0cdb",
+     "question": "Sebuah tas berharga Rp 250.000 mendapat diskon 20%. Harga yang harus dibayar adalah...",
+     "options": [
+      "A. Rp 137.500",
+      "B. Rp 175.000",
+      "C. Rp 200.000",
+      "D. Rp 237.500",
+      "E. Rp 275.000"
+     ],
+     "answer": "C",
+     "explanation": "Potongan = 20% x 250.000 = 50.000. Harga bayar = 250.000 - 50.000 = 200.000.",
+     "topic": "Numerik: persentase",
+     "difficulty": 2
+    },
+    {
+     "uid": "7a7eb388530cd890d0",
+     "question": "Sebuah tas berharga Rp 480.000 mendapat diskon 25%. Harga yang harus dibayar adalah...",
+     "options": [
+      "A. Rp 216.000",
+      "B. Rp 240.000",
+      "C. Rp 264.000",
+      "D. Rp 312.000",
+      "E. Rp 360.000"
+     ],
+     "answer": "E",
+     "explanation": "Potongan = 25% x 480.000 = 120.000. Harga bayar = 480.000 - 120.000 = 360.000.",
+     "topic": "Numerik: persentase",
+     "difficulty": 2
+    },
+    {
+     "uid": "9e02446adeb356d345",
+     "question": "Sebuah tas berharga Rp 360.000 mendapat diskon 15%. Harga yang harus dibayar adalah...",
+     "options": [
+      "A. Rp 198.000",
+      "B. Rp 234.000",
+      "C. Rp 288.000",
+      "D. Rp 306.000",
+      "E. Rp 396.000"
+     ],
+     "answer": "D",
+     "explanation": "Potongan = 15% x 360.000 = 54.000. Harga bayar = 360.000 - 54.000 = 306.000.",
+     "topic": "Numerik: persentase",
+     "difficulty": 2
+    },
+    {
+     "uid": "ccc771c30b5640636c",
+     "question": "Sebuah tas berharga Rp 900.000 mendapat diskon 30%. Harga yang harus dibayar adalah...",
+     "options": [
+      "A. Rp 630.000",
+      "B. Rp 720.000",
+      "C. Rp 810.000",
+      "D. Rp 855.000",
+      "E. Rp 900.000"
+     ],
+     "answer": "A",
+     "explanation": "Potongan = 30% x 900.000 = 270.000. Harga bayar = 900.000 - 270.000 = 630.000.",
+     "topic": "Numerik: persentase",
+     "difficulty": 2
+    },
+    {
+     "uid": "98371682ef53c53df4",
+     "question": "Uang Andi dan Budi berbanding 3 : 2. Jika jumlah uang mereka Rp 150.000, uang Andi adalah Rp ... ribu",
+     "options": [
+      "A. 76",
+      "B. 83",
+      "C. 90",
+      "D. 97",
+      "E. 132"
+     ],
+     "answer": "C",
+     "explanation": "Jumlah bagian 3 + 2 = 5. Uang Andi = 3/5 x 150 = 90 (ribu rupiah).",
+     "topic": "Numerik: perbandingan",
+     "difficulty": 2
+    },
+    {
+     "uid": "9b3081a093e60c587c",
+     "question": "Uang Andi dan Budi berbanding 5 : 3. Jika jumlah uang mereka Rp 240.000, uang Andi adalah Rp ... ribu",
+     "options": [
+      "A. 102",
+      "B. 150",
+      "C. 162",
+      "D. 174",
+      "E. 222"
+     ],
+     "answer": "B",
+     "explanation": "Jumlah bagian 5 + 3 = 8. Uang Andi = 5/8 x 240 = 150 (ribu rupiah).",
+     "topic": "Numerik: perbandingan",
+     "difficulty": 2
+    },
+    {
+     "uid": "f1ae714e5f3868061c",
+     "question": "Uang Andi dan Budi berbanding 4 : 7. Jika jumlah uang mereka Rp 330.000, uang Andi adalah Rp ... ribu",
+     "options": [
+      "A. 60",
+      "B. 100",
+      "C. 110",
+      "D. 120",
+      "E. 150"
+     ],
+     "answer": "D",
+     "explanation": "Jumlah bagian 4 + 7 = 11. Uang Andi = 4/11 x 330 = 120 (ribu rupiah).",
+     "topic": "Numerik: perbandingan",
+     "difficulty": 2
+    },
+    {
+     "uid": "a77952615778b4ca98",
+     "question": "Sebuah mobil melaju dengan kecepatan rata-rata 60 km/jam selama 2,5 jam. Jarak yang ditempuh adalah... km",
+     "options": [
+      "A. 90",
+      "B. 110",
+      "C. 120",
+      "D. 130",
+      "E. 150"
+     ],
+     "answer": "E",
+     "explanation": "Jarak = kecepatan x waktu = 60 x 2,5 = 150 km.",
+     "topic": "Numerik: kecepatan",
+     "difficulty": 2
+    },
+    {
+     "uid": "5a3d9336f7da57ceb0",
+     "question": "Sebuah mobil melaju dengan kecepatan rata-rata 72 km/jam selama 1,5 jam. Jarak yang ditempuh adalah... km",
+     "options": [
+      "A. 58",
+      "B. 68",
+      "C. 78",
+      "D. 88",
+      "E. 108"
+     ],
+     "answer": "E",
+     "explanation": "Jarak = kecepatan x waktu = 72 x 1,5 = 108 km.",
+     "topic": "Numerik: kecepatan",
+     "difficulty": 2
+    },
+    {
+     "uid": "886c546853473be7aa",
+     "question": "Sebuah mobil melaju dengan kecepatan rata-rata 45 km/jam selama 4 jam. Jarak yang ditempuh adalah... km",
+     "options": [
+      "A. 180",
+      "B. 190",
+      "C. 210",
+      "D. 230",
+      "E. 240"
+     ],
+     "answer": "A",
+     "explanation": "Jarak = kecepatan x waktu = 45 x 4 = 180 km.",
+     "topic": "Numerik: kecepatan",
+     "difficulty": 2
+    },
+    {
+     "uid": "acba5017a74aeba785",
+     "question": "Usia ayah 4 kali usia anaknya. Jika jumlah usia keduanya 50 tahun, usia anak adalah... tahun",
+     "options": [
+      "A. 4",
+      "B. 8",
+      "C. 10",
+      "D. 12",
+      "E. 20"
+     ],
+     "answer": "C",
+     "explanation": "Misal usia anak x, maka usia ayah 4x. x + 4x = 50, jadi 5x = 50 dan x = 10.",
+     "topic": "Numerik: usia",
+     "difficulty": 2
+    },
+    {
+     "uid": "fa8b3aa4b4dc311f1a",
+     "question": "Usia ayah 3 kali usia anaknya. Jika jumlah usia keduanya 48 tahun, usia anak adalah... tahun",
+     "options": [
+      "A. 10",
+      "B. 12",
+      "C. 14",
+      "D. 20",
+      "E. 22"
+     ],
+     "answer": "B",
+     "explanation": "Misal usia anak x, maka usia ayah 3x. x + 3x = 48, jadi 4x = 48 dan x = 12.",
+     "topic": "Numerik: usia",
+     "difficulty": 2
+    },
+    {
+     "uid": "85cf50852a6c187136",
+     "question": "Rina dapat menyelesaikan suatu pekerjaan dalam 12 hari, sedangkan Sari dalam 6 hari. Jika bekerja bersama, pekerjaan itu selesai dalam... hari",
+     "options": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4",
+      "E. 5"
+     ],
+     "answer": "D",
+     "explanation": "Kecepatan bersama = 1/12 + 1/6 = 18/72 pekerjaan per hari, sehingga waktu = 72/18 = 4 hari.",
+     "topic": "Numerik: pekerjaan",
+     "difficulty": 3
+    },
+    {
+     "uid": "e8440ea83c2a76165b",
+     "question": "Rina dapat menyelesaikan suatu pekerjaan dalam 10 hari, sedangkan Sari dalam 15 hari. Jika bekerja bersama, pekerjaan itu selesai dalam... hari",
+     "options": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5",
+      "E. 6"
+     ],
+     "answer": "E",
+     "explanation": "Kecepatan bersama = 1/10 + 1/15 = 25/150 pekerjaan per hari, sehingga waktu = 150/25 = 6 hari.",
+     "topic": "Numerik: pekerjaan",
+     "difficulty": 3
+    },
+    {
+     "uid": "8d7f65db23fe1775ca",
+     "question": "Rina dapat menyelesaikan suatu pekerjaan dalam 20 hari, sedangkan Sari dalam 30 hari. Jika bekerja bersama, pekerjaan itu selesai dalam... hari",
+     "options": [
+      "A. 6",
+      "B. 9",
+      "C. 11",
+      "D. 12",
+      "E. 18"
+     ],
+     "answer": "D",
+     "explanation": "Kecepatan bersama = 1/20 + 1/30 = 50/600 pekerjaan per hari, sehingga waktu = 600/50 = 12 hari.",
+     "topic": "Numerik: pekerjaan",
+     "difficulty": 3
+    },
+    {
+     "uid": "c238769f8da4f38d85",
+     "question": "Rina dapat menyelesaikan suatu pekerjaan dalam 6 hari, sedangkan Sari dalam 3 hari. Jika bekerja bersama, pekerjaan itu selesai dalam... hari",
+     "options": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4",
+      "E. 7"
+     ],
+     "answer": "B",
+     "explanation": "Kecepatan bersama = 1/6 + 1/3 = 9/18 pekerjaan per hari, sehingga waktu = 18/9 = 2 hari.",
+     "topic": "Numerik: pekerjaan",
+     "difficulty": 3
+    },
+    {
+     "uid": "c7f2718860ffd141de",
+     "question": "Rata-rata lima nilai ujian adalah 80. Setelah satu nilai ditambahkan, rata-rata menjadi 82. Nilai yang ditambahkan adalah...",
+     "options": [
+      "A. 92",
+      "B. 94",
+      "C. 96",
+      "D. 98",
+      "E. 100"
+     ],
+     "answer": "A",
+     "explanation": "Jumlah awal = 5 x 80 = 400. Jumlah baru = 6 x 82 = 492. Nilai tambahan = 492 - 400 = 92.",
+     "topic": "Numerik: rata-rata",
+     "difficulty": 3
+    },
+    {
+     "uid": "5b329ddf89427aa107",
+     "question": "Lampu A menyala setiap 6 detik dan lampu B setiap 8 detik. Keduanya menyala bersamaan pada detik ke-0. Keduanya akan menyala bersamaan lagi pada detik ke...",
+     "options": [
+      "A. 12",
+      "B. 18",
+      "C. 24",
+      "D. 33",
+      "E. 42"
+     ],
+     "answer": "C",
+     "explanation": "Saat menyala bersamaan lagi adalah KPK dari 6 dan 8, yaitu 24 detik.",
+     "topic": "Numerik: KPK dan FPB",
+     "difficulty": 3
+    },
+    {
+     "uid": "485caa830e7945cbed",
+     "question": "Lampu A menyala setiap 10 detik dan lampu B setiap 15 detik. Keduanya menyala bersamaan pada detik ke-0. Keduanya akan menyala bersamaan lagi pada detik ke...",
+     "options": [
+      "A. 15",
+      "B. 30",
+      "C. 33",
+      "D. 42",
+      "E. 45"
+     ],
+     "answer": "B",
+     "explanation": "Saat menyala bersamaan lagi adalah KPK dari 10 dan 15, yaitu 30 detik.",
+     "topic": "Numerik: KPK dan FPB",
+     "difficulty": 3
+    },
+    {
+     "uid": "ce7f47b03209e50e1f",
+     "question": "Semua pegawai kantor adalah orang yang tepat waktu. Semua orang yang tepat waktu adalah orang yang dipercaya atasan. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Semua orang yang tepat waktu adalah pegawai kantor",
+      "B. Semua pegawai kantor adalah orang yang dipercaya atasan",
+      "C. Tidak ada pegawai kantor yang termasuk orang yang dipercaya atasan",
+      "D. Semua orang yang dipercaya atasan adalah pegawai kantor",
+      "E. Sebagian pegawai kantor bukan orang yang dipercaya atasan"
+     ],
+     "answer": "B",
+     "explanation": "Karena semua pegawai kantor termasuk orang yang tepat waktu, dan semua orang yang tepat waktu termasuk orang yang dipercaya atasan, maka semua pegawai kantor pasti termasuk orang yang dipercaya atasan. Kesimpulan lain membalik arah hubungan atau bertentangan dengan premis.",
+     "topic": "Logika: silogisme",
+     "difficulty": 2
+    },
+    {
+     "uid": "6b117ce94995222136",
+     "question": "Semua dokter adalah orang yang berpendidikan. Semua orang yang berpendidikan adalah orang yang memahami ilmu kesehatan. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Semua orang yang berpendidikan adalah dokter",
+      "B. Tidak ada dokter yang termasuk orang yang memahami ilmu kesehatan",
+      "C. Semua orang yang memahami ilmu kesehatan adalah dokter",
+      "D. Sebagian dokter bukan orang yang memahami ilmu kesehatan",
+      "E. Semua dokter adalah orang yang memahami ilmu kesehatan"
+     ],
+     "answer": "E",
+     "explanation": "Karena semua dokter termasuk orang yang berpendidikan, dan semua orang yang berpendidikan termasuk orang yang memahami ilmu kesehatan, maka semua dokter pasti termasuk orang yang memahami ilmu kesehatan. Kesimpulan lain membalik arah hubungan atau bertentangan dengan premis.",
+     "topic": "Logika: silogisme",
+     "difficulty": 2
+    },
+    {
+     "uid": "6e44471b497bef2a72",
+     "question": "Semua kucing adalah hewan berkaki empat. Semua hewan berkaki empat adalah hewan menyusui. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Sebagian kucing bukan hewan menyusui",
+      "B. Semua kucing adalah hewan menyusui",
+      "C. Tidak ada kucing yang termasuk hewan menyusui",
+      "D. Semua hewan menyusui adalah kucing",
+      "E. Semua hewan berkaki empat adalah kucing"
+     ],
+     "answer": "B",
+     "explanation": "Karena semua kucing termasuk hewan berkaki empat, dan semua hewan berkaki empat termasuk hewan menyusui, maka semua kucing pasti termasuk hewan menyusui. Kesimpulan lain membalik arah hubungan atau bertentangan dengan premis.",
+     "topic": "Logika: silogisme",
+     "difficulty": 2
+    },
+    {
+     "uid": "61d5d4b62a2a02bfbc",
+     "question": "Semua kucing adalah hewan berkaki empat. Tidak ada hewan berkaki empat yang termasuk hewan menyusui. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Sebagian hewan menyusui adalah hewan berkaki empat",
+      "B. Tidak ada kucing yang termasuk hewan menyusui",
+      "C. Semua kucing adalah hewan menyusui",
+      "D. Sebagian kucing adalah hewan menyusui",
+      "E. Semua hewan menyusui adalah kucing"
+     ],
+     "answer": "B",
+     "explanation": "Semua kucing berada di dalam kelompok hewan berkaki empat, sedangkan kelompok hewan berkaki empat tidak memiliki anggota yang termasuk hewan menyusui. Maka tidak ada kucing yang termasuk hewan menyusui.",
+     "topic": "Logika: silogisme",
+     "difficulty": 3
+    },
+    {
+     "uid": "8ad576e2030af0bab2",
+     "question": "Semua peserta pelatihan adalah orang yang mendapat sertifikat. Tidak ada orang yang mendapat sertifikat yang termasuk orang yang terdaftar. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Sebagian peserta pelatihan adalah orang yang terdaftar",
+      "B. Semua peserta pelatihan adalah orang yang terdaftar",
+      "C. Sebagian orang yang terdaftar adalah orang yang mendapat sertifikat",
+      "D. Semua orang yang terdaftar adalah peserta pelatihan",
+      "E. Tidak ada peserta pelatihan yang termasuk orang yang terdaftar"
+     ],
+     "answer": "E",
+     "explanation": "Semua peserta pelatihan berada di dalam kelompok orang yang mendapat sertifikat, sedangkan kelompok orang yang mendapat sertifikat tidak memiliki anggota yang termasuk orang yang terdaftar. Maka tidak ada peserta pelatihan yang termasuk orang yang terdaftar.",
+     "topic": "Logika: silogisme",
+     "difficulty": 3
+    },
+    {
+     "uid": "7a56818e4c7b2e3c0c",
+     "question": "Semua buku di perpustakaan adalah benda yang bernomor katalog. Tidak ada benda yang bernomor katalog yang termasuk benda yang tercatat. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Sebagian buku di perpustakaan adalah benda yang tercatat",
+      "B. Semua benda yang tercatat adalah buku di perpustakaan",
+      "C. Sebagian benda yang tercatat adalah benda yang bernomor katalog",
+      "D. Tidak ada buku di perpustakaan yang termasuk benda yang tercatat",
+      "E. Semua buku di perpustakaan adalah benda yang tercatat"
+     ],
+     "answer": "D",
+     "explanation": "Semua buku di perpustakaan berada di dalam kelompok benda yang bernomor katalog, sedangkan kelompok benda yang bernomor katalog tidak memiliki anggota yang termasuk benda yang tercatat. Maka tidak ada buku di perpustakaan yang termasuk benda yang tercatat.",
+     "topic": "Logika: silogisme",
+     "difficulty": 3
+    },
+    {
+     "uid": "d1f3d71a478fcf9c09",
+     "question": "Sebagian pegawai kantor adalah orang yang tepat waktu. Semua orang yang tepat waktu adalah orang yang dipercaya atasan. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Sebagian orang yang dipercaya atasan bukan orang yang tepat waktu",
+      "B. Tidak ada pegawai kantor yang termasuk orang yang dipercaya atasan",
+      "C. Semua pegawai kantor adalah orang yang dipercaya atasan",
+      "D. Semua orang yang dipercaya atasan adalah orang yang tepat waktu",
+      "E. Sebagian pegawai kantor adalah orang yang dipercaya atasan"
+     ],
+     "answer": "E",
+     "explanation": "Bagian pegawai kantor yang termasuk orang yang tepat waktu otomatis termasuk orang yang dipercaya atasan, sehingga sebagian pegawai kantor adalah orang yang dipercaya atasan. Pernyataan 'semua' tidak dijamin oleh premis.",
+     "topic": "Logika: silogisme",
+     "difficulty": 3
+    },
+    {
+     "uid": "5927ce2176dfd72b8d",
+     "question": "Sebagian dokter adalah orang yang berpendidikan. Semua orang yang berpendidikan adalah orang yang memahami ilmu kesehatan. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Semua dokter adalah orang yang memahami ilmu kesehatan",
+      "B. Tidak ada dokter yang termasuk orang yang memahami ilmu kesehatan",
+      "C. Sebagian orang yang memahami ilmu kesehatan bukan orang yang berpendidikan",
+      "D. Sebagian dokter adalah orang yang memahami ilmu kesehatan",
+      "E. Semua orang yang memahami ilmu kesehatan adalah orang yang berpendidikan"
+     ],
+     "answer": "D",
+     "explanation": "Bagian dokter yang termasuk orang yang berpendidikan otomatis termasuk orang yang memahami ilmu kesehatan, sehingga sebagian dokter adalah orang yang memahami ilmu kesehatan. Pernyataan 'semua' tidak dijamin oleh premis.",
+     "topic": "Logika: silogisme",
+     "difficulty": 3
+    },
+    {
+     "uid": "e655050243df22a6f7",
+     "question": "Jika hujan turun deras, maka jalan tergenang. Ternyata jalan tidak tergenang. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Hujan turun deras",
+      "B. Hujan tidak turun deras",
+      "C. Tidak ada kesimpulan yang dapat ditarik",
+      "D. Jalan tergenang",
+      "E. Hujan tidak turun deras, tetapi jalan tergenang"
+     ],
+     "answer": "B",
+     "explanation": "Bila hujan turun deras selalu diikuti jalan tergenang, maka jalan tidak tergenang berarti hujan turun deras tidak terjadi (kontraposisi).",
+     "topic": "Logika: silogisme",
+     "difficulty": 3
+    },
+    {
+     "uid": "26fa5fd3323d456633",
+     "question": "Jika laporan diserahkan tepat waktu, maka tunjangan dibayarkan. Ternyata tunjangan tidak dibayarkan. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Laporan diserahkan tepat waktu",
+      "B. Laporan tidak diserahkan tepat waktu, tetapi tunjangan dibayarkan",
+      "C. Tidak ada kesimpulan yang dapat ditarik",
+      "D. Laporan tidak diserahkan tepat waktu",
+      "E. Tunjangan dibayarkan"
+     ],
+     "answer": "D",
+     "explanation": "Bila laporan diserahkan tepat waktu selalu diikuti tunjangan dibayarkan, maka tunjangan tidak dibayarkan berarti laporan diserahkan tepat waktu tidak terjadi (kontraposisi).",
+     "topic": "Logika: silogisme",
+     "difficulty": 3
+    },
+    {
+     "uid": "c0fbb8ab2faf80e0d4",
+     "question": "Jika kartu identitas valid, maka akses diberikan. Ternyata kartu identitas valid. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Kartu identitas tidak valid",
+      "B. Kartu identitas valid, tetapi akses tidak diberikan",
+      "C. Tidak ada kesimpulan yang dapat ditarik",
+      "D. Akses tidak diberikan",
+      "E. Akses diberikan"
+     ],
+     "answer": "E",
+     "explanation": "Syarat (kartu identitas valid) terpenuhi, sehingga akibatnya (akses diberikan) pasti terjadi.",
+     "topic": "Logika: silogisme",
+     "difficulty": 2
+    },
+    {
+     "uid": "fd626a653bb7c15cfa",
+     "question": "Jika lampu lalu lintas merah, maka kendaraan berhenti. Ternyata lampu lalu lintas merah. Kesimpulan yang pasti benar adalah...",
+     "options": [
+      "A. Lampu lalu lintas merah, tetapi kendaraan tidak berhenti",
+      "B. Kendaraan berhenti",
+      "C. Tidak ada kesimpulan yang dapat ditarik",
+      "D. Kendaraan tidak berhenti",
+      "E. Lampu lalu lintas tidak merah"
+     ],
+     "answer": "B",
+     "explanation": "Syarat (lampu lalu lintas merah) terpenuhi, sehingga akibatnya (kendaraan berhenti) pasti terjadi.",
+     "topic": "Logika: silogisme",
+     "difficulty": 2
+    },
+    {
+     "uid": "97b20cd484f8163913",
+     "question": "SINONIM dari kata 'AKURAT' adalah...",
+     "options": [
+      "A. Cepat",
+      "B. Samar",
+      "C. Ragu",
+      "D. Tepat",
+      "E. Kasar"
+     ],
+     "answer": "D",
+     "explanation": "Akurat berarti teliti dan tepat.",
+     "topic": "Verbal: sinonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "688fd1cb46ef27af4e",
+     "question": "SINONIM dari kata 'FLEKSIBEL' adalah...",
+     "options": [
+      "A. Keras",
+      "B. Kaku",
+      "C. Luwes",
+      "D. Mahal",
+      "E. Tegas"
+     ],
+     "answer": "C",
+     "explanation": "Fleksibel berarti luwes dan mudah menyesuaikan diri.",
+     "topic": "Verbal: sinonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "e3a45610d088bbe48d",
+     "question": "SINONIM dari kata 'KOLABORASI' adalah...",
+     "options": [
+      "A. Pengawasan",
+      "B. Kerja sama",
+      "C. Persaingan",
+      "D. Perselisihan",
+      "E. Pemisahan"
+     ],
+     "answer": "B",
+     "explanation": "Kolaborasi adalah perbuatan bekerja sama.",
+     "topic": "Verbal: sinonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "0d0ab544dd26f83bb0",
+     "question": "SINONIM dari kata 'EKSKLUSIF' adalah...",
+     "options": [
+      "A. Murah",
+      "B. Biasa",
+      "C. Terbuka",
+      "D. Khusus",
+      "E. Umum"
+     ],
+     "answer": "D",
+     "explanation": "Eksklusif berarti terpisah dari yang lain atau khusus.",
+     "topic": "Verbal: sinonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "addaa977150b4988d9",
+     "question": "SINONIM dari kata 'MITIGASI' adalah...",
+     "options": [
+      "A. Upaya mencari penyebab",
+      "B. Upaya menghentikan seluruh kegiatan",
+      "C. Upaya melaporkan kerugian",
+      "D. Upaya memperbesar risiko",
+      "E. Upaya mengurangi dampak"
+     ],
+     "answer": "E",
+     "explanation": "Mitigasi adalah tindakan mengurangi dampak atau risiko, misalnya risiko bencana.",
+     "topic": "Verbal: sinonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "2890b6d5f78b382d38",
+     "question": "ANTONIM dari kata 'OPTIMIS' adalah...",
+     "options": [
+      "A. Gembira",
+      "B. Tenang",
+      "C. Percaya diri",
+      "D. Ambisius",
+      "E. Pesimis"
+     ],
+     "answer": "E",
+     "explanation": "Optimis berarti selalu berharap baik; lawannya pesimis, yaitu mudah putus harapan.",
+     "topic": "Verbal: antonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "f214be6d2a2bf3cc1b",
+     "question": "ANTONIM dari kata 'HEMAT' adalah...",
+     "options": [
+      "A. Boros",
+      "B. Murah",
+      "C. Kikir",
+      "D. Cermat",
+      "E. Teliti"
+     ],
+     "answer": "A",
+     "explanation": "Hemat berarti tidak berlebihan memakai sesuatu; lawannya boros.",
+     "topic": "Verbal: antonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "cf55d9bbd5f4d5d0f9",
+     "question": "ANTONIM dari kata 'INKLUSIF' adalah...",
+     "options": [
+      "A. Terbuka",
+      "B. Eksklusif",
+      "C. Umum",
+      "D. Menyeluruh",
+      "E. Ramah"
+     ],
+     "answer": "B",
+     "explanation": "Inklusif berarti mencakup semua pihak; lawannya eksklusif, yaitu terpisah atau terbatas.",
+     "topic": "Verbal: antonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "f199bb9ee6af50778b",
+     "question": "ANTONIM dari kata 'DEFISIT' adalah...",
+     "options": [
+      "A. Surplus",
+      "B. Minus",
+      "C. Seimbang",
+      "D. Rugi",
+      "E. Hutang"
+     ],
+     "answer": "A",
+     "explanation": "Defisit berarti kekurangan; lawannya surplus, yaitu kelebihan.",
+     "topic": "Verbal: antonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "3fafd5fd5302b13efb",
+     "question": "ANTONIM dari kata 'EKSPOR' adalah...",
+     "options": [
+      "A. Distribusi",
+      "B. Konsumsi",
+      "C. Produksi",
+      "D. Impor",
+      "E. Investasi"
+     ],
+     "answer": "D",
+     "explanation": "Ekspor adalah pengiriman barang ke luar negeri; lawannya impor, yaitu pemasukan barang dari luar negeri.",
+     "topic": "Verbal: antonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "c05f536d7f5eeac755",
+     "question": "ANTONIM dari kata 'MAYORITAS' adalah...",
+     "options": [
+      "A. Minoritas",
+      "B. Umum",
+      "C. Seluruh",
+      "D. Dominan",
+      "E. Kolektif"
+     ],
+     "answer": "A",
+     "explanation": "Mayoritas berarti bagian yang lebih besar; lawannya minoritas, yaitu bagian yang lebih kecil.",
+     "topic": "Verbal: antonim",
+     "difficulty": 2
+    },
+    {
+     "uid": "9112c4aa811b6d8be0",
+     "question": "Guru : Murid = Dokter : ...",
+     "options": [
+      "A. Obat",
+      "B. Apotek",
+      "C. Perawat",
+      "D. Ruang praktik",
+      "E. Pasien"
+     ],
+     "answer": "E",
+     "explanation": "Guru mengajar murid, sedangkan dokter merawat dan mengobati pasien.",
+     "topic": "Verbal: analogi",
+     "difficulty": 2
+    },
+    {
+     "uid": "a9e17e35988fd18f8b",
+     "question": "Hakim : Pengadilan = Dokter : ...",
+     "options": [
+      "A. Pasar",
+      "B. Bandara",
+      "C. Rumah sakit",
+      "D. Sekolah",
+      "E. Perpustakaan"
+     ],
+     "answer": "C",
+     "explanation": "Hakim bertugas di pengadilan; dokter bertugas di rumah sakit.",
+     "topic": "Verbal: analogi",
+     "difficulty": 2
+    }
+   ]
+  },
+  "tkp": {
+   "segment_id": "tkp",
+   "segment_name": "Tes Karakteristik Pribadi (TKP)",
+   "total_soal": 91,
+   "soal": [
+    {
+     "uid": "6a2eb0269700d77482",
+     "question": "Atasan memberikan tenggat waktu yang sangat sempit untuk proyek baru, padahal Anda sedang mengerjakan tugas lain. Tindakan Anda?",
+     "options": [
+      "A. Mengerjakan tugas baru tersebut dan mengabaikan tugas lama.",
+      "B. Menolak tugas tersebut karena beban kerja sudah terlalu banyak.",
+      "C. Mengatur prioritas pekerjaan dan berupaya menyelesaikan keduanya dengan efisien.",
+      "D. Melaporkan kepada atasan bahwa tugas tersebut mustahil selesai tepat waktu.",
+      "E. Meminta bantuan rekan kerja untuk mengerjakan tugas lama Anda secara diam-diam."
+     ],
+     "answer": "C",
+     "explanation": "Kemampuan manajemen prioritas dan tanggung jawab terhadap tugas adalah kunci profesionalisme.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026981657d58e",
+     "question": "Saat sedang melayani pelanggan yang marah, tiba-tiba sistem komputer kantor mengalami gangguan. Apa yang Anda lakukan?",
+     "options": [
+      "A. Meminta pelanggan untuk menunggu sampai sistem kembali normal.",
+      "B. Memberikan solusi manual kepada pelanggan agar pelayanan tetap berjalan.",
+      "C. Meminta maaf atas ketidaknyamanan tersebut dan menjelaskan situasi dengan sabar.",
+      "D. Meninggalkan meja pelayanan sejenak untuk memanggil teknisi IT.",
+      "E. Mengatakan bahwa ini bukan kesalahan Anda dan meminta pelanggan tidak marah."
+     ],
+     "answer": "C",
+     "explanation": "Orientasi pelayanan mengharuskan kesabaran dan komunikasi yang baik terutama saat menghadapi kendala teknis.",
+     "topic": "TIK"
+    },
+    {
+     "uid": "6a2eb02699168b310c",
+     "question": "Anda menemukan salah satu rekan kerja melakukan kecurangan dalam laporan keuangan. Langkah Anda?",
+     "options": [
+      "A. Mengingatkan rekan tersebut untuk memperbaiki laporannya.",
+      "B. Membicarakan hal tersebut dengan rekan kerja lainnya untuk mencari pendapat.",
+      "C. Menegur rekan tersebut dan membantunya memperbaikinya agar tidak ketahuan.",
+      "D. Mendiamkannya karena takut terlibat masalah.",
+      "E. Melaporkan kecurangan tersebut kepada atasan secara formal."
+     ],
+     "answer": "E",
+     "explanation": "Integritas menuntut kejujuran dan keberanian untuk melaporkan tindakan yang melanggar aturan organisasi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb0269a288fa1fa",
+     "question": "Dalam sebuah diskusi tim, pendapat Anda ditolak mentah-mentah oleh mayoritas anggota tim. Sikap Anda?",
+     "options": [
+      "A. Mencoba meyakinkan mereka terus-menerus hingga pendapat saya diterima.",
+      "B. Keluar dari ruangan rapat karena merasa pendapat saya tidak dihargai.",
+      "C. Menunggu saat yang tepat untuk membalas pendapat mereka dengan argumen lain.",
+      "D. Menerima penolakan tersebut dengan lapang dada dan mendukung keputusan tim.",
+      "E. Kecewa dan tidak mau lagi memberikan ide dalam diskusi selanjutnya."
+     ],
+     "answer": "D",
+     "explanation": "Sikap dewasa dalam bekerja adalah menghargai keputusan kolektif meskipun berbeda dengan pendapat pribadi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb0269b23dcb63a",
+     "question": "Anda melihat ada rekan kerja yang berbuat diskriminasi kepada pelanggan berdasarkan latar belakang suku. Apa tindakan Anda?",
+     "options": [
+      "A. Tidak ikut campur karena itu urusan pribadi rekan tersebut.",
+      "B. Menegur rekan tersebut dan mengingatkan pentingnya sikap profesional.",
+      "C. Membantu pelanggan tersebut dengan sikap yang jauh lebih ramah.",
+      "D. Langsung melaporkan rekan tersebut ke pihak HRD tanpa bicara padanya.",
+      "E. Menghindar agar tidak terlibat masalah dengan rekan tersebut."
+     ],
+     "answer": "B",
+     "explanation": "Menjaga profesionalisme dan nilai anti-diskriminasi di lingkungan kerja adalah tanggung jawab bersama.",
+     "topic": "Sosial budaya"
+    },
+    {
+     "uid": "6a2eb0269c42ef7981",
+     "question": "Perusahaan menetapkan aturan baru yang menurut Anda kurang efisien. Apa yang Anda lakukan?",
+     "options": [
+      "A. Mengajak rekan kerja lain untuk menolak aturan baru tersebut.",
+      "B. Mengajukan keberatan secara tertulis dengan memberikan solusi alternatif.",
+      "C. Mengikuti aturan tersebut dengan terpaksa.",
+      "D. Mengabaikan aturan tersebut dan tetap bekerja dengan cara lama.",
+      "E. Melanggar aturan tersebut secara sembunyi-sembunyi."
+     ],
+     "answer": "B",
+     "explanation": "Sikap kritis yang solutif lebih dihargai daripada tindakan melawan aturan secara pasif atau agresif.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb0269d4b387fa6",
+     "question": "Anda mendapatkan tugas di daerah terpencil dengan fasilitas yang terbatas. Bagaimana reaksi Anda?",
+     "options": [
+      "A. Mencoba mencari celah agar bisa sering kembali ke kota.",
+      "B. Mengeluh kepada keluarga tentang kondisi lokasi kerja.",
+      "C. Menerima tugas tersebut dan berusaha beradaptasi dengan kondisi lingkungan.",
+      "D. Menjalankan tugas dengan setengah hati karena fasilitas kurang.",
+      "E. Mengajukan surat pindah tugas ke lokasi yang lebih layak."
+     ],
+     "answer": "C",
+     "explanation": "Kemampuan adaptasi di lingkungan kerja yang menantang adalah indikator kesiapan kerja yang baik.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb0269e54ac34a6",
+     "question": "Seorang atasan memberikan pujian kepada Anda di depan rekan kerja lainnya. Apa yang Anda rasakan dan lakukan?",
+     "options": [
+      "A. Menganggap pujian tersebut sebagai kewajiban atasan.",
+      "B. Mengatakan bahwa ini berkat kerja keras seluruh tim.",
+      "C. Merasa bangga dan menyombongkan diri kepada rekan kerja.",
+      "D. Mengucapkan terima kasih dan tetap rendah hati.",
+      "E. Merasa canggung dan meminta atasan tidak memuji saya lagi."
+     ],
+     "answer": "B",
+     "explanation": "Sikap kolaboratif ditunjukkan dengan mengakui peran tim dalam keberhasilan pribadi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb0269f32f053f5",
+     "question": "Anda diminta atasan untuk membantu pekerjaan rekan kerja yang sedang mengalami kesulitan, padahal tugas Anda sendiri belum selesai. Apa yang Anda lakukan?",
+     "options": [
+      "A. Meminta rekan kerja tersebut untuk mengerjakan tugas saya sebagai ganti bantuan saya.",
+      "B. Menolak permintaan atasan secara tegas karena harus fokus tugas sendiri.",
+      "C. Menerima tugas tersebut namun mengerjakannya dengan asal-asalan.",
+      "D. Mengatur jadwal agar bisa menyelesaikan tugas sendiri sekaligus membantu rekan.",
+      "E. Mengerjakan tugas rekan kerja dengan mengabaikan tugas sendiri."
+     ],
+     "answer": "D",
+     "explanation": "Menunjukkan jiwa kerja sama tanpa mengabaikan tanggung jawab utama adalah nilai tambah yang penting.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026a05544be8e",
+     "question": "Saat rapat, ada rekan kerja yang memotong pembicaraan Anda. Apa yang Anda lakukan?",
+     "options": [
+      "A. Membicarakan hal tersebut kepada atasan setelah rapat selesai.",
+      "B. Marah dan meninggalkan ruangan rapat.",
+      "C. Diam dan membiarkan dia berbicara hingga selesai.",
+      "D. Dengan sopan meminta waktu untuk menyelesaikan kalimat saya.",
+      "E. Memotong balik pembicaraannya agar ia tahu rasanya."
+     ],
+     "answer": "D",
+     "explanation": "Kemampuan mengendalikan diri dan berkomunikasi secara asertif sangat penting dalam forum diskusi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026a14e2d9baf",
+     "question": "Tujuan utama Anda dalam bekerja adalah...",
+     "options": [
+      "A. Mendapatkan jabatan yang tinggi dalam waktu singkat.",
+      "B. Mendapatkan gaji yang tinggi dan fasilitas yang memadai.",
+      "C. Menjalin hubungan pertemanan yang luas di kantor.",
+      "D. Memberikan kontribusi terbaik bagi instansi dan masyarakat.",
+      "E. Mendapatkan ilmu baru agar bisa pindah ke perusahaan yang lebih besar."
+     ],
+     "answer": "D",
+     "explanation": "Soal ini menilai orientasi kerja yang berfokus pada pengabdian dan kontribusi organisasi.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": "6a2eb026a23e7ce6e6",
+     "question": "Anda melihat rekan kerja mengambil alat tulis kantor untuk keperluan pribadi di rumah. Apa sikap Anda?",
+     "options": [
+      "A. Membiarkannya karena hal itu sudah biasa dilakukan.",
+      "B. Mengambil juga untuk diri sendiri.",
+      "C. Melaporkan kepada atasan agar dia segera dipecat.",
+      "D. Menyindirnya di depan rekan kerja yang lain.",
+      "E. Menegur rekan tersebut secara pribadi agar tidak mengulanginya."
+     ],
+     "answer": "E",
+     "explanation": "Integritas mencakup hal-hal kecil seperti penggunaan inventaris kantor.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026a33de3afa7",
+     "question": "Bagaimana cara Anda dalam menghadapi kritik dari rekan kerja tentang hasil kerja Anda?",
+     "options": [
+      "A. Menghargai kritik tersebut dan melakukan introspeksi diri.",
+      "B. Meminta atasan untuk menilai apakah kritik tersebut benar atau salah.",
+      "C. Mengabaikan kritik tersebut karena dia bukan atasan saya.",
+      "D. Merasa tidak terima dan balik mengkritik hasil kerjanya.",
+      "E. Menjauhi rekan tersebut karena merasa tidak nyaman."
+     ],
+     "answer": "A",
+     "explanation": "Keterbukaan terhadap umpan balik merupakan ciri karyawan yang ingin terus berkembang.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026a4c6e58ac0",
+     "question": "Jika Anda terpilih menjadi tim proyek yang berisi orang-orang dari latar belakang berbeda, apa yang Anda lakukan untuk menyatukan tim?",
+     "options": [
+      "A. Fokus pada pembagian tugas saja agar tidak terjadi konflik.",
+      "B. Mengajak tim untuk saling mengenal dan membangun komunikasi yang baik.",
+      "C. Meminta atasan untuk mengganti anggota tim yang sulit diajak kerja sama.",
+      "D. Mengikuti saja apa yang diinginkan oleh anggota yang paling dominan.",
+      "E. Membuat aturan ketat yang harus diikuti semua orang."
+     ],
+     "answer": "B",
+     "explanation": "Pentingnya jejaring kerja dan kemampuan merangkul keberagaman dalam sebuah tim.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": "6a2eb026a5e20f92a9",
+     "question": "Anda diminta untuk melakukan sesuatu yang bertentangan dengan hati nurani oleh atasan Anda. Apa yang Anda lakukan?",
+     "options": [
+      "A. Melakukannya karena itu perintah atasan.",
+      "B. Menolak perintah tersebut dengan alasan yang logis dan etis.",
+      "C. Melakukannya namun mencari dukungan rekan kerja agar tidak sendirian.",
+      "D. Menunda pelaksanaan perintah tersebut sampai atasan lupa.",
+      "E. Melakukannya namun dengan rasa terpaksa dan mengeluh."
+     ],
+     "answer": "B",
+     "explanation": "Keputusan yang etis dan berintegritas sangat krusial, terutama di lingkungan pemerintahan.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026a6de9d9435",
+     "question": "Bagaimana pandangan Anda terhadap teknologi baru yang akan diterapkan di kantor Anda?",
+     "options": [
+      "A. Menolak karena saya sudah nyaman dengan cara manual.",
+      "B. Khawatir akan mempersulit pekerjaan saya.",
+      "C. Belajar dengan antusias agar bisa mengoperasikannya dengan cepat.",
+      "D. Menggunakan teknologi baru tersebut hanya jika diwajibkan.",
+      "E. Mengusulkan untuk tetap menggunakan sistem lama agar tidak ada error."
+     ],
+     "answer": "C",
+     "explanation": "Adaptasi terhadap teknologi adalah aspek penting dalam menghadapi perubahan dan peningkatan efisiensi.",
+     "topic": "TIK"
+    },
+    {
+     "uid": "6a2eb026a8091784ed",
+     "question": "Dalam sebuah acara kantor, Anda melihat rekan baru yang tampak canggung dan sendirian. Apa tindakan Anda?",
+     "options": [
+      "A. Meminta rekan lain untuk mengajak dia berbicara.",
+      "B. Hanya menyapa singkat lalu kembali mengobrol dengan teman lama.",
+      "C. Membiarkannya karena dia harus berani berinteraksi sendiri.",
+      "D. Tidak peduli selama dia tidak mengganggu jalannya acara.",
+      "E. Mengajaknya bergabung dengan kelompok saya."
+     ],
+     "answer": "E",
+     "explanation": "Sikap ramah dan kemampuan sosial yang baik memperkuat hubungan antar rekan kerja.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026a9116deaa8",
+     "question": "Jika Anda melakukan kesalahan dalam laporan kerja yang berdampak pada kinerja tim, apa yang Anda lakukan?",
+     "options": [
+      "A. Diam saja dan berharap atasan tidak menyadarinya.",
+      "B. Mencari kambing hitam agar tidak disalahkan.",
+      "C. Mengakui kesalahan dan bertanggung jawab untuk memperbaikinya.",
+      "D. Menyalahkan sistem komputer yang error.",
+      "E. Memperbaiki laporan tersebut tanpa memberitahu siapapun."
+     ],
+     "answer": "C",
+     "explanation": "Tanggung jawab atas tindakan pribadi adalah integritas dasar seorang ASN.",
+     "topic": "TIK"
+    },
+    {
+     "uid": "6a2eb026aa0e7ee8b6",
+     "question": "Apa yang Anda lakukan jika ada dua rekan kerja yang berkonflik di depan Anda?",
+     "options": [
+      "A. Memihak salah satu rekan yang lebih akrab dengan saya.",
+      "B. Mencoba menjadi penengah agar mereka berdamai secara objektif.",
+      "C. Pergi meninggalkan tempat agar tidak terbawa suasana.",
+      "D. Menonton mereka hingga selesai.",
+      "E. Melaporkan mereka kepada atasan agar segera ditindak."
+     ],
+     "answer": "B",
+     "explanation": "Kemampuan mengelola konflik adalah keterampilan kepemimpinan yang penting.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026aaed6bc45e",
+     "question": "Anda diberikan beban kerja yang melebihi kapasitas Anda, apa yang Anda lakukan?",
+     "options": [
+      "A. Mengerjakan semuanya dengan lambat agar tidak cepat selesai.",
+      "B. Mengerjakan dengan asal-asalan yang penting selesai.",
+      "C. Menolak mengerjakan sebagian tugas dengan alasan sudah lelah.",
+      "D. Mengomunikasikan dengan atasan untuk mendiskusikan prioritas tugas.",
+      "E. Mengeluh kepada semua rekan kerja tentang ketidakadilan atasan."
+     ],
+     "answer": "D",
+     "explanation": "Komunikasi yang profesional kepada atasan saat menghadapi kendala adalah cara terbaik untuk menjaga produktivitas.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026ac0ebce9df",
+     "question": "Saat melayani pelanggan yang tidak paham prosedur, apa sikap Anda?",
+     "options": [
+      "A. Memintanya membaca kembali prosedur di brosur.",
+      "B. Memarahi pelanggan karena dianggap tidak menyimak.",
+      "C. Menjelaskan perlahan dengan bahasa yang mudah dimengerti.",
+      "D. Mengerjakan tugas pelanggan tersebut agar antrean cepat selesai.",
+      "E. Mengalihkan pelanggan kepada staf lain karena merasa lelah menjelaskan."
+     ],
+     "answer": "C",
+     "explanation": "Orientasi pelayanan memerlukan kesabaran dan kemampuan menjelaskan dengan cara yang tepat.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": "6a2eb026ad1a683f3b",
+     "question": "Apa tindakan Anda jika mengetahui ada anggaran proyek yang tidak terpakai?",
+     "options": [
+      "A. Menggunakannya untuk kepentingan tim sebagai bonus.",
+      "B. Menyimpannya untuk kebutuhan proyek di masa depan.",
+      "C. Menggunakannya untuk keperluan kantor lain tanpa izin.",
+      "D. Membiarkannya begitu saja.",
+      "E. Melaporkannya kepada atasan dan mengembalikannya ke kas negara."
+     ],
+     "answer": "E",
+     "explanation": "Integritas dalam pengelolaan keuangan negara sangatlah krusial bagi seorang abdi negara.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026ae149cb2d1",
+     "question": "Jika Anda mendapatkan hasil evaluasi kerja yang kurang baik dari atasan, apa yang Anda lakukan?",
+     "options": [
+      "A. Menerima hasil evaluasi dan menanyakan cara untuk memperbaikinya.",
+      "B. Mengabaikan hasil evaluasi karena merasa kerja saya sudah maksimal.",
+      "C. Marah dan menuduh atasan tidak adil.",
+      "D. Pindah ke divisi lain yang lebih sesuai dengan kemampuan.",
+      "E. Menurunkan semangat kerja karena merasa tidak dihargai."
+     ],
+     "answer": "A",
+     "explanation": "Profesionalisme diukur dari sejauh mana seseorang mau memperbaiki diri dari kekurangan.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": "6a2eb026aeec3fa010",
+     "question": "Saat terjadi bencana alam di daerah sekitar kantor, Anda melihat banyak rekan kerja yang memilih pulang lebih awal. Apa yang Anda lakukan?",
+     "options": [
+      "A. Membantu mengevakuasi rekan-rekan lain sebelum memutuskan pulang.",
+      "B. Menunggu instruksi atasan mengenai langkah selanjutnya.",
+      "C. Mengikuti rekan lain pulang karena takut membahayakan diri.",
+      "D. Tetap tinggal di kantor untuk memastikan dokumen penting aman.",
+      "E. Menelepon keluarga untuk memastikan mereka aman dan tetap bekerja."
+     ],
+     "answer": "A",
+     "explanation": "Sikap kepedulian sosial dan tanggung jawab dalam situasi darurat adalah perilaku ASN yang diharapkan.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026aff6db7286",
+     "question": "Bagaimana Anda menanggapi persaingan antarrekan kerja di kantor Anda?",
+     "options": [
+      "A. Menganggap persaingan sebagai musuh yang harus dikalahkan.",
+      "B. Melakukan segala cara agar saya yang menjadi yang terbaik.",
+      "C. Menganggapnya sebagai motivasi untuk meningkatkan kualitas diri.",
+      "D. Menjadikannya bahan gosip dengan rekan kerja lain.",
+      "E. Menghindari persaingan karena ingin mencari ketenangan."
+     ],
+     "answer": "C",
+     "explanation": "Persaingan yang sehat adalah pendorong bagi organisasi untuk terus maju.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026b0f22d53f1",
+     "question": "Anda harus bekerja di hari libur karena tugas mendesak. Apa sikap Anda?",
+     "options": [
+      "A. Mengerjakan tugas dengan senang hati karena rasa tanggung jawab.",
+      "B. Datang terlambat ke kantor sebagai protes.",
+      "C. Mengeluh karena kehilangan waktu istirahat.",
+      "D. Menyelesaikan tugas dengan asal agar bisa cepat pulang.",
+      "E. Meminta kompensasi berlebih kepada atasan."
+     ],
+     "answer": "A",
+     "explanation": "Dedikasi dalam bekerja seringkali diuji saat harus mengorbankan waktu pribadi demi kepentingan organisasi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026b1d48b0c77",
+     "question": "Jika Anda mendapati rekan kerja tidak disiplin (sering terlambat), apa yang Anda lakukan?",
+     "options": [
+      "A. Membiarkannya agar saya tidak dianggap sok tahu.",
+      "B. Melaporkannya kepada atasan dengan bukti absensi.",
+      "C. Mendiamkannya karena takut merusak hubungan.",
+      "D. Membicarakan perilakunya di belakang bersama rekan lain.",
+      "E. Menegur rekan tersebut secara pribadi dengan sopan."
+     ],
+     "answer": "E",
+     "explanation": "Inisiatif untuk mengingatkan rekan kerja adalah bentuk dukungan terhadap budaya disiplin di kantor.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026b29ea012db",
+     "question": "Apa yang Anda lakukan jika Anda diminta untuk bekerja dalam lingkungan yang tidak nyaman karena perbedaan pendapat?",
+     "options": [
+      "A. Mengajukan pindah divisi karena tidak tahan dengan perbedaan pendapat.",
+      "B. Mencoba mencari jalan tengah yang menguntungkan semua pihak.",
+      "C. Tetap bekerja sesuai arahan atasan tanpa memedulikan pendapat orang lain.",
+      "D. Memilih untuk diam dan tidak berinteraksi dengan orang yang berbeda pendapat.",
+      "E. Mencari rekan kerja yang sependapat untuk membentuk kubu sendiri."
+     ],
+     "answer": "B",
+     "explanation": "Kemampuan merangkul perbedaan pendapat dan mencari solusi bersama adalah kunci manajemen konflik.",
+     "topic": "Sosial budaya"
+    },
+    {
+     "uid": "6a2eb026b38739a3c2",
+     "question": "Seorang warga yang kurang mampu meminta bantuan kepada Anda di luar jam kerja resmi, namun ia sangat membutuhkannya saat itu juga. Tindakan Anda?",
+     "options": [
+      "A. Menyarankannya untuk mencari bantuan di tempat lain saja.",
+      "B. Memintanya datang besok pagi di kantor untuk prosedur resmi.",
+      "C. Memberikan bantuan semampu saya dengan tetap mengikuti prosedur yang benar.",
+      "D. Memberikan bantuan uang pribadi secara diam-diam agar dia tidak merepotkan.",
+      "E. Menolak dengan tegas karena sudah di luar jam kerja."
+     ],
+     "answer": "C",
+     "explanation": "Menunjukkan jiwa melayani dan kepedulian sosial dengan tetap menjaga profesionalisme dan prosedur.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": "6a2eb026b45d41aabd",
+     "question": "Anda ditugaskan mengerjakan laporan yang rumit dan belum pernah Anda lakukan sebelumnya. Apa langkah Anda?",
+     "options": [
+      "A. Mencari contoh laporan lama dan menjiplaknya agar cepat selesai.",
+      "B. Meminta atasan untuk memberikan tugas lain saja.",
+      "C. Menunda pekerjaan sampai ada teman yang bisa membantu saya secara penuh.",
+      "D. Mengerjakan sebisanya dan mengabaikan bagian yang sulit.",
+      "E. Mempelajari aturan dan mencari panduan, lalu bertanya kepada rekan yang lebih berpengalaman."
+     ],
+     "answer": "E",
+     "explanation": "Menunjukkan kemauan belajar dan orientasi pada hasil yang berkualitas.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026b53a46d239",
+     "question": "Terdapat perubahan jadwal rapat yang mendadak saat Anda sudah merencanakan pertemuan dengan keluarga. Keputusan Anda?",
+     "options": [
+      "A. Membatalkan acara keluarga dan mengikuti rapat demi tanggung jawab pekerjaan.",
+      "B. Tetap pergi bersama keluarga karena acara sudah direncanakan jauh hari.",
+      "C. Mengikuti rapat dengan berat hati dan mengeluh di sepanjang rapat.",
+      "D. Datang rapat sebentar lalu pulang lebih awal untuk mengejar acara keluarga.",
+      "E. Meminta rekan kerja lain untuk menggantikan saya di rapat."
+     ],
+     "answer": "A",
+     "explanation": "Prioritas utama ASN adalah tanggung jawab profesi di atas kepentingan pribadi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026b5fbea06d4",
+     "question": "Atasan Anda sangat perfeksionis dan selalu menegur kesalahan kecil dalam pekerjaan Anda. Sikap Anda?",
+     "options": [
+      "A. Menganggap atasan terlalu cerewet dan mengabaikan tegurannya.",
+      "B. Bekerja dengan malas-malasan karena merasa tidak akan pernah benar di mata atasan.",
+      "C. Meminta dipindahkan ke divisi lain karena tidak tahan dengan atasan.",
+      "D. Melawan teguran tersebut dengan berargumen bahwa hasil kerja saya sudah cukup baik.",
+      "E. Memperbaiki kesalahan tersebut dan menjadikan teguran sebagai evaluasi diri."
+     ],
+     "answer": "E",
+     "explanation": "Resiliensi dan kemauan memperbaiki diri merupakan indikator kecerdasan emosional dalam bekerja.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": "6a2eb026b7b817b2ba",
+     "question": "Anda melihat ada sistem pelayanan yang berbelit-belit dan merugikan pelanggan. Apa yang Anda lakukan?",
+     "options": [
+      "A. Mengeluh kepada pelanggan bahwa sistemnya memang buruk.",
+      "B. Mengikuti sistem tersebut apa adanya sesuai perintah atasan.",
+      "C. Membiarkannya karena bukan tugas saya untuk memperbaiki sistem.",
+      "D. Mengusulkan perbaikan alur pelayanan kepada atasan secara sopan.",
+      "E. Membuat sistem baru sendiri tanpa sepengetahuan atasan."
+     ],
+     "answer": "D",
+     "explanation": "Inisiatif dalam melakukan inovasi dan perbaikan organisasi.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": "6a2eb026b897274e30",
+     "question": "Saat jam kerja, Anda melihat rekan kerja sedang asyik bermain gim di ponselnya. Apa tindakan Anda?",
+     "options": [
+      "A. Menyindirnya dengan keras agar dia malu.",
+      "B. Melaporkannya ke atasan agar dia segera dipecat.",
+      "C. Ikut bermain bersamanya agar suasana kantor santai.",
+      "D. Mengabaikannya karena itu hak pribadinya.",
+      "E. Menegurnya agar tetap fokus bekerja demi target tim."
+     ],
+     "answer": "E",
+     "explanation": "Tanggung jawab moral sebagai rekan kerja untuk menjaga kedisiplinan dan produktivitas.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026b96257e8d7",
+     "question": "Bagaimana sikap Anda saat harus bekerja sama dengan orang yang kepribadiannya sangat bertolak belakang dengan Anda?",
+     "options": [
+      "A. Membatasi komunikasi hanya pada urusan pekerjaan saja.",
+      "B. Mencoba memahami cara kerjanya dan mencari titik temu untuk tujuan bersama.",
+      "C. Mengabaikan keberadaannya dan bekerja sendiri.",
+      "D. Meminta atasan untuk mengganti rekan tim saya.",
+      "E. Memaksanya untuk mengikuti cara kerja saya sepenuhnya."
+     ],
+     "answer": "B",
+     "explanation": "Kemampuan adaptasi interpersonal sangat krusial dalam kerja tim.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": "6a2eb026ba236f3817",
+     "question": "Ketika terjadi perbedaan pendapat dalam tim mengenai strategi proyek, keputusan apa yang Anda ambil?",
+     "options": [
+      "A. Memilih pendapat yang paling didukung oleh anggota tim terbanyak.",
+      "B. Mengajukan pendapat pribadi dengan data dan alasan yang kuat, namun legowo menerima keputusan akhir.",
+      "C. Mengambil jalan tengah yang mungkin tidak memuaskan siapapun.",
+      "D. Menyerahkan sepenuhnya kepada atasan untuk memilih salah satu pendapat.",
+      "E. Memilih pendapat anggota yang paling senior tanpa melihat kualitas idenya."
+     ],
+     "answer": "B",
+     "explanation": "Objektivitas dalam berpendapat serta kedewasaan dalam menerima keputusan kolektif.",
+     "topic": "TIK"
+    },
+    {
+     "uid": "6a2eb026baeb101d10",
+     "question": "Anda mendapatkan promosi jabatan, namun ada rekan kerja yang sudah lama mengabdi merasa iri kepada Anda. Apa tindakan Anda?",
+     "options": [
+      "A. Tetap menjalin hubungan baik dan memintanya untuk bekerja sama mendukung tugas saya.",
+      "B. Menjelaskan bahwa jabatan ini adalah hasil kerja keras saya.",
+      "C. Meminta atasan agar membatalkan promosi saya.",
+      "D. Menghindarinya agar tidak terjadi konflik.",
+      "E. Tidak peduli karena itu adalah urusan dia."
+     ],
+     "answer": "A",
+     "explanation": "Kecerdasan sosial dalam mengelola hubungan interpersonal di tengah dinamika promosi jabatan.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": "6a2eb026bbc3f51bc9",
+     "question": "Dalam pelayanan publik, Anda harus menghadapi pelanggan yang sedang emosi dan mengeluarkan kata-kata kasar. Sikap Anda?",
+     "options": [
+      "A. Mengajaknya bicara baik-baik untuk menenangkan diri dan mencari tahu masalahnya.",
+      "B. Mengabaikan pelanggan tersebut sampai dia tenang.",
+      "C. Mengusirnya keluar dari ruangan kantor.",
+      "D. Membalasnya dengan kata-kata kasar juga.",
+      "E. Memanggil petugas keamanan untuk mengeluarkannya segera."
+     ],
+     "answer": "A",
+     "explanation": "Orientasi pelayanan dituntut untuk memiliki kesabaran dan pengendalian diri yang tinggi.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": "6a2eb026bd0324dc94",
+     "question": "Saat Anda sedang sibuk, seorang rekan kerja meminta bantuan untuk menyelesaikan tugasnya yang tertunda karena dia kurang paham. Apa yang Anda lakukan?",
+     "options": [
+      "A. Menyarankannya bertanya kepada rekan yang lain saja.",
+      "B. Langsung membantu dan meninggalkan tugas saya.",
+      "C. Menolak dengan halus karena tugas saya juga mendesak.",
+      "D. Mengajarkannya cara mengerjakan tugas tersebut tanpa harus saya yang mengerjakan.",
+      "E. Membantunya setelah pekerjaan saya sendiri selesai."
+     ],
+     "answer": "D",
+     "explanation": "Menunjukkan kemauan berbagi pengetahuan dan semangat kerja sama yang efektif.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026bdd630ce4e",
+     "question": "Bagaimana cara Anda dalam menjaga kerahasiaan data penting kantor?",
+     "options": [
+      "A. Menganggapnya bukan masalah besar karena data kantor bersifat umum.",
+      "B. Memberitahu rekan dekat saja agar mereka tahu progres kerja.",
+      "C. Membawa data tersebut ke rumah agar bisa saya kerjakan di akhir pekan.",
+      "D. Membiarkannya di meja kantor karena ruangan sudah terkunci.",
+      "E. Menyimpan semua dokumen dengan rapi dan tidak memberikan akses ke orang yang tidak berhak."
+     ],
+     "answer": "E",
+     "explanation": "Kedisiplinan dalam menjaga aset dan informasi organisasi adalah tanggung jawab utama ASN.",
+     "topic": "TIK"
+    },
+    {
+     "uid": "6a2eb026be92857614",
+     "question": "Saat ada rapat yang berlangsung sangat membosankan dan bertele-tele, apa yang Anda lakukan?",
+     "options": [
+      "A. Diam saja dan mencoba untuk tidur sejenak.",
+      "B. Memainkan ponsel di bawah meja.",
+      "C. Berusaha tetap menyimak dan memberikan usulan agar rapat lebih efektif.",
+      "D. Meminta izin keluar ruangan karena mengantuk.",
+      "E. Mengajak rekan di sebelah untuk mengobrol."
+     ],
+     "answer": "C",
+     "explanation": "Profesionalisme diukur dengan tetap produktif dalam situasi yang kurang mendukung.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026bf46cfdd71",
+     "question": "Seorang atasan secara tidak sengaja melakukan kesalahan dalam sebuah instruksi kepada tim. Apa yang Anda lakukan?",
+     "options": [
+      "A. Mengikutinya saja agar tidak dicap membangkang.",
+      "B. Mengingatkan atasan secara sopan dan privat mengenai kemungkinan kesalahan instruksi tersebut.",
+      "C. Menertawakan atasan tersebut bersama rekan lain.",
+      "D. Mengabaikan instruksi tersebut dan menjalankan cara saya sendiri.",
+      "E. Membiarkannya agar atasan sadar sendiri kesalahannya."
+     ],
+     "answer": "B",
+     "explanation": "Komunikasi yang santun dan konstruktif kepada atasan sangat diperlukan untuk keberhasilan tugas.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c01cffabb8",
+     "question": "Terdapat banyak lowongan pekerjaan lain dengan gaji yang lebih besar di perusahaan swasta. Bagaimana dengan posisi Anda di ASN?",
+     "options": [
+      "A. Saya bimbang dan tidak fokus dalam bekerja.",
+      "B. Saya bertahan sambil tetap mencari pekerjaan lain sebagai cadangan.",
+      "C. Saya tetap bertahan karena ingin mengabdi pada bangsa dan negara.",
+      "D. Saya akan segera keluar jika ada kesempatan itu.",
+      "E. Saya hanya bertahan sampai masa kontrak habis."
+     ],
+     "answer": "C",
+     "explanation": "Soal ini mengukur komitmen dan motivasi pengabdian sebagai ASN.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c0eb41ef63",
+     "question": "Apa yang Anda lakukan jika mendapatkan kritik pedas mengenai hasil kerja Anda di media sosial?",
+     "options": [
+      "A. Membalas dengan kata-kata kasar untuk membela diri.",
+      "B. Melakukan klarifikasi dengan sopan dan memberikan penjelasan berbasis fakta.",
+      "C. Mengadukan orang tersebut ke pihak kepolisian.",
+      "D. Menghapus komentar tersebut dan memblokir orangnya.",
+      "E. Mengabaikannya dan tetap bekerja secara profesional."
+     ],
+     "answer": "B",
+     "explanation": "Etika bermedia sosial dan kemampuan komunikasi publik yang baik.",
+     "topic": "TIK"
+    },
+    {
+     "uid": "6a2eb026c1d62fa656",
+     "question": "Saat kantor mengadakan kegiatan kerja bakti, Anda memiliki janji pribadi yang penting. Apa keputusan Anda?",
+     "options": [
+      "A. Mengirim perwakilan keluarga untuk menggantikan saya.",
+      "B. Datang terlambat ke kerja bakti setelah urusan pribadi selesai.",
+      "C. Membatalkan janji pribadi dan mengikuti kerja bakti sampai selesai.",
+      "D. Datang sebentar saja untuk absen, lalu pergi.",
+      "E. Meminta izin tidak ikut kerja bakti kepada ketua panitia."
+     ],
+     "answer": "C",
+     "explanation": "Menunjukkan semangat gotong royong dan kesediaan berkorban bagi lingkungan kerja.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c2b5651557",
+     "question": "Apa yang Anda lakukan jika rekan kerja menyebarkan gosip mengenai kehidupan pribadi Anda?",
+     "options": [
+      "A. Mengkonfrontasinya dengan marah di depan umum.",
+      "B. Membalas dengan menyebarkan gosip tentang dia juga.",
+      "C. Menangis dan mengadu kepada atasan.",
+      "D. Mengundurkan diri karena merasa tidak nyaman.",
+      "E. Tidak menanggapi dan membuktikan dengan kinerja yang baik."
+     ],
+     "answer": "E",
+     "explanation": "Kedewasaan dan fokus pada pekerjaan adalah kunci menghadapi konflik personal di kantor.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c38d8e093a",
+     "question": "Bagaimana sikap Anda jika atasan memberikan target yang menurut Anda sangat tidak masuk akal?",
+     "options": [
+      "A. Mengerjakan seadanya yang penting terlihat sibuk.",
+      "B. Melaporkan atasan tersebut ke atasan yang lebih tinggi.",
+      "C. Menerima dengan pasrah dan kemungkinan besar gagal.",
+      "D. Menjelaskan kendala secara jujur dan mengajukan target yang lebih realistis dengan data.",
+      "E. Mengabaikan target tersebut."
+     ],
+     "answer": "D",
+     "explanation": "Kemampuan melakukan negosiasi yang profesional dan berbasis data.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c49ceaa0b5",
+     "question": "Jika Anda mendapatkan kesempatan untuk belajar ke luar negeri namun harus meninggalkan keluarga dalam waktu lama, apa yang Anda lakukan?",
+     "options": [
+      "A. Menerima kesempatan tersebut dan merencanakan komunikasi jarak jauh yang baik.",
+      "B. Meminta keluarga ikut pindah ke luar negeri tanpa memikirkan biaya.",
+      "C. Menerima tawaran tersebut namun tetap sering izin pulang.",
+      "D. Menolak kesempatan tersebut karena keluarga lebih penting.",
+      "E. Menunda keberangkatan sampai saya merasa siap secara emosional."
+     ],
+     "answer": "A",
+     "explanation": "Profesionalisme dalam mengambil kesempatan pengembangan diri dengan perencanaan yang matang.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c5c68a190e",
+     "question": "Saat sedang melayani pelanggan yang banyak, sistem antrean tiba-tiba rusak. Apa langkah Anda?",
+     "options": [
+      "A. Mengatur antrean secara manual dan tetap tenang melayani.",
+      "B. Menutup loket sampai perbaikan selesai.",
+      "C. Menyalahkan staf IT yang tidak sigap.",
+      "D. Meminta atasan untuk menangani pelanggan.",
+      "E. Menghentikan pelayanan dan menyuruh orang pulang."
+     ],
+     "answer": "A",
+     "explanation": "Ketahanan terhadap tekanan (working under pressure) dan kreativitas dalam mencari solusi.",
+     "topic": "TIK"
+    },
+    {
+     "uid": "6a2eb026c697065e48",
+     "question": "Apa yang Anda lakukan jika teman akrab Anda berbuat kesalahan yang merugikan kantor?",
+     "options": [
+      "A. Memarahinya secara pribadi tanpa melaporkan ke atasan.",
+      "B. Melindunginya karena dia teman baik saya.",
+      "C. Membantunya menutupi kesalahan tersebut.",
+      "D. Memintanya untuk mengaku dan memperbaikinya sendiri.",
+      "E. Diam saja karena tidak enak jika harus melaporkan teman."
+     ],
+     "answer": "D",
+     "explanation": "Menjaga integritas profesional di atas hubungan pertemanan pribadi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c75e8d4b10",
+     "question": "Saat Anda sedang lelah bekerja, ada pelanggan yang membutuhkan bantuan mendesak. Apa sikap Anda?",
+     "options": [
+      "A. Mengarahkan pelanggan kepada staf lain yang terlihat santai.",
+      "B. Memberikan pelayanan asal-asalan yang penting selesai.",
+      "C. Melayani namun dengan wajah tidak bersahabat.",
+      "D. Tetap melayani dengan ramah dan sabar meskipun lelah.",
+      "E. Memintanya kembali besok karena saya sudah lelah."
+     ],
+     "answer": "D",
+     "explanation": "Orientasi pelayanan mengutamakan kebutuhan pelanggan di atas kondisi pribadi.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": "6a2eb026c8305fd809",
+     "question": "Seberapa sering Anda merasa perlu untuk memperbaiki kelemahan diri dalam bekerja?",
+     "options": [
+      "A. Jika ada waktu luang saja.",
+      "B. Hanya saat ditegur oleh atasan.",
+      "C. Setiap kali merasa ada pekerjaan yang hasilnya kurang memuaskan.",
+      "D. Saya tidak merasa perlu karena saya sudah bekerja dengan baik.",
+      "E. Sesekali saja jika ada pelatihan dari kantor."
+     ],
+     "answer": "C",
+     "explanation": "Kesadaran untuk terus melakukan self-improvement secara berkelanjutan.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c8f636167b",
+     "question": "Jika Anda mendapatkan ide cemerlang untuk kantor, namun lingkungan kerja cenderung pasif. Apa yang Anda lakukan?",
+     "options": [
+      "A. Mengeluh karena lingkungan kantor tidak suportif.",
+      "B. Mengerjakannya sendiri tanpa memberi tahu siapa pun.",
+      "C. Menyimpan ide tersebut karena takut dianggap aneh.",
+      "D. Menunggu sampai ada orang lain yang mengusulkannya juga.",
+      "E. Mempresentasikannya dengan baik kepada atasan untuk kemajuan kantor."
+     ],
+     "answer": "E",
+     "explanation": "Menunjukkan semangat inisiatif dan keberanian membawa perubahan positif.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026c9b4fc53e1",
+     "question": "Saat atasan tidak berada di kantor, tingkat kedisiplinan rekan kerja menurun. Apa sikap Anda?",
+     "options": [
+      "A. Tetap bekerja dengan displin seperti biasanya.",
+      "B. Pulang lebih awal karena tidak ada atasan.",
+      "C. Ikut santai karena semua orang juga santai.",
+      "D. Memanfaatkan waktu untuk melakukan urusan pribadi.",
+      "E. Mengingatkan rekan-rekan untuk tetap bekerja secara profesional."
+     ],
+     "answer": "A",
+     "explanation": "Integritas ditunjukkan saat kita bekerja dengan baik bahkan tanpa pengawasan.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026ca8abec5ce",
+     "question": "Dalam mengerjakan tugas tim, ada anggota yang sangat malas dan hanya menggantungkan diri pada orang lain. Tindakan Anda?",
+     "options": [
+      "A. Menyindirnya terus-menerus di depan tim.",
+      "B. Mengajaknya bicara secara empat mata dan memberi pengertian tentang tanggung jawab.",
+      "C. Melaporkannya ke atasan untuk mengeluarkannya dari tim.",
+      "D. Menanggung semua pekerjaannya sendiri.",
+      "E. Membiarkannya karena saya malas berkonflik."
+     ],
+     "answer": "B",
+     "explanation": "Kemampuan memotivasi anggota tim secara persuasif.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026cb4467f003",
+     "question": "Anda terpilih untuk memimpin rapat, namun Anda belum menguasai topik yang akan dibahas sepenuhnya. Apa yang Anda lakukan?",
+     "options": [
+      "A. Meminta rekan lain untuk menggantikan saya memimpin rapat.",
+      "B. Membatalkan rapat tersebut.",
+      "C. Bertanya kepada peserta rapat tentang materi tersebut di tengah rapat.",
+      "D. Mempelajari materi tersebut semaksimal mungkin sebelum rapat dimulai.",
+      "E. Membawa buku panduan dan membacanya di depan peserta rapat."
+     ],
+     "answer": "D",
+     "explanation": "Persiapan yang matang dan rasa tanggung jawab terhadap tugas kepemimpinan.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": "6a2eb026cc066af82a",
+     "question": "Saat Anda sedang libur, atasan meminta bantuan untuk urusan pekerjaan yang sangat penting. Apa tindakan Anda?",
+     "options": [
+      "A. Mengabaikan telepon dari atasan.",
+      "B. Membantu memberikan solusi atau instruksi yang diperlukan melalui telepon.",
+      "C. Meminta atasan untuk menunggu sampai saya masuk kerja.",
+      "D. Berbohong bahwa saya sedang berada di luar kota.",
+      "E. Menolak karena saya sedang berhak libur."
+     ],
+     "answer": "B",
+     "explanation": "Sikap dedikasi yang tinggi dengan tetap memberikan solusi bagi organisasi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Saat ditugaskan ke daerah terpencil yang minim fasilitas, sikap Anda...",
+     "options": [
+      "A. Menerima namun dengan berat hati",
+      "B. Menolak dengan alasan kesehatan",
+      "C. Menerima tugas dan mencoba beradaptasi sebaik mungkin",
+      "D. Mengajukan cuti panjang dulu",
+      "E. Meminta tambahan tunjangan sangat besar sebelum berangkat"
+     ],
+     "answer": "C",
+     "explanation": "Poin tertinggi pada aspek adaptasi lingkungan kerja.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Rekan kerja sering datang terlambat membebani tim. Anda akan...",
+     "options": [
+      "A. Melapor ke HRD agar segera dipecat",
+      "B. Menyindirnya di grup chat kantor",
+      "C. Mendiamkannya karena bukan urusan saya",
+      "D. Ikut datang terlambat saja",
+      "E. Menegur secara personal dan membicarakan dampaknya pada kinerja tim"
+     ],
+     "answer": "E",
+     "explanation": "Penyelesaian masalah secara dewasa dan profesional di dalam tim.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Pelanggan marah karena pelayanan lambat. Tindakan Anda...",
+     "options": [
+      "A. Meminta maaf, mendengar keluhan, dan segera menyelesaikan urusannya",
+      "B. Melayani asal-asalan dan biarkan pergi",
+      "C. Membalas dengan nada marah juga",
+      "D. Memanggil security untuk mengusir pelanggan",
+      "E. Menghindar dan pergi ke teman"
+     ],
+     "answer": "A",
+     "explanation": "Aspek pelayanan publik: merespons keluhan secara empatik dan solutif.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": null,
+     "question": "Anda melihat celah kelemahan sistem IT yang bisa membocorkan data sensitif. Sikap Anda...",
+     "options": [
+      "A. Membocorkan data kepada pihak luar",
+      "B. Mengabaikannya karena bukan tugas Anda",
+      "C. Segera melaporkan ke atasan atau tim IT yang berwenang",
+      "D. Menunggu sampai sistem benar-benar rusak baru lapor",
+      "E. Memanfaatkannya untuk kepentingan pribadi"
+     ],
+     "answer": "C",
+     "explanation": "Aspek profesionalisme dan tanggung jawab terhadap integritas perusahaan.",
+     "topic": "TIK"
+    },
+    {
+     "uid": null,
+     "question": "Tugas menumpuk dan atasan memberi tugas mendadak yang mendesak. Anda akan...",
+     "options": [
+      "A. Minta resign karena kelelahan",
+      "B. Mengerjakan asal-asalan agar cepat selesai",
+      "C. Melempar tugas ke rekan yang lebih santai",
+      "D. Menolak mentah-mentah tugas baru",
+      "E. Menganalisis prioritas dan mendiskusikan tenggat waktu dengan atasan"
+     ],
+     "answer": "E",
+     "explanation": "Aspek manajemen waktu dan komunikasi profesional.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda mengetahui rekan kerja menerima gratifikasi dari vendor. Sikap Anda...",
+     "options": [
+      "A. Melaporkan kepada atasan atau unit kepatuhan",
+      "B. Menutup mata karena tidak merugikan Anda langsung",
+      "C. Menegurnya diam-diam dan meminta dia berhenti",
+      "D. Mengancam akan melaporkan untuk mendapatkan keuntungan",
+      "E. Ikut menerima bagiannya"
+     ],
+     "answer": "A",
+     "explanation": "Integritas mengharuskan pelaporan praktik korupsi/gratifikasi sesuai prosedur.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Dalam rapat tim, pendapat Anda berbeda dengan atasan. Apa yang Anda lakukan?",
+     "options": [
+      "A. Keluar dari rapat sebagai bentuk protes",
+      "B. Berdebat keras demi mempertahankan pendapat",
+      "C. Menggosipkan keputusan atasan kepada rekan lain",
+      "D. Diam saja dan setuju apapun keputusan atasan",
+      "E. Menyampaikan pendapat dengan data dan argumen yang logis secara sopan"
+     ],
+     "answer": "E",
+     "explanation": "Menyampaikan pendapat secara asertif, sopan, dan berbasis data adalah komunikasi profesional.",
+     "topic": "TIK"
+    },
+    {
+     "uid": null,
+     "question": "Anda diminta atasan mengerjakan sesuatu yang menurut Anda tidak etis namun tidak ilegal. Sikap Anda...",
+     "options": [
+      "A. Langsung menolak tanpa penjelasan",
+      "B. Melaksanakan sambil mencatat keberatan secara tertulis kepada atasan",
+      "C. Mengadukan ke media massa",
+      "D. Mengerjakan dan menyalahkan atasan jika ada masalah",
+      "E. Melakukannya tanpa mempertanyakan"
+     ],
+     "answer": "B",
+     "explanation": "Menyampaikan keberatan secara tertulis adalah tindakan profesional dan beretika.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Seorang warga datang mengurus dokumen namun tidak membawa semua persyaratan. Anda...",
+     "options": [
+      "A. Membiarkan warga menunggu tanpa penjelasan",
+      "B. Menolak dan menyuruhnya pulang",
+      "C. Menerima berkas tidak lengkap untuk mempercepat proses",
+      "D. Meminta 'biaya tambahan' untuk memperlancar proses",
+      "E. Menjelaskan persyaratan yang kurang dan memberi tahu cara melengkapinya dengan ramah"
+     ],
+     "answer": "E",
+     "explanation": "Pelayanan prima mengutamakan kejelasan informasi dan empati terhadap masyarakat.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": null,
+     "question": "Anda menerima hadiah dari rekanan bisnis sebagai tanda terima kasih atas kerjasama. Anda...",
+     "options": [
+      "A. Menerimanya sambil memastikan tidak ada yang tahu",
+      "B. Menerima tapi tidak melaporkan",
+      "C. Menerimanya dan langsung membaginya dengan rekan",
+      "D. Menerimanya karena itu wajar dalam bisnis",
+      "E. Menolak dan menjelaskan kebijakan perusahaan tentang gratifikasi"
+     ],
+     "answer": "E",
+     "explanation": "ASN/karyawan BUMN harus menolak gratifikasi sesuai aturan dan kebijakan yang berlaku.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Target kerja Anda bulan ini sangat tinggi dan tampak sulit dicapai. Sikap Anda...",
+     "options": [
+      "A. Mengerjakan secukupnya saja tanpa peduli target",
+      "B. Meminta rekan mengerjakan bagian Anda",
+      "C. Mengisi laporan palsu agar target tampak tercapai",
+      "D. Bekerja keras, cari cara inovatif, dan evaluasi progres mingguan",
+      "E. Menyerah dan melaporkan target tidak realistis"
+     ],
+     "answer": "D",
+     "explanation": "Orientasi pada hasil dengan upaya maksimal dan evaluasi berkala adalah karakter unggul ASN.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda menyelesaikan tugas lebih cepat dari jadwal. Waktu luang digunakan untuk...",
+     "options": [
+      "A. Mengerjakan tugas dari unit lain yang membutuhkan bantuan",
+      "B. Meninggalkan kantor lebih awal",
+      "C. Menunggu jam pulang",
+      "D. Bermain handphone dan bersantai",
+      "E. Bergosip dengan rekan"
+     ],
+     "answer": "A",
+     "explanation": "Proaktif membantu rekan menunjukkan semangat kerja tim dan kontribusi positif.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Rekan Anda mengajukan ide inovatif namun terasa berisiko tinggi. Respons Anda...",
+     "options": [
+      "A. Mengklaim ide tersebut sebagai milik sendiri",
+      "B. Langsung menolak karena terlalu berisiko",
+      "C. Mendiskusikan potensi dan risikonya bersama secara konstruktif",
+      "D. Diam saja dan tidak peduli",
+      "E. Mendukung tanpa evaluasi apapun"
+     ],
+     "answer": "C",
+     "explanation": "Evaluasi konstruktif terhadap ide baru menunjukkan kemampuan berpikir kritis yang sehat.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda tidak setuju dengan kebijakan baru organisasi. Tindakan Anda...",
+     "options": [
+      "A. Mengadu ke media sosial",
+      "B. Menghasut rekan-rekan untuk memboikot",
+      "C. Menolak melaksanakan kebijakan tersebut",
+      "D. Melaksanakan sambil menyampaikan masukan melalui saluran resmi",
+      "E. Pura-pura patuh di depan atasan"
+     ],
+     "answer": "D",
+     "explanation": "Menyampaikan masukan melalui saluran resmi adalah cara profesional menghadapi kebijakan.",
+     "topic": "TIK"
+    },
+    {
+     "uid": null,
+     "question": "Atasan Anda jarang hadir namun selalu mengakui keberhasilan tim sebagai miliknya. Sikap Anda...",
+     "options": [
+      "A. Berhenti bekerja keras karena tidak dihargai",
+      "B. Mengadu langsung ke jenjang atas secara emosional",
+      "C. Membalas dengan sengaja menghambat pekerjaannya",
+      "D. Menyebarkan informasi ini ke seluruh kantor",
+      "E. Mendokumentasikan kontribusi tim dan menyampaikan secara profesional saat evaluasi"
+     ],
+     "answer": "E",
+     "explanation": "Mendokumentasikan kontribusi dan menyampaikan secara profesional adalah langkah etis.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda mendapat proyek baru di bidang yang belum Anda kuasai. Respons Anda...",
+     "options": [
+      "A. Pura-pura ahli tanpa persiapan",
+      "B. Mengerjakan asal-asalan",
+      "C. Menerima dan segera belajar serta mencari mentor yang tepat",
+      "D. Menolak karena takut gagal",
+      "E. Mendelegasikan seluruhnya ke bawahan tanpa pengawasan"
+     ],
+     "answer": "C",
+     "explanation": "Kemauan belajar dan pengembangan diri adalah karakter ASN yang adaptif.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda memiliki hubungan persahabatan dengan salah satu calon rekanan yang sedang diseleksi. Sikap Anda...",
+     "options": [
+      "A. Memilih calon lain meski kualitasnya lebih rendah agar tidak disangka memihak",
+      "B. Mengundurkan diri dari proses seleksi dan melaporkan potensi konflik kepentingan",
+      "C. Mendukung calon tersebut karena Anda percaya kemampuannya",
+      "D. Memberikan bocoran soal seleksi kepada calon tersebut",
+      "E. Diam saja dan tetap terlibat dalam seleksi"
+     ],
+     "answer": "B",
+     "explanation": "Konflik kepentingan harus dilaporkan dan dihindari untuk menjaga integritas proses seleksi.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Ketika mengerjakan tugas kantor, Anda menyadari ada kesalahan yang terlanjur dikirim ke pimpinan. Anda...",
+     "options": [
+      "A. Pura-pura tidak tahu dan berharap tidak diperhatikan",
+      "B. Menunggu pimpinan yang menegur baru kemudian merespons",
+      "C. Membuat laporan kedua tanpa pemberitahuan seolah tidak ada kesalahan",
+      "D. Segera menghubungi pimpinan, mengakui kesalahan, dan menyampaikan koreksinya",
+      "E. Menyalahkan rekan yang membantu mengerjakan"
+     ],
+     "answer": "D",
+     "explanation": "Mengakui kesalahan dan segera memperbaiki adalah wujud integritas dan profesionalisme.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda ditugaskan memimpin tim yang anggotanya lebih senior. Cara Anda memimpin...",
+     "options": [
+      "A. Berdiskusi dengan tim, menghargai pengalaman mereka, dan membangun kesepakatan bersama",
+      "B. Mengabaikan pendapat mereka karena Anda yang pemimpin",
+      "C. Langsung menerapkan aturan ketat tanpa komunikasi",
+      "D. Mendelegasikan semua keputusan kepada anggota senior",
+      "E. Menghindari konflik dengan selalu mengikuti keinginan mayoritas"
+     ],
+     "answer": "A",
+     "explanation": "Kepemimpinan kolaboratif yang menghargai senioritas sambil tetap tegas adalah pendekatan terbaik.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda menemukan prosedur yang ada saat ini tidak efisien dan membuang waktu. Tindakan Anda...",
+     "options": [
+      "A. Mengabaikannya dan mengikuti prosedur yang ada",
+      "B. Mengeluh kepada rekan tapi tidak mengambil tindakan",
+      "C. Mengusulkan perbaikan prosedur secara tertulis kepada atasan disertai data",
+      "D. Langsung mengubah prosedur sendiri tanpa izin",
+      "E. Membiarkan saja karena bukan tanggung jawab Anda"
+     ],
+     "answer": "C",
+     "explanation": "Mengusulkan perbaikan melalui jalur resmi dengan data adalah sikap inovatif yang profesional.",
+     "topic": "TIK"
+    },
+    {
+     "uid": null,
+     "question": "Rekan kerja dari divisi lain meminta bantuan Anda yang memerlukan waktu cukup lama padahal tugas Anda sendiri belum selesai. Anda...",
+     "options": [
+      "A. Mendiskusikan skala prioritas dan menawarkan bantuan yang tidak mengganggu tugas utama Anda",
+      "B. Menyuruhnya meminta bantuan orang lain saja",
+      "C. Menolak tegas karena tugas Anda lebih prioritas",
+      "D. Berjanji membantu tapi tidak menepati",
+      "E. Langsung membantu penuh dan mengorbankan tugas sendiri"
+     ],
+     "answer": "A",
+     "explanation": "Manajemen prioritas dan kolaborasi dengan tetap menjaga tanggung jawab utama adalah pilihan terbaik.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": null,
+     "question": "Saat evaluasi kinerja tahunan, atasan memberikan penilaian yang menurut Anda tidak adil. Anda...",
+     "options": [
+      "A. Marah dan mengancam resign",
+      "B. Mengadu ke HRD tentang ketidakadilan atasan secara emosional",
+      "C. Menerima saja tanpa membela diri",
+      "D. Meminta sesi diskusi khusus untuk membahas dasar penilaian dan menyampaikan perspektif Anda dengan data",
+      "E. Membalas dengan sengaja menurunkan kinerja bulan depan"
+     ],
+     "answer": "D",
+     "explanation": "Meminta klarifikasi secara profesional dan berbasis data adalah langkah terbaik menghadapi evaluasi yang terasa tidak adil.",
+     "topic": "TIK"
+    },
+    {
+     "uid": null,
+     "question": "Anda mendapatkan informasi rahasia perusahaan secara tidak sengaja. Anda...",
+     "options": [
+      "A. Memposting di media sosial dengan akun anonim",
+      "B. Menyimpan informasi tersebut dan tidak menyebarkannya kepada siapapun",
+      "C. Memanfaatkan informasi untuk keuntungan pribadi",
+      "D. Langsung melaporkan ke media massa jika mengandung informasi penting",
+      "E. Membagikan kepada rekan yang perlu tahu menurut penilaian Anda"
+     ],
+     "answer": "B",
+     "explanation": "Menjaga kerahasiaan informasi perusahaan adalah kewajiban etis setiap karyawan.",
+     "topic": "TIK"
+    },
+    {
+     "uid": null,
+     "question": "Anda ditunjuk mewakili instansi dalam forum nasional. Persiapan Anda...",
+     "options": [
+      "A. Mempelajari materi, mengkoordinasikan dengan pimpinan, dan mempersiapkan diri secara maksimal",
+      "B. Hanya membawa bahan yang ada tanpa riset tambahan",
+      "C. Fokus pada penampilan fisik saja agar terlihat profesional",
+      "D. Mendelegasikan ke rekan yang lebih suka berbicara di depan umum",
+      "E. Berangkat tanpa persiapan khusus dan bersikap spontan"
+     ],
+     "answer": "A",
+     "explanation": "Representasi instansi membutuhkan persiapan substansif dan koordinasi dengan pimpinan.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": null,
+     "question": "Anda menyadari seorang rekan sedang mengalami masalah pribadi yang berdampak pada kinerjanya. Sikap Anda...",
+     "options": [
+      "A. Menyebarkan informasi masalah pribadinya kepada rekan lain",
+      "B. Mengabaikannya karena urusan pribadi bukan tanggung jawab Anda",
+      "C. Mendekatinya secara personal, menunjukkan empati, dan menawarkan bantuan jika memungkinkan",
+      "D. Langsung melaporkan penurunan kinerjanya ke atasan",
+      "E. Mengambil alih semua tugasnya tanpa izin"
+     ],
+     "answer": "C",
+     "explanation": "Empati dan dukungan antar rekan kerja memperkuat kohesi tim dan iklim kerja yang sehat.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda perlu mengambil keputusan penting namun data yang tersedia tidak lengkap. Anda...",
+     "options": [
+      "A. Meminta orang lain yang memutuskan agar Anda tidak bertanggung jawab",
+      "B. Menunda keputusan sampai semua data tersedia meski mengorbankan tenggat waktu",
+      "C. Memalsukan data untuk melengkapi kekurangan",
+      "D. Memutuskan berdasarkan intuisi tanpa dasar apapun",
+      "E. Mengambil keputusan berdasarkan data terbaik yang ada sambil mencatat asumsi dan risikonya"
+     ],
+     "answer": "E",
+     "explanation": "Pengambilan keputusan dengan data terbaik yang ada sambil mendokumentasikan risiko adalah praktik manajemen yang baik.",
+     "topic": "TIK"
+    },
+    {
+     "uid": null,
+     "question": "Program kerja yang sudah Anda rencanakan dengan matang ternyata ditolak pimpinan. Reaksi Anda...",
+     "options": [
+      "A. Menyalahkan rekan yang membantu menyusun program",
+      "B. Marah dan frustrasi secara terbuka",
+      "C. Menyerah dan tidak mengajukan program apapun ke depan",
+      "D. Meminta penjelasan alasan penolakan dan mencari cara memperbaiki rencana",
+      "E. Memaksakan tetap menjalankan program tanpa persetujuan"
+     ],
+     "answer": "D",
+     "explanation": "Memahami alasan penolakan dan memperbaiki rencana menunjukkan kematangan profesional.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda dipercaya mengelola anggaran tim. Terdapat sisa anggaran di akhir periode. Tindakan Anda...",
+     "options": [
+      "A. Membagikan ke anggota tim secara informal",
+      "B. Menyimpannya untuk keperluan tim di luar anggaran berikutnya tanpa laporan",
+      "C. Melaporkan sisa anggaran dan mengembalikannya sesuai prosedur",
+      "D. Membeli kebutuhan yang tidak mendesak agar anggaran habis",
+      "E. Menggunakan sisa anggaran untuk keperluan pribadi"
+     ],
+     "answer": "C",
+     "explanation": "Sisa anggaran harus dilaporkan dan dikembalikan sesuai aturan keuangan yang berlaku.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda diminta mengerjakan tugas yang sama berulang-ulang dan terasa monoton. Sikap Anda...",
+     "options": [
+      "A. Meminta mutasi ke bagian lain yang lebih menarik",
+      "B. Mencari cara untuk meningkatkan efisiensi proses dan kualitas output meski tugas itu berulang",
+      "C. Mengerjakan dengan semangat yang makin menurun setiap harinya",
+      "D. Menolak tugas tersebut kepada atasan",
+      "E. Mengerjakan sekedarnya saja karena sudah bosan"
+     ],
+     "answer": "B",
+     "explanation": "Profesionalisme mengharuskan kinerja konsisten bahkan pada tugas yang rutin dan berulang.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Dalam situasi krisis yang membutuhkan tindakan cepat, Anda...",
+     "options": [
+      "A. Menyerahkan sepenuhnya kepada rekan yang lebih senior",
+      "B. Menghindari situasi tersebut agar tidak terlibat",
+      "C. Menunggu petunjuk atasan meski situasi semakin memburuk",
+      "D. Mengambil tindakan proaktif sesuai wewenang sambil segera melaporkan ke atasan",
+      "E. Panik dan tidak tahu harus berbuat apa"
+     ],
+     "answer": "D",
+     "explanation": "Dalam krisis, tindakan proaktif sesuai wewenang sambil tetap berkomunikasi dengan atasan adalah respons terbaik.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Seorang masyarakat meminta layanan di luar jam kerja karena urusan mendesak. Anda...",
+     "options": [
+      "A. Mengarahkan ke layanan darurat atau petugas yang berwenang dan memberikan informasi yang dibutuhkan",
+      "B. Mengabaikan tanpa memberikan arahan apapun",
+      "C. Meminta bayaran tambahan sebagai kompensasi",
+      "D. Melayani penuh meski merugikan Anda secara pribadi",
+      "E. Menolak karena sudah di luar jam kerja"
+     ],
+     "answer": "A",
+     "explanation": "Mengarahkan ke layanan yang tepat dan memberi informasi yang dibutuhkan adalah standar pelayanan prima.",
+     "topic": "Pelayanan publik"
+    },
+    {
+     "uid": null,
+     "question": "Ketika ada konflik antar rekan dalam tim, posisi Anda sebagai anggota tim adalah...",
+     "options": [
+      "A. Memihak salah satu pihak yang Anda kenal lebih baik",
+      "B. Bersikap netral, membantu mediasi, dan fokus pada penyelesaian yang produktif",
+      "C. Melaporkan langsung ke atasan tanpa mencoba mediasi",
+      "D. Menghindari konflik tersebut sepenuhnya",
+      "E. Memperkeruh suasana dengan menyampaikan pendapat masing-masing pihak"
+     ],
+     "answer": "B",
+     "explanation": "Mediasi yang netral dan berorientasi solusi adalah peran konstruktif dalam konflik tim.",
+     "topic": "Jejaring kerja"
+    },
+    {
+     "uid": null,
+     "question": "Anda harus menyampaikan berita buruk kepada atasan tentang kegagalan proyek. Cara Anda menyampaikannya...",
+     "options": [
+      "A. Meminta rekan lain yang menyampaikan agar Anda tidak kena dampaknya",
+      "B. Melebih-lebihkan keberhasilan kecil agar tidak terlihat buruk",
+      "C. Menyalahkan faktor eksternal sepenuhnya",
+      "D. Menyampaikan fakta dengan jelas, disertai analisis penyebab dan rencana perbaikan",
+      "E. Menunda selama mungkin sampai tidak bisa ditutupi lagi"
+     ],
+     "answer": "D",
+     "explanation": "Menyampaikan kabar buruk secara transparan dengan solusi adalah wujud integritas dan profesionalisme.",
+     "topic": "Profesionalisme"
+    },
+    {
+     "uid": null,
+     "question": "Anda memiliki gagasan yang berpotensi menghemat anggaran signifikan namun perlu perubahan sistem. Tindakan Anda...",
+     "options": [
+      "A. Mengusulkan melalui saluran resmi dengan proposal yang matang dan berbasis data",
+      "B. Menceritakan hanya kepada rekan dekat",
+      "C. Langsung mengubah sistem sendiri tanpa koordinasi",
+      "D. Diam karena takut tidak didengar",
+      "E. Menunggu ada yang memiliki ide serupa"
+     ],
+     "answer": "A",
+     "explanation": "Mengusulkan inovasi melalui saluran resmi dengan proposal berbasis data adalah cara yang tepat dan produktif.",
+     "topic": "TIK"
+    }
+   ]
+  }
+ },
+ "total_soal": 267
+}
