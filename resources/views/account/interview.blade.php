@@ -67,7 +67,7 @@
             @if (! $aiOn)
                 <p class="text-sm text-graphite-500">Pewawancara AI belum diaktifkan di server ini (butuh minimal satu kunci LLM di .env).</p>
             @else
-                <form method="POST" action="{{ route('account.interview.start') }}" class="ivs-row">
+                <form method="POST" data-no-unsaved action="{{ route('account.interview.start') }}" class="ivs-row">
                     @csrf
                     <div class="ui-field"><label for="iv-role">Posisi yang dilamar</label><input id="iv-role" name="role" class="ui-input" maxlength="120" placeholder="mis. Staf IT PLN, Analis Data" value="{{ old('role') }}" required>@error('role')<small class="text-red-700">{{ $message }}</small>@enderror</div>
                     <div class="ui-field"><label for="iv-context">Lowongan atau catatan (opsional)</label><textarea id="iv-context" name="context" class="ui-input" rows="3" maxlength="1500" placeholder="Tempel deskripsi lowongan atau tulis nama perusahaan, supaya pertanyaannya lebih sesuai.">{{ old('context') }}</textarea>@error('context')<small class="text-red-700">{{ $message }}</small>@enderror</div>

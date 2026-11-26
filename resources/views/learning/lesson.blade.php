@@ -8,6 +8,8 @@
         $pos = $pos ?? 1;
         $thumb = $lesson->thumbnailUrl();
         $topicQuery = $lesson->content_url;
+        // Topik jalur resmi (CPNS/BUMN/TNI-POLRI) tanpa video tersemat: tautannya ke situs institusi, bukan pencarian YouTube.
+        $isOfficial = ! $lesson->isVideo() && filled($lesson->credit_name) && filled($lesson->content_url) && ! str_contains((string) $lesson->content_url, 'youtube.com');
     @endphp
     <section class="mx-auto max-w-4xl px-4 py-10">
         <a href="{{ route('learning.show', $course) }}" class="lp-btn lp-btn-back"><span aria-hidden="true">&larr;</span> {{ $course->title }}</a>
@@ -25,7 +27,7 @@
             <div class="lp-frame">
                 <div class="lp-bar">
                     <span class="lp-brand"><x-icon name="book" /> Owlspire Belajar</span>
-                    <span class="lp-bar-t">{{ $lesson->isVideo() ? ($lesson->video_title ?: $lesson->title) : 'Video topik ini' }}</span>
+                    <span class="lp-bar-t">{{ $lesson->isVideo() ? ($lesson->video_title ?: $lesson->title) : ($isOfficial ? 'Sumber resmi topik ini' : 'Video topik ini') }}</span>
                 </div>
 
                 @if ($lesson->isVideo())
@@ -42,8 +44,13 @@
                         <span class="lp-shade" aria-hidden="true"></span>
                         <div class="lp-empty">
                             <x-icon name="play" />
-                            <p>Video untuk topik ini belum dipasang.</p>
-                            <a href="{{ $topicQuery }}" target="_blank" rel="noopener" class="btn-primary">Cari videonya di YouTube &#8599;</a>
+                            @if ($isOfficial)
+                                <p>Video resmi untuk topik ini belum disematkan. Pelajari penjelasan lengkap di bawah, lalu cek informasi terbaru langsung dari {{ $lesson->credit_name }}.</p>
+                                <a href="{{ $lesson->content_url }}" target="_blank" rel="noopener noreferrer" class="btn-primary">Buka sumber resmi &#8599;</a>
+                            @else
+                                <p>Video untuk topik ini belum dipasang.</p>
+                                <a href="{{ $topicQuery }}" target="_blank" rel="noopener" class="btn-primary">Cari videonya di YouTube &#8599;</a>
+                            @endif
                         </div>
                     </div>
                 @endif
@@ -89,8 +96,12 @@
 
                 <h2 class="lp-h">Cara belajar</h2>
                 <ul class="lp-tips">
-                    <li>Tonton sampai selesai, lalu catat 3 hal yang baru kamu pahami.</li>
-                    <li>Setelah topik ini, coba simulasi karier untuk mengukur pemahamanmu.</li>
+                    @if ($lesson->isVideo())
+                        <li>Tonton sampai selesai, lalu catat 3 hal yang baru kamu pahami.</li>
+                    @else
+                        <li>Baca penjelasan lengkap di bawah, lalu catat 3 hal yang baru kamu pahami.</li>
+                    @endif
+                    <li>{{ $course->career_id ? 'Setelah topik ini, coba simulasi karier untuk mengukur pemahamanmu.' : 'Setelah topik ini, coba Simulasi '.$course->category.' untuk mengukur pemahamanmu.' }}</li>
                 </ul>
             </div>
 

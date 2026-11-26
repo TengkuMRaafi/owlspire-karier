@@ -34,13 +34,71 @@ class JalurResmiSeeder
                     'content_url' => $url, 'source_url' => $t['url'],
                     'credit_name' => $t['source'], 'license' => $video ? 'Disematkan lewat pemutar resmi YouTube' : 'Tautan sumber resmi',
                     'body' => $t['overview'],
-                    'details' => ['points' => $t['points'], 'terms' => $t['terms'] ?? [], 'practice' => $t['practice']],
+                    'details' => ['points' => $t['points'], 'terms' => array_map(fn ($x) => ['t' => $x[0], 'd' => $x[1]], $t['terms'] ?? []), 'practice' => $t['practice']],
                 ]);
                 $n += $lesson->wasRecentlyCreated ? 1 : 0;
             }
         }
 
+        return $n + self::fillTerms() + self::normalizeTerms();
+    }
+
+    /** Istilah lama tersimpan sebagai pasangan [istilah, arti]; halaman topik membaca kunci t dan d. */
+    public static function normalizeTerms(): int
+    {
+        $n = 0;
+        $courseIds = Course::whereIn('slug', array_keys(self::data()))->pluck('id');
+        $sectionIds = CourseSection::whereIn('course_id', $courseIds)->pluck('id');
+        foreach (Lesson::whereIn('section_id', $sectionIds)->get() as $lesson) {
+            $details = $lesson->details ?? [];
+            $terms = $details['terms'] ?? [];
+            if (! $terms || ! array_is_list($terms) || isset($terms[0]['t'])) {
+                continue;
+            }
+            $details['terms'] = array_map(fn ($x) => isset($x['t']) ? $x : ['t' => $x[0] ?? '', 'd' => $x[1] ?? ''], $terms);
+            $lesson->update(['details' => $details]);
+            $n++;
+        }
+
         return $n;
+    }
+
+    /** Istilah penting untuk topik yang belum punya; yang sudah diisi (atau disunting admin) tidak diubah. */
+    public static function fillTerms(): int
+    {
+        $n = 0;
+        foreach (self::terms() as $key => $pairs) {
+            [$slug, $topik] = explode('/', $key);
+            $course = Course::where('slug', $slug)->first();
+            $section = $course ? CourseSection::where('course_id', $course->id)->where('title', 'Jalur inti')->first() : null;
+            $lesson = $section ? Lesson::where('section_id', $section->id)->where('slug', $topik)->first() : null;
+            if (! $lesson || ! empty($lesson->details['terms'] ?? [])) {
+                continue;
+            }
+            $details = $lesson->details ?? [];
+            $details['terms'] = array_map(fn ($x) => ['t' => $x[0], 'd' => $x[1]], $pairs);
+            $lesson->update(['details' => $details]);
+            $n++;
+        }
+
+        return $n;
+    }
+
+    private static function terms(): array
+    {
+        return [
+            'jalur-cpns/topik-3' => [['Silogisme', 'Penarikan kesimpulan dari dua premis'], ['Deret', 'Barisan angka dengan pola tertentu'], ['Analogi', 'Kesamaan hubungan antara dua pasangan kata']],
+            'jalur-cpns/topik-4' => [['BerAKHLAK', 'Nilai dasar ASN: Berorientasi pelayanan, Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif'], ['Profesionalisme', 'Bekerja disiplin, bertanggung jawab, dan taat aturan']],
+            'jalur-cpns/topik-5' => [['Passing grade', 'Nilai ambang batas minimal tiap subtes SKD'], ['SSCASN', 'Portal resmi pendaftaran CASN milik BKN'], ['SKB', 'Seleksi Kompetensi Bidang']],
+            'jalur-bumn/topik-1' => [['FHCI', 'Forum Human Capital Indonesia, penyelenggara Rekrutmen Bersama BUMN'], ['RBB', 'Rekrutmen Bersama BUMN']],
+            'jalur-bumn/topik-2' => [['TKD', 'Tes Kemampuan Dasar: verbal, numerik, dan logika'], ['Modus tollens', 'Jika p maka q, q tidak terjadi, maka p tidak terjadi']],
+            'jalur-bumn/topik-4' => [['Learning agility', 'Kemampuan belajar cepat dari pengalaman dan menerapkannya di situasi baru'], ['Conditional sentence', 'Kalimat pengandaian berpola if']],
+            'jalur-tni-polri/topik-1' => [['Pantukhir', 'Penentuan kelulusan akhir'], ['Akpol', 'Akademi Kepolisian'], ['Akmil', 'Akademi Militer']],
+            'jalur-tni-polri/topik-2' => [['Psikotes', 'Rangkaian tes psikologi: kecerdasan, kecermatan, kepribadian'], ['Analogi', 'Kesamaan hubungan antara dua pasangan kata']],
+            'jalur-tni-polri/topik-3' => [['Kecermatan', 'Kemampuan teliti, fokus, dan cepat dalam memeriksa data'], ['Kata baku', 'Kata yang sesuai kaidah ejaan dan KBBI']],
+            'jalur-tni-polri/topik-4' => [['Kesamaptaan', 'Kebugaran jasmani: kekuatan, daya tahan, dan kelincahan'], ['Shuttle run', 'Lari bolak-balik jarak pendek untuk menilai kelincahan']],
+            'jalur-tni-polri/topik-5' => [['Tripel Pythagoras', 'Tiga bilangan bulat yang memenuhi a kuadrat + b kuadrat = c kuadrat, misalnya 3-4-5'], ['Wawasan kebangsaan', 'Pemahaman tentang dasar negara dan bangsa']],
+        ];
     }
 
     private static function data(): array

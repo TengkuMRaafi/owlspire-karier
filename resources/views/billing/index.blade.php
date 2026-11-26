@@ -159,7 +159,7 @@
         </div>
 
         {{-- Satu form untuk Premium dan tiket. JS (billing.js) mengganti action: billing.plan atau billing.buy. --}}
-        <form method="POST" action="{{ route('billing.plan') }}" class="ck-grid" data-action-plan="{{ route('billing.plan') }}" data-action-ticket="{{ route('billing.buy') }}" data-plans="{{ json_encode($planData) }}" data-ticket-price="{{ $price }}">
+        <form method="POST" data-no-unsaved action="{{ route('billing.plan') }}" class="ck-grid" data-action-plan="{{ route('billing.plan') }}" data-action-ticket="{{ route('billing.buy') }}" data-plans="{{ json_encode($planData) }}" data-ticket-price="{{ $price }}">
             @csrf
             <input type="hidden" name="ranking_shown" value="1">
             <div class="ck-main">

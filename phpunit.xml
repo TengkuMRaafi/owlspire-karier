@@ -26,6 +26,9 @@
         <env name="MIDTRANS_SERVER_KEY" value="" force="true"/>
         <env name="MIDTRANS_PRODUCTION" value="false" force="true"/>
         <env name="MIDTRANS_METHOD" value="qris" force="true"/>
+        <!-- Captcha Turnstile harus mati di tes (kunci asli di .env membuat semua POST masuk/daftar/lupa sandi ditolak). -->
+        <env name="TURNSTILE_SITE_KEY" value="" force="true"/>
+        <env name="TURNSTILE_SECRET_KEY" value="" force="true"/>
         <env name="GROQ_API_KEY" value=""/>
         <env name="GEMINI_API_KEY" value=""/>
         <env name="CEREBRAS_API_KEY" value=""/>

@@ -60,14 +60,13 @@ class VerifiedGateTest extends TestCase
     public function test_belum_terverifikasi_tetap_bisa_membeli_tiket_simulasi(): void
     {
         // Tiket hanya membuka simulasi di akunnya sendiri, jadi tidak butuh email terverifikasi (beda dengan Premium).
-        $this->seed(PlanSeeder::class);
+        $this->seed([PlanSeeder::class, \Database\Seeders\ExamSeeder::class]);
         $u = User::factory()->unverified()->create();
         $type = ExamType::selection()->first();
+        $this->assertNotNull($type, 'Tipe ujian untuk tiket harus ada setelah seeding.');
 
-        if ($type) {
-            $this->actingAs($u)->post('/harga/beli', ['exam_type_id' => $type->id])->assertRedirect();
-            $this->assertSame(1, Order::where('user_id', $u->id)->count());
-        }
+        $this->actingAs($u)->post('/harga/beli', ['exam_type_id' => $type->id])->assertRedirect();
+        $this->assertSame(1, Order::where('user_id', $u->id)->count());
     }
 
     public function test_terverifikasi_bisa_membeli_langganan(): void

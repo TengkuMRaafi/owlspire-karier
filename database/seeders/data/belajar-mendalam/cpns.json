@@ -1,0 +1,877 @@
+{
+ "topics": {
+  "1": {
+   "v": 1,
+   "minutes": 10,
+   "prereq": "Tidak ada. Topik ini cocok dibaca sebelum kamu mulai belajar materi apa pun, supaya kamu tahu medan ujiannya.",
+   "sections": [
+    {
+     "heading": "Apa itu SKD dan CAT",
+     "paragraphs": [
+      "Seleksi Kompetensi Dasar (SKD) adalah tes tertulis pertama yang diikuti pelamar CPNS setelah lolos seleksi administrasi. Tesnya dikerjakan di komputer memakai sistem Computer Assisted Test (CAT) milik BKN, sehingga jawabanmu langsung dinilai oleh sistem, bukan oleh manusia.",
+      "SKD terdiri atas tiga subtes. Memahami bobot masing-masing membantumu membagi tenaga belajar dengan masuk akal."
+     ],
+     "table": {
+      "head": [
+       "Subtes",
+       "Jumlah soal",
+       "Cara penilaian",
+       "Skor maksimal"
+      ],
+      "rows": [
+       [
+        "TWK (Tes Wawasan Kebangsaan)",
+        "30",
+        "Benar 5, salah atau kosong 0",
+        "150"
+       ],
+       [
+        "TIU (Tes Intelegensia Umum)",
+        "35",
+        "Benar 5, salah atau kosong 0",
+        "175"
+       ],
+       [
+        "TKP (Tes Karakteristik Pribadi)",
+        "45",
+        "Setiap opsi bernilai 1 sampai 5",
+        "225"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Totalnya 110 soal dikerjakan dalam 100 menit, dengan skor maksimal 550. Rata-rata waktumu hanya sekitar 54 detik per soal, jadi kecepatan sama pentingnya dengan ketepatan."
+     ],
+     "note": {
+      "label": "Tidak ada nilai minus",
+      "text": "Di TWK dan TIU, jawaban salah tidak mengurangi skor. Karena itu jangan pernah membiarkan soal kosong: kalau waktu hampir habis, tebak dengan menyisihkan opsi yang jelas keliru."
+     }
+    },
+    {
+     "heading": "Cara kerja di layar CAT",
+     "paragraphs": [
+      "Tampilan CAT bisa sedikit berbeda dari tahun ke tahun, jadi bagian ini fokus pada kebiasaan yang selalu berlaku. Pelajari antarmuka aslinya lewat simulasi resmi BKN di cat.bkn.go.id/simulasi sebelum hari ujian."
+     ],
+     "steps": [
+      "Datang lebih awal dan bawa dokumen yang diminta di kartu ujian (umumnya KTP asli). Ikuti arahan pengawas.",
+      "Login memakai data peserta yang diberikan panitia, lalu baca petunjuk sebelum waktu mulai berjalan.",
+      "Jawab soal dengan memilih satu opsi. Gunakan panel nomor soal untuk berpindah dan melihat soal mana yang belum terjawab.",
+      "Pantau sisa waktu secara berkala, bukan hanya di akhir.",
+      "Sebelum mengakhiri ujian, pastikan tidak ada soal yang masih kosong, lalu selesaikan sesi sesuai petunjuk."
+     ]
+    },
+    {
+     "heading": "Mengatur waktu 100 menit",
+     "paragraphs": [
+      "Tiga subtes menuntut kecepatan yang berbeda. TWK dan TKP lebih banyak membaca dan memilih, sedangkan TIU memuat hitungan yang memakan waktu. Pembagian berikut hanya patokan awal; sesuaikan setelah kamu tahu kecepatanmu sendiri."
+     ],
+     "table": {
+      "head": [
+       "Subtes",
+       "Alokasi waktu",
+       "Waktu per soal"
+      ],
+      "rows": [
+       [
+        "TWK (30 soal)",
+        "20 menit",
+        "sekitar 40 detik"
+       ],
+       [
+        "TIU (35 soal)",
+        "45 menit",
+        "sekitar 77 detik"
+       ],
+       [
+        "TKP (45 soal)",
+        "30 menit",
+        "sekitar 40 detik"
+       ],
+       [
+        "Cadangan",
+        "5 menit",
+        "untuk memeriksa soal kosong"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Aturan sederhananya: soal yang menahanmu lebih dari dua kali waktu rata-rata sebaiknya dilewati dulu. Kembali lagi kalau waktu tersisa."
+     ]
+    },
+    {
+     "heading": "Cara latihan yang efektif",
+     "paragraphs": [
+      "Banyak pelamar belajar materi berbulan-bulan tetapi baru pertama kali melihat CAT di hari ujian. Akibatnya mereka gugup dan kehabisan waktu. Latihan yang baik punya tiga tahap: kenali sistemnya, ukur dirimu, lalu perbaiki titik lemah."
+     ],
+     "steps": [
+      "Kerjakan satu sesi penuh 110 soal di simulasi dengan timer, tanpa membuka catatan.",
+      "Catat waktu yang kamu habiskan dan skor tiap subtes, bukan hanya skor total.",
+      "Pilih satu subtes dengan selisih terbesar dari target, pelajari topiknya, lalu ulangi simulasi seminggu kemudian."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Membiarkan soal TWK atau TIU kosong karena takut salah",
+     "why": "Salah dan kosong sama-sama bernilai 0, jadi kosong hanya membuang peluang.",
+     "fix": "Isi semua soal. Sisihkan opsi yang jelas keliru lalu pilih salah satu sisanya."
+    },
+    {
+     "wrong": "Menghabiskan lima menit untuk satu soal hitungan",
+     "why": "Satu soal bernilai 5 poin, sementara lima menit setara beberapa soal TWK yang lebih mudah.",
+     "fix": "Lewati soal yang menahan terlalu lama dan kembali jika waktu tersisa."
+    },
+    {
+     "wrong": "Baru mengenal tampilan CAT di hari ujian",
+     "why": "Kebingungan di antarmuka menyita waktu dan konsentrasi.",
+     "fix": "Latih di simulasi resmi BKN dan di Simulasi CPNS platform ini."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Berapa skor maksimal SKD?",
+     "a": "550, yaitu 150 (TWK) + 175 (TIU) + 225 (TKP)."
+    },
+    {
+     "q": "Jawaban TIU salah, berapa nilainya?",
+     "a": "0. Tidak ada pengurangan, jadi soal sebaiknya tidak dikosongkan."
+    },
+    {
+     "q": "Mengapa TKP tidak punya jawaban salah?",
+     "a": "Setiap opsi bernilai 1 sampai 5 sesuai seberapa tepat sikapnya. Opsi terbaik bernilai 5."
+    }
+   ],
+   "summary": [
+    "SKD = 30 soal TWK, 35 soal TIU, 45 soal TKP; 110 soal dalam 100 menit.",
+    "TWK dan TIU: benar 5, salah 0. TKP: setiap opsi 1 sampai 5.",
+    "Latih CAT lebih dulu, lalu pelajari materi per subtes."
+   ],
+   "next": "Lanjut ke topik TWK untuk mulai menguasai materi wawasan kebangsaan."
+  },
+  "2": {
+   "v": 1,
+   "minutes": 14,
+   "prereq": "Pernah belajar PPKn di SMA sudah cukup. Kamu akan menghafal beberapa angka dan tanggal, tetapi juga memahami maknanya.",
+   "sections": [
+    {
+     "heading": "Lima aspek yang diujikan",
+     "paragraphs": [
+      "TWK menguji seberapa baik kamu memahami dasar negara dan sikap sebagai warga negara. Materinya dikelompokkan ke dalam lima aspek. Di bank soal simulasi platform ini, topik yang paling sering muncul adalah UUD 1945, Pancasila, lembaga negara, dan sejarah kebangsaan."
+     ],
+     "table": {
+      "head": [
+       "Aspek",
+       "Isi pokok",
+       "Yang sering ditanya"
+      ],
+      "rows": [
+       [
+        "Pilar negara",
+        "Pancasila, UUD NRI 1945, NKRI, Bhinneka Tunggal Ika",
+        "Makna sila, pasal kunci, bentuk negara"
+       ],
+       [
+        "Nasionalisme",
+        "Sejarah perjuangan dan cinta tanah air",
+        "Sumpah Pemuda, proklamasi, tokoh"
+       ],
+       [
+        "Integritas",
+        "Jujur, disiplin, anti korupsi",
+        "Sikap saat ada pelanggaran"
+       ],
+       [
+        "Bela negara",
+        "Hak dan kewajiban membela negara",
+        "Dasar hukum dan bentuk bela negara"
+       ],
+       [
+        "Bahasa Indonesia",
+        "Ejaan, kalimat efektif, penalaran bacaan",
+        "Kata baku dan penggunaan kalimat"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Pancasila: sila, lambang, dan sejarah rumusannya",
+     "paragraphs": [
+      "Hafalkan kelima sila beserta lambangnya, karena soal sering menukar atau mengacak keduanya. Pahami juga mengapa nilai tiap sila relevan bagi seorang aparatur negara."
+     ],
+     "table": {
+      "head": [
+       "Sila",
+       "Bunyi singkat",
+       "Lambang"
+      ],
+      "rows": [
+       [
+        "1",
+        "Ketuhanan Yang Maha Esa",
+        "Bintang"
+       ],
+       [
+        "2",
+        "Kemanusiaan yang adil dan beradab",
+        "Rantai"
+       ],
+       [
+        "3",
+        "Persatuan Indonesia",
+        "Pohon beringin"
+       ],
+       [
+        "4",
+        "Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan",
+        "Kepala banteng"
+       ],
+       [
+        "5",
+        "Keadilan sosial bagi seluruh rakyat Indonesia",
+        "Padi dan kapas"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Urutan sejarah rumusannya: pidato Soekarno tentang dasar negara pada sidang BPUPKI tanggal 1 Juni 1945 (kini diperingati sebagai Hari Lahir Pancasila), rumusan Piagam Jakarta pada 22 Juni 1945, lalu rumusan final yang disahkan PPKI pada 18 Agustus 1945 bersama UUD 1945."
+     ],
+     "note": {
+      "label": "Jebakan umum",
+      "text": "Piagam Jakarta bukan rumusan final. Rumusan yang berlaku adalah hasil pengesahan PPKI pada 18 Agustus 1945."
+     }
+    },
+    {
+     "heading": "UUD NRI 1945 dan lembaga negara",
+     "paragraphs": [
+      "UUD 1945 ditetapkan PPKI pada 18 Agustus 1945 dan diamandemen empat kali, yaitu pada 1999, 2000, 2001, dan 2002. Jangan hafal nomor pasal secara buta; kaitkan tiap pasal dengan isinya."
+     ],
+     "table": {
+      "head": [
+       "Pasal",
+       "Isi pokok"
+      ],
+      "rows": [
+       [
+        "Pasal 1",
+        "Ayat 1: negara kesatuan berbentuk republik. Ayat 2: kedaulatan di tangan rakyat. Ayat 3: negara hukum"
+       ],
+       [
+        "Pasal 27 ayat 3",
+        "Hak dan kewajiban setiap warga ikut serta dalam pembelaan negara"
+       ],
+       [
+        "Pasal 28A sampai 28J",
+        "Hak asasi manusia"
+       ],
+       [
+        "Pasal 29",
+        "Negara berdasar Ketuhanan Yang Maha Esa dan jaminan kemerdekaan beragama"
+       ],
+       [
+        "Pasal 30",
+        "Pertahanan dan keamanan negara (sistem pertahanan dan keamanan rakyat semesta)"
+       ],
+       [
+        "Pasal 31",
+        "Pendidikan"
+       ],
+       [
+        "Pasal 33",
+        "Perekonomian dan penguasaan sumber daya oleh negara"
+       ],
+       [
+        "Pasal 36A",
+        "Lambang negara Garuda Pancasila dengan semboyan Bhinneka Tunggal Ika"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Untuk lembaga negara, ingat bahwa MPR beranggotakan anggota DPR dan anggota DPD. Lembaga lain yang sering ditanya: Presiden, Mahkamah Agung, Mahkamah Konstitusi, Badan Pemeriksa Keuangan, dan Komisi Yudisial. Fokuskan pada tugas pokok masing-masing."
+     ]
+    },
+    {
+     "heading": "NKRI dan Bhinneka Tunggal Ika",
+     "paragraphs": [
+      "NKRI menegaskan bahwa Indonesia adalah negara kesatuan, bukan serikat. Wawasan Nusantara memandang wilayah Indonesia sebagai satu kesatuan utuh darat, laut, dan udara. Salah satu tonggaknya adalah Deklarasi Djuanda pada 13 Desember 1957.",
+      "Semboyan Bhinneka Tunggal Ika diambil dari Kakawin Sutasoma karya Mpu Tantular pada masa Majapahit. Artinya berbeda-beda tetapi tetap satu. Maknanya menghargai keberagaman dalam bingkai persatuan, bukan menyeragamkan perbedaan."
+     ]
+    },
+    {
+     "heading": "Cara belajar yang efisien",
+     "steps": [
+      "Mulai dari UUD 1945 dan Pancasila karena frekuensi soalnya paling tinggi.",
+      "Buat kartu tanya-jawab untuk pasal kunci dan tanggal penting; ulang tiap hari beberapa menit.",
+      "Untuk soal sikap integritas dan bela negara, pilih tindakan yang menaati aturan, jujur, dan mengutamakan kepentingan umum.",
+      "Setelah tiap sesi belajar, kerjakan 10 soal TWK di simulasi dan baca pembahasannya."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Mengira Piagam Jakarta adalah rumusan final dasar negara",
+     "why": "Rumusan yang berlaku ditetapkan PPKI pada 18 Agustus 1945.",
+     "fix": "Ingat urutan 1 Juni, 22 Juni, lalu 18 Agustus 1945."
+    },
+    {
+     "wrong": "Tertukar Pasal 27 ayat 3 dengan Pasal 30",
+     "why": "Keduanya sama-sama bicara pertahanan, tetapi Pasal 27 ayat 3 tentang hak dan kewajiban warga, Pasal 30 tentang sistem pertahanan dan keamanan.",
+     "fix": "Hubungkan Pasal 27 dengan warga negara dan Pasal 30 dengan sistem pertahanan negara."
+    },
+    {
+     "wrong": "Memaknai Bhinneka Tunggal Ika sebagai penyeragaman",
+     "why": "Semboyan ini justru mengakui perbedaan.",
+     "fix": "Pilih opsi yang menekankan persatuan dalam keberagaman."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Apa lambang sila ketiga?",
+     "a": "Pohon beringin, yang melambangkan Persatuan Indonesia."
+    },
+    {
+     "q": "Berapa kali UUD 1945 diamandemen, dan kapan?",
+     "a": "Empat kali, pada tahun 1999, 2000, 2001, dan 2002."
+    },
+    {
+     "q": "Siapa pengarang Kakawin Sutasoma yang memuat Bhinneka Tunggal Ika?",
+     "a": "Mpu Tantular."
+    },
+    {
+     "q": "Pasal berapa yang mengatur bela negara sebagai hak dan kewajiban warga?",
+     "a": "Pasal 27 ayat 3 UUD NRI 1945."
+    }
+   ],
+   "summary": [
+    "TWK memuat pilar negara, nasionalisme, integritas, bela negara, dan Bahasa Indonesia.",
+    "Hafalkan sila beserta lambangnya dan urutan sejarah rumusan Pancasila.",
+    "UUD 1945 ditetapkan 18 Agustus 1945 dan diamandemen empat kali (1999 sampai 2002)."
+   ],
+   "next": "Berikutnya TIU: hitungan, bahasa, dan penalaran logika."
+  },
+  "3": {
+   "v": 1,
+   "minutes": 16,
+   "prereq": "Bisa berhitung dasar (tambah, kurang, kali, bagi, pecahan, persen). Rumus-rumus penting dijelaskan di bawah.",
+   "sections": [
+    {
+     "heading": "Peta TIU: tiga kelompok soal",
+     "paragraphs": [
+      "TIU terdiri atas 35 soal yang mengukur kecerdasan umum. Soalnya terbagi tiga kelompok. Di bank soal simulasi platform ini, soal terbanyak adalah deret angka, silogisme, dan berhitung, jadi mulai dari sana."
+     ],
+     "table": {
+      "head": [
+       "Kelompok",
+       "Isi",
+       "Contoh"
+      ],
+      "rows": [
+       [
+        "Verbal",
+        "Sinonim, antonim, analogi kata",
+        "SINONIM: efektif = berhasil guna"
+       ],
+       [
+        "Numerik",
+        "Berhitung, deret, perbandingan, persen, kecepatan, pekerjaan",
+        "2, 5, 8, 11, ..."
+       ],
+       [
+        "Logika dan figural",
+        "Silogisme, penalaran analitis, pola gambar",
+        "Semua A adalah B"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Deret angka: kenali polanya dengan cepat",
+     "paragraphs": [
+      "Kunci deret adalah mencari hubungan antarsuku dengan urutan tetap: pertama cek selisih, lalu rasio, lalu selisih dari selisih, baru pola khusus seperti kuadrat atau selang-seling.",
+      "Untuk deret aritmetika, suku ke-n adalah Un = a + (n - 1)b, dengan a suku pertama dan b beda. Untuk deret geometri, Un = a x r pangkat (n - 1), dengan r rasio. Contoh: pada 4, 9, 14, ... suku ke-10 adalah 4 + 9 x 5 = 49."
+     ],
+     "table": {
+      "head": [
+       "Jenis",
+       "Ciri",
+       "Contoh",
+       "Suku berikutnya"
+      ],
+      "rows": [
+       [
+        "Aritmetika",
+        "Selisih tetap",
+        "4, 9, 14, 19",
+        "24"
+       ],
+       [
+        "Geometri",
+        "Rasio tetap",
+        "3, 6, 12, 24",
+        "48"
+       ],
+       [
+        "Selisih bertingkat",
+        "Selisih bertambah 1",
+        "2, 3, 5, 8, 12",
+        "17"
+       ],
+       [
+        "Kuadrat",
+        "Bilangan berpangkat dua",
+        "1, 4, 9, 16, 25",
+        "36"
+       ],
+       [
+        "Selang-seling",
+        "Dua deret bergantian",
+        "2, 5, 4, 7, 6, 9",
+        "8"
+       ]
+      ]
+     },
+     "note": {
+      "label": "Cek selang-seling",
+      "text": "Kalau selisih antarsuku naik-turun tidak beraturan, pisahkan suku ganjil dan genap. Pada 2, 5, 4, 7, 6, 9 suku ganjilnya 2, 4, 6 dan suku genapnya 5, 7, 9, masing-masing bertambah 2."
+     }
+    },
+    {
+     "heading": "Hitungan cepat: persen, perbandingan, kecepatan, pekerjaan",
+     "paragraphs": [
+      "Soal cerita TIU jarang rumit, tetapi mudah salah karena terburu-buru. Tuliskan apa yang diketahui, pilih rumus, lalu hitung dengan angka yang dibulatkan agar mudah."
+     ],
+     "table": {
+      "head": [
+       "Jenis",
+       "Rumus atau cara",
+       "Contoh dan jawaban"
+      ],
+      "rows": [
+       [
+        "Persen",
+        "Harga akhir = harga x (100 - diskon)%",
+        "Diskon 20% dari Rp250.000, bayar Rp200.000"
+       ],
+       [
+        "Perbandingan",
+        "Total dibagi jumlah bagian, kali bagian",
+        "3 : 5 dari 40: 15 dan 25"
+       ],
+       [
+        "Kecepatan",
+        "Jarak = kecepatan x waktu",
+        "60 km/jam selama 2,5 jam = 150 km"
+       ],
+       [
+        "Pekerjaan bersama",
+        "Jumlahkan kecepatan kerja (1/t)",
+        "A 6 hari, B 3 hari: 1/6 + 1/3 = 1/2, selesai 2 hari"
+       ],
+       [
+        "Rata-rata",
+        "Total = rata-rata x banyak data",
+        "Rata-rata 5 nilai 80; agar 6 nilai rata-rata 82 butuh nilai 92"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Verbal: sinonim, antonim, analogi",
+     "paragraphs": [
+      "Perkaya kosakata baku dengan membaca dan membuka KBBI untuk kata yang belum kamu kenal. Untuk analogi, tentukan hubungan antara pasangan pertama (fungsi, bagian dan keseluruhan, sebab dan akibat, tempat), lalu terapkan ke pasangan kedua. Contoh: Dokter : Rumah sakit = Guru : Sekolah, hubungannya orang dengan tempat kerjanya.",
+      "Jika tidak tahu arti suatu kata, susun kalimat pendek dengan tiap opsi lalu rasakan mana yang paling wajar. Cara ini sering lebih cepat daripada menebak."
+     ]
+    },
+    {
+     "heading": "Logika: silogisme dan penalaran",
+     "paragraphs": [
+      "Silogisme menarik kesimpulan dari dua premis. Kesimpulan hanya benar kalau mengikuti dari premis, bukan karena terdengar masuk akal."
+     ],
+     "table": {
+      "head": [
+       "Bentuk",
+       "Premis",
+       "Kesimpulan sah"
+      ],
+      "rows": [
+       [
+        "Silogisme biasa",
+        "Semua A adalah B. Semua B adalah C.",
+        "Semua A adalah C"
+       ],
+       [
+        "Modus ponens",
+        "Jika p maka q. p benar.",
+        "q benar"
+       ],
+       [
+        "Modus tollens",
+        "Jika p maka q. q tidak benar.",
+        "p tidak benar"
+       ],
+       [
+        "Tidak sah",
+        "Semua dokter pintar. Beberapa orang pintar musisi.",
+        "Tidak dapat disimpulkan bahwa dokter adalah musisi"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Jebakan klasik adalah mengira bahwa dari Jika p maka q dan q benar, p pasti benar. Itu tidak sah, sebab q bisa terjadi karena sebab lain."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Langsung menghitung semua soal cerita dari nol",
+     "why": "Menghabiskan waktu dan rawan salah hitung.",
+     "fix": "Hafalkan pola umum (persen, perbandingan, pekerjaan) lalu terapkan rumusnya."
+    },
+    {
+     "wrong": "Memaksa menjawab soal deret yang tidak ketemu polanya",
+     "why": "Satu soal bisa menyedot waktu beberapa soal lain.",
+     "fix": "Setelah cek selisih, rasio, dan selang-seling, lewati dulu dan kembali nanti."
+    },
+    {
+     "wrong": "Menyimpulkan silogisme berdasarkan pengetahuan umum",
+     "why": "Soal logika hanya menilai bentuk premisnya.",
+     "fix": "Anggap premis benar, lalu tanyakan apakah kesimpulan pasti mengikuti."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Suku berikutnya dari 3, 6, 12, 24?",
+     "a": "48, karena rasio tetap 2."
+    },
+    {
+     "q": "Dua orang menyelesaikan pekerjaan: A sendiri 6 hari, B sendiri 3 hari. Berapa hari kalau bersama?",
+     "a": "2 hari, sebab 1/6 + 1/3 = 1/2 pekerjaan per hari."
+    },
+    {
+     "q": "Jika hujan maka jalan basah. Jalan tidak basah. Kesimpulannya?",
+     "a": "Tidak hujan (modus tollens)."
+    },
+    {
+     "q": "Harga Rp250.000 didiskon 20%. Berapa yang dibayar?",
+     "a": "Rp200.000."
+    }
+   ],
+   "summary": [
+    "Deret: cek selisih, rasio, selisih bertingkat, kuadrat, lalu selang-seling.",
+    "Hafal pola hitung cepat: persen, perbandingan, kecepatan, pekerjaan, rata-rata.",
+    "Silogisme: kesimpulan harus pasti mengikuti dari premis."
+   ],
+   "next": "Lanjut ke TKP, subtes yang butuh skor tertinggi untuk lolos."
+  },
+  "4": {
+   "v": 1,
+   "minutes": 12,
+   "prereq": "Tidak ada. Yang kamu butuhkan adalah kemampuan membayangkan dirimu bekerja sebagai pelayan publik.",
+   "sections": [
+    {
+     "heading": "Cara kerja skor TKP",
+     "paragraphs": [
+      "TKP berisi 45 soal situasi kerja. Setiap soal punya lima opsi dan setiap opsi bernilai 1 sampai 5 sesuai seberapa tepat sikapnya sebagai ASN. Tidak ada opsi yang salah mutlak, tetapi satu opsi paling tepat bernilai 5.",
+      "TKP punya skor maksimal terbesar, yaitu 225. Ambang batas tahun 2024 sebesar 166 berarti kamu perlu rata-rata sekitar 3,7 per soal (166 dibagi 45), jadi hampir semua jawabanmu harus berada di opsi bernilai tinggi."
+     ]
+    },
+    {
+     "heading": "Enam aspek TKP",
+     "table": {
+      "head": [
+       "Aspek",
+       "Sikap yang diharapkan"
+      ],
+      "rows": [
+       [
+        "Pelayanan publik",
+        "Ramah, cepat, adil, dan menyelesaikan kebutuhan warga"
+       ],
+       [
+        "Jejaring kerja",
+        "Membangun kerja sama dan komunikasi lintas unit"
+       ],
+       [
+        "Sosial budaya",
+        "Menghormati perbedaan dan tidak diskriminatif"
+       ],
+       [
+        "Teknologi informasi dan komunikasi",
+        "Memanfaatkan teknologi untuk bekerja dan menjaga keamanan data"
+       ],
+       [
+        "Profesionalisme",
+        "Disiplin, bertanggung jawab, dan taat aturan"
+       ],
+       [
+        "Anti radikalisme",
+        "Setia pada Pancasila, toleran, dan menolak paham yang memecah bangsa"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Di bank soal simulasi platform ini, soal profesionalisme adalah yang paling banyak, diikuti TIK dan pelayanan publik."
+     ]
+    },
+    {
+     "heading": "Pola opsi bernilai tinggi dan rendah",
+     "paragraphs": [
+      "Sebagian besar soal TKP bisa dijawab dengan menanyakan satu hal: apa tindakan paling bertanggung jawab yang tetap sesuai aturan? Contoh berikut menunjukkan bagaimana opsi disusun dari terbaik ke terburuk."
+     ],
+     "table": {
+      "head": [
+       "Situasi: warga datang ke loketmu untuk layanan di luar wewenang unitmu",
+       "Nilai"
+      ],
+      "rows": [
+       [
+        "Menjelaskan dengan ramah, mengantar ke unit berwenang, dan memastikan warga terlayani",
+        "5"
+       ],
+       [
+        "Memberi tahu unit yang berwenang beserta lokasinya",
+        "4"
+       ],
+       [
+        "Mengatakan bahwa itu bukan wewenang unitmu",
+        "3"
+       ],
+       [
+        "Meminta warga bertanya ke tempat lain",
+        "2"
+       ],
+       [
+        "Mengabaikan warga",
+        "1"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Perhatikan polanya: nilai naik bila tindakan lebih proaktif, lebih membantu, dan tetap dalam aturan. Opsi bernilai rendah biasanya pasif, melempar tanggung jawab, atau melanggar prosedur."
+     ]
+    },
+    {
+     "heading": "ASN BerAKHLAK sebagai kacamata",
+     "paragraphs": [
+      "ASN memiliki nilai dasar BerAKHLAK: Berorientasi pelayanan, Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif. Gunakan nilai ini untuk menimbang opsi.",
+      "Jangan tertukar dengan AKHLAK pada BUMN (Amanah, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif). Sekilas mirip, tetapi nilai pertama ASN adalah berorientasi pelayanan dan nilai kedua adalah akuntabel."
+     ]
+    },
+    {
+     "heading": "Strategi mengerjakan",
+     "steps": [
+      "Baca situasi dan semua opsi sebelum memilih; opsi terbaik sering ada di akhir.",
+      "Buang opsi yang melanggar aturan, menunda, atau menyalahkan orang lain.",
+      "Di antara sisa opsi, pilih yang paling proaktif namun tidak melampaui wewenangmu.",
+      "Jangan memikirkan satu soal terlalu lama; alokasikan sekitar 40 detik per soal."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Memilih opsi paling sopan tetapi pasif",
+     "why": "Sopan saja belum menyelesaikan masalah, nilainya cenderung menengah.",
+     "fix": "Cari opsi yang sopan sekaligus mengambil tindakan nyata."
+    },
+    {
+     "wrong": "Mengambil keputusan di luar wewenang",
+     "why": "Tindakan sepihak tanpa koordinasi melanggar prosedur.",
+     "fix": "Pilih opsi yang berkoordinasi dengan atasan atau unit terkait."
+    },
+    {
+     "wrong": "Memilih opsi yang melempar pekerjaan ke orang lain",
+     "why": "Mencerminkan kurangnya tanggung jawab.",
+     "fix": "Pilih opsi yang menyelesaikan atau memastikan tuntas."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Berapa rata-rata nilai per soal TKP yang dibutuhkan untuk ambang batas 166 (data 2024)?",
+     "a": "Sekitar 3,7, karena 166 dibagi 45 soal."
+    },
+    {
+     "q": "Sebutkan enam aspek TKP.",
+     "a": "Pelayanan publik, jejaring kerja, sosial budaya, TIK, profesionalisme, anti radikalisme."
+    },
+    {
+     "q": "Apa beda AKHLAK BUMN dan BerAKHLAK ASN?",
+     "a": "AKHLAK BUMN dimulai dari Amanah; BerAKHLAK ASN dimulai dari Berorientasi pelayanan dan Akuntabel."
+    }
+   ],
+   "summary": [
+    "Setiap opsi TKP bernilai 1 sampai 5; cari yang paling proaktif dan sesuai aturan.",
+    "Ambang batas 2024 sebesar 166 menuntut rata-rata sekitar 3,7 per soal.",
+    "Pakai nilai BerAKHLAK untuk menimbang opsi."
+   ],
+   "next": "Terakhir: strategi menembus ambang batas dan alur pendaftaran SSCASN."
+  },
+  "5": {
+   "v": 1,
+   "minutes": 12,
+   "prereq": "Sebaiknya sudah membaca topik TWK, TIU, dan TKP agar kamu paham arti skor di bawah.",
+   "sections": [
+    {
+     "heading": "Membaca ambang batas (passing grade)",
+     "paragraphs": [
+      "Lolos SKD berarti nilai setiap subtes memenuhi ambang batas, bukan hanya total yang besar. Jika satu subtes di bawah ambang, kamu tidak lolos meski subtes lain sangat tinggi.",
+      "Angka resmi ditetapkan tiap tahun melalui keputusan Menteri PANRB. Sebagai acuan belajar, ambang batas CPNS 2024 adalah sebagai berikut. Ini data 2024; pastikan angka tahun berjalan dari pengumuman resmi."
+     ],
+     "table": {
+      "head": [
+       "Subtes",
+       "Ambang batas 2024",
+       "Skor maksimal",
+       "Setara"
+      ],
+      "rows": [
+       [
+        "TWK",
+        "65",
+        "150",
+        "13 soal benar dari 30"
+       ],
+       [
+        "TIU",
+        "80",
+        "175",
+        "16 soal benar dari 35"
+       ],
+       [
+        "TKP",
+        "166",
+        "225",
+        "rata-rata sekitar 3,7 per soal"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Lolos ambang batas belum berarti lolos formasi. Peserta diperingkat berdasarkan nilai, dan kuota tiap formasi terbatas, jadi targetkan nilai di atas ambang batas."
+     ]
+    },
+    {
+     "heading": "Menentukan target belajarmu",
+     "paragraphs": [
+      "Beri jarak aman di atas ambang batas, karena nilaimu di hari ujian bisa turun akibat gugup. Angka berikut hanya target belajar, bukan ketentuan resmi."
+     ],
+     "table": {
+      "head": [
+       "Subtes",
+       "Target aman",
+       "Artinya"
+      ],
+      "rows": [
+       [
+        "TWK",
+        "90 atau lebih",
+        "18 soal benar atau lebih"
+       ],
+       [
+        "TIU",
+        "105 atau lebih",
+        "21 soal benar atau lebih"
+       ],
+       [
+        "TKP",
+        "175 atau lebih",
+        "rata-rata sekitar 3,9 per soal"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Hitung skor simulasimu per subtes lalu bandingkan dengan tabel ini. Fokuskan waktu belajar pada subtes yang paling jauh di bawah target."
+     ]
+    },
+    {
+     "heading": "Alur pendaftaran lewat SSCASN",
+     "paragraphs": [
+      "Seluruh pendaftaran CPNS dilakukan lewat portal resmi sscasn.bkn.go.id. Menurut pengumuman BKN pada November 2026, portal sudah dibuka untuk pembuatan akun, sedangkan jadwal pendaftaran dan formasi mengikuti pengumuman resmi."
+     ],
+     "steps": [
+      "Buat akun SSCASN lebih awal dan lengkapi data diri dengan benar sesuai dokumen.",
+      "Siapkan berkas dalam bentuk digital: KTP, ijazah, transkrip, pas foto, dan dokumen lain sesuai formasi.",
+      "Baca persyaratan formasi dengan teliti dan pilih formasi yang sesuai kualifikasimu; umumnya satu pelamar hanya boleh melamar satu formasi.",
+      "Ikuti seleksi administrasi, lalu SKD, lalu SKB sesuai jadwal.",
+      "Pantau pengumuman hanya lewat kanal resmi BKN dan instansi tujuan."
+     ]
+    },
+    {
+     "heading": "Waspada penipuan",
+     "paragraphs": [
+      "Seleksi CPNS tidak dipungut biaya dan tidak ada jalur titip. Siapa pun yang menjanjikan kelulusan dengan imbalan adalah penipu. Selalu periksa informasi di sscasn.bkn.go.id dan situs resmi instansi."
+     ]
+    },
+    {
+     "heading": "Rencana belajar delapan minggu",
+     "table": {
+      "head": [
+       "Minggu",
+       "Fokus"
+      ],
+      "rows": [
+       [
+        "1",
+        "Simulasi awal CAT dan catat skor per subtes"
+       ],
+       [
+        "2 sampai 3",
+        "TWK: Pancasila, UUD 1945, NKRI, sejarah"
+       ],
+       [
+        "4 sampai 5",
+        "TIU: deret, hitungan, silogisme, verbal"
+       ],
+       [
+        "6",
+        "TKP: pola opsi dan nilai BerAKHLAK"
+       ],
+       [
+        "7",
+        "Dua simulasi penuh dan analisis kesalahan"
+       ],
+       [
+        "8",
+        "Ulang topik terlemah dan atur kebiasaan hari ujian"
+       ]
+      ]
+     }
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Hanya mengejar total skor tanpa memeriksa tiap subtes",
+     "why": "Gagal di satu subtes berarti gugur.",
+     "fix": "Pantau tiga angka sekaligus: TWK, TIU, dan TKP."
+    },
+    {
+     "wrong": "Membuat akun dan melengkapi berkas di hari terakhir",
+     "why": "Portal biasanya ramai dan berkas yang kurang tidak sempat diurus.",
+     "fix": "Siapkan akun dan berkas jauh sebelum pendaftaran ditutup."
+    },
+    {
+     "wrong": "Mempercayai calo atau informasi di media sosial",
+     "why": "Informasi tidak resmi sering menyesatkan dan berpotensi penipuan.",
+     "fix": "Rujuk hanya sscasn.bkn.go.id dan situs instansi."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Berapa soal TWK yang harus benar untuk ambang batas 65 (data 2024)?",
+     "a": "13 soal, karena tiap soal benar bernilai 5."
+    },
+    {
+     "q": "Jika TWK dan TIU lolos tetapi TKP di bawah ambang batas, hasilnya?",
+     "a": "Tidak lolos SKD, sebab ambang batas berlaku untuk setiap subtes."
+    },
+    {
+     "q": "Di mana pendaftaran CPNS yang resmi dilakukan?",
+     "a": "Di portal sscasn.bkn.go.id."
+    }
+   ],
+   "summary": [
+    "Ambang batas berlaku per subtes; acuan 2024: TWK 65, TIU 80, TKP 166.",
+    "Targetkan nilai di atas ambang batas sebagai zona aman.",
+    "Daftar hanya lewat sscasn.bkn.go.id; seleksi tidak dipungut biaya."
+   ],
+   "next": "Uji kesiapanmu dengan Simulasi CPNS."
+  }
+ }
+}

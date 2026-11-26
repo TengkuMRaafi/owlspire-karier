@@ -179,7 +179,7 @@
                 </div>
             </section>
 
-            <form method="POST" action="{{ route('account.interview.answer', $session) }}" class="pn-card" id="iv-form" data-target="{{ $target }}" data-voice="{{ json_encode($persona['voice'] ?? []) }}" data-answered="{{ $count }}" data-finish-from="{{ \App\Services\Ai\InterviewCoach::MIN_TO_EVALUATE }}">
+            <form method="POST" data-no-unsaved action="{{ route('account.interview.answer', $session) }}" class="pn-card" id="iv-form" data-target="{{ $target }}" data-voice="{{ json_encode($persona['voice'] ?? []) }}" data-answered="{{ $count }}" data-finish-from="{{ \App\Services\Ai\InterviewCoach::MIN_TO_EVALUATE }}">
                 @csrf
                 <label for="iv-answer" class="text-sm font-bold">Jawabanmu</label>
                 <textarea id="iv-answer" name="answer" class="ui-input iv-ta" maxlength="1500" placeholder="Ketik jawabanmu di sini…" required>{{ old('answer') }}</textarea>
@@ -233,7 +233,7 @@
                 <h2 class="text-lg font-bold" id="iv-grade-title">Menyusun penilaian…</h2>
                 <p class="text-sm text-graphite-500" id="iv-grade-msg" style="margin-top:.5rem">Pewawancara membaca ulang seluruh percakapanmu. Biasanya hanya beberapa detik.</p>
                 @if ($errors->has('grade'))<p class="iv-err">{{ $errors->first('grade') }}</p>@endif
-                <form method="POST" action="{{ route('account.interview.grade', $session) }}" id="iv-grade-form" style="margin-top:1rem">
+                <form method="POST" data-no-unsaved action="{{ route('account.interview.grade', $session) }}" id="iv-grade-form" style="margin-top:1rem">
                     @csrf
                     <button class="btn-primary" type="submit" id="iv-grade-btn">Buat penilaian</button>
                 </form>

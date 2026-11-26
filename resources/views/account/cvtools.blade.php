@@ -111,7 +111,7 @@
                     @if (! $aiOn)
                         <p class="text-sm text-graphite-500">Penulis AI belum diaktifkan di server ini (butuh minimal satu kunci LLM di .env).</p>
                     @endif
-                    <form method="POST" action="{{ route('account.cvtools.improve') }}" data-ct-form>
+                    <form method="POST" data-no-unsaved action="{{ route('account.cvtools.improve') }}" data-ct-form>
                         @csrf
                         <div class="ct-grid">
                             <div class="ui-field"><label for="ct-role">Posisi yang ingin dilamar</label><input id="ct-role" name="role" class="ui-input" maxlength="120" value="{{ old('role', $prefill['role']) }}" placeholder="mis. Data Analyst" required>@error('role')<small class="text-red-700">{{ $message }}</small>@enderror</div>

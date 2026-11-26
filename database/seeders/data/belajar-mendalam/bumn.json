@@ -1,0 +1,585 @@
+{
+ "topics": {
+  "1": {
+   "v": 1,
+   "minutes": 9,
+   "prereq": "Tidak ada. Topik ini memberi peta besar sebelum kamu belajar materi tesnya.",
+   "sections": [
+    {
+     "heading": "Apa itu Rekrutmen Bersama BUMN",
+     "paragraphs": [
+      "Rekrutmen Bersama BUMN (RBB) adalah seleksi terpadu untuk banyak perusahaan BUMN sekaligus. Penyelenggaranya adalah Forum Human Capital Indonesia (FHCI) lewat portal rekrutmenbersama.fhcibumn.id. Satu akun dan satu rangkaian tes dipakai untuk melamar ke beberapa perusahaan.",
+      "Karena banyak perusahaan terlibat, persyaratan dan formasi berbeda tiap periode dan tiap posisi. Baca pengumuman periode berjalan dengan teliti, terutama batas usia, jenjang pendidikan, dan jurusan."
+     ]
+    },
+    {
+     "heading": "Tahapan seleksi",
+     "paragraphs": [
+      "Gambaran umum tahapan berikut mengikuti pola yang digunakan pada periode sebelumnya. Urutan dan jenis tes bisa berubah, jadi anggap ini peta awal dan cocokkan dengan pengumuman resmi."
+     ],
+     "table": {
+      "head": [
+       "Tahap",
+       "Isi",
+       "Yang perlu dipersiapkan"
+      ],
+      "rows": [
+       [
+        "1. Pendaftaran dan administrasi",
+        "Membuat akun, mengisi data, mengunggah berkas",
+        "Dokumen digital lengkap dan jelas"
+       ],
+       [
+        "2. Tes tahap 1",
+        "Tes Kemampuan Dasar (TKD), AKHLAK, Wawasan Kebangsaan",
+        "Verbal, numerik, logika, nilai AKHLAK, dasar negara"
+       ],
+       [
+        "3. Tes tahap 2",
+        "Bahasa Inggris dan Learning Agility",
+        "Grammar, reading, kemampuan belajar cepat"
+       ],
+       [
+        "4. Seleksi di perusahaan",
+        "Wawancara dan tes lanjutan dari perusahaan tujuan",
+        "Pemahaman posisi dan perusahaan"
+       ],
+       [
+        "5. Penetapan",
+        "Pemeriksaan akhir dan penetapan kelulusan",
+        "Kondisi kesehatan dan kelengkapan berkas"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Menyiapkan akun dan berkas",
+     "steps": [
+      "Buat akun di portal resmi dan gunakan email yang aktif serta mudah kamu akses.",
+      "Siapkan pindaian jelas untuk KTP, ijazah, transkrip nilai, pas foto, dan dokumen lain yang diminta.",
+      "Periksa ejaan nama dan nomor identitas agar sama persis dengan dokumen asli.",
+      "Lengkapi profil dan unggah berkas sebelum pendaftaran ditutup, bukan di hari terakhir."
+     ]
+    },
+    {
+     "heading": "Waspada penipuan",
+     "paragraphs": [
+      "Rekrutmen Bersama BUMN tidak memungut biaya dan tidak menerima titipan. Informasi resmi hanya dari portal FHCI dan kanal resmi perusahaan BUMN. Abaikan tawaran jalur dalam dari siapa pun."
+     ]
+    },
+    {
+     "heading": "Rencana persiapan delapan minggu",
+     "table": {
+      "head": [
+       "Minggu",
+       "Fokus"
+      ],
+      "rows": [
+       [
+        "1 sampai 2",
+        "TKD: hitungan, deret, logika"
+       ],
+       [
+        "3",
+        "Wawasan kebangsaan dan Pasal 33 UUD 1945"
+       ],
+       [
+        "4",
+        "AKHLAK: definisi dan penerapan"
+       ],
+       [
+        "5 sampai 6",
+        "Bahasa Inggris: grammar dan reading"
+       ],
+       [
+        "7",
+        "Learning agility: siapkan contoh pengalaman"
+       ],
+       [
+        "8",
+        "Simulasi penuh dan perbaikan titik lemah"
+       ]
+      ]
+     }
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Baru menyiapkan berkas saat pendaftaran hampir ditutup",
+     "why": "Dokumen yang kurang atau buram bisa membuat pendaftaran tertolak.",
+     "fix": "Siapkan seluruh berkas digital jauh hari."
+    },
+    {
+     "wrong": "Mengikuti informasi dari grup atau akun tidak resmi",
+     "why": "Jadwal dan syarat sering salah atau dipakai untuk penipuan.",
+     "fix": "Rujuk hanya rekrutmenbersama.fhcibumn.id."
+    },
+    {
+     "wrong": "Fokus belajar hanya satu jenis tes",
+     "why": "Setiap tahap punya penilaian sendiri dan bisa menggugurkan.",
+     "fix": "Bagi waktu belajar ke semua jenis tes."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Siapa penyelenggara Rekrutmen Bersama BUMN?",
+     "a": "Forum Human Capital Indonesia (FHCI), lewat portal rekrutmenbersama.fhcibumn.id."
+    },
+    {
+     "q": "Apakah rekrutmen ini dipungut biaya?",
+     "a": "Tidak. Waspadai pihak yang meminta biaya atau menjanjikan jalur dalam."
+    },
+    {
+     "q": "Mengapa harus cek pengumuman tiap periode?",
+     "a": "Persyaratan, formasi, dan jenis tes bisa berubah dari satu periode ke periode lain."
+    }
+   ],
+   "summary": [
+    "RBB diselenggarakan FHCI lewat portal resmi rekrutmenbersama.fhcibumn.id.",
+    "Pola umum: administrasi, tes tahap 1, tes tahap 2, seleksi perusahaan.",
+    "Siapkan berkas lebih awal dan waspadai penipuan."
+   ],
+   "next": "Lanjut ke TKD dan Wawasan Kebangsaan."
+  },
+  "2": {
+   "v": 1,
+   "minutes": 14,
+   "prereq": "Bisa berhitung dasar. Jika belum membaca topik TIU di jalur CPNS, topik itu membantu karena pola soalnya mirip.",
+   "sections": [
+    {
+     "heading": "Apa yang diuji di TKD",
+     "paragraphs": [
+      "Tes Kemampuan Dasar (TKD) mengukur kemampuan verbal, numerik, dan logika dalam waktu terbatas. Di bank soal simulasi BUMN platform ini, soal numerik berbentuk hitungan cerita sehari-hari seperti biaya pengiriman, pecahan, dan persen."
+     ],
+     "table": {
+      "head": [
+       "Kelompok",
+       "Isi",
+       "Fokus belajar"
+      ],
+      "rows": [
+       [
+        "Verbal",
+        "Sinonim, antonim, pemahaman bacaan",
+        "Kosakata baku dan ide pokok"
+       ],
+       [
+        "Numerik",
+        "Persen, perbandingan, pecahan, kecepatan",
+        "Pola hitung cepat"
+       ],
+       [
+        "Logika",
+        "Silogisme, penalaran, deret",
+        "Bentuk premis dan pola"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Numerik: pola yang sering muncul",
+     "paragraphs": [
+      "Soal numerik TKD jarang menuntut rumus rumit. Yang membedakan adalah kecepatan dan ketelitian, serta kemampuan menghindari jebakan."
+     ],
+     "table": {
+      "head": [
+       "Contoh soal",
+       "Penyelesaian",
+       "Jawaban"
+      ],
+      "rows": [
+       [
+        "Berat paket 2,5 kg, biaya Rp8.000/kg",
+        "2,5 x 8.000",
+        "Rp20.000"
+       ],
+       [
+        "x/4 = 3/12",
+        "3/12 disederhanakan menjadi 1/4",
+        "x = 1"
+       ],
+       [
+        "Harga naik 10% lalu turun 10%",
+        "100 menjadi 110, lalu 110 x 0,9",
+        "99, bukan 100"
+       ],
+       [
+        "Pergi 60 km/jam, pulang 40 km/jam, jarak sama",
+        "2 x 60 x 40 : (60 + 40)",
+        "48 km/jam, bukan 50"
+       ]
+      ]
+     },
+     "note": {
+      "label": "Dua jebakan klasik",
+      "text": "Kenaikan lalu penurunan persen yang sama tidak mengembalikan ke harga awal, dan kecepatan rata-rata pulang-pergi bukan rata-rata hitung dari dua kecepatan."
+     }
+    },
+    {
+     "heading": "Logika dan verbal",
+     "paragraphs": [
+      "Untuk logika, ingat modus tollens: jika p maka q, dan q tidak terjadi, maka p tidak terjadi. Contoh: jika hujan maka jalan basah; jalan tidak basah; kesimpulannya tidak hujan.",
+      "Untuk verbal, baca bacaan dengan mencari ide pokok di kalimat pertama dan terakhir paragraf, lalu cek opsi yang paling sesuai dengan isi teks, bukan dengan pengetahuan pribadimu."
+     ]
+    },
+    {
+     "heading": "Wawasan kebangsaan untuk calon pegawai BUMN",
+     "paragraphs": [
+      "Tes wawasan kebangsaan menguji Pancasila, UUD 1945, NKRI, dan Bhinneka Tunggal Ika. Materi dasarnya sama dengan TWK; ulang topik TWK di jalur CPNS.",
+      "Khusus untuk BUMN, perhatikan Pasal 33 UUD 1945. Ayat 1 menyebut perekonomian disusun sebagai usaha bersama berdasar asas kekeluargaan. Ayat 2 menyatakan cabang produksi yang penting bagi negara dan menguasai hajat hidup orang banyak dikuasai negara. Ayat 3 menyatakan bumi, air, dan kekayaan alam dikuasai negara untuk sebesar-besarnya kemakmuran rakyat."
+     ]
+    },
+    {
+     "heading": "Mengatur waktu",
+     "steps": [
+      "Kerjakan soal yang kamu yakini lebih dulu, lewati yang membutuhkan lebih dari satu menit.",
+      "Tulis angka antara di kertas coret agar tidak salah hitung.",
+      "Sisakan beberapa menit di akhir untuk mengisi soal yang masih kosong."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Menganggap naik 10% lalu turun 10% kembali ke harga awal",
+     "why": "Persentase kedua dihitung dari harga yang sudah berubah.",
+     "fix": "Hitung bertahap: 100, 110, lalu 99."
+    },
+    {
+     "wrong": "Merata-ratakan kecepatan pergi dan pulang secara langsung",
+     "why": "Waktu tempuh kedua perjalanan berbeda, sehingga rata-rata hitung tidak tepat.",
+     "fix": "Pakai jarak total dibagi waktu total, atau rumus 2ab/(a+b) untuk jarak sama."
+    },
+    {
+     "wrong": "Memilih jawaban berdasarkan pengetahuan pribadi di soal bacaan",
+     "why": "Soal menanyakan isi teks.",
+     "fix": "Dasarkan jawaban pada kalimat di bacaan."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Harga Rp100.000 naik 10% lalu turun 10%. Berapa harga akhir?",
+     "a": "Rp99.000."
+    },
+    {
+     "q": "Pergi 60 km/jam dan pulang 40 km/jam di jalur yang sama. Berapa kecepatan rata-rata?",
+     "a": "48 km/jam."
+    },
+    {
+     "q": "Pasal UUD 1945 yang paling terkait ekonomi dan BUMN?",
+     "a": "Pasal 33."
+    }
+   ],
+   "summary": [
+    "TKD menguji verbal, numerik, dan logika dengan batas waktu ketat.",
+    "Waspadai jebakan persen bertahap dan kecepatan rata-rata.",
+    "Ulang materi kebangsaan, khususnya Pasal 33 UUD 1945."
+   ],
+   "next": "Selanjutnya nilai inti BUMN: AKHLAK."
+  },
+  "3": {
+   "v": 1,
+   "minutes": 12,
+   "prereq": "Tidak ada. Setelah menonton video, baca topik ini untuk menguatkan definisi dan latihan menjawab skenario.",
+   "sections": [
+    {
+     "heading": "Mengapa AKHLAK diuji",
+     "paragraphs": [
+      "AKHLAK adalah core values (nilai inti) yang berlaku di seluruh BUMN: Amanah, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif. Perusahaan ingin memastikan calon pegawai bisa bersikap sesuai nilai itu dalam situasi kerja sehari-hari.",
+      "Di platform ini, soal AKHLAK ada dua jenis: soal definisi (Amanah artinya apa) dan soal skenario (perilaku ini mencerminkan nilai apa atau tindakan mana yang paling sesuai)."
+     ]
+    },
+    {
+     "heading": "Enam nilai dan perilaku kuncinya",
+     "table": {
+      "head": [
+       "Nilai",
+       "Makna",
+       "Contoh perilaku"
+      ],
+      "rows": [
+       [
+        "Amanah",
+        "Memegang teguh kepercayaan yang diberikan",
+        "Menepati janji, bertanggung jawab atas tugas, menjaga etika"
+       ],
+       [
+        "Kompeten",
+        "Terus belajar dan mengembangkan kapabilitas",
+        "Meningkatkan kompetensi, membantu orang lain belajar, bekerja dengan kualitas terbaik"
+       ],
+       [
+        "Harmonis",
+        "Saling peduli dan menghargai perbedaan",
+        "Menghargai siapa pun, suka menolong, menjaga suasana kerja kondusif"
+       ],
+       [
+        "Loyal",
+        "Berdedikasi dan mengutamakan kepentingan bangsa dan negara",
+        "Menjaga nama baik perusahaan, patuh pada aturan dan pimpinan sepanjang tidak melanggar hukum"
+       ],
+       [
+        "Adaptif",
+        "Terus berinovasi dan antusias menghadapi perubahan",
+        "Cepat menyesuaikan diri, proaktif, mengikuti perkembangan teknologi"
+       ],
+       [
+        "Kolaboratif",
+        "Membangun kerja sama yang sinergis",
+        "Terbuka bekerja sama, memberi ruang kontribusi pihak lain, memadukan sumber daya"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Cara menjawab soal skenario",
+     "steps": [
+      "Baca situasinya dan tebak nilai apa yang sedang diuji.",
+      "Singkirkan opsi yang melanggar aturan, menyalahkan orang lain, atau hanya menguntungkan diri sendiri.",
+      "Di antara opsi sisa, pilih yang mengambil tanggung jawab, menjaga hubungan kerja, dan mengutamakan kepentingan perusahaan.",
+      "Pilih opsi yang realistis dan konkret, bukan yang heroik dan bertindak sendirian."
+     ],
+     "paragraphs_after": [
+      "Contoh: dua rekan satu tim berselisih sehingga proyek tertunda. Jawaban paling kuat biasanya mempertemukan keduanya, mendengarkan masing-masing, dan mencari solusi bersama. Ini menggabungkan nilai Harmonis dan Kolaboratif. Opsi yang membiarkan atau langsung mengadu ke atasan tanpa mencoba menengahi nilainya lebih rendah."
+     ]
+    },
+    {
+     "heading": "Membedakan nilai yang mirip",
+     "table": {
+      "head": [
+       "Pasangan",
+       "Pembeda cepat"
+      ],
+      "rows": [
+       [
+        "Amanah dan Loyal",
+        "Amanah soal tanggung jawab atas kepercayaan; Loyal soal dedikasi dan menjaga kepentingan bangsa serta perusahaan"
+       ],
+       [
+        "Harmonis dan Kolaboratif",
+        "Harmonis soal sikap saling menghargai; Kolaboratif soal kerja sama yang menghasilkan sinergi"
+       ],
+       [
+        "Kompeten dan Adaptif",
+        "Kompeten soal menambah kemampuan; Adaptif soal menyesuaikan diri dan berinovasi menghadapi perubahan"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Jangan tertukar dengan BerAKHLAK ASN",
+     "paragraphs": [
+      "Pegawai negeri (ASN) memiliki nilai BerAKHLAK yang dimulai dari Berorientasi Pelayanan dan Akuntabel. Di tes BUMN, gunakan AKHLAK dengan nilai pertama Amanah."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Hanya menghafal definisi tanpa latihan skenario",
+     "why": "Banyak soal meminta kamu menerapkan nilai pada situasi.",
+     "fix": "Latih skenario dan tulis nilai mana yang diuji."
+    },
+    {
+     "wrong": "Memilih jawaban yang langsung melapor ke atasan untuk semua masalah",
+     "why": "Pegawai yang baik berusaha menyelesaikan masalah di level yang tepat.",
+     "fix": "Pilih opsi yang bertanggung jawab dan berkoordinasi."
+    },
+    {
+     "wrong": "Memilih tindakan heroik seorang diri",
+     "why": "Nilai Kolaboratif dan Harmonis menekankan kerja tim.",
+     "fix": "Pilih tindakan yang melibatkan pihak lain secara tepat."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Apa kepanjangan AKHLAK?",
+     "a": "Amanah, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif."
+    },
+    {
+     "q": "Perilaku membangun kerja sama yang sinergis mencerminkan nilai apa?",
+     "a": "Kolaboratif."
+    },
+    {
+     "q": "Terus belajar dan mengembangkan kapabilitas adalah makna nilai apa?",
+     "a": "Kompeten."
+    }
+   ],
+   "summary": [
+    "AKHLAK = Amanah, Kompeten, Harmonis, Loyal, Adaptif, Kolaboratif.",
+    "Skenario: pilih opsi yang bertanggung jawab, taat aturan, dan kolaboratif.",
+    "Jangan tertukar dengan BerAKHLAK milik ASN."
+   ],
+   "next": "Berikutnya Bahasa Inggris dan Learning Agility."
+  },
+  "4": {
+   "v": 1,
+   "minutes": 14,
+   "prereq": "Memahami kalimat bahasa Inggris sederhana. Contoh di bawah memakai kalimat singkat.",
+   "sections": [
+    {
+     "heading": "Format dan strategi umum",
+     "paragraphs": [
+      "Tes bahasa Inggris pada seleksi BUMN umumnya berupa pilihan ganda tentang grammar (struktur kalimat), vocabulary, dan reading comprehension. Format dan durasi dapat berubah tiap periode, jadi cocokkan dengan pengumuman. Soal di simulasi platform ini banyak menguji tenses dan conditional sentence."
+     ]
+    },
+    {
+     "heading": "Grammar yang paling sering muncul",
+     "table": {
+      "head": [
+       "Pokok",
+       "Pola",
+       "Contoh benar"
+      ],
+      "rows": [
+       [
+        "Future perfect",
+        "will have + verb 3",
+        "The manager will have finished the project by tomorrow."
+       ],
+       [
+        "Conditional type 1",
+        "If + present, will + verb",
+        "If it rains, we will cancel the event."
+       ],
+       [
+        "Conditional type 2",
+        "If + past (were), would + verb",
+        "If I were you, I would study harder."
+       ],
+       [
+        "Conditional type 3",
+        "If + past perfect, would have + verb 3",
+        "If she had studied, she would have passed."
+       ],
+       [
+        "Passive voice",
+        "be + verb 3",
+        "The report was submitted by the team."
+       ],
+       [
+        "Subject-verb agreement",
+        "The number of = tunggal; A number of = jamak",
+        "The number of applicants is increasing. A number of applicants are waiting."
+       ]
+      ]
+     },
+     "note": {
+      "label": "Were untuk semua subjek",
+      "text": "Pada conditional type 2, were dipakai untuk semua subjek, termasuk I, he, dan she."
+     }
+    },
+    {
+     "heading": "Strategi reading",
+     "steps": [
+      "Baca pertanyaan lebih dulu agar kamu tahu apa yang dicari.",
+      "Baca kalimat pertama tiap paragraf untuk menangkap ide pokok.",
+      "Cari jawaban di teks dan cocokkan dengan opsi; hindari opsi yang terlalu ekstrem atau tidak disebut dalam teks.",
+      "Untuk soal kosakata dalam konteks, ganti kata itu dengan tiap opsi dan lihat mana yang paling cocok."
+     ]
+    },
+    {
+     "heading": "Learning agility",
+     "paragraphs": [
+      "Learning agility adalah kemampuan belajar cepat dari pengalaman, lalu menerapkannya di situasi baru atau yang belum pernah dihadapi. Perusahaan menilainya untuk mengetahui seberapa cepat kamu beradaptasi dengan perubahan.",
+      "Kerangka yang umum dipakai membagi learning agility ke dalam beberapa dimensi. Gunakan sebagai cermin untuk menyiapkan contoh nyata."
+     ],
+     "table": {
+      "head": [
+       "Dimensi",
+       "Artinya",
+       "Contoh bukti dari pengalamanmu"
+      ],
+      "rows": [
+       [
+        "Mental agility",
+        "Berpikir kritis dan melihat masalah dari sudut baru",
+        "Kamu menemukan cara lebih sederhana untuk menyelesaikan tugas"
+       ],
+       [
+        "People agility",
+        "Bekerja baik dengan beragam orang",
+        "Kamu berhasil bekerja sama dengan tim yang berbeda latar belakang"
+       ],
+       [
+        "Change agility",
+        "Nyaman dan proaktif menghadapi perubahan",
+        "Kamu cepat menguasai alat atau sistem baru"
+       ],
+       [
+        "Results agility",
+        "Menghasilkan capaian dalam situasi baru",
+        "Kamu meraih target di peran yang belum pernah kamu jalani"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Siapkan dua atau tiga cerita dengan pola situasi, tindakan, hasil, dan pelajaran. Tunjukkan bahwa kamu belajar dari kesalahan dan menerapkannya di kesempatan berikutnya."
+     ]
+    },
+    {
+     "heading": "Rencana latihan empat minggu",
+     "table": {
+      "head": [
+       "Minggu",
+       "Latihan"
+      ],
+      "rows": [
+       [
+        "1",
+        "Tenses dan subject-verb agreement, 15 soal per hari"
+       ],
+       [
+        "2",
+        "Conditional dan passive voice"
+       ],
+       [
+        "3",
+        "Reading: dua teks pendek per hari dengan waktu terbatas"
+       ],
+       [
+        "4",
+        "Simulasi penuh dan siapkan cerita learning agility"
+       ]
+      ]
+     }
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Memilih jawaban grammar berdasarkan rasa bukan pola",
+     "why": "Perasaan bisa meleset pada pola seperti future perfect dan conditional.",
+     "fix": "Kenali pola dan tulis rumusnya sebelum menjawab."
+    },
+    {
+     "wrong": "Menjawab soal reading dari pengetahuan sendiri",
+     "why": "Jawaban harus bersumber dari teks.",
+     "fix": "Tunjuk kalimat di teks yang mendukung jawabanmu."
+    },
+    {
+     "wrong": "Menyebut sifat umum tanpa contoh saat membahas learning agility",
+     "why": "Penilai butuh bukti nyata.",
+     "fix": "Siapkan cerita konkret dengan hasil yang jelas."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Lengkapi: If I ___ you, I would study harder.",
+     "a": "were, karena conditional type 2 memakai were untuk semua subjek."
+    },
+    {
+     "q": "Pola future perfect?",
+     "a": "will have + verb 3."
+    },
+    {
+     "q": "Apa yang diukur learning agility?",
+     "a": "Kemampuan belajar cepat dari pengalaman dan menerapkannya di situasi baru."
+    }
+   ],
+   "summary": [
+    "Grammar yang sering muncul: tenses, conditional, passive, subject-verb agreement.",
+    "Reading: cari ide pokok dan dasarkan jawaban pada teks.",
+    "Learning agility: siapkan cerita nyata yang menunjukkan belajar dan beradaptasi."
+   ],
+   "next": "Uji dirimu dengan Simulasi BUMN."
+  }
+ }
+}

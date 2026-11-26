@@ -54,7 +54,7 @@
                     title="Jatah analisis CV hari ini habis"
                     :lead="'Kamu sudah memakai '.($quotaLimit ?? 0).' analisis CV hari ini. Jatah terisi lagi otomatis saat hari berganti.'"
                     :keep="$profile ? 'Hasil analisis CV terakhirmu tetap bisa dilihat di bawah.' : null">
-                <form method="POST" action="{{ route('cv.store') }}" enctype="multipart/form-data" class="cv-form" data-cv-form data-cv-pdfjs="{{ rtrim(parse_url(asset('vendor/pdfjs'), PHP_URL_PATH), '/') }}/">
+                <form method="POST" data-no-unsaved action="{{ route('cv.store') }}" enctype="multipart/form-data" class="cv-form" data-cv-form data-cv-pdfjs="{{ rtrim(parse_url(asset('vendor/pdfjs'), PHP_URL_PATH), '/') }}/">
                     @csrf
                     @php $cvType = old('cv_type', $ats ? 'ats' : 'standard'); @endphp
                     <fieldset class="cv-type">

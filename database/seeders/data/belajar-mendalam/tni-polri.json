@@ -1,0 +1,726 @@
+{
+ "topics": {
+  "1": {
+   "v": 1,
+   "minutes": 11,
+   "prereq": "Tidak ada. Topik ini adalah peta awal sebelum kamu menentukan jalur yang cocok.",
+   "sections": [
+    {
+     "heading": "Peta jalur Polri dan TNI",
+     "paragraphs": [
+      "Seleksi Polri dan TNI dibuka lewat beberapa jalur sesuai pangkat dan jenjang pendidikan. Persyaratan tiap jalur berbeda dan berubah dari tahun ke tahun, jadi pakai tabel ini hanya sebagai gambaran dan cocokkan dengan pengumuman resmi."
+     ],
+     "table": {
+      "head": [
+       "Institusi",
+       "Jalur umum",
+       "Gambaran"
+      ],
+      "rows": [
+       [
+        "Polri",
+        "Akpol",
+        "Pendidikan calon perwira bagi lulusan SMA atau sederajat"
+       ],
+       [
+        "Polri",
+        "Bintara dan Tamtama",
+        "Jalur pembentukan anggota pada jenjang bintara dan tamtama"
+       ],
+       [
+        "Polri",
+        "Jalur sarjana (misalnya SIPSS)",
+        "Bagi lulusan sarjana dengan kualifikasi tertentu"
+       ],
+       [
+        "TNI",
+        "Akademi militer (Akmil, AAL, AAU)",
+        "Pendidikan calon perwira tiga matra"
+       ],
+       [
+        "TNI",
+        "Perwira Prajurit Karier",
+        "Bagi lulusan sarjana dengan jurusan tertentu"
+       ],
+       [
+        "TNI",
+        "Bintara dan Tamtama Prajurit Karier",
+        "Jalur pembentukan anggota pada jenjang bintara dan tamtama"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Pendaftaran Polri dilakukan lewat penerimaan.polri.go.id. Untuk TNI, ikuti pengumuman di kanal resmi tni.mil.id dan satuan matra masing-masing."
+     ]
+    },
+    {
+     "heading": "Tahapan seleksi secara umum",
+     "paragraphs": [
+      "Nama dan urutan tahap bisa berbeda tiap jalur dan tahun. Pola umum berikut membantumu memahami apa yang menunggu di depan."
+     ],
+     "table": {
+      "head": [
+       "Tahap",
+       "Yang dinilai"
+      ],
+      "rows": [
+       [
+        "Administrasi",
+        "Kelengkapan dan keabsahan dokumen"
+       ],
+       [
+        "Kesehatan",
+        "Kondisi fisik dan kesehatan, termasuk pemeriksaan dokter"
+       ],
+       [
+        "Kesamaptaan jasmani",
+        "Kekuatan, daya tahan, dan kelincahan"
+       ],
+       [
+        "Psikologi",
+        "Kecerdasan, kecermatan, dan kepribadian"
+       ],
+       [
+        "Akademik",
+        "Pengetahuan dan kemampuan dasar sesuai jalur"
+       ],
+       [
+        "Penentuan kelulusan akhir (pantukhir)",
+        "Penilaian gabungan seluruh tahap dan penetapan kelulusan"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Menyiapkan persyaratan dan berkas",
+     "steps": [
+      "Baca pengumuman jalur yang kamu incar dan catat syarat usia, tinggi badan, pendidikan, dan jurusan.",
+      "Cocokkan kondisi dirimu dengan syarat tersebut sebelum mulai menyiapkan berkas.",
+      "Siapkan dokumen yang umum diminta, seperti akta kelahiran, kartu keluarga, KTP, ijazah, dan dokumen lain sesuai pengumuman.",
+      "Urus dokumen yang butuh waktu lebih dulu, misalnya surat keterangan dari instansi terkait.",
+      "Periksa ulang kesesuaian nama, tanggal lahir, dan data lain di semua dokumen."
+     ]
+    },
+    {
+     "heading": "Waspada calo dan penipuan",
+     "paragraphs": [
+      "Penerimaan resmi tidak dipungut biaya dan tidak ada jalur titipan. Siapa pun yang menjanjikan kelulusan dengan imbalan uang adalah penipu. Daftar hanya lewat kanal resmi dan jangan menyerahkan uang atau dokumen asli kepada pihak yang tidak jelas.",
+      "Jika ragu soal keaslian informasi, tanyakan langsung ke satuan resmi terdekat, misalnya Polda, Polres, atau Komando Distrik Militer di daerahmu."
+     ]
+    },
+    {
+     "heading": "Rencana persiapan paralel",
+     "paragraphs": [
+      "Karena tahapan jasmani menuntut waktu pembentukan kebugaran, mulailah dari yang paling lama. Berjalan paralel lebih baik daripada berurutan."
+     ],
+     "table": {
+      "head": [
+       "Jalur persiapan",
+       "Mulai",
+       "Kegiatan"
+      ],
+      "rows": [
+       [
+        "Fisik",
+        "Sejak sekarang",
+        "Lari bertahap, latihan kekuatan, istirahat cukup"
+       ],
+       [
+        "Akademik dan psikotes",
+        "Sejak sekarang",
+        "Latihan soal berkala dan evaluasi"
+       ],
+       [
+        "Administrasi",
+        "Beberapa bulan sebelum pendaftaran",
+        "Mengurus dokumen satu per satu"
+       ]
+      ]
+     }
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Menyiapkan berkas sebelum memastikan syarat dasar terpenuhi",
+     "why": "Tenaga terbuang jika syarat usia, tinggi badan, atau pendidikan tidak cocok.",
+     "fix": "Cek syarat dulu, baru urus berkas."
+    },
+    {
+     "wrong": "Memercayai tawaran jalur dalam",
+     "why": "Tidak ada jalur dalam di seleksi resmi dan biasanya itu penipuan.",
+     "fix": "Daftar hanya lewat portal resmi."
+    },
+    {
+     "wrong": "Menunda latihan fisik sampai pendaftaran dibuka",
+     "why": "Kebugaran dibangun berminggu-minggu, bukan beberapa hari.",
+     "fix": "Mulai latihan bertahap sejak dini."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Lewat mana pendaftaran Polri dilakukan?",
+     "a": "Lewat portal resmi penerimaan.polri.go.id."
+    },
+    {
+     "q": "Apakah seleksi resmi dipungut biaya?",
+     "a": "Tidak. Hati-hati dengan pihak yang meminta biaya atau menjanjikan kelulusan."
+    },
+    {
+     "q": "Apa kepanjangan pantukhir?",
+     "a": "Penentuan kelulusan akhir."
+    }
+   ],
+   "summary": [
+    "Jalur, syarat, dan urutan tahap berbeda tiap tahun; selalu cocokkan dengan pengumuman resmi.",
+    "Mulai persiapan fisik, akademik, dan administrasi secara paralel.",
+    "Seleksi resmi tidak dipungut biaya."
+   ],
+   "next": "Lanjut ke psikotes: tes kecerdasan."
+  },
+  "2": {
+   "v": 1,
+   "minutes": 13,
+   "prereq": "Kemampuan berhitung dasar dan kosakata bahasa Indonesia sudah cukup.",
+   "sections": [
+    {
+     "heading": "Dua bagian psikotes",
+     "paragraphs": [
+      "Di Simulasi TNI/POLRI platform ini, psikotes dibagi menjadi bagian kepribadian (pernyataan dengan skala setuju sampai tidak setuju), kecerdasan, dan kecermatan. Topik ini membahas kecerdasan dan cara menghadapi bagian kepribadian."
+     ]
+    },
+    {
+     "heading": "Tes kecerdasan: bentuk soal",
+     "paragraphs": [
+      "Kecerdasan mengukur kemampuan verbal, numerik, dan figural dengan waktu terbatas. Soal yang kamu temui di simulasi mencakup deret angka, sinonim, dan analogi. Pola soal berulang, sehingga latihan membuatmu semakin cepat mengenalinya."
+     ],
+     "table": {
+      "head": [
+       "Jenis",
+       "Contoh",
+       "Jawaban"
+      ],
+      "rows": [
+       [
+        "Deret aritmetika",
+        "7, 14, 21, 28, ...",
+        "35"
+       ],
+       [
+        "Selisih menurun",
+        "100, 90, 81, 73, ...",
+        "66 (selisih 10, 9, 8, 7)"
+       ],
+       [
+        "Geometri",
+        "2, 6, 18, 54, ...",
+        "162 (kali 3)"
+       ],
+       [
+        "Pengali naik",
+        "1, 2, 6, 24, ...",
+        "120 (kali 2, 3, 4, 5)"
+       ],
+       [
+        "Selisih berganda",
+        "3, 5, 9, 17, ...",
+        "33 (selisih 2, 4, 8, 16)"
+       ],
+       [
+        "Analogi",
+        "Pilot : Pesawat = Masinis : ...",
+        "Kereta api"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Teknik menjawab cepat",
+     "steps": [
+      "Lihat selisih dan rasio antarsuku sebelum mencoba cara lain.",
+      "Gunakan eliminasi: coret opsi yang jelas tidak mungkin lebih dulu.",
+      "Lewati soal yang menahan lebih dari satu menit dan kembali kalau waktu tersisa.",
+      "Jangan mengulang soal yang sudah kamu jawab kecuali ada alasan jelas."
+     ]
+    },
+    {
+     "heading": "Bagian kepribadian: jujur dan konsisten",
+     "paragraphs": [
+      "Pernyataan kepribadian menanyakan sikap dan kebiasaanmu, misalnya cara menghadapi kritik atau tekanan. Pernyataan yang mirip sering diulang dengan kalimat berbeda untuk melihat konsistensi, sehingga jawaban yang dibuat-buat mudah terbaca.",
+      "Jawablah jujur dan konsisten. Pahami juga nilai yang dibutuhkan di institusi ini: pengendalian emosi, disiplin, kerja sama, dan kesiapan menerima arahan. Jika kamu merasa dirimu jauh dari nilai itu, perbaiki sikapnya lewat latihan, bukan dengan memalsukan jawaban."
+     ],
+     "table": {
+      "head": [
+       "Pernyataan",
+       "Respons yang sejalan dengan tuntutan tugas"
+      ],
+      "rows": [
+       [
+        "Saya merasa nyaman memimpin tim darurat",
+        "Sangat setuju atau setuju"
+       ],
+       [
+        "Jika dikritik atasan di depan umum, saya langsung marah dan membela diri",
+        "Tidak setuju atau sangat tidak setuju"
+       ]
+      ]
+     }
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Mengerjakan soal deret dengan menebak",
+     "why": "Pola deret hampir selalu bisa ditemukan dengan selisih atau rasio.",
+     "fix": "Cek selisih, rasio, lalu selisih bertingkat."
+    },
+    {
+     "wrong": "Memberi jawaban ekstrem berlawanan pada pernyataan serupa",
+     "why": "Menunjukkan ketidakkonsistenan.",
+     "fix": "Jawab sesuai dirimu dan perhatikan kemiripan pernyataan."
+    },
+    {
+     "wrong": "Terlalu lama pada satu soal",
+     "why": "Waktu terbatas dan setiap soal bernilai sama.",
+     "fix": "Batasi sekitar satu menit lalu lanjutkan."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Suku berikutnya dari 2, 6, 18, 54?",
+     "a": "162."
+    },
+    {
+     "q": "Suku berikutnya dari 1, 2, 6, 24?",
+     "a": "120, karena dikalikan 2, 3, 4, lalu 5."
+    },
+    {
+     "q": "Mengapa jawaban kepribadian harus konsisten?",
+     "a": "Pernyataan serupa diulang untuk menguji konsistensi, jadi jawaban yang kontradiktif mudah terbaca."
+    }
+   ],
+   "summary": [
+    "Kecerdasan: deret, analogi, sinonim dengan waktu terbatas.",
+    "Cek selisih, rasio, dan pola bertingkat untuk deret.",
+    "Kepribadian: jujur, konsisten, dan paham nilai yang dituntut tugas."
+   ],
+   "next": "Berikutnya tes kecermatan."
+  },
+  "3": {
+   "v": 1,
+   "minutes": 10,
+   "prereq": "Tidak ada. Yang dibutuhkan hanya latihan rutin singkat dan ketekunan.",
+   "sections": [
+    {
+     "heading": "Apa itu tes kecermatan",
+     "paragraphs": [
+      "Tes kecermatan menilai ketelitian, konsentrasi, dan kecepatan kerja. Soalnya sederhana tetapi banyak dan harus diselesaikan dalam waktu singkat, sehingga kesalahan kecil menumpuk bila kamu kurang fokus."
+     ]
+    },
+    {
+     "heading": "Bentuk soal yang umum",
+     "paragraphs": [
+      "Di simulasi platform ini, kecermatan muncul sebagai perbandingan dua data (sama atau beda) dan pemilihan kata yang salah ejaan."
+     ],
+     "table": {
+      "head": [
+       "Bentuk",
+       "Contoh",
+       "Jawaban"
+      ],
+      "rows": [
+       [
+        "Bandingkan angka",
+        "14562 dan 14562",
+        "SAMA"
+       ],
+       [
+        "Bandingkan angka",
+        "14562 dan 14652",
+        "BEDA, digit 5 dan 6 bertukar posisi"
+       ],
+       [
+        "Ejaan baku",
+        "praktek atau praktik",
+        "praktik"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Kata baku yang sering diuji",
+     "table": {
+      "head": [
+       "Tidak baku",
+       "Baku"
+      ],
+      "rows": [
+       [
+        "praktek",
+        "praktik"
+       ],
+       [
+        "analisa",
+        "analisis"
+       ],
+       [
+        "apotik",
+        "apotek"
+       ],
+       [
+        "ijin",
+        "izin"
+       ],
+       [
+        "resiko",
+        "risiko"
+       ],
+       [
+        "obyek",
+        "objek"
+       ],
+       [
+        "nasehat",
+        "nasihat"
+       ],
+       [
+        "silahkan",
+        "silakan"
+       ],
+       [
+        "aktifitas",
+        "aktivitas"
+       ],
+       [
+        "sistim",
+        "sistem"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Teknik meningkatkan kecepatan dan ketelitian",
+     "steps": [
+      "Bandingkan dalam potongan dua atau tiga karakter sekaligus, bukan satu per satu.",
+      "Jaga ritme: tidak terburu-buru, tidak melambat.",
+      "Jangan mengulang bagian yang sudah kamu cek; lanjutkan ke depan.",
+      "Posisikan duduk dan layar atau kertas dengan nyaman supaya mata tidak cepat lelah.",
+      "Latih 10 menit tiap hari, lebih baik daripada latihan lama sekali seminggu."
+     ]
+    },
+    {
+     "heading": "Mengukur kemajuan",
+     "paragraphs": [
+      "Catat jumlah soal yang selesai dan jumlah yang benar setiap hari selama seminggu. Targetkan kecepatan naik bertahap tanpa mengorbankan ketepatan. Jika ketepatan turun, perlambat sedikit dulu."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Mengejar kecepatan sampai banyak salah",
+     "why": "Banyak kesalahan menurunkan nilai lebih jauh daripada beberapa soal tidak terselesaikan.",
+     "fix": "Cari kecepatan yang masih menjaga ketepatan."
+    },
+    {
+     "wrong": "Kehilangan fokus karena memikirkan soal sebelumnya",
+     "why": "Pikiran terpecah membuat urutan kacau.",
+     "fix": "Fokus pada soal yang sedang dikerjakan."
+    },
+    {
+     "wrong": "Hanya latihan menjelang tes",
+     "why": "Kecepatan perseptual butuh pembiasaan.",
+     "fix": "Latihan rutin singkat sejak jauh hari."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Bandingkan 14562 dan 14652. Sama atau beda?",
+     "a": "Beda; dua digit tengah tertukar."
+    },
+    {
+     "q": "Bentuk baku dari praktek?",
+     "a": "Praktik."
+    },
+    {
+     "q": "Mengapa latihan 10 menit per hari lebih efektif?",
+     "a": "Keterampilan perseptual terbentuk lewat pengulangan rutin, bukan lewat satu sesi panjang."
+    }
+   ],
+   "summary": [
+    "Kecermatan menilai ketelitian, fokus, dan kecepatan.",
+    "Bandingkan dalam potongan karakter dan jaga ritme.",
+    "Latih singkat setiap hari dan catat kemajuan."
+   ],
+   "next": "Berikutnya kesamaptaan jasmani."
+  },
+  "4": {
+   "v": 1,
+   "minutes": 13,
+   "prereq": "Kondisi sehat. Jika kamu punya riwayat penyakit atau cedera, konsultasikan ke dokter sebelum latihan berat.",
+   "sections": [
+    {
+     "heading": "Gambaran tes jasmani",
+     "paragraphs": [
+      "Tes kesamaptaan jasmani menilai kebugaran melalui beberapa komponen. Komponen yang umum adalah lari (daya tahan), pull up atau chinning, sit up, push up, dan shuttle run (kekuatan dan kelincahan). Sebagian jalur juga menguji renang dan memeriksa postur.",
+      "Standar nilai dan jumlah repetisi berbeda antara pria dan wanita serta antar jalur, dan dapat berubah tiap tahun. Karena itu cari standar resmi di pengumuman jalur yang kamu ikuti. Panduan di bawah adalah cara membangun kemampuan, bukan angka standar resmi."
+     ]
+    },
+    {
+     "heading": "Komponen dan cara melatihnya",
+     "table": {
+      "head": [
+       "Komponen",
+       "Yang dilatih",
+       "Cara membangun"
+      ],
+      "rows": [
+       [
+        "Lari",
+        "Daya tahan jantung dan paru",
+        "Lari santai bertahap, tambah durasi pelan-pelan, selingi interval sekali seminggu"
+       ],
+       [
+        "Pull up atau chinning",
+        "Kekuatan punggung dan lengan",
+        "Gantung diam (dead hang), pull up dengan bantuan, lalu pull up penuh"
+       ],
+       [
+        "Push up",
+        "Kekuatan dada, bahu, dan lengan",
+        "Mulai dari push up dengan tumpuan lebih tinggi, lalu turun ke lantai"
+       ],
+       [
+        "Sit up",
+        "Kekuatan otot perut",
+        "Latih teknik benar dan tambah repetisi bertahap"
+       ],
+       [
+        "Shuttle run",
+        "Kelincahan dan akselerasi",
+        "Latihan bolak-balik jarak pendek dan perubahan arah"
+       ]
+      ]
+     },
+     "note": {
+      "label": "Teknik harus sah",
+      "text": "Repetisi yang tekniknya tidak sesuai ketentuan petugas bisa tidak dihitung. Latih gerakan dengan teknik benar, bukan hanya mengejar jumlah."
+     }
+    },
+    {
+     "heading": "Contoh jadwal latihan delapan minggu",
+     "paragraphs": [
+      "Jadwal berikut hanya contoh umum. Sesuaikan dengan kondisimu dan naikkan beban secara bertahap, tidak lebih dari sekitar 10% per minggu untuk mencegah cedera."
+     ],
+     "table": {
+      "head": [
+       "Minggu",
+       "Lari",
+       "Kekuatan"
+      ],
+      "rows": [
+       [
+        "1 sampai 2",
+        "3 kali, lari santai 20 sampai 30 menit",
+        "Push up dan sit up beberapa set, dead hang"
+       ],
+       [
+        "3 sampai 4",
+        "3 kali, tambah satu sesi interval",
+        "Tambah set, mulai pull up dengan bantuan"
+       ],
+       [
+        "5 sampai 6",
+        "3 sampai 4 kali, perpanjang lari santai",
+        "Tambah repetisi; latihan shuttle run"
+       ],
+       [
+        "7",
+        "Uji coba lari sesuai durasi tes",
+        "Uji coba semua komponen"
+       ],
+       [
+        "8",
+        "Kurangi volume, jaga kebugaran",
+        "Latihan ringan dan pemulihan"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Pemulihan dan hari tes",
+     "paragraphs": [
+      "Tidur cukup, makan teratur, dan minum air yang cukup sama pentingnya dengan latihan. Beri hari istirahat tiap minggu agar otot pulih.",
+      "Di hari tes, makan ringan beberapa jam sebelumnya, lakukan pemanasan menyeluruh, dan ikuti arahan petugas. Jangan mencoba beban atau teknik baru di hari tes."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Menaikkan beban latihan terlalu cepat",
+     "why": "Meningkatkan risiko cedera yang bisa mengganggu seluruh persiapan.",
+     "fix": "Naikkan bertahap dan sisipkan hari istirahat."
+    },
+    {
+     "wrong": "Hanya mengejar jumlah repetisi tanpa teknik benar",
+     "why": "Repetisi bisa tidak dihitung.",
+     "fix": "Latih teknik sesuai ketentuan lebih dulu."
+    },
+    {
+     "wrong": "Latihan berlebihan menjelang tes",
+     "why": "Tubuh kelelahan di hari tes.",
+     "fix": "Kurangi volume dalam seminggu terakhir."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Komponen tes jasmani yang umum?",
+     "a": "Lari, pull up atau chinning, sit up, push up, dan shuttle run."
+    },
+    {
+     "q": "Dari mana kamu mendapat standar nilai resmi?",
+     "a": "Dari pengumuman resmi jalur yang kamu ikuti, karena berbeda tiap jalur, jenis kelamin, dan tahun."
+    },
+    {
+     "q": "Berapa kenaikan beban latihan mingguan yang aman sebagai patokan umum?",
+     "a": "Sekitar 10% per minggu."
+    }
+   ],
+   "summary": [
+    "Latih daya tahan lari dan kekuatan secara bertahap.",
+    "Teknik gerakan yang benar sama penting dengan jumlah repetisi.",
+    "Standar nilai resmi ada di pengumuman tiap jalur."
+   ],
+   "next": "Terakhir: akademik dan wawasan kebangsaan."
+  },
+  "5": {
+   "v": 1,
+   "minutes": 12,
+   "prereq": "Materi setingkat SMA. Jika belum membaca topik TWK di jalur CPNS, baca itu lebih dulu karena materinya beririsan.",
+   "sections": [
+    {
+     "heading": "Isi tes akademik dan wawasan kebangsaan",
+     "paragraphs": [
+      "Tes akademik menguji pengetahuan dan kemampuan dasar sesuai jalur. Materi yang umum meliputi matematika dasar, bahasa Indonesia, pengetahuan umum, dan wawasan kebangsaan. Kisi-kisi pasti berbeda per jalur dan tahun, jadi cocokkan dengan pengumuman resmi."
+     ],
+     "table": {
+      "head": [
+       "Materi",
+       "Yang perlu dikuasai"
+      ],
+      "rows": [
+       [
+        "Matematika dasar",
+        "Aritmetika, persen, perbandingan, bangun datar, teorema Pythagoras"
+       ],
+       [
+        "Bahasa Indonesia",
+        "Ejaan baku, kalimat efektif, ide pokok bacaan"
+       ],
+       [
+        "Wawasan kebangsaan",
+        "Pancasila, UUD 1945, NKRI, Bhinneka Tunggal Ika, sejarah perjuangan"
+       ],
+       [
+        "Pengetahuan umum",
+        "Isu kebangsaan, tata negara, dan pengetahuan dasar sesuai jalur"
+       ]
+      ]
+     }
+    },
+    {
+     "heading": "Matematika dasar: rumus yang paling sering dipakai",
+     "table": {
+      "head": [
+       "Pokok",
+       "Rumus atau fakta",
+       "Contoh"
+      ],
+      "rows": [
+       [
+        "Persegi panjang",
+        "Luas = panjang x lebar; keliling = 2 x (panjang + lebar)",
+        "12 x 5 = 60"
+       ],
+       [
+        "Pythagoras",
+        "a kuadrat + b kuadrat = c kuadrat",
+        "3-4-5, 5-12-13, 8-15-17"
+       ],
+       [
+        "Persen",
+        "Bagian = persen x total",
+        "20% dari 250.000 = 50.000"
+       ],
+       [
+        "Perbandingan",
+        "Total dibagi jumlah bagian",
+        "3 : 5 dari 40: 15 dan 25"
+       ]
+      ]
+     },
+     "paragraphs_after": [
+      "Hafalkan tripel Pythagoras 3-4-5, 5-12-13, dan 8-15-17 karena sering muncul dan menghemat waktu."
+     ]
+    },
+    {
+     "heading": "Wawasan kebangsaan dan mental ideologi",
+     "paragraphs": [
+      "Calon prajurit dan anggota Polri diharapkan setia pada Pancasila, UUD 1945, dan NKRI. Pelajari kelima sila, urutan sejarah rumusan Pancasila (1 Juni, 22 Juni, dan 18 Agustus 1945), serta pasal kunci UUD 1945 seperti Pasal 27 ayat 3 tentang bela negara dan Pasal 30 tentang pertahanan dan keamanan.",
+      "Pada tahap penilaian sikap dan latar belakang, calon diperiksa antara lain terkait keterlibatan dalam organisasi terlarang dan penyalahgunaan narkoba. Jaga rekam jejakmu sejak sekarang."
+     ]
+    },
+    {
+     "heading": "Kesehatan dan penentuan kelulusan akhir",
+     "paragraphs": [
+      "Pemeriksaan kesehatan menilai kondisi fisik secara menyeluruh, antara lain penglihatan, pendengaran, gigi, dan tubuh. Beberapa kondisi dapat memengaruhi kelayakan, dan ketentuannya dapat berubah. Cek ketentuan terbaru di pengumuman resmi dan konsultasikan ke dokter bila ada kekhawatiran.",
+      "Penentuan kelulusan akhir menggabungkan hasil seluruh tahap, jadi jangan mengabaikan satu tahap pun."
+     ]
+    },
+    {
+     "heading": "Cara belajar yang efisien",
+     "steps": [
+      "Mulai dari wawasan kebangsaan karena materinya paling stabil.",
+      "Latih matematika dasar 20 menit per hari dan catat soal yang salah.",
+      "Perkuat ejaan baku lewat latihan kecermatan.",
+      "Kerjakan Simulasi TNI/POLRI secara berkala dan perbaiki topik yang salah."
+     ]
+    }
+   ],
+   "mistakes": [
+    {
+     "wrong": "Mengabaikan akademik karena fokus ke fisik",
+     "why": "Nilai akademik ikut menentukan kelulusan.",
+     "fix": "Bagi waktu latihan antara fisik dan akademik."
+    },
+    {
+     "wrong": "Menghafal rumus tanpa latihan soal",
+     "why": "Waktu tes terbatas sehingga butuh kelancaran.",
+     "fix": "Kerjakan soal bertimer dan catat kesalahan."
+    },
+    {
+     "wrong": "Tidak memeriksa ketentuan kesehatan terbaru",
+     "why": "Kondisi tertentu bisa menggugurkan, dan aturannya berubah.",
+     "fix": "Baca pengumuman resmi dan konsultasi ke dokter."
+    }
+   ],
+   "checks": [
+    {
+     "q": "Sisi miring segitiga siku-siku dengan sisi 5 dan 12?",
+     "a": "13."
+    },
+    {
+     "q": "Pasal UUD 1945 tentang hak dan kewajiban bela negara?",
+     "a": "Pasal 27 ayat 3."
+    },
+    {
+     "q": "Urutan sejarah rumusan Pancasila?",
+     "a": "1 Juni 1945, Piagam Jakarta 22 Juni 1945, rumusan final PPKI 18 Agustus 1945."
+    }
+   ],
+   "summary": [
+    "Akademik: matematika dasar, Bahasa Indonesia, wawasan kebangsaan, dan pengetahuan umum.",
+    "Hafal tripel Pythagoras dan rumus bangun datar dasar.",
+    "Cek ketentuan kesehatan terbaru dan jaga rekam jejak."
+   ],
+   "next": "Uji dirimu dengan Simulasi TNI/POLRI."
+  }
+ }
+}

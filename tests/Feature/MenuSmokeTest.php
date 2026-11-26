@@ -101,7 +101,7 @@ class MenuSmokeTest extends TestCase
         }
         $this->assertNotEmpty($targets);
 
-        $this->assertNoneBroken($this->probe($admin, $targets, fn ($s) => $s < 400), 'admin (semua halaman GET, termasuk tambah/impor)');
+        $this->assertNoneBroken($this->probe($admin, $targets, fn ($s, $name) => $s < 400 || ($name === 'admin.maintenance.preview' && $s === 503)), 'admin (semua halaman GET, termasuk tambah/impor)');
     }
 
     public function test_staf_hanya_bisa_membuka_menu_sesuai_area_dan_sidebarnya_cocok(): void
