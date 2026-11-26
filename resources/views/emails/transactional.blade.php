@@ -1,16 +1,13 @@
 {{-- Templat email sistem (verifikasi, reset sandi, login baru). Tabel + gaya inline supaya aman di Gmail/Outlook.
-     Logo ditanam langsung di email (CID bernama tetap 'owl-mark'), jadi tampil walau APP_URL berupa tunnel atau localhost. --}}
+     Logo dimuat lewat URL publik (APP_URL + /images/email/owl-mark.png), bukan lampiran CID, supaya tampil di header dan tidak muncul sebagai lampiran.
+     APP_URL harus berupa alamat publik (https://domain-produksi). Di localhost gambar tidak akan tampil. --}}
 @php
     $brand = config('platform.brand.name');
     $tagline = mb_strtoupper(config('platform.brand.tagline'));
     $font = 'Arial,Helvetica,sans-serif';
     $ink = '#1f2a3d'; $muted = '#5f6b7a'; $blue = '#2f58b3'; $rule = '#d8dee8';
     $logoPath = public_path('images/email/owl-mark.png');
-    $logo = null;
-    if (isset($message) && is_file($logoPath)) {
-        $message->getSymfonyMessage()->embedFromPath($logoPath, 'owl-mark', 'image/png');
-        $logo = 'cid:owl-mark';
-    }
+    $logo = is_file($logoPath) ? rtrim((string) config('app.url'), '/').'/images/email/owl-mark.png' : null;
     $preheader = \Illuminate\Support\Str::limit(strip_tags((string) ($lines[0] ?? '')), 110, '');
 @endphp
 <!DOCTYPE html>
@@ -46,7 +43,7 @@
     <tr><td class="hd" style="background:{{ $blue }};padding:24px 32px;">
         <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
             @if ($logo)
-            <td valign="middle" style="padding:0 14px 0 0;"><img src="{{ $logo }}" width="46" height="54" alt="" style="display:block;width:46px;height:54px;"></td>
+            <td valign="middle" style="padding:0 14px 0 0;"><img src="{{ $logo }}" width="46" height="54" alt="{{ $brand }}" style="display:block;width:46px;height:54px;border:0;"></td>
             @endif
             <td valign="middle" style="padding:0;">
                 <div class="wm" style="font-family:{{ $font }};font-size:32px;line-height:32px;font-weight:bold;letter-spacing:-0.8px;"><span style="color:#ffffff;">Owl</span><span style="color:#a9c4f2;">spire</span></div>
